@@ -1,0 +1,21 @@
+{
+  "screen": "Custom Recurrence",
+  "description": "Configure custom repeat — interval number, unit (day/week/month), and duration type",
+  "request": {
+    "repeatEvery": "number",
+    "repeatUnit": "string",
+    "durationType": "string",
+    "occurrences": "number",
+    "untilDate": "string"
+  },
+  "response": {
+    "recurrenceId": "string",
+    "summary": "string"
+  },
+  "notes": {
+    "repeatUnit": "day | week | month | year",
+    "durationType": "forever | specific_times | until",
+    "occurrences": "required when durationType = specific_times",
+    "untilDate": "required when durationType = until"
+  }
+}

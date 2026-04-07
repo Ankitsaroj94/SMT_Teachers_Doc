@@ -1,0 +1,53 @@
+{
+  "is_starred": "boolean",
+  "calender_start_date": "dateString",
+  "this_month_calendar": [
+    "dateString",
+    "dateString",
+    "dateString",
+    "dateString",
+    "dateString",
+    "dateString",
+    "dateString"
+  ],
+  "events": [
+    {
+      "message": "string",
+      "time": "timeString"
+    },
+    {
+      "message": "string",
+      "time": "timeString"
+    },
+    {
+      "message": "string",
+      "time": "timeString"
+    }
+  ],
+  "circular": [
+    {
+      "message": "string",
+      "time": "timeString"
+    }
+  ],
+  "staff_birthdays": [
+    {
+      "name": "string",
+      "profile": "string"
+    },
+    {
+      "name": "string",
+      "profile": "string"
+    }
+  ],
+  "student_birthdays": [
+    {
+      "name": "string",
+      "profile": "string"
+    },
+    {
+      "name": "string",
+      "profile": "string"
+    }
+  ]
+}

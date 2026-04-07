@@ -1,0 +1,32 @@
+{
+  "screen": "My Books",
+  "description": "User's personal book list with tabs — Borrowed, History, Requested — with search",
+  "request": {
+    "search": "string",
+    "tab": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "image": "string",
+        "name": "string",
+        "description": "string",
+        "date": "string",
+        "batchFlag": "string",
+        "studentId": "string",
+        "class": "string"
+      }
+    ],
+    "total": "number"
+  },
+  "notes": {
+    "tab": "borrowed | history | requested",
+    "image": "book cover image URL",
+    "name": "book title",
+    "description": "author name(s)",
+    "date": "due/return date string e.g. Due in 4 days / Overdue by 2 days",
+    "batchFlag": "available | overdue | due_soon",
+    "studentId": "book ID",
+    "class": "genre or category"
+  }
+}

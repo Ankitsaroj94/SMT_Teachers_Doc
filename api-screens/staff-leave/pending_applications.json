@@ -1,0 +1,91 @@
+{
+    "pending_applications_page": {
+        "filters": {
+            "tabs": [
+                {
+                    "label": "All",
+                    "count": 3
+                },
+                {
+                    "label": "Leave",
+                    "count": 3
+                },
+                {
+                    "label": "Short Leave",
+                    "count": 3
+                },
+                {
+                    "label": "Forgot To Swipe",
+                    "count": 3
+                }
+            ],
+            "status": [
+                {
+                    "label": "Pending",
+                    "count": 32
+                },
+                {
+                    "label": "Approved",
+                    "count": 0
+                },
+                {
+                    "label": "Rejected",
+                    "count": 0
+                }
+            ],
+            "sort": {
+                "field": "name",
+                "direction": "ascending/descending"
+            }
+        },
+        "applications": [
+            {
+                "applicant": {
+                    "name": "Rajat Abrol",
+                    "avatar": "default_avatar.png",
+                    "employee_code": 240,
+                    "designation": "Non-Teaching",
+                    "time_ago": "3w",
+                    "status": "Backdated"
+                },
+                "details": {
+                    "type": "Leave",
+                    "session": "1st Session",
+                    "date": "4 May 2025",
+                    "time": "02:15 AM - 7:00 PM",
+                    "attachments_count": 2,
+                    "leave_details": [
+                        {
+                            "date": "4 May 2025",
+                            "time": "02:15 AM - 7:00 PM",
+                            "leave_session": "Morning"
+                        },
+                        {
+                            "date": "4 May 2025",
+                            "time": "02:15 AM - 7:00 PM",
+                            "leave_session": "Evening"
+                        }
+                    ],
+                    "attachments": [
+                        "https://example.com/1275778-1.jpg",
+                        "https://example.com/1275778-1.jpg"
+                    ],
+                    "activity": [
+                        {
+                            "waiting_for_approval": "Tarun Agarwal / You",
+                            "color": "#FF6B6B",
+                            "time_ago": ""
+                        },
+                        {
+                            "requested_by": "Rajat Abrol",
+                            "color": "#FF6B6B",
+                            "time_ago": "8 jun 2025, 02:15 AM"
+                        }
+                    ],
+                    "request_reason": "Taking a short break for personal matters and to recharge.",
+                    "approved_reason": "Taking a short break for personal matters and to recharge."
+                }
+            }
+        ]
+    }
+}

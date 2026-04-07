@@ -1,0 +1,22 @@
+---
+description: API screen contract conventions for Figma-driven JSON files
+alwaysApply: true
+---
+
+# API Screens Contract Rules
+
+- Create one JSON contract per screen in `api-screens/` and keep names kebab-case.
+- Include `screen`, `description`, `request`, `response`; add `example_response` when helpful.
+- Map `figmaNodeId` from the provided Figma URL node (`1234-5678` -> `1234:5678`).
+- Include only request fields visible in the UI; do not invent hidden filters/params.
+- Prefer existing project schema style over generic templates when conflicts exist.
+- When another API provides part of payload, pass linkage instead of duplicating input fields.
+  - Example: use `recurrenceId` from `custom-recurrence` in `new-booking`.
+- For cross-screen dependencies, allow embedded object handoff when UI passes full object.
+  - Example: `selectedResource` object from `select-resource` to `new-booking`.
+- Keep enums and conditional behavior explicit in `notes`.
+  - Example: `repeat: never | daily | weekly | monthly | custom`.
+  - Example: mention conditional fields like custom recurrence fields.
+- Response can include enriched computed fields even if request is normalized.
+  - Example: request has date/time fields, response can return ISO `startDateTime/endDateTime`.
+- For selectable slots/resources, model availability and selection state clearly when shown in UI.

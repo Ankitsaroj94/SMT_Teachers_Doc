@@ -1,0 +1,70 @@
+{
+  "screen": "Leave Applications",
+  "description": "Leave/Permissions list with weekly date strip, grouped by day, filters for date/leave type/grade type",
+  "request": {
+    "weekDate": "string",
+    "tab": "string",
+    "date": "string",
+    "leaveType": "string",
+    "gradeType": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "weekStrip": [
+      {
+        "day": "string",
+        "date": "number",
+        "month": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "data": [
+      {
+        "image": "string",
+        "name": "string",
+        "employeeId": "string",
+        "designation": "string",
+        "startDate": "string",
+        "endDate": "string",
+        "startTime": "string",
+        "endTime": "string",
+        "date": "string",
+        "leaveType": "string",
+        "sessionType": "string",
+        "description": "string",
+        "attachmentsCount": "number",
+        "batchFlag": "string",
+        "leave_details": [
+          {
+            "date": "string",
+            "time": "string",
+            "leave_session": "string"
+          }
+        ],
+        "leave_duration": "string",
+        "request_reason": "string",
+        "approved_reason": "string",
+        "attachments": [
+          "string",
+          "string"
+        ],
+        "activity": [
+          {
+            "waiting_for_approval": "string",
+            "color": "string",
+            "time_ago": "string"
+          },
+          {
+            "requested_by": "string",
+            "color": "string",
+            "time_ago": "string"
+          }
+        ]
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  }
+}

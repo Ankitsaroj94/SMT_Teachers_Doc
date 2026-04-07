@@ -1,0 +1,119 @@
+{
+    "StaffLeave": {
+        "pending_applications": {
+            "title": "Pending Applications",
+            "applications": [
+                {
+                    "type": "Leave",
+                    "count": 12
+                },
+                {
+                    "type": "Short Leave",
+                    "count": 2
+                },
+                {
+                    "type": "Forgot To Swipe",
+                    "count": 8
+                },
+                {
+                    "type": "On Duty",
+                    "count": 6
+                },
+                {
+                    "type": "On Tour",
+                    "count": 6
+                },
+                {
+                    "type": "Bus Duty",
+                    "count": 6
+                },
+                {
+                    "type": "Comp Off",
+                    "count": 6
+                }
+            ]
+        },
+        "on_leave_today": {
+            "title": "On Leave Today",
+            "total": 4,
+            "employees": [
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "leave_type": "FULL"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "leave_type": "1ST"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "leave_type": "FULL"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "leave_type": "2ND"
+                }
+            ]
+        },
+        "other_permissions_today": {
+            "title": "Other Permissions Today",
+            "total": 4,
+            "employees": [
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "permission_type": "WFH"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "permission_type": "SHORT LEAVE"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "permission_type": "FORGOT TO SWIPE"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "permission_type": "ON DUTY"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "permission_type": "ON TOUR"
+                },
+                {
+                    "initials": "SS",
+                    "name": "Sukhdeep S",
+                    "subject": "English",
+                    "class": "VI-C",
+                    "permission_type": "BUS DUTY"
+                }
+            ]
+        }
+    }
+}

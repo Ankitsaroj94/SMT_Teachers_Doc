@@ -1,0 +1,28 @@
+{
+  "screen": "Reject Request (Bottom Sheet)",
+  "description": "Bottom sheet to reject a leave request — optional comment and predefined reason tag chips",
+  "request": {
+    "leaveId": "string",
+    "comment": "string",
+    "reasonTags": ["string"]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "batchFlag": "string"
+  },
+  "reasonTagsOptions": {
+    "data": [
+      { "id": "string", "label": "string" }
+    ],
+    "example": [
+      { "id": "staffing_needs", "label": "Staffing needs" },
+      { "id": "urgent_tasks", "label": "Urgent tasks" },
+      { "id": "project_deadlines", "label": "Project deadlines" }
+    ]
+  },
+  "notes": {
+    "batchFlag": "rejected",
+    "reasonTags": "array of selected tag IDs, optional"
+  }
+}

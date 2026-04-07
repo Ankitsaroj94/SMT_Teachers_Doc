@@ -1,0 +1,18 @@
+{
+  "screen": "Approve Leave",
+  "description": "Approve a single or multiple leave requests — triggered from Approve button on list or detail screen",
+  "request": {
+    "leaveIds": ["string"],
+    "comment": "string"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "approved": "number",
+    "batchFlag": "string"
+  },
+  "notes": {
+    "leaveIds": "array to support bulk approval from Select Multiple mode",
+    "batchFlag": "approved"
+  }
+}

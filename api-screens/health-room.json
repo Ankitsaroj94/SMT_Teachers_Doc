@@ -1,0 +1,28 @@
+{
+  "screen": "Health Room",
+  "request": {
+    "search": "string",
+    "date": "string",
+    "sortBy": "string",
+    "class": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "image": "string",
+        "name": "string",
+        "date": "string",
+        "time": "string",
+        "class": "string",
+        "studentId": "string",
+        "batchFlag": "boolean",
+        "description": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  }
+}

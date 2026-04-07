@@ -1,0 +1,11 @@
+[
+    {
+        "id": "string",
+        "title": "string",
+        "date": "string",
+        "details": {
+            "key": "string",
+            "value": "string | number | boolean"
+        }
+    }
+]

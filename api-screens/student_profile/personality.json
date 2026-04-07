@@ -1,0 +1,84 @@
+{
+    "Personality Item": [
+        {
+            "year": "string",
+            "class_name": "string",
+            "overall_grade": "string"
+        },
+        {
+            "year": "string",
+            "class_name": "string",
+            "overall_grade": "string"
+        }
+    ],
+    "App Spline Chart Data": [
+        {
+            "title/tag": "string",
+            "color": "string",
+            "data": [
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                }
+            ]
+        },
+        {
+            "title/tag": "string",
+            "color": "string",
+            "data": [
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                }
+            ]
+        }
+    ]
+}

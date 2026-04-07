@@ -1,0 +1,23 @@
+{
+  "screen": "New Booking",
+  "description": "Default booking form — start/end datetime, resource, repeat, requirements",
+  "request": {
+    "allDay": "boolean",
+    "startDate": "string",
+    "startTime": "string",
+    "endDate": "string",
+    "endTime": "string",
+    "includeSaturdays": "boolean",
+    "resourceId": "string",
+    "eventName": "string",
+    "repeat": "string",
+    "requirements": "string",
+    "customEventNameEnabled": "boolean",
+    "calendarEventId": "string"
+  },
+  "response": {
+    "bookingId": "string",
+    "status": "string",
+    "message": "string"
+  }
+}

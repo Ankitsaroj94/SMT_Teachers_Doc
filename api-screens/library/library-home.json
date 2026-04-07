@@ -1,0 +1,71 @@
+{
+  "screen": "Library Home",
+  "description": "Library landing screen — My Books carousel, Recently Added, Available Books, All Books sections with search",
+  "request": {
+    "search": "string"
+  },
+  "response": {
+    "myBooks": {
+      "data": [
+        {
+          "image": "string",
+          "name": "string",
+          "description": "string",
+          "date": "string",
+          "batchFlag": "string",
+          "studentId": "string",
+          "class": "string"
+        }
+      ]
+    },
+    "recentlyAdded": {
+      "data": [
+        {
+          "image": "string",
+          "name": "string",
+          "description": "string",
+          "date": "string",
+          "batchFlag": "string",
+          "studentId": "string",
+          "class": "string"
+        }
+      ]
+    },
+    "availableBooks": {
+      "data": [
+        {
+          "image": "string",
+          "name": "string",
+          "description": "string",
+          "date": "string",
+          "batchFlag": "string",
+          "studentId": "string",
+          "class": "string"
+        }
+      ]
+    },
+    "allBooks": {
+      "data": [
+        {
+          "image": "string",
+          "name": "string",
+          "description": "string",
+          "date": "string",
+          "batchFlag": "string",
+          "studentId": "string",
+          "class": "string"
+        }
+      ],
+      "total": "number"
+    }
+  },
+  "notes": {
+    "image": "book cover image URL",
+    "name": "book title",
+    "description": "author name(s)",
+    "date": "due date string e.g. Due in 5 days / Due tomorrow",
+    "batchFlag": "New | Bestseller | (empty)",
+    "studentId": "book ID",
+    "class": "genre or category"
+  }
+}

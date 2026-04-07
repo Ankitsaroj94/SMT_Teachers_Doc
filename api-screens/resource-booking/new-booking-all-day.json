@@ -1,0 +1,21 @@
+{
+  "screen": "New Booking — All Day",
+  "description": "Booking form with All Day toggle ON — time fields hidden, only dates shown",
+  "request": {
+    "allDay": true,
+    "startDate": "string",
+    "endDate": "string",
+    "includeSaturdays": "boolean",
+    "resourceId": "string",
+    "eventName": "string",
+    "repeat": "string",
+    "requirements": "string",
+    "customEventNameEnabled": "boolean",
+    "calendarEventId": "string"
+  },
+  "response": {
+    "bookingId": "string",
+    "status": "string",
+    "message": "string"
+  }
+}

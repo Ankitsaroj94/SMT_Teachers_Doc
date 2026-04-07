@@ -1,0 +1,40 @@
+{
+  "screen": "Leave Request Cards (List)",
+  "description": "Reusable card list used in Pending Approvals — supports unselected and selected (multi-select) states",
+  "request": {
+    "page": "number",
+    "limit": "number",
+    "sortBy": "string",
+    "leaveType": "string",
+    "role": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "image": "string",
+        "name": "string",
+        "studentId": "string",
+        "class": "string",
+        "employmentType": "string",
+        "leaveType": "string",
+        "sessionType": "string",
+        "startDate": "string",
+        "endDate": "string",
+        "startTime": "string",
+        "endTime": "string",
+        "date": "string",
+        "description": "string",
+        "attachmentsCount": "number",
+        "batchFlag": "boolean",
+        "timeAgo": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "notes": {
+    "batchFlag": "boolean — true = selected (purple checkmark), false = unselected",
+    "sessionType": "1st Session | 2nd Session | Full Day"
+  }
+}

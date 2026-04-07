@@ -1,0 +1,46 @@
+{
+  "screen": "Pending Approvals",
+  "description": "List of staff leave requests pending approval — tabs for All / Leave / Forgot to Swipe, filters for sort/leave type/role",
+  "request": {
+    "search": "string",
+    "tab": "string",
+    "sortBy": "string",
+    "leaveType": "string",
+    "role": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "tabCounts": {
+      "all": "number",
+      "leave": "number",
+      "forgotToSwipe": "number"
+    },
+    "data": [
+      {
+        "image": "string",
+        "name": "string",
+        "studentId": "string",
+        "class": "string",
+        "employmentType": "string",
+        "leaveType": "string",
+        "startDate": "string",
+        "endDate": "string",
+        "date": "string",
+        "description": "string",
+        "attachmentsCount": "number",
+        "batchFlag": "string",
+        "timeAgo": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "notes": {
+    "tab": "all | leave | forgot_to_swipe",
+    "sortBy": "oldest | newest",
+    "batchFlag": "pending | approved | rejected",
+    "employmentType": "Teaching | Non-Teaching"
+  }
+}

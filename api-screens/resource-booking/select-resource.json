@@ -1,0 +1,29 @@
+{
+  "screen": "Select Resource",
+  "description": "Grouped resource list with expandable cards and inline time-slot selection.",
+  "request": {
+    "search": "string",
+    "date": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "categoryId": "string",
+        "categoryName": "string",
+        "color": "string",
+        "resources": [
+          {
+            "id": "string",
+            "name": "string",
+            "timeSlots": [
+              {
+                "time": "string",
+                "available": "boolean"
+              }
+            ]
+          } 
+        ]
+      }
+    ]
+  }
+}

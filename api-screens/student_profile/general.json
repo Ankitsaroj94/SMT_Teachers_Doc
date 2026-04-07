@@ -1,0 +1,55 @@
+{
+    "name": "string",
+    "class": "string",
+    "type": "string",
+    "profile_image": "string",
+    "general": {
+        "gender": "string",
+        "bloodGroup": "string",
+        "dob": "time string",
+        "house": "string",
+        "studentEmail": "string",
+        "admissionNo": "string",
+        "dateOfAdmission": "dateString",
+        "joinForm": "string",
+        "cbse_reg_no": "string",
+        "cbse_roll_no": "string",
+        "busInfo": {
+            "morningRoute": "string",
+            "morningStop": "string",
+            "eveningRoute": "string",
+            "eveningStop": "string"
+        }
+    },
+    "family": [
+        {
+            "type": "string", // primary secondary sibling mother father etc
+            "relation": "string",
+            "name": "string",
+            "mobile": "string",
+            "email": "string"
+        },
+        {
+            "type": "string",
+            "relation": "string",
+            "name": "string",
+            "mobile": "string",
+            "email": "string"
+        },
+        {
+            "type": "string",
+            "relation": "string",
+            "name": "string",
+            "mobile": "string",
+            "email": "string"
+        },
+        {
+            "type": "string",
+            "relation": "string",
+            "name": "string",
+            "mobile": "string",
+            "email": "string"
+        }
+    ]
+  
+}

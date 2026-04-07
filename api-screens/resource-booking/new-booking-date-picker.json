@@ -1,0 +1,20 @@
+{
+  "screen": "New Booking — Date Picker",
+  "description": "Booking form with inline calendar expanded for date selection",
+  "request": {
+    "month": "number",
+    "year": "number"
+  },
+  "response": {
+    "month": "number",
+    "year": "number",
+    "days": [
+      {
+        "date": "string",
+        "available": "boolean",
+        "isWeekend": "boolean",
+        "isToday": "boolean"
+      }
+    ]
+  }
+}

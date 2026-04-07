@@ -1,0 +1,43 @@
+{
+  "screen": "Book Detail",
+  "description": "Individual book detail — cover, availability badge, metadata, related books carousel, Request book CTA",
+  "request": {
+    "studentId": "string"
+  },
+  "response": {
+    "image": "string",
+    "name": "string",
+    "description": "string",
+    "date": "string",
+    "batchFlag": "string",
+    "studentId": "string",
+    "class": "string",
+    "details": {
+      "author": "string",
+      "publisher": "string",
+      "releaseDate": "string",
+      "isbn": "string",
+      "pages": "number",
+      "language": "string"
+    },
+    "relatedBooks": [
+      {
+        "image": "string",
+        "name": "string",
+        "description": "string",
+        "date": "string",
+        "batchFlag": "string",
+        "studentId": "string",
+        "class": "string"
+      }
+    ]
+  },
+  "notes": {
+    "studentId": "bookId",
+    "image": "book cover image URL",
+    "name": "book title",
+    "description": "author name(s)",
+    "batchFlag": "available | unavailable | requested | reserved",
+    "date": "availability string"
+  }
+}

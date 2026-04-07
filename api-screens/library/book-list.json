@@ -1,0 +1,36 @@
+{
+  "screen": "Book List",
+  "description": "Full book list with search and tabs — Available / Recently Added — each book shows availability status",
+  "request": {
+    "search": "string",
+    "tab": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "image": "string",
+        "name": "string",
+        "description": "string",
+        "date": "string",
+        "batchFlag": "string",
+        "studentId": "string",
+        "class": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "notes": {
+    "tab": "available | recently_added",
+    "image": "book cover image URL",
+    "name": "book title",
+    "description": "author name(s)",
+    "date": "availability string e.g. Available in 10 days / Reserved - Collect in 10 Days",
+    "batchFlag": "available | unavailable | requested | reserved",
+    "studentId": "book ID",
+    "class": "genre or category"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "screen": "New Booking - Default",
+  "figmaNodeId": "3117:48567",
+  "description": "New Booking form with inline date picker, recurring selector (including custom recurrence), resource selector, requirements, and calendar event naming options.",
+  "request": {
+    "allDay": "boolean",
+    "startDate": "string",
+    "startTime": "string",
+    "endDate": "string",
+    "endTime": "string",
+    "includeSaturdays": "boolean",
+    "selectedResource": {
+      "id": "string",
+      "name": "string",
+      "timeSlots": [
+        {
+          "time": "string",
+          "available": "boolean"
+        }
+      ]
+    },
+    "repeat": "string",
+    "recurrenceId": "string",
+    "customRecurrence": {
+      "repeatEvery": "number",
+      "repeatUnit": "string",
+      "durationType": "string",
+      "occurrences": "number",
+      "untilDate": "string"
+    },
+    "requirements": "string",
+    "customEventNameEnabled": "boolean",
+    "calendarEventId": "string"
+  },
+  "response": {
+    "bookingId": "string",
+    "status": "string",
+    "message": "string",
+    "data": {
+      "resourceId": "string",
+      "resourceName": "string",
+      "allDay": "boolean",
+      "startDateTime": "string",
+      "endDateTime": "string",
+      "includeSaturdays": "boolean",
+      "repeat": "string",
+      "recurrenceId": "string",
+      "customRecurrence": {
+        "repeatEvery": "number",
+        "repeatUnit": "string",
+        "durationType": "string",
+        "occurrences": "number",
+        "untilDate": "string",
+        "summary": "string"
+      },
+      "requirements": "string",
+      "customEventNameEnabled": "boolean",
+      "calendarEventId": "string",
+      "calendarMonth": "number",
+      "calendarYear": "number",
+      "createdAt": "string"
+    }
+  },
+  "example_response": {
+    "bookingId": "rb_20250901_0001",
+    "status": "confirmed",
+    "message": "Resource booking created successfully.",
+    "data": {
+      "resourceId": "c1",
+      "resourceName": "Classroom 1",
+      "allDay": false,
+      "startDateTime": "2025-08-19T15:00:00+05:30",
+      "endDateTime": "2025-08-19T15:00:00+05:30",
+      "includeSaturdays": false,
+      "repeat": "custom",
+      "recurrenceId": "rec_2wk_until_dec",
+      "customRecurrence": {
+        "repeatEvery": 2,
+        "repeatUnit": "week",
+        "durationType": "until",
+        "occurrences": 0,
+        "untilDate": "2025-12-31",
+        "summary": "Every 2 weeks until 31 Dec 2025"
+      },
+      "requirements": "Projector and whiteboard required.",
+      "customEventNameEnabled": false,
+      "calendarEventId": "evt_90021",
+      "calendarMonth": 8,
+      "calendarYear": 2025,
+      "createdAt": "2025-08-30T10:15:00+05:30"
+    }
+  },
+  "notes": {
+    "repeat": "never | daily | weekly | monthly | custom",
+    "selectedResource": "Pass selected resource object from select-resource response (includes chosen time slot context)",
+    "recurrenceId": "Pass the recurrenceId returned by custom-recurrence API when repeat = custom",
+    "customRecurrence": "Can be passed directly in request when creating recurrence inline; omit when recurrenceId is provided",
+    "repeatUnit": "day | week | month | year",
+    "durationType": "forever | specific_times | until",
+    "calendarEventId": "Used when selecting an existing event from calendar",
+    "customEventNameEnabled": "When false, event title is sourced from selected calendar event",
+    "startDateTime/endDateTime": "Server can return merged ISO datetimes even when request sends separate date/time fields"
+  }
+}

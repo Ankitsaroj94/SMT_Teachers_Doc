@@ -1,0 +1,23 @@
+{
+  "screen": "Recurrence Type",
+  "description": "Bottom sheet for selecting repeat frequency — Never, Every day, Every week, Every month",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "data": [
+      { "id": "never", "label": "Never", "value": "never" },
+      { "id": "daily", "label": "Every day", "value": "daily" },
+      { "id": "weekly", "label": "Every week", "value": "weekly" },
+      { "id": "monthly", "label": "Every month", "value": "monthly" },
+      { "id": "custom", "label": "Custom", "value": "custom" }
+    ]
+  }
+}

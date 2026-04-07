@@ -1,0 +1,96 @@
+{
+    "Academic Reports Item": [
+        {
+            "class_name": "string",
+            "teacher_name": "string",
+            "term_1": "Url",
+            "academic_reports": [
+                {
+                    "term_1": "Url",
+                    "term_2": "Url"
+                }
+            ]
+        },
+        {
+            "class_name": "string",
+            "teacher_name": "string",
+            "term_1": "Url",
+            "academic_reports": [
+                {
+                    "term_1": "Url",
+                    "term_2": "Url"
+                }
+            ]
+        }
+    ],
+    "App Spline Chart Data": [
+        {
+            "nameOfSub": "string",
+            "color": "string",
+            "data": [
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                }
+            ]
+        },
+        {
+            "nameOfSub": "string",
+            "color": "string",
+            "data": [
+                {
+                    "Label": "string",
+                    "Value": "number"
+                },
+                {
+                    "Label": "string",
+                    "Value": "number"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+  "screen": "Leave Application Detail",
+  "description": "Full detail of a single leave request — staff info, leave dates/sessions, attachments, activity timeline, people on leave same week",
+  "request": {
+    "leaveId": "string"
+  },
+  "response": {
+    "pendingFromName": "string",
+    "image": "string",
+    "name": "string",
+    "studentId": "string",
+    "class": "string",
+    "employmentType": "string",
+    "leaveDetails": {
+      "startDate": "string",
+      "startSession": "string",
+      "endDate": "string",
+      "endSession": "string",
+      "duration": "string",
+      "leaveType": "string",
+      "leaveCode": "string",
+      "date": "string"
+    },
+    "description": "string",
+    "attachments": [
+      {
+        "fileName": "string",
+        "fileSize": "string",
+        "fileType": "string",
+        "url": "string"
+      }
+    ],
+    "activity": [
+      {
+        "status": "string",
+        "actorName": "string",
+        "action": "string",
+        "timestamp": "string",
+        "color": "string"
+      }
+    ],
+    "peopleOnLeaveThisWeek": [
+      {
+        "image": "string",
+        "name": "string",
+        "studentId": "string",
+        "batchFlag": "string",
+        "date": "string",
+        "class": "string",
+        "description": "string"
+      }
+    ],
+    "batchFlag": "string"
+  },
+  "notes": {
+    "startSession": "Morning | Evening | Full Day",
+    "batchFlag": "pending | approved | rejected",
+    "activity_color": "yellow = pending | green = approved | purple = raised"
+  }
+}

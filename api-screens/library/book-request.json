@@ -1,0 +1,30 @@
+{
+  "screen": "Book Request (Bottom Sheet)",
+  "description": "Bottom sheet to request a book — shows book info, borrow date range, duration, comment field, overdue fine notice",
+  "request": {
+    "studentId": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "comment": "string"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "requestId": "string",
+    "batchFlag": "string",
+    "date": "string"
+  },
+  "bookInfo": {
+    "image": "string",
+    "name": "string",
+    "description": "string",
+    "studentId": "string",
+    "overdueFine": "string"
+  },
+  "notes": {
+    "studentId": "bookId",
+    "overdueFine": "e.g. ₹10/week — shown as warning on the sheet",
+    "batchFlag": "requested",
+    "date": "expected availability / collection date"
+  }
+}

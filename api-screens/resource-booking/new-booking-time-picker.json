@@ -1,0 +1,17 @@
+{
+  "screen": "New Booking — Time Picker",
+  "description": "Booking form with inline time slot grid expanded for start time selection",
+  "request": {
+    "resourceId": "string",
+    "date": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "time": "string",
+        "available": "boolean",
+        "isCustom": "boolean"
+      }
+    ]
+  }
+}
