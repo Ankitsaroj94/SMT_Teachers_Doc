@@ -1,0 +1,65 @@
+{
+  "screen": "Assignment Submissions List - State 1",
+  "figmaNodeId": "5349:85179",
+  "description": "Submissions listing with tabs, chips, sort controls, and expanded submission cards.",
+  "request": {
+    "tab": "string",
+    "chip": "string",
+    "sortBy": "string",
+    "sortOrder": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "submissionId": "string",
+        "student": {
+          "id": "string",
+          "name": "string",
+          "avatar": "string"
+        },
+        "scoreLabel": "string",
+        "submittedAt": "string",
+        "status": "string",
+        "attachments": [
+          {
+            "id": "string",
+            "name": "string",
+            "url": "string"
+          }
+        ],
+        "isExpanded": "boolean"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "data": [
+      {
+        "submissionId": "sub_9001",
+        "student": {
+          "id": "stu_1001",
+          "name": "Aarav Mehta",
+          "avatar": "https://cdn.school.app/avatar/stu_1001.png"
+        },
+        "scoreLabel": "8/10",
+        "submittedAt": "2026-04-07T10:20:00+05:30",
+        "status": "submitted",
+        "attachments": [
+          {
+            "id": "file_9001",
+            "name": "answers.pdf",
+            "url": "https://cdn.school.app/submissions/file_9001.pdf"
+          }
+        ],
+        "isExpanded": true
+      }
+    ],
+    "total": 128,
+    "page": 1,
+    "limit": 20
+  }
+}

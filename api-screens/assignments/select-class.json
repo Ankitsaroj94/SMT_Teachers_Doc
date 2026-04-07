@@ -1,0 +1,57 @@
+{
+  "screen": "Select Class",
+  "figmaNodeId": "10852:207972",
+  "description": "Bottom sheet class picker opened from Create Assignment audience/class selector.",
+  "request": {
+    "search": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "name": "string",
+        "section": "string",
+        "curriculum": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "cls_v_c",
+        "name": "V - C",
+        "section": "C",
+        "curriculum": ""
+      },
+      {
+        "id": "cls_vi_b",
+        "name": "VI - B",
+        "section": "B",
+        "curriculum": ""
+      },
+      {
+        "id": "cls_vi_fruits",
+        "name": "VI - Fruits",
+        "section": "Fruits",
+        "curriculum": ""
+      },
+      {
+        "id": "cls_iii_nasa_2016",
+        "name": "III - NASA Space Explorer 2016",
+        "section": "NASA Space Explorer 2016",
+        "curriculum": ""
+      }
+    ],
+    "total": 4,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "flow": "selected class ID(s) should be passed to create-assignment request audience.classIds"
+  }
+}

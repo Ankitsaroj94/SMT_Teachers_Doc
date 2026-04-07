@@ -20,3 +20,13 @@ alwaysApply: true
 - Response can include enriched computed fields even if request is normalized.
   - Example: request has date/time fields, response can return ISO `startDateTime/endDateTime`.
 - For selectable slots/resources, model availability and selection state clearly when shown in UI.
+- For assignments dashboard-style data screens, prefer sectioned response keys over generic lists:
+  - `overview`, `modules`, `pendingApprovals`, `assignmentsDue`.
+- Use camelCase naming for dashboard contracts:
+  - Example: `isStarred`, `dateFilter`, `submissionStatus.pendingCount`.
+- In assignments dashboard screens, keep module labels aligned to actual UI modules.
+  - Current module set: `Overview`, `Pending Approvals`, `Assignment Due`.
+- In assignments list screens, follow the visual flow order:
+  - Summary count first (example: `assignmentCreatedCount`)
+  - Then date buckets (`dateGroups`) like `Today`, `Yesterday`, `Earlier`
+  - Then assignment cards inside each date group

@@ -1,0 +1,118 @@
+{
+  "screen": "Create Assignment",
+  "figmaNodeId": "2733:46478",
+  "description": "Assignment creation form with title, description, attachments, subject, category, audience, submission/deadline toggles, parent portal schedule, special-needs toggle, and notes.",
+  "request": {
+    "title": "string",
+    "description": "string",
+    "attachments": [
+      {
+        "fileId": "string",
+        "fileName": "string",
+        "fileUrl": "string",
+        "mimeType": "string",
+        "size": "number"
+      }
+    ],
+    "subjectId": "string",
+    "categoryId": "string",
+    "audience": {
+      "type": "string",
+      "classIds": [
+        "string"
+      ],
+      "studentIds": [
+        "string"
+      ]
+    },
+    "allowStudentSubmissions": "boolean",
+    "submissionDeadlineEnabled": "boolean",
+    "submissionDeadlineDate": "string",
+    "submissionDeadlineTime": "string",
+    "showInParentPortal": "boolean",
+    "parentPortalDate": "string",
+    "parentPortalTime": "string",
+    "applicableToSpecialNeeds": "boolean",
+    "notes": "string"
+  },
+  "response": {
+    "assignmentId": "string",
+    "status": "string",
+    "message": "string",
+    "data": {
+      "title": "string",
+      "description": "string",
+      "attachments": [
+        {
+          "fileId": "string",
+          "fileName": "string",
+          "fileUrl": "string"
+        }
+      ],
+      "subject": {
+        "id": "string",
+        "name": "string"
+      },
+      "category": {
+        "id": "string",
+        "name": "string"
+      },
+      "audience": {
+        "type": "string",
+        "classIds": [
+          "string"
+        ]
+      },
+      "allowStudentSubmissions": "boolean",
+      "submissionDeadline": "string",
+      "showInParentPortal": "boolean",
+      "parentPortalSchedule": "string",
+      "applicableToSpecialNeeds": "boolean",
+      "notes": "string",
+      "publishedAt": "string"
+    }
+  },
+  "example_response": {
+    "assignmentId": "asn_90210",
+    "status": "published",
+    "message": "Assignment published successfully.",
+    "data": {
+      "title": "Chapter 3 Worksheet",
+      "description": "Solve all questions from chapter 3 and upload notebook photos.",
+      "attachments": [
+        {
+          "fileId": "file_311",
+          "fileName": "worksheet.pdf",
+          "fileUrl": "https://cdn.school.app/assignments/worksheet.pdf"
+        }
+      ],
+      "subject": {
+        "id": "sub_math",
+        "name": "Mathematics"
+      },
+      "category": {
+        "id": "cat_homework",
+        "name": "Homework"
+      },
+      "audience": {
+        "type": "class",
+        "classIds": [
+          "cls_v_c"
+        ]
+      },
+      "allowStudentSubmissions": false,
+      "submissionDeadline": "2026-04-12T18:00:00+05:30",
+      "showInParentPortal": true,
+      "parentPortalSchedule": "2026-04-10T09:00:00+05:30",
+      "applicableToSpecialNeeds": false,
+      "notes": "Bring completed sheets tomorrow.",
+      "publishedAt": "2026-04-07T11:00:00+05:30"
+    }
+  },
+  "notes": {
+    "audience.type": "class | student_group | individual",
+    "classIds": "Use IDs selected from Select Class flow",
+    "submissionDeadlineDate/submissionDeadlineTime": "Required only when submissionDeadlineEnabled = true",
+    "parentPortalDate/parentPortalTime": "Required only when showInParentPortal = true"
+  }
+}

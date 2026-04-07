@@ -1,0 +1,90 @@
+{
+  "screen": "Assignment Detail Overview",
+  "figmaNodeId": "2735:32118",
+  "description": "Detailed assignment view (parent Book Detail screen) with header metadata, assignment content, submission info, and class-wise submission summary cards.",
+  "request": {
+    "assignmentId": "string",
+    "classId": "string",
+    "section": "string"
+  },
+  "response": {
+    "assignment": {
+      "id": "string",
+      "subject": "string",
+      "title": "string",
+      "type": "string",
+      "due_on": "string",
+      "due_days_left": "number",
+      "tags": [
+        "string"
+      ],
+      "description": "string",
+      "attachments": [
+        {
+          "id": "string",
+          "name": "string",
+          "url": "string"
+        }
+      ],
+      "uploadedBy": "string",
+      "uploadId": "string",
+      "uploadDate": "string",
+      "duration": "string",
+      "dueDate": "string"
+    },
+    "classSummary": [
+      {
+        "classId": "string",
+        "className": "string",
+        "submitted": "number",
+        "notSubmitted": "number",
+        "total": "number"
+      }
+    ]
+  },
+
+  
+  "example_response": {
+    "assignment": {
+      "id": "asn_101",
+      "subject": "string",
+      "title": "Algebra Practice Set 4",
+      "type": "Homework",
+      "due_on": "string",
+      "due_days_left": "number",
+      "tags": [
+        "string",
+        "string"
+      ],
+      "description": "Complete questions 1-10 from worksheet.",
+      "attachments": [
+        {
+          "id": "att_10",
+          "name": "worksheet.pdf",
+          "url": "https://cdn.school.app/assignment/worksheet.pdf"
+        }
+      ],
+      "uploadedBy": "Megha Gupta",
+      "uploadId": "190899898",
+      "uploadDate": "2026-04-07",
+      "duration": "2 weeks",
+      "dueDate": "2026-04-21"
+    },
+    "classSummary": [
+      {
+        "classId": "cls_xii_a",
+        "className": "XII - A",
+        "submitted": 14,
+        "notSubmitted": 30,
+        "total": 44
+      },
+      {
+        "classId": "cls_xii_b",
+        "className": "XII - B",
+        "submitted": 18,
+        "notSubmitted": 26,
+        "total": 44
+      }
+    ]
+  }
+}

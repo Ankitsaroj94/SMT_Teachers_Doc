@@ -1,0 +1,107 @@
+{
+  "screen": "Assignments Dashboard",
+  "figmaNodeId": "13019:96208",
+  "description": "Assignments home screen with overview stats, sub-module tiles (Daily/Classwork/Holiday/Extra), Pending Approvals table, and Assignments Due list grouped by subject.",
+  "request": {
+    "dateFilter": "string"
+  },
+  "response": {
+    "isStarred": "boolean",
+    "overview": {
+      "totalCreated": "number",
+      "myAssignments": "number"
+    },
+    "pendingApprovals": [
+      {
+        "classSection": "string",
+        "subject": "string",
+        "studentName": "string",
+        "studentId": "string",
+        "date": "string"
+      }
+    ],
+    "assignmentsDue": [
+      {
+        "subject": "string",
+        "title": "string",
+        "assignment_type": "string",
+        "dueDate": "string",
+        "tag": "string",
+        "attachmentsCount": "number",
+        "classes": [
+          "string"
+        ],
+        "submissionStatus": {
+          "pendingCount": "number",
+          "allSubmitted": "boolean"
+        }
+      }
+    ]
+  },
+  
+  "example_response": {
+    "isStarred": false,
+    "overview": {
+      "totalCreated": 21,
+      "myAssignments": 8
+    },
+    "pendingApprovals": [
+      {
+        "classSection": "XI C",
+        "subject": "Maths",
+        "studentName": "Ava Wilson",
+        "studentId": "1561159",
+        "date": "07 May"
+      },
+      {
+        "classSection": "III C",
+        "subject": "Maths",
+        "studentName": "Aaryan Kashyap",
+        "studentId": "1561160",
+        "date": "07 May"
+      }
+    ],
+    "assignmentsDue": [
+      {
+        "subject": "Maths",
+        "title": "Worksheet 4 - Exploring the Visuals of Derivatives",
+        "assignment_type": "daily_assignment",
+        "dueDate": "27 Sep",
+        "tag": "Daily Homework",
+        "attachmentsCount": 2,
+        "classes": [
+          "XII - A",
+          "XII - B",
+          "XII - C",
+          "XII - D"
+        ],
+        "submissionStatus": {
+          "pendingCount": 5,
+          "allSubmitted": false
+        }
+      },
+      {
+        "subject": "History",
+        "title": "Essay - The Impact of World War II",
+        "assignment_type": "extra_assignment",
+        "dueDate": "01 Oct",
+        "tag": "Major Project",
+        "attachmentsCount": 1,
+        "classes": [
+          "XII - A",
+          "XII - B"
+        ],
+        "submissionStatus": {
+          "pendingCount": 0,
+          "allSubmitted": true
+        }
+      }
+    ]
+  },
+  "notes": {
+    "dateFilter": "Chip dropdown in Overview card — e.g. Today, This Week, This Month",
+    "modules": "4 sub-module tiles: Daily Assignment, Classwork, Holiday Assignment, Extra Assignment",
+    "pendingApprovals": "Table with columns: Class, Subject, Name (+ studentId sub-label), Date",
+    "assignmentsDue": "Grouped by subject; submissionStatus.pendingCount > 0 shows red pending label, allSubmitted=true shows green 'All Submitted'"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "screen": "Assignment List Page",
+  "figmaNodeId": "2733:47325",
+  "description": "Assignments listing screen with created count and date-grouped assignment cards.",
+  "request": {
+    "dateFilter": "string",
+    "chips": [
+      "string"
+    ],
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "assignmentCreatedCount": "number",
+    "dateGroups": [
+      {
+        "date": "string",
+        "assignments": [
+          {
+            "id": "string",
+            "title": "string",
+            "description": "string",
+            "dueDate": "string",
+            "tag": "string",
+            "classes": [
+              "string",
+              "string"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "example_response": {
+    "assignmentCreatedCount": 21,
+    "dateGroups": [
+      {
+        "date": "Today",
+        "assignments": [
+          {
+            "id": "asn_501",
+            "title": "Worksheet 4 - Exploring the Visuals of Derivatives",
+            "description": "Solve Q1 to Q10 from worksheet and submit PDF.",
+            "dueDate": "27 Sep",
+            "tag": "Daily Homework",
+            "classes": [
+              "XII - A",
+              "XII - B"
+            ]
+          }
+        ]
+      },
+      {
+        "date": "Yesterday",
+        "assignments": [
+          {
+            "id": "asn_498",
+            "title": "Lab Report - Investigating Chemical Reactions",
+            "description": "Write observations and submit practical notebook notes.",
+            "dueDate": "29 Sep",
+            "tag": "Weekly Assignment",
+            "classes": [
+              "XII - C",
+              "XII - D"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "notes": {
+    "flow": "Show assignmentCreatedCount first, then dateGroups (Today, Yesterday, Earlier).",
+    "chips": "Use visible chip filters from the top list area."
+  }
+}

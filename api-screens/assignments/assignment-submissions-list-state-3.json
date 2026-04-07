@@ -1,0 +1,51 @@
+{
+  "screen": "Assignment Submissions List - State 3",
+  "figmaNodeId": "5349:86189",
+  "description": "Submissions listing compact variant dominated by short rows with minimal metadata.",
+  "request": {
+    "tab": "string",
+    "chip": "string",
+    "sortBy": "string",
+    "sortOrder": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "submissionId": "string",
+        "studentName": "string",
+        "scoreLabel": "string",
+        "submittedAt": "string",
+        "status": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "data": [
+      {
+        "submissionId": "sub_9101",
+        "studentName": "Neha Verma",
+        "scoreLabel": "9/10",
+        "submittedAt": "2026-04-07T11:10:00+05:30",
+        "status": "graded"
+      },
+      {
+        "submissionId": "sub_9102",
+        "studentName": "Arjun Rao",
+        "scoreLabel": "Pending",
+        "submittedAt": "2026-04-07T10:50:00+05:30",
+        "status": "submitted"
+      }
+    ],
+    "total": 24,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "state": "Compact rendering of the same list data as other submission list states"
+  }
+}
