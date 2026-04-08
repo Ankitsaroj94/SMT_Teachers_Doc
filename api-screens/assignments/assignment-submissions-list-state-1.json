@@ -1,64 +1,103 @@
 {
   "screen": "Assignment Submissions List - State 1",
   "figmaNodeId": "5349:85179",
-  "description": "Submissions listing with tabs, chips, sort controls, and expanded submission cards.",
+  "description": "Assignments submissions screen with top tabs, filter chips, sort controls, and pending-approval style rows.",
   "request": {
+    "module": "string",
     "tab": "string",
-    "chip": "string",
+    "dateFilter": "string",
     "sortBy": "string",
     "sortOrder": "string",
     "page": "number",
     "limit": "number"
   },
   "response": {
+    "tabs": [
+      "string"
+    ],
+    "activeTab": "string",
+    "chips": [
+      "string"
+    ],
     "data": [
       {
-        "submissionId": "string",
-        "student": {
-          "id": "string",
-          "name": "string",
-          "avatar": "string"
-        },
-        "scoreLabel": "string",
-        "submittedAt": "string",
+        "profileImage": "string",
+        "classSection": "string",
+        "studentName": "string",
+        "studentId": "string",
         "status": "string",
-        "attachments": [
+        "details": [
           {
-            "id": "string",
-            "name": "string",
-            "url": "string"
+            "description": "string",
+            "date": "string",
+            "tag": "string"
           }
         ],
-        "isExpanded": "boolean"
+        "remarks": "string"
       }
     ],
     "total": "number",
     "page": "number",
     "limit": "number"
   },
+
+
   "example_response": {
+    "tabs": [
+      "All",
+      "Submitted",
+      "Not Submitted"
+    ],
+    "activeTab": "All",
+    "chips": [
+      "All",
+      "Maths",
+      "Science",
+      "English"
+    ],
     "data": [
       {
-        "submissionId": "sub_9001",
-        "student": {
-          "id": "stu_1001",
-          "name": "Aarav Mehta",
-          "avatar": "https://cdn.school.app/avatar/stu_1001.png"
-        },
-        "scoreLabel": "8/10",
-        "submittedAt": "2026-04-07T10:20:00+05:30",
-        "status": "submitted",
-        "attachments": [
+        "profileImage": "string",
+        "studentName": "Ava Wilson",
+        "studentId": "1561159",
+        "classSection": "XI C",
+        "status": "approved",
+        "details": [
           {
-            "id": "file_9001",
-            "name": "answers.pdf",
-            "url": "https://cdn.school.app/submissions/file_9001.pdf"
+            "description": "1st Submission on ",
+            "date": "07 May 2026, 10:00 AM",
+            "tag": "late"
+          },
+          {
+            "description": "2nd Submission on ",
+            "date": "07 May 2026, 10:00 AM",
+            "tag": "not_received"
           }
         ],
-        "isExpanded": true
+        "remarks": "Good Work! Focus more on explaining your answers in detail."
+      },
+      {
+        "profileImage": "string",
+        "studentName": "Riya Patel",
+        "studentId": "1561160",
+        "classSection": "IV A",
+        "status": "pending",
+        "details": [
+          {
+            "description": "1st Submission on ",
+            "date": "07 May 2026, 09:15 AM",
+            "tag": "late"
+          },
+          {
+            "description": "2nd Submission pending",
+            "date": "",
+            "tag": "not_received"
+          }
+        ],
+        "remarks": "Pending review."
       }
     ],
-    "total": 128,
+    "total": 24,
     "page": 1,
     "limit": 20
   }

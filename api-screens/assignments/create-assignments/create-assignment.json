@@ -1,0 +1,38 @@
+{
+  "screen": "Create Assignment",
+  "figmaNodeId": "8332:97171",
+  "description": "Staff form to compose and publish an assignment: title, description, attachments, subject and category pickers, audience (applicable to), submission and deadline toggles, parent-portal visibility with schedule, mainstream/special-needs applicability toggle, notes, and Publish.",
+  "request": {
+    "title": "string",
+    "description": "string",
+    "attachments": [
+      {
+        "source": "gallery | camera | document | audio",
+        "name": "string",
+        "url": "string"
+      }
+    ],
+    "subjectId": "string",
+    "categoryId": "string",
+    "applicableTo": "string",
+    "allowStudentSubmissions": "boolean",
+    "setDeadline": "boolean",
+    "deadlineDate": "string",
+    "deadlineTime": "string",
+    "homeworkDisplayInParentPortal": "boolean",
+    "parentPortalDisplayDate": "string",
+    "parentPortalDisplayTime": "string",
+    "homeworkApplicableToMainstreamOrSpecialNeeds": "boolean",
+    "notes": "string"
+  },
+  "response": {
+    "assignmentId": "string",
+    "status": "string",
+    "publishedAt": "string"
+  },
+  "example_response": {
+    "assignmentId": "asn_new_001",
+    "status": "published",
+    "publishedAt": "2026-04-08T09:41:00.000Z"
+  }
+}

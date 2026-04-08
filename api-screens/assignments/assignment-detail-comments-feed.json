@@ -9,52 +9,75 @@
   "response": {
     "assignment": {
       "id": "string",
+      "subject": "string",
+      "classSection": "string",
+      "studentName": "string",
+      "studentId": "string",
       "title": "string",
-      "description": "string",
-      "uploadedBy": "string",
-      "uploadDate": "string",
-      "duration": "string",
-      "dueDate": "string"
-    },
-    "remarks": [
-      {
-        "id": "string",
-        "date": "string",
-        "note": "string"
-      }
-    ],
-    "submissionSummary": {
-      "submitted": "number",
-      "notSubmitted": "number",
-      "total": "number"
+      "submittedOn": "string",
+      "attachments": [
+        {
+          "url": "string"
+        }
+      ],
+      "description": {
+        "text": "string",
+        "attachments": [
+          {
+            "url": "string"
+          }
+        ]
+      },
+      "otherDetails": {
+        "uploadedBy": "string",
+        "uploadDate": "string",
+        "duration": "string",
+        "dueDate": "string"
+      },
+      "rejectionHistory": [
+        {
+          "date": "string",
+          "note": "string"
+        }
+      ]
     }
   },
+
+  
   "example_response": {
     "assignment": {
       "id": "asn_101",
-      "title": "Algebra Practice Set 4",
-      "description": "Complete questions 1-10 from worksheet.",
-      "uploadedBy": "Megha Gupta",
-      "uploadDate": "2026-04-07",
-      "duration": "2 weeks",
-      "dueDate": "2026-04-21"
-    },
-    "remarks": [
-      {
-        "id": "rmk_1",
-        "date": "2026-04-10",
-        "note": "Task is incomplete; only 2 of the 10 questions were answered."
+      "subject": "Maths",
+      "classSection": "XI C",
+      "studentName": "Ava Wilson",
+      "studentId": "1561159",
+      "title": "string",
+      "submittedOn": "date time",
+      "attachments": [
+        {
+          "url": "string"
+        }
+      ],
+      "description": {
+        "text": "string",
+        "attachments": [
+          {
+            "url": "string"
+          }
+        ]
       },
-      {
-        "id": "rmk_2",
-        "date": "2026-04-12",
-        "note": "Answers copied from guide. Please write your own answers."
-      }
-    ],
-    "submissionSummary": {
-      "submitted": 14,
-      "notSubmitted": 30,
-      "total": 44
+      "otherDetails": {
+        "uploadedBy": "Megha Gupta",
+        "uploadDate": "10 May 2025, Monday",
+        "duration": "2 weeks",
+        "dueDate": "24 May 2025, Friday"
+      },
+      "rejectionHistory": [
+        {
+          "date": "10 May 2025, Monday",
+          "note": "Task is incomplete; only 2 of the 10 questions were answered."
+        }
+      ]
     }
   }
 }

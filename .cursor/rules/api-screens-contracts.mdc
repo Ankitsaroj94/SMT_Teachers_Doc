@@ -30,3 +30,8 @@ alwaysApply: true
   - Summary count first (example: `assignmentCreatedCount`)
   - Then date buckets (`dateGroups`) like `Today`, `Yesterday`, `Earlier`
   - Then assignment cards inside each date group
+- Extract `example_response` values directly from visible Figma content wherever possible.
+- Keep key names aligned to Figma labels (converted consistently to project naming style).
+- Do not add unnecessary/speculative keys that are not visible in UI flow.
+- Ensure `response` schema keys and `example_response` keys stay fully aligned.
+- If user provides an explicit target shape, treat it as final and adapt contract to it.
