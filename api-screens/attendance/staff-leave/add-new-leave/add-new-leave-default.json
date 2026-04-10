@@ -1,0 +1,69 @@
+{
+  "screen": "Add New Leave - Default",
+  "figmaNodeId": "8045:106761",
+  "description": "Default add-leave form with class prefilled, student picker, date/session range, reason, remarks, attachment field, and Submit action.",
+  "request": {
+    "classId": "string",
+    "studentIds": [
+      "string"
+    ],
+    "applicationDate": "string",
+    "leaveType": "string",
+    "fromDate": "string",
+    "fromSession": "string",
+    "toDate": "string",
+    "toSession": "string",
+    "reason": "string",
+    "remarks": "string",
+    "attachments": [
+      "string"
+    ]
+  },
+  "response": {
+    "title": "string",
+    "fields": {
+      "classLabel": "string",
+      "classValue": "string",
+      "selectStudentLabel": "string",
+      "selectStudentHelperText": "string",
+      "applicationDateLabel": "string",
+      "applicationDateValue": "string",
+      "leaveTypeLabel": "string",
+      "leaveTypeValue": "string",
+      "fromDateValue": "string",
+      "fromSessionValue": "string",
+      "toDateValue": "string",
+      "toSessionValue": "string",
+      "reasonLabel": "string",
+      "reasonValue": "string",
+      "remarksLabel": "string",
+      "remarksValue": "string",
+      "attachmentLabel": "string"
+    },
+    "submitLabel": "string"
+  },
+  "example_response": {
+    "title": "Add New Leave",
+    "fields": {
+      "classLabel": "Class",
+      "classValue": "XII - C",
+      "selectStudentLabel": "Select Student",
+      "selectStudentHelperText": "You can select multiple students",
+      "applicationDateLabel": "Date of Application",
+      "applicationDateValue": "1 Sept, 2025, Thursday",
+      "leaveTypeLabel": "Leave type",
+      "leaveTypeValue": "",
+      "fromDateValue": "1 Sept, 2025, Thursday",
+      "fromSessionValue": "Morning",
+      "toDateValue": "3 Sept, 2025, Saturday",
+      "toSessionValue": "Evening",
+      "reasonLabel": "Reason",
+      "reasonValue": "",
+      "remarksLabel": "Remarks",
+      "remarksValue": "",
+      "attachmentLabel": "Attachment"
+    },
+    "submitLabel": "Submit"
+  },
+  "notes": "Only visible form controls are modeled. Select Student supports multiple selection as indicated by helper text."
+}

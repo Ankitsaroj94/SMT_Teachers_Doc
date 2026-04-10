@@ -1,0 +1,103 @@
+{
+  "screen": "Leave Application Approvals - Approved List",
+  "figmaNodeId": "8045:110704",
+  "description": "Approvals list with Approved tab selected; cards show decision label such as 'Approved - 24 sep'.",
+  "request": {
+    "search": "string",
+    "leaveTypeTab": "string",
+    "classFilter": "string",
+    "sortBy": "string",
+    "approvalStatusTab": "pending | approved | rejected",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "screenTitle": "string",
+    "leaveTypeTabs": [
+      {
+        "label": "string",
+        "count": "number"
+      }
+    ],
+    "filterChips": {
+      "classLabel": "string",
+      "sortByLabel": "string"
+    },
+    "statusTabs": [
+      {
+        "label": "string",
+        "count": "number",
+        "isSelected": "boolean"
+      }
+    ],
+    "cards": [
+      {
+        "employeeName": "string",
+        "employeeMeta": "string",
+        "decisionLabel": "string",
+        "leaveType": "string",
+        "leaveDatesLabel": "string",
+        "reasonLabel": "string",
+        "attachmentsLabel": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "screenTitle": "Leave Application",
+    "leaveTypeTabs": [
+      {
+        "label": "All",
+        "count": 3
+      },
+      {
+        "label": "Leave",
+        "count": 3
+      },
+      {
+        "label": "Study Leave",
+        "count": 3
+      },
+      {
+        "label": "Representing School",
+        "count": 3
+      },
+      {
+        "label": "Medical Leave",
+        "count": 3
+      }
+    ],
+    "filterChips": {
+      "classLabel": "Class",
+      "sortByLabel": "Sort By"
+    },
+    "statusTabs": [
+      {
+        "label": "Pending",
+        "count": 32,
+        "isSelected": false
+      },
+      {
+        "label": "Approved",
+        "count": 0,
+        "isSelected": true
+      },
+      {
+        "label": "Rejected",
+        "count": 0,
+        "isSelected": false
+      }
+    ],
+    "cards": [
+      {
+        "employeeName": "Rajat Abrol",
+        "employeeMeta": "878687 | XII- A",
+        "decisionLabel": "Approved - 24 sep",
+        "leaveType": "Leave",
+        "leaveDatesLabel": "4 May 2025, Morning",
+        "reasonLabel": "Reason : Family member died",
+        "attachmentsLabel": "2 Attachments"
+      }
+    ]
+  },
+  "notes": "Approved list cards replace per-card actions with a status timestamp label."
+}

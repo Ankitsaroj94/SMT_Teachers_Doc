@@ -1,0 +1,71 @@
+{
+  "screen": "Leave Application Detail - Approved By You",
+  "figmaNodeId": "12106:86161",
+  "description": "Leave detail state with approval badge and activity showing approval by the current user.",
+  "request": {
+    "leaveId": "string"
+  },
+  "response": {
+    "statusBadgeLabel": "string",
+    "staff": {
+      "name": "string",
+      "meta": "string"
+    },
+    "leaveDetails": {
+      "fromDateLabel": "string",
+      "fromSession": "string",
+      "toDateLabel": "string",
+      "toSession": "string",
+      "durationLabel": "string",
+      "reason": "string",
+      "remarks": "string"
+    },
+    "attachments": [
+      {
+        "fileName": "string",
+        "fileMeta": "string",
+        "actionLabel": "string"
+      }
+    ],
+    "activity": [
+      {
+        "message": "string",
+        "timestamp": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "statusBadgeLabel": "Request Approved by You",
+    "staff": {
+      "name": "Tarun Aggarwal",
+      "meta": "X-C (23) | 23022"
+    },
+    "leaveDetails": {
+      "fromDateLabel": "1 Sept, 2025, Thursday",
+      "fromSession": "Morning",
+      "toDateLabel": "3 Sept, 2025, Saturday",
+      "toSession": "Evening",
+      "durationLabel": "2_days -Leave",
+      "reason": "Going on vacation.",
+      "remarks": "New Year Celebration - Vande Matram Dance Troupe"
+    },
+    "attachments": [
+      {
+        "fileName": "1275778 .jpg",
+        "fileMeta": "2.8 mb - JPEG",
+        "actionLabel": "View"
+      }
+    ],
+    "activity": [
+      {
+        "message": "You have Approved the request",
+        "timestamp": "10 Jun 2025, 8:00 pm"
+      },
+      {
+        "message": "Request raised by Tarun Aggarwal",
+        "timestamp": "8 Jun 2025, 6:40 am"
+      }
+    ]
+  },
+  "notes": "Approved detail state shows status badge at top and no footer decision buttons."
+}

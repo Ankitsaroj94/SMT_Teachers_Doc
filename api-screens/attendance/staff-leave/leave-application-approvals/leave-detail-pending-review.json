@@ -1,0 +1,70 @@
+{
+  "screen": "Leave Application Detail - Pending Review",
+  "figmaNodeId": "15159:116938",
+  "description": "Detailed leave request view with staff profile, leave details, reason, remarks, attachments, and activity timeline before decision.",
+  "request": {
+    "leaveId": "string"
+  },
+  "response": {
+    "staff": {
+      "name": "string",
+      "meta": "string"
+    },
+    "leaveDetails": {
+      "fromDateLabel": "string",
+      "fromSession": "string",
+      "toDateLabel": "string",
+      "toSession": "string",
+      "durationLabel": "string",
+      "reason": "string",
+      "remarks": "string"
+    },
+    "attachments": [
+      {
+        "fileName": "string",
+        "fileMeta": "string",
+        "actionLabel": "string"
+      }
+    ],
+    "activity": [
+      {
+        "message": "string",
+        "timestamp": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "staff": {
+      "name": "Tarun Aggarwal",
+      "meta": "X-C (23) | 23022"
+    },
+    "leaveDetails": {
+      "fromDateLabel": "1 Sept, 2025, Thursday",
+      "fromSession": "Morning",
+      "toDateLabel": "3 Sept, 2025, Saturday",
+      "toSession": "Evening",
+      "durationLabel": "2_days - School Leave",
+      "reason": "Event Participation",
+      "remarks": "New Year Celebration - Vande Matram Dance Troupe"
+    },
+    "attachments": [
+      {
+        "fileName": "1275778 .jpg",
+        "fileMeta": "2.8 mb - JPEG",
+        "actionLabel": "View"
+      },
+      {
+        "fileName": "1275778 .jpg",
+        "fileMeta": "2.8 mb - JPEG",
+        "actionLabel": "View"
+      }
+    ],
+    "activity": [
+      {
+        "message": "Applied by Rajat Abrol",
+        "timestamp": "8 Jun 2025, 6:40 am"
+      }
+    ]
+  },
+  "notes": "This node does not show status chip or decision buttons; it is the neutral detail state."
+}

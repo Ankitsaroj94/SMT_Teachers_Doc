@@ -1,0 +1,77 @@
+{
+  "screen": "Leave Application Detail - Waiting For Your Approval",
+  "figmaNodeId": "12051:88089",
+  "description": "Leave detail state where request is awaiting your decision and footer actions Reject/Approve are visible.",
+  "request": {
+    "leaveId": "string"
+  },
+  "response": {
+    "staff": {
+      "name": "string",
+      "meta": "string"
+    },
+    "leaveDetails": {
+      "fromDateLabel": "string",
+      "fromSession": "string",
+      "toDateLabel": "string",
+      "toSession": "string",
+      "durationLabel": "string",
+      "reason": "string",
+      "remarks": "string"
+    },
+    "attachments": [
+      {
+        "fileName": "string",
+        "fileMeta": "string",
+        "actionLabel": "string"
+      }
+    ],
+    "activity": [
+      {
+        "message": "string",
+        "timestamp": "string"
+      }
+    ],
+    "decisionActions": {
+      "rejectLabel": "string",
+      "approveLabel": "string"
+    }
+  },
+  "example_response": {
+    "staff": {
+      "name": "Tarun Aggarwal",
+      "meta": "X-C (23) | 23022"
+    },
+    "leaveDetails": {
+      "fromDateLabel": "1 Sept, 2025, Thursday",
+      "fromSession": "Morning",
+      "toDateLabel": "3 Sept, 2025, Saturday",
+      "toSession": "Evening",
+      "durationLabel": "2_days - School Leave",
+      "reason": "Event Participation",
+      "remarks": "New Year Celebration - Vande Matram Dance Troupe"
+    },
+    "attachments": [
+      {
+        "fileName": "1275778 .jpg",
+        "fileMeta": "2.8 mb - JPEG",
+        "actionLabel": "View"
+      }
+    ],
+    "activity": [
+      {
+        "message": "Waiting for approval from You",
+        "timestamp": "-"
+      },
+      {
+        "message": "Request raised by Tarun Aggarwal",
+        "timestamp": "8 Jun 2025, 6:40 am"
+      }
+    ],
+    "decisionActions": {
+      "rejectLabel": "Reject",
+      "approveLabel": "Approve"
+    }
+  },
+  "notes": "Footer actions are part of this state; first timeline row indicates pending decision."
+}

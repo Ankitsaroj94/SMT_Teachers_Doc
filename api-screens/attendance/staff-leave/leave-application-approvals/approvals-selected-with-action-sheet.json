@@ -1,0 +1,74 @@
+{
+  "screen": "Leave Application Approvals - Selected With Action Sheet",
+  "figmaNodeId": "8045:109117",
+  "description": "Bulk-selection state with 3 items selected, optional comment input, Reject(3)/Approve(3) actions, and reject confirmation bottom sheet.",
+  "request": {
+    "selectedLeaveIds": [
+      "string"
+    ],
+    "comment": "string",
+    "bulkAction": "approve | reject",
+    "confirmReject": "boolean"
+  },
+  "response": {
+    "headerTitle": "string",
+    "selectedCount": "number",
+    "selectAllLabel": "string",
+    "cards": [
+      {
+        "leaveId": "string",
+        "employeeName": "string",
+        "employeeMeta": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "bottomActionBar": {
+      "commentPlaceholder": "string",
+      "rejectLabel": "string",
+      "approveLabel": "string"
+    },
+    "rejectConfirmationModal": {
+      "title": "string",
+      "message": "string",
+      "confirmLabel": "string",
+      "cancelLabel": "string"
+    }
+  },
+  "example_response": {
+    "headerTitle": "3 selected",
+    "selectedCount": 3,
+    "selectAllLabel": "Select All",
+    "cards": [
+      {
+        "leaveId": "leave_001",
+        "employeeName": "Rajat Abrol",
+        "employeeMeta": "878687 | XII- A",
+        "isSelected": true
+      },
+      {
+        "leaveId": "leave_002",
+        "employeeName": "Rajat Abrol",
+        "employeeMeta": "878687 | XII- A",
+        "isSelected": true
+      },
+      {
+        "leaveId": "leave_003",
+        "employeeName": "Rajat Abrol",
+        "employeeMeta": "878687 | XII- A",
+        "isSelected": true
+      }
+    ],
+    "bottomActionBar": {
+      "commentPlaceholder": "Write a Comment (Optional)",
+      "rejectLabel": "Reject (3)",
+      "approveLabel": "Approve (3)"
+    },
+    "rejectConfirmationModal": {
+      "title": "Reject Request",
+      "message": "Are you sure you want to reject Rajat Abrol's request for a 3-day Study Leave (4 May - 6 May 2025)?",
+      "confirmLabel": "Reject",
+      "cancelLabel": "Cancel"
+    }
+  },
+  "notes": "Reject confirmation sheet appears as overlay after tapping Reject (3)."
+}

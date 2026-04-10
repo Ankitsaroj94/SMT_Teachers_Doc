@@ -1,0 +1,73 @@
+{
+  "screen": "Add New Leave - Filled With Attachments",
+  "figmaNodeId": "10823:63984",
+  "description": "Filled add-leave form with multiple selected students, leave type chosen, date/session range selected, reason and remarks entered, and attached files listed.",
+  "request": {
+    "classId": "string",
+    "studentIds": [
+      "string"
+    ],
+    "applicationDate": "string",
+    "leaveType": "string",
+    "fromDate": "string",
+    "fromSession": "string",
+    "toDate": "string",
+    "toSession": "string",
+    "reason": "string",
+    "remarks": "string",
+    "attachments": [
+      "string"
+    ]
+  },
+  "response": {
+    "title": "string",
+    "selectedStudents": [
+      "string"
+    ],
+    "applicationDateValue": "string",
+    "leaveTypeValue": "string",
+    "fromDateValue": "string",
+    "fromSessionValue": "string",
+    "toDateValue": "string",
+    "toSessionValue": "string",
+    "validationHint": "string",
+    "reasonValue": "string",
+    "remarksValue": "string",
+    "attachmentSummary": "string",
+    "attachmentFiles": [
+      {
+        "fileName": "string"
+      }
+    ],
+    "submitLabel": "string"
+  },
+  "example_response": {
+    "title": "Add New Leave",
+    "selectedStudents": [
+      "Linda Gomez",
+      "Daniel Lee",
+      "Ava Wilson",
+      "Olivia Martinez"
+    ],
+    "applicationDateValue": "1 Sept, 2025, Thursday",
+    "leaveTypeValue": "School Leave",
+    "fromDateValue": "1 Sept, 2025, Thursday",
+    "fromSessionValue": "Evening",
+    "toDateValue": "1 Sept, 2025, Thursday",
+    "toSessionValue": "Morning",
+    "validationHint": "Please make sure the start date/time is earlier than the end date/time.",
+    "reasonValue": "Event Participation",
+    "remarksValue": "New Year Celebration - Vande Matram Dance Troupe",
+    "attachmentSummary": "1_item",
+    "attachmentFiles": [
+      {
+        "fileName": "1275778 .jpg"
+      },
+      {
+        "fileName": "chapter ex 5 .pdf"
+      }
+    ],
+    "submitLabel": "Submit"
+  },
+  "notes": "Values are extracted literally from the node, including the visible date/session ordering and validation hint."
+}

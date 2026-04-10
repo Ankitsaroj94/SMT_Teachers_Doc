@@ -1,0 +1,68 @@
+{
+  "screen": "Leave Application Approvals - Select Items Mode",
+  "figmaNodeId": "8045:109629",
+  "description": "Bulk-selection mode for approvals list with row checkboxes, Select All control, and bottom Reject/Approve actions.",
+  "request": {
+    "selectedLeaveIds": [
+      "string"
+    ],
+    "selectAll": "boolean",
+    "sortBy": "string"
+  },
+  "response": {
+    "headerTitle": "string",
+    "selectAllLabel": "string",
+    "sortHeaderLabel": "string",
+    "cards": [
+      {
+        "leaveId": "string",
+        "employeeName": "string",
+        "employeeMeta": "string",
+        "appliedLabel": "string",
+        "leaveType": "string",
+        "leaveDatesLabel": "string",
+        "reasonLabel": "string",
+        "attachmentsLabel": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "bottomActions": {
+      "rejectLabel": "string",
+      "approveLabel": "string"
+    }
+  },
+  "example_response": {
+    "headerTitle": "Select items",
+    "selectAllLabel": "Select All",
+    "sortHeaderLabel": "Name",
+    "cards": [
+      {
+        "leaveId": "leave_001",
+        "employeeName": "Rajat Abrol",
+        "employeeMeta": "878687 | XII- A",
+        "appliedLabel": "Applied 3w ago",
+        "leaveType": "Leave",
+        "leaveDatesLabel": "4 May 2025, Morning",
+        "reasonLabel": "Reason : Family member died",
+        "attachmentsLabel": "2 Attachments",
+        "isSelected": false
+      },
+      {
+        "leaveId": "leave_002",
+        "employeeName": "Rajat Abrol",
+        "employeeMeta": "878687 | XII- A",
+        "appliedLabel": "Applied 3w ago",
+        "leaveType": "Study Leave",
+        "leaveDatesLabel": "4 May - 6 May 2025",
+        "reasonLabel": "Reason : Event Participation",
+        "attachmentsLabel": "1 Attachments",
+        "isSelected": false
+      }
+    ],
+    "bottomActions": {
+      "rejectLabel": "Reject",
+      "approveLabel": "Approve"
+    }
+  },
+  "notes": "This state is triggered from Select Multiple. Bottom action labels are shown without count suffix in this node."
+}
