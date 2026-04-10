@@ -1,0 +1,78 @@
+{
+  "screen": "Attendance Reports - Student-wise Daily Overview",
+  "figmaNodeId": "8007:186031",
+  "description": "Reports screen with Student-wise scope, class/date/sort chips, daily overview cards, Show Punches toggle, Morning/Evening columns, and per-student attendance marks.",
+  "request": {
+    "scope": "studentWise",
+    "classId": "string",
+    "date": "string",
+    "sortBy": "string",
+    "period": "daily"
+  },
+  "response": {
+    "overview": {
+      "total": "number",
+      "onLeave": "number",
+      "present": "number",
+      "absent": "number"
+    },
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "profilePicture": "string",
+        "studentId": "string",
+        "morningStatus": "P | A | -",
+        "eveningStatus": "P | A | -",
+        "morningPunchTime": "string",
+        "eveningPunchTime": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "pageTitle": "Reports",
+    "filters": {
+      "scopeLabel": "Student-wise",
+      "classLabel": "XII - C",
+      "dateLabel": "Today, 1 Sept 2025",
+      "sortByLabel": "Sort By"
+    },
+    "overview": {
+      "periodLabel": "Daily",
+      "total": 24,
+      "onLeave": 1,
+      "present": 21,
+      "absent": 3
+    },
+    "showPunches": false,
+    "sessionColumns": [
+      "Morning",
+      "Evening"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "profilePicture": "https://via.placeholder.com/150",
+        "studentId": "1561154",
+        "morningStatus": "P",
+        "eveningStatus": "P"
+      },
+      {
+        "serial": 2,
+        "name": "Linda Gomez",
+        "studentId": "1561155",
+        "morningStatus": "P",
+        "eveningStatus": "P"
+      },
+      {
+        "serial": 3,
+        "name": "Sophia Kim",
+        "studentId": "1561157",
+        "morningStatus": "P",
+        "eveningStatus": "A"
+      }
+    ]
+  },
+  "notes": "Show Punches switch is OFF in this node state. Daily overview values are visible as Total 24, On Leave 1, Present 21, Absent 3."
+}

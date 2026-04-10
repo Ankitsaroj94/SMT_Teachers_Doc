@@ -1,0 +1,67 @@
+{
+  "screen": "Attendance Reports - Class-wise Monthly Overview",
+  "figmaNodeId": "8007:187398",
+  "description": "Class-wise monthly report where each class row shows Students Present (%) across day columns in the selected month.",
+  "request": {
+    "scope": "classWise",
+    "month": "string",
+    "sortBy": "string",
+    "period": "monthly"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "monthLabel": "string",
+      "sortByLabel": "string"
+    },
+    "reportTitle": "string",
+    "periodLabel": "string",
+    "dayColumns": [
+      "string"
+    ],
+    "rows": [
+      {
+        "formClass": "string",
+        "dayPercentages": {
+          "31": "string",
+          "30": "string",
+          "29": "string",
+          "28": "string",
+          "27": "string"
+        }
+      }
+    ]
+  },
+  "example_response": {
+    "dayColumns": [
+      "31",
+      "30",
+      "29",
+      "28",
+      "27"
+    ],
+    "data": [
+      {
+        "formClass": "XII - B",
+        "dayPercentages": {
+          "31": "95%",
+          "30": "79%",
+          "29": "98%",
+          "28": "93%",
+          "27": "96%"
+        }
+      },
+      {
+        "formClass": "XII - C",
+        "dayPercentages": {
+          "31": "15%",
+          "30": "34%",
+          "29": "31%",
+          "28": "25%",
+          "27": "35%"
+        }
+      }
+    ]
+  }
+}

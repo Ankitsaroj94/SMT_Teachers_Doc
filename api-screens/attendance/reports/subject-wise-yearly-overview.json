@@ -1,0 +1,90 @@
+{
+  "screen": "Attendance Reports - Subject-wise Yearly Overview",
+  "figmaNodeId": "8007:187806",
+  "description": "Subject-wise report with student rows and month-based percentage values.",
+  "request": {
+    "scope": "subjectWise",
+    "classId": "string",
+    "dateFilter": "string",
+    "sortBy": "string",
+    "period": "yearly"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "classLabel": "string",
+      "dateLabel": "string",
+      "sortByLabel": "string"
+    },
+    "monthColumns": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "studentId": "string",
+        "monthPercentages": {
+          "january": "string",
+          "february": "string",
+          "march": "string",
+          "april": "string",
+          "may": "string",
+          "june": "string",
+          "july": "string",
+          "august": "string",
+          "september": "string",
+          "october": "string",
+          "november": "string",
+          "december": "string"
+        }
+      }
+    ]
+  },
+  "example_response": {
+    "pageTitle": "Reports",
+    "filters": {
+      "scopeLabel": "Subject-wise",
+      "classLabel": "XII - C",
+      "dateLabel": "Today",
+      "sortByLabel": "Sort By"
+    },
+    "monthColumns": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "studentId": "1561154",
+        "monthPercentages": {
+          "january": "40%",
+          "february": "98%",
+          "march": "51%",
+          "april": "85%",
+          "may": "73%",
+          "june": "93%",
+          "july": "38%",
+          "august": "53%",
+          "september": "76%",
+          "october": "31%",
+          "november": "63%",
+          "december": "89%"
+        }
+      }
+    ]
+  },
+  "notes": "The node shows Subject-wise + class/date/sort chips and a month-based matrix. Date chip text is 'Today' in this Figma state even though values are shown month-wise."
+}

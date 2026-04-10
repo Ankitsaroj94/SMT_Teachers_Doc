@@ -1,0 +1,80 @@
+{
+  "screen": "Attendance Reports - Student-wise Monthly Overview",
+  "figmaNodeId": "8007:186461",
+  "description": "Student-wise monthly attendance report with day-wise matrix. Each day has Morning/Evening sub-columns and each student row contains P/A values.",
+  "request": {
+    "scope": "studentWise",
+    "classId": "string",
+    "month": "string",
+    "sortBy": "string",
+    "period": "monthly"
+  },
+  "response": {
+    "overview": {
+      "total": "number",
+      "onLeave": "string",
+      "present": "string",
+      "absent": "string"
+    },
+    "dayColumns": [
+      "string"
+    ],
+    "sessionSubColumns": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "profilePicture": "string",
+        "studentId": "string",
+        "attendanceByDay": [
+          {
+            "day": "string",
+            "morningStatus": "P | A | -",
+            "eveningStatus": "P | A | -"
+          }
+        ]
+      }
+    ]
+  },
+  "example_response": {
+    "overview": {
+      "total": 24,
+      "onLeave": "8%",
+      "present": "70%",
+      "absent": "22%"
+    },
+    "dayColumns": [
+      "31",
+      "30",
+      "29",
+      "28",
+      "27"
+    ],
+    "sessionSubColumns": [
+      "M",
+      "E"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "profilePicture": "https://via.placeholder.com/150",
+        "studentId": "1561154",
+        "attendanceByDay": [
+          {
+            "day": "31",
+            "morningStatus": "P",
+            "eveningStatus": "P"
+          },
+          {
+            "day": "30",
+            "morningStatus": "P",
+            "eveningStatus": "P"
+          }
+        ]
+      }
+    ]
+  }
+}

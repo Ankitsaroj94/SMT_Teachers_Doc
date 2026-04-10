@@ -1,0 +1,52 @@
+{
+  "screen": "Attendance Reports - Class-wise Daily Overview",
+  "figmaNodeId": "8007:187759",
+  "description": "Class-wise daily report showing Students Present (%) with Morning and Evening percentage columns per class.",
+  "request": {
+    "scope": "classWise",
+    "year": "string",
+    "sortBy": "string",
+    "period": "daily"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "yearLabel": "string",
+      "sortByLabel": "string"
+    },
+    "reportTitle": "string",
+    "periodLabel": "string",
+    "columns": {
+      "classLabel": "string",
+      "morningLabel": "string",
+      "eveningLabel": "string"
+    },
+    "rows": [
+      {
+        "formClass": "string",
+        "morningPresentPercent": "string",
+        "eveningPresentPercent": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "data": [
+      {
+        "formClass": "XII - B",
+        "morningPresentPercent": "74%",
+        "eveningPresentPercent": "83%"
+      },
+      {
+        "formClass": "XII - C",
+        "morningPresentPercent": "40%",
+        "eveningPresentPercent": "98%"
+      },
+      {
+        "formClass": "XI - A",
+        "morningPresentPercent": "42%",
+        "eveningPresentPercent": "82%"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "screen": "Attendance Reports - Class-wise Daily Empty State",
+  "figmaNodeId": "8007:187309",
+  "description": "Class-wise daily reports state before a Form-Class is selected. Overview cards show dashes and an empty-state message is displayed.",
+  "request": {
+    "scope": "classWise",
+    "formClassId": "string",
+    "date": "string",
+    "sortBy": "string",
+    "period": "daily"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "formClassLabel": "string",
+      "dateLabel": "string",
+      "sortByLabel": "string"
+    },
+    "overview": {
+      "periodLabel": "string",
+      "total": "string",
+      "onLeave": "string",
+      "present": "string",
+      "absent": "string"
+    },
+    "emptyState": {
+      "title": "string",
+      "subtitle": "string"
+    }
+  },
+  "example_response": {
+    "pageTitle": "Reports",
+    "filters": {
+      "scopeLabel": "Class-wise",
+      "formClassLabel": "Form - Class",
+      "dateLabel": "Today",
+      "sortByLabel": "Sort By"
+    },
+    "overview": {
+      "periodLabel": "Daily",
+      "total": "-",
+      "onLeave": "-",
+      "present": "-",
+      "absent": "-"
+    },
+    "emptyState": {
+      "title": "Nothing to display here",
+      "subtitle": "Please select the Form - Class to see the statistics."
+    }
+  },
+  "notes": "This state is specifically tied to missing Form-Class selection."
+}

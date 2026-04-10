@@ -1,0 +1,86 @@
+{
+  "screen": "Attendance Reports - Student-wise Daily (Show Punches)",
+  "figmaNodeId": "13005:77907",
+  "description": "Student-wise daily report with Show Punches enabled, Morning/Evening session columns, punch times, and per-student attendance status.",
+  "request": {
+    "scope": "studentWise",
+    "classId": "string",
+    "date": "string",
+    "sortBy": "string",
+    "period": "daily",
+    "showPunches": "boolean"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "classLabel": "string",
+      "dateLabel": "string",
+      "sortByLabel": "string"
+    },
+    "overview": {
+      "periodLabel": "string",
+      "total": "number",
+      "onLeave": "number",
+      "present": "number",
+      "absent": "number"
+    },
+    "showPunches": "boolean",
+    "sessionColumns": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "studentId": "string",
+        "morningPunchTime": "string",
+        "eveningPunchTime": "string",
+        "morningStatus": "P | A | -",
+        "eveningStatus": "P | A | -"
+      }
+    ]
+  },
+  "example_response": {
+    "pageTitle": "Reports",
+    "filters": {
+      "scopeLabel": "Student-wise",
+      "classLabel": "XII - C",
+      "dateLabel": "Today, 1 Sept 2025",
+      "sortByLabel": "Sort By"
+    },
+    "overview": {
+      "periodLabel": "Daily",
+      "total": 24,
+      "onLeave": 1,
+      "present": 21,
+      "absent": 3
+    },
+    "showPunches": true,
+    "sessionColumns": [
+      "Morning",
+      "Evening"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "studentId": "1561154",
+        "morningPunchTime": "7:00am",
+        "eveningPunchTime": "7:00am",
+        "morningStatus": "P",
+        "eveningStatus": "P"
+      },
+      {
+        "serial": 2,
+        "name": "Linda Gomez",
+        "studentId": "1561155",
+        "morningPunchTime": "7:00am",
+        "eveningPunchTime": "7:00am",
+        "morningStatus": "P",
+        "eveningStatus": "P"
+      }
+    ]
+  },
+  "notes": "Show Punches switch is ON in this node state. The list explicitly shows morning and evening punch times in addition to P/A attendance marks."
+}

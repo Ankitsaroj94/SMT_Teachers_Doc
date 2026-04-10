@@ -1,0 +1,95 @@
+{
+  "screen": "Attendance Reports - Class-wise Yearly Overview",
+  "figmaNodeId": "8007:187642",
+  "description": "Class-wise yearly report with month columns and Students Present (%) values for each class.",
+  "request": {
+    "scope": "classWise",
+    "year": "string",
+    "sortBy": "string",
+    "period": "yearly"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "yearLabel": "string",
+      "sortByLabel": "string"
+    },
+    "reportTitle": "string",
+    "periodLabel": "string",
+    "monthColumns": [
+      "string"
+    ],
+    "rows": [
+      {
+        "formClass": "string",
+        "monthPercentages": {
+          "january": "string",
+          "february": "string",
+          "march": "string",
+          "april": "string",
+          "may": "string",
+          "june": "string",
+          "july": "string",
+          "august": "string",
+          "september": "string",
+          "october": "string",
+          "november": "string",
+          "december": "string"
+        }
+      }
+    ]
+  },
+  "example_response": {
+    "monthLabels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "data": [
+      {
+        "formClass": "XII - B",
+        "monthPercentages": {
+          "january": "74%",
+          "february": "83%",
+          "march": "39%",
+          "april": "90%",
+          "may": "61%",
+          "june": "72%",
+          "july": "97%",
+          "august": "50%",
+          "september": "37%",
+          "october": "99%",
+          "november": "67%",
+          "december": "59%"
+        }
+      },
+      {
+        "formClass": "XII - C",
+        "monthPercentages": {
+          "january": "40%",
+          "february": "98%",
+          "march": "51%",
+          "april": "85%",
+          "may": "73%",
+          "june": "93%",
+          "july": "38%",
+          "august": "53%",
+          "september": "76%",
+          "october": "31%",
+          "november": "63%",
+          "december": "89%"
+        }
+      }
+    ]
+  }
+}

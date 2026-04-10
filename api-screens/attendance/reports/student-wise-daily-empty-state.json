@@ -1,0 +1,55 @@
+{
+  "screen": "Attendance Reports - Student-wise Daily Empty State",
+  "figmaNodeId": "12907:97686",
+  "description": "Student-wise daily reports state with no attendance submitted for the selected day. Overview shows dashes and a call-to-action to mark attendance.",
+  "request": {
+    "scope": "studentWise",
+    "classId": "string",
+    "date": "string",
+    "sortBy": "string",
+    "period": "daily"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filters": {
+      "scopeLabel": "string",
+      "classLabel": "string",
+      "dateLabel": "string",
+      "sortByLabel": "string"
+    },
+    "overview": {
+      "periodLabel": "string",
+      "total": "string",
+      "onLeave": "string",
+      "present": "string",
+      "absent": "string"
+    },
+    "emptyState": {
+      "messageTitle": "string",
+      "messageBody": "string",
+      "primaryActionLabel": "string"
+    }
+  },
+  "example_response": {
+    "pageTitle": "Reports",
+    "filters": {
+      "scopeLabel": "Student-wise",
+      "classLabel": "XII - C",
+      "dateLabel": "Today, 1 Sept 2025",
+      "sortByLabel": "Sort By"
+    },
+    "overview": {
+      "periodLabel": "Daily",
+      "total": "-",
+      "onLeave": "-",
+      "present": "-",
+      "absent": "-"
+    },
+    "emptyState": {
+      "messageTitle": "Attendance not recorded",
+      "messageBody": "School was in session on [Date], but no data was submitted.",
+      "primaryActionLabel": "Mark Attendance Now"
+    }
+  },
+  "notes": "This state includes an explicit CTA button to go to attendance marking flow."
+}

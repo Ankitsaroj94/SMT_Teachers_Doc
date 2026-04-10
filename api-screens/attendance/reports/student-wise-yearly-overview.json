@@ -1,0 +1,91 @@
+{
+  "screen": "Attendance Reports - Student-wise Yearly Overview",
+  "figmaNodeId": "8007:186205",
+  "description": "Student-wise yearly report with month columns and percentage values per student.",
+  "request": {
+    "scope": "studentWise",
+    "classId": "string",
+    "year": "string",
+    "sortBy": "string",
+    "period": "yearly"
+  },
+  "response": {
+    
+    "overview": {
+      "periodLabel": "string",
+      "total": "number",
+      "onLeave": "string",
+      "present": "string",
+      "absent": "string"
+    },
+    "monthColumns": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "profilePicture": "string",
+        "studentId": "string",
+        "monthPercentages": {
+          "january": "string",
+          "february": "string",
+          "march": "string",
+          "april": "string",
+          "may": "string",
+          "june": "string",
+          "july": "string",
+          "august": "string",
+          "september": "string",
+          "october": "string",
+          "november": "string",
+          "december": "string"
+        }
+      }
+    ]
+  },
+  "example_response": {
+    "overview": {
+      "total": 24,
+      "onLeave": "8%",
+      "present": "70%",
+      "absent": "22%"
+    },
+    "monthColumns": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "profilePicture": "https://via.placeholder.com/150",
+        "studentId": "1561154",
+        "monthPercentages": {
+          "january": "40%",
+          "february": "98%",
+          "march": "51%",
+          "april": "85%",
+          "may": "73%",
+          "june": "93%",
+          "july": "38%",
+          "august": "53%",
+          "september": "76%",
+          "october": "31%",
+          "november": "63%",
+          "december": "89%"
+        }
+      }
+    ]
+  }
+}
