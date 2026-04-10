@@ -1,0 +1,105 @@
+{
+  "screen": "Student Attendance — Class Schedule (Class Selected)",
+  "figmaNodeId": "14487:167975",
+  "description": "Same Attendance / Class Schedule shell with filters applied: session shows Morning, class XII C, summary counts (Total, On Leave, Present, Absent), and List of Absentees table (Class, Roll No., Name, Date).",
+  "request": {
+    "sessionId": "string",
+    "classId": "string",
+    "dateFilter": "string",
+    "subjectId": "string"
+  },
+  "response": {
+    "attendanceSummary": {
+      "total": "number",
+      "onLeave": "number",
+      "present": "number",
+      "absent": "number"
+    },
+    "absentees": {
+
+      "columns": {
+        "class": "string",
+        "rollNo": "string",
+        "name": "string",
+        "date": "string"
+      },
+      "rows": [
+        {
+          "classGrade": "string",
+          "classSection": "string",
+          "rollNo": "string",
+          "name": "string",
+          "date": "string"
+        }
+      ]
+    },
+    "activeFooterTab": "string"
+  },
+
+
+  "example_response": {
+    "pageTitle": "Attendance",
+    "subModules": [
+      { "id": "student_attendance", "label": "Student Attendance" },
+      { "id": "leave_application", "label": "Leave Application" },
+      { "id": "add_new_leave", "label": "Add New Leave" },
+      { "id": "student_reports", "label": "Student Reports" }
+    ],
+    "sectionTitle": "Attendance",
+    "filterRow": {
+      "sessionLabel": "Morning",
+      "classLabel": "XII C",
+      "dateChipLabel": "Today",
+      "subjectLabel": "Subject"
+    },
+    "selectedClassDisplay": "XII C",
+    "attendanceSummary": {
+      "total": 24,
+      "onLeave": 1,
+      "present": 21,
+      "absent": 3
+    },
+    "absentees": {
+      "sectionTitle": "List of Absentees",
+      "dateSubLabel": "Today",
+      "columns": {
+        "class": "Class",
+        "rollNo": "Roll No.",
+        "name": "Name",
+        "date": "Date"
+      },
+      "rows": [
+        {
+          "classGrade": "XI",
+          "classSection": "C",
+          "rollNo": "23490",
+          "name": "Aditi Sharma",
+          "date": "07 May"
+        },
+        {
+          "classGrade": "III",
+          "classSection": "C",
+          "rollNo": "33210",
+          "name": "Aaryan Kashyap",
+          "date": "07 May"
+        },
+        {
+          "classGrade": "IV",
+          "classSection": "A",
+          "rollNo": "44567",
+          "name": "Riya Patel",
+          "date": "07 May"
+        },
+        {
+          "classGrade": "V",
+          "classSection": "B",
+          "rollNo": "55678",
+          "name": "Nikhil Verma",
+          "date": "07 May"
+        }
+      ]
+    },
+    "activeFooterTab": "studentAttendance"
+  },
+  "notes": "Class column in design stacks grade and section on two lines (e.g. XI / C). sessionLabel reflects selected session (empty state contract uses Session; this variant uses Morning). subjectLabel remains Subject in design until a subject is chosen."
+}

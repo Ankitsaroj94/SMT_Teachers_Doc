@@ -1,0 +1,29 @@
+Today’s work — API screen contracts (SMT Teachers Doc)
+Date reference: 2026-04-08
+
+1) Create Assignment (Figma: Create Assignment / node 8332:97171)
+   - Contract path: api-screens/assignments/create-assignments/create-assignment.json
+   - Covers publish form: title, description, attachments (gallery/camera/document/audio),
+     subject, category, applicable to, toggles, deadlines, parent portal dates, notes, Publish.
+
+2) Attendance → Class schedule (Figma batch)
+   - Folder: api-screens/attendance/class-schedule/
+   - student-attendance-empty-filters.json — figma 11400:79453 (filters empty state)
+   - student-attendance-class-overview.json — figma 14487:167975 (XII C, summary, absentees table)
+   - leave-calendar.json — figma 8045:108811 (Leave Calendar, chips, day-grouped leave cards)
+
+3) Attendance → Student attendance / mark flow (Figma batch)
+   - Folder: api-screens/attendance/student-attendance/
+   - mark-attendance-setup-class-session.json — figma 8007:189100 (Class + session + mark all + Continue)
+   - mark-attendance-setup-subject-periods.json — figma 8007:189679 (Subject + periods 1–8 + Continue)
+   - student-attendance-roster-unmarked.json — figma 10671:150532 (roster with – / Submit)
+   - student-attendance-roster-all-present.json — figma 12113:87018 (roster all P / Submit)
+   - student-attendance-submit-confirmation.json — figma 12900:96621 (modal, summary, notify parents, Submit/Cancel)
+
+4) Workspace / rules touchpoints (if modified in same session)
+   - .cursor/rules/api-screens-contracts.mdc — per git status at session start (verify locally if needed)
+
+Notes
+- Contracts follow project conventions: screen, figmaNodeId, description, request, response,
+  example_response where used; camelCase for new attendance/assignment shapes; kebab-case JSON filenames.
+- Figma source: file iv4SFTxeHwgBYQ6TNhydaL (Shriconnect Staff App) unless noted otherwise.

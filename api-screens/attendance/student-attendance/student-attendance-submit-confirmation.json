@@ -1,0 +1,57 @@
+{
+  "screen": "Student Attendance — Submit Confirmation",
+  "figmaNodeId": "12900:96621",
+  "description": "Modal over roster: Mark Attendance title, confirmation copy for class and date, Summary card (Total, On Leave, Present, Absent), Notify parents of absentees with channel toggles (Whatsapp, SMS), disclaimer text, Submit and Cancel.",
+  "request": {
+    "classId": "string",
+    "selectedDate": "string",
+    "session": "both | morning | evening",
+    "draftAttendance": [
+      {
+        "studentId": "string",
+        "attendanceMark": "present | absent | unmarked"
+      }
+    ],
+    "notifyAbsentViaWhatsapp": "boolean",
+    "notifyAbsentViaSms": "boolean"
+  },
+  "response": {
+    "modalTitle": "string",
+    "confirmMessage": "string",
+    "summary": {
+      "total": "number",
+      "onLeave": "number",
+      "present": "number",
+      "absent": "number"
+    },
+    "notifySectionTitle": "string",
+    "channels": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "notificationDisclaimer": "string",
+    "submitLabel": "string",
+    "cancelLabel": "string"
+  },
+  "example_response": {
+    "modalTitle": "Mark Attendance",
+    "confirmMessage": "Are you sure you want to mark today's attendance for class XII - C ?",
+    "summary": {
+      "total": 24,
+      "onLeave": 1,
+      "present": 21,
+      "absent": 3
+    },
+    "notifySectionTitle": "Notify parents of absentees.",
+    "channels": [
+      { "id": "whatsapp", "label": "Whatsapp" },
+      { "id": "sms", "label": "SMS" }
+    ],
+    "notificationDisclaimer": "Notification will be triggered to the parents of the students who are marked absent.",
+    "submitLabel": "Submit",
+    "cancelLabel": "Cancel"
+  },
+  "notes": "confirmMessage uses curly apostrophe in Figma (today's); example uses ASCII apostrophe. draftAttendance in request is optional linkage if submit API validates client-side roster; omit if server recomputes from session id only. Modal stacks visually above same roster as student-attendance-roster-* screens."
+}

@@ -1,0 +1,70 @@
+{
+  "screen": "Student Attendance — Class Schedule (No Filters)",
+  "figmaNodeId": "11400:79453",
+  "description": "Attendance hub on Class Schedule flow: sub-module tiles, Attendance section with Session / Class / Today / Subject filter row, empty class summary and absentees panels until filters are applied. Footer tab Student Attendance active.",
+  "request": {
+    "sessionId": "string",
+    "classId": "string",
+    "dateFilter": "string",
+    "subjectId": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "subModules": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "sectionTitle": "string",
+    "filterRow": {
+      "sessionLabel": "string",
+      "classLabel": "string",
+      "dateChipLabel": "string",
+      "subjectLabel": "string"
+    },
+    "classSummary": {
+      "isEmpty": "boolean",
+      "emptyTitle": "string",
+      "emptySubtitle": "string"
+    },
+    "absentees": {
+      "sectionTitle": "string",
+      "dateSubLabel": "string",
+      "isEmpty": "boolean",
+      "emptyTitle": "string",
+      "emptySubtitle": "string"
+    },
+    "activeFooterTab": "string"
+  },
+  "example_response": {
+    "pageTitle": "Attendance",
+    "subModules": [
+      { "id": "student_attendance", "label": "Student Attendance" },
+      { "id": "leave_application", "label": "Leave Application" },
+      { "id": "add_new_leave", "label": "Add New Leave" },
+      { "id": "student_reports", "label": "Student Reports" }
+    ],
+    "sectionTitle": "Attendance",
+    "filterRow": {
+      "sessionLabel": "Session",
+      "classLabel": "Class",
+      "dateChipLabel": "Today",
+      "subjectLabel": "Subject"
+    },
+    "classSummary": {
+      "isEmpty": true,
+      "emptyTitle": "No Filter selected.",
+      "emptySubtitle": "Select filters to view class data"
+    },
+    "absentees": {
+      "sectionTitle": "List of Absentees",
+      "dateSubLabel": "Today",
+      "isEmpty": true,
+      "emptyTitle": "No Filter selected.",
+      "emptySubtitle": "Select filters to view class data"
+    },
+    "activeFooterTab": "studentAttendance"
+  },
+  "notes": "When any of sessionId, classId, dateFilter, or subjectId is unset in the client, UI matches empty state. Figma frame name is Class Schedule; filter chips show row labels Session, Class, Today, Subject with chevrons."
+}

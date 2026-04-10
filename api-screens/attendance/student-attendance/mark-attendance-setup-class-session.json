@@ -1,0 +1,44 @@
+{
+  "screen": "Mark Attendance Setup — Class & Session",
+  "figmaNodeId": "8007:189100",
+  "description": "Student Attendance entry: Mark Attendance for? segmented Class | Subject (Class selected), class select (e.g. XII - C), Select Date with Today label and date chip, Which Session? (Both, Morning, Evening), Mark all as (Present, Absent, Punches), sticky Continue.",
+  "request": {
+    "markAttendanceFor": "class",
+    "classId": "string",
+    "date": "string",
+    "session": "both | morning | evening",
+    "bulkMarkAs": "present | absent | punches"
+  },
+  "response": {
+    "pageTitle": "string",
+    "markAttendanceFor": "class | subject",
+    "classOptions": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "selectedClassId": "string",
+    "selectedClassLabel": "string",
+    "datePreset": "string",
+    "selectedDate": "string",
+    "session": "both | morning | evening",
+    "bulkMarkAs": "present | absent | punches",
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Student Attendance",
+    "markAttendanceFor": "class",
+    "classOptions": [
+      { "id": "xii_c", "label": "XII - C" }
+    ],
+    "selectedClassId": "xii_c",
+    "selectedClassLabel": "XII - C",
+    "datePreset": "Today",
+    "selectedDate": "2025-08-19",
+    "session": "both",
+    "bulkMarkAs": "present",
+    "primaryActionLabel": "Continue"
+  },
+  "notes": "Figma shows date chip copy as 19 Aug, 2025; example_response uses ISO date for selectedDate. Session row: Both uses distinct selected styling in file — confirm product default. Subject tab visible but inactive when markAttendanceFor is class."
+}

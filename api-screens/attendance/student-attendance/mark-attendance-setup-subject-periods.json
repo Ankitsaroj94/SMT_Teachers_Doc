@@ -1,0 +1,51 @@
+{
+  "screen": "Mark Attendance Setup — Subject & Periods",
+  "figmaNodeId": "8007:189679",
+  "description": "Student Attendance when marking by subject: Class | Subject (Subject selected), Select Form - Class and Select Subject dropdowns, Select Date, Which Period? grid Period 1–8, Mark all as (Present, Absent, Class Attendance, Punches), sticky Continue.",
+  "request": {
+    "markAttendanceFor": "subject",
+    "formClassId": "string",
+    "subjectId": "string",
+    "date": "string",
+    "period": "number",
+    "bulkMarkAs": "present | absent | classAttendance | punches"
+  },
+  "response": {
+    "pageTitle": "string",
+    "markAttendanceFor": "class | subject",
+    "formClassPlaceholder": "string",
+    "subjectPlaceholder": "string",
+    "selectedFormClassId": "string",
+    "selectedSubjectId": "string",
+    "datePreset": "string",
+    "selectedDate": "string",
+    "periodLabels": ["string"],
+    "selectedPeriod": "number",
+    "bulkMarkAs": "present | absent | classAttendance | punches",
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Student Attendance",
+    "markAttendanceFor": "subject",
+    "formClassPlaceholder": "Select Form - Class",
+    "subjectPlaceholder": "Select Subject",
+    "selectedFormClassId": "",
+    "selectedSubjectId": "",
+    "datePreset": "Today",
+    "selectedDate": "2025-08-19",
+    "periodLabels": [
+      "Period 1",
+      "Period 2",
+      "Period 3",
+      "Period 4",
+      "Period 5",
+      "Period 6",
+      "Period 7",
+      "Period 8"
+    ],
+    "selectedPeriod": 1,
+    "bulkMarkAs": "present",
+    "primaryActionLabel": "Continue"
+  },
+  "notes": "period is 1–8 matching tab labels. bulkMarkAs enum adds classAttendance for the extra tab vs class/session setup screen. Placeholders shown until user selects form class and subject."
+}

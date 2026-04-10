@@ -1,0 +1,64 @@
+{
+  "screen": "Student Attendance — Roster (All Present)",
+  "figmaNodeId": "12113:87018",
+  "description": "Same roster shell as unmarked state; Mark all as and each row show Present (P). Submit enabled at bottom.",
+  "request": {
+    "classId": "string",
+    "selectedDate": "string",
+    "sortBy": "string",
+    "session": "both | morning | evening",
+    "search": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "chips": {
+      "classLabel": "string",
+      "dateLabel": "string",
+      "sortByLabel": "string"
+    },
+    "session": "both | morning | evening",
+    "markAllControl": {
+      "label": "string",
+      "value": "unmarked | present | absent"
+    },
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "studentId": "string",
+        "punchTimeLabel": "string",
+        "attendanceMark": "unmarked | present | absent"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Student Attendance",
+    "chips": {
+      "classLabel": "XII - C",
+      "dateLabel": "19 May 2025",
+      "sortByLabel": "Sort By"
+    },
+    "session": "both",
+    "markAllControl": {
+      "label": "Mark all as",
+      "value": "present"
+    },
+    "students": [
+      { "serial": 1, "name": "Mark Thompson", "studentId": "1561154", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 2, "name": "Linda Gomez", "studentId": "1561155", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 3, "name": "Riya Patel", "studentId": "1561155", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 4, "name": "Sophia Kim", "studentId": "1561157", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 5, "name": "Ethan Brown", "studentId": "1561158", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 6, "name": "Ava Wilson", "studentId": "1561159", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 7, "name": "Daniel Lee", "studentId": "1561160", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 8, "name": "Olivia Martinez", "studentId": "1561161", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 9, "name": "Henry Davis", "studentId": "1561162", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 10, "name": "Emily Johnson", "studentId": "1561163", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 11, "name": "Michael Clark", "studentId": "1561164", "punchTimeLabel": "7:00am", "attendanceMark": "present" },
+      { "serial": 12, "name": "James Chen", "studentId": "1561156", "punchTimeLabel": "7:00am", "attendanceMark": "present" }
+    ],
+    "primaryActionLabel": "Submit"
+  },
+  "notes": "UI displays P in the toggle when attendanceMark is present. Pair with student-attendance-roster-unmarked.json for the same request shape and schema."
+}

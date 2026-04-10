@@ -1,0 +1,54 @@
+{
+  "screen": "Student Attendance — Roster (Unmarked)",
+  "figmaNodeId": "10671:150532",
+  "description": "Roster after setup: header with search, filter chips (class, date, Sort By), session pills (Both, Morning, Evening), Mark all as present/absent control showing unselected (–), scrollable student rows (serial, avatar, name, student id, punch time, per-row present/absent switch unmarked), Submit.",
+  "request": {
+    "classId": "string",
+    "selectedDate": "string",
+    "sortBy": "string",
+    "session": "both | morning | evening",
+    "search": "string"
+  },
+  "response": {
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "profilePic": "string",
+        "studentId": "string",
+        "punchTime": "string",
+        "attendanceMark": "unmarked | present | absent",
+        "remark":"string"
+      }
+    ]
+  },
+  "example_response": {
+    "pageTitle": "Student Attendance",
+    "chips": {
+      "classLabel": "XII - C",
+      "dateLabel": "19 May 2025",
+      "sortByLabel": "Sort By"
+    },
+    "session": "both",
+    "markAllControl": {
+      "label": "Mark all as",
+      "value": "unmarked"
+    },
+    "students": [
+      { "serial": 1, "name": "Mark Thompson", "studentId": "1561154", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 2, "name": "Linda Gomez", "studentId": "1561155", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 3, "name": "Riya Patel", "studentId": "1561155", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 4, "name": "Sophia Kim", "studentId": "1561157", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 5, "name": "Ethan Brown", "studentId": "1561158", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 6, "name": "Ava Wilson", "studentId": "1561159", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 7, "name": "Daniel Lee", "studentId": "1561160", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 8, "name": "Olivia Martinez", "studentId": "1561161", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 9, "name": "Henry Davis", "studentId": "1561162", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 10, "name": "Emily Johnson", "studentId": "1561163", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 11, "name": "Michael Clark", "studentId": "1561164", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" },
+      { "serial": 12, "name": "James Chen", "studentId": "1561156", "punchTimeLabel": "7:00am", "attendanceMark": "unmarked" }
+    ],
+    "primaryActionLabel": "Submit"
+  },
+  "notes": "Per-row switch shows en dash – in design when unset. Figma duplicates studentId 1561155 on rows 2–3; example keeps design literals. session selection styling may differ from example — adjust selected session to match implementation."
+}
