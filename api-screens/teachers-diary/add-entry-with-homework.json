@@ -1,0 +1,48 @@
+{
+  "screen": "Add Entry (Homework Assigned)",
+  "description": "Create a teacher diary entry with homework assignment blocks visible and attached.",
+  "figmaNodeId": "14655:106739",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "date": "string",
+    "period": "string",
+    "totalStudentsAttended": "number",
+    "subTopicOrLessonPlan": "string",
+    "lessonSummary": "string",
+    "coverageStatus": "string",
+    "coveragePercentage": "number",
+    "academicResource": "string",
+    "sourceUsed": "string",
+    "teacherFeedback": "string",
+    "syncFromLessonPlan": "boolean",
+    "homeworkAssigned": "boolean",
+    "homeworkItems": [
+      {
+        "subject": "string",
+        "title": "string",
+        "homeworkId": "string",
+        "homeworkType": "string",
+        "attachmentsCount": "number",
+        "dueOn": "string",
+        "uploadedOn": "string"
+      }
+    ]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "entryId": "string",
+    "homeworkLinkedCount": "number"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Diary entry created",
+    "entryId": "TDR-1070742",
+    "homeworkLinkedCount": 2
+  },
+  "notes": {
+    "coverageStatus": "Initiated | Partial | Complete",
+    "homeworkItems": "Visible when homeworkAssigned is true"
+  }
+}

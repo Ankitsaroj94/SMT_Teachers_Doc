@@ -1,0 +1,71 @@
+{
+  "screen": "Teachers Diary Calendar Mini",
+  "description": "Teachers diary list with compact weekly calendar strip and date-specific entries.",
+  "figmaNodeId": "14655:105151",
+  "request": {
+    "selectedDate": "string",
+    "dateRange": "string",
+    "class": "string",
+    "subject": "string",
+    "status": "string"
+  },
+  "response": {
+    "title": "string",
+    "monthLabel": "string",
+    "dateStrip": [
+      {
+        "weekDay": "string",
+        "day": "number",
+        "date": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "selectedDateLabel": "string",
+    "entries": [
+      {
+        "class": "string",
+        "subject": "string",
+        "period": "string",
+        "subTopic": "string",
+        "coverageStatus": "string",
+        "teacherName": "string",
+        "attendanceSummary": "string"
+      }
+    ],
+    "addEntryCta": "string"
+  },
+  "example_response": {
+    "title": "Teachers Dairy",
+    "monthLabel": "May 2024",
+    "dateStrip": [
+      {
+        "weekDay": "M",
+        "day": 19,
+        "date": "2024-05-19",
+        "isSelected": true
+      },
+      {
+        "weekDay": "T",
+        "day": 20,
+        "date": "2024-05-20",
+        "isSelected": false
+      }
+    ],
+    "selectedDateLabel": "Monday - 19 May",
+    "entries": [
+      {
+        "class": "XII-B",
+        "subject": "PHYSICS",
+        "period": "Period 4",
+        "subTopic": "Electromagnetism",
+        "coverageStatus": "Complete",
+        "teacherName": "Anisha Verma",
+        "attendanceSummary": "45/50 students"
+      }
+    ],
+    "addEntryCta": "Add Entry"
+  },
+  "notes": {
+    "status": "Initiated | Partial | Complete"
+  }
+}

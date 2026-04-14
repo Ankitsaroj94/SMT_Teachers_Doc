@@ -1,0 +1,32 @@
+{
+  "screen": "Add Entry",
+  "description": "Create a teacher diary entry with class, lesson, coverage, and optional notes.",
+  "figmaNodeId": "14655:105610",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "date": "string",
+    "period": "string",
+    "totalStudentsAttended": "number",
+    "subTopicOrLessonPlan": "string",
+    "lessonSummary": "string",
+    "coverageStatus": "string",
+    "coveragePercentage": "number",
+    "academicResource": "string",
+    "sourceUsed": "string",
+    "teacherFeedback": "string",
+    "syncFromLessonPlan": "boolean",
+    "homeworkAssigned": "boolean"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "entryId": "string",
+    "coverageStatus": "string"
+  },
+  "notes": {
+    "coverageStatus": "Initiated | Partial | Complete",
+    "coveragePercentage": "Relevant when coverageStatus is Partial",
+    "syncFromLessonPlan": "When true, linked lesson plan completion auto-updates entry status"
+  }
+}

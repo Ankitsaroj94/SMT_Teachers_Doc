@@ -1,0 +1,79 @@
+{
+  "screen": "Teachers Diary Calendar List",
+  "description": "Teachers diary grouped by day sections with per-day class entries and top filters.",
+  "figmaNodeId": "14655:104668",
+  "request": {
+    "fromDate": "string",
+    "toDate": "string",
+    "class": "string",
+    "subject": "string",
+    "status": "string"
+  },
+  "response": {
+    "title": "string",
+    "selectedWeek": [
+      {
+        "weekDay": "string",
+        "day": "number",
+        "date": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "sections": [
+      {
+        "label": "string",
+        "dateLabel": "string",
+        "entries": [
+          {
+            "class": "string",
+            "subject": "string",
+            "period": "string",
+            "subTopic": "string",
+            "coverageStatus": "string",
+            "teacherName": "string",
+            "attendanceSummary": "string"
+          }
+        ]
+      }
+    ],
+    "addEntryCta": "string"
+  },
+  "example_response": {
+    "selectedWeek": [
+      {
+        "weekDay": "M",
+        "day": 19,
+        "date": "2024-05-19",
+        "isSelected": true
+      },
+      {
+        "weekDay": "T",
+        "day": 20,
+        "date": "2024-05-20",
+        "isSelected": false
+      }
+    ],
+    "sections": [
+      {
+        "label": "Today",
+        "dateLabel": "MONDAY - 19 MAY",
+        "entries": [
+          {
+            "class": "XII-A",
+            "subject": "MATHEMATICS",
+            "period": "Period 4",
+            "subTopic": "Quadratic Equations",
+            "coverageStatus": "Partial",
+            "teacherName": "Rajat Abrol",
+            "attendanceSummary": "49/52 students"
+          }
+        ]
+      }
+    ],
+    "addEntryCta": "Add Entry"
+  },
+  "notes": {
+    "status": "Initiated | Partial | Complete",
+    "sections": "Grouped by date headings like Today and weekday labels"
+  }
+}

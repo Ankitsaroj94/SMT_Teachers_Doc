@@ -1,0 +1,61 @@
+{
+  "screen": "Teachers Diary Entry Detail",
+  "description": "Read-only detail of a teacher diary entry with lesson information, resources, and inline comments.",
+  "figmaNodeId": "15159:117341",
+  "request": {
+    "entryId": "string"
+  },
+  "response": {
+    "class": "string",
+    "subject": "string",
+    "period": "string",
+    "subTopic": "string",
+    "coverageStatus": "string",
+    "teacherName": "string",
+    "attendanceSummary": "string",
+    "updatedAt": "string",
+    "lessonSummary": "string",
+    "coveragePercentage": "number",
+    "academicResource": {
+      "title": "string",
+      "uploadedBy": "string",
+      "uploadedAt": "string"
+    },
+    "sourceUsed": "string",
+    "teacherFeedback": "string",
+    "syncFromLessonPlan": "boolean",
+    "homeworkAssigned": "boolean",
+    "actions": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "class": "XII-A",
+    "subject": "MATHEMATICS",
+    "period": "Period 4",
+    "subTopic": "Quadratic Equations",
+    "coverageStatus": "Partial",
+    "teacherName": "Rajat Abrol",
+    "attendanceSummary": "49/52 students",
+    "updatedAt": "16 Feb 2026, 2:30 PM",
+    "lessonSummary": "The WiFi in Computer Lab 3 (Ground Floor) has been intermittently dropping since Monday morning.",
+    "coveragePercentage": 80,
+    "academicResource": {
+      "title": "Discussion Wrap-Up",
+      "uploadedBy": "Sita Verma",
+      "uploadedAt": "16 Feb 2026, 2:30 PM"
+    },
+    "sourceUsed": "|-",
+    "teacherFeedback": "Lorem ipsum dolor sit amet consectetur.",
+    "syncFromLessonPlan": true,
+    "homeworkAssigned": true,
+    "actions": [
+      "Edit",
+      "Add Comment",
+      "Send"
+    ]
+  },
+  "notes": {
+    "coverageStatus": "Initiated | Partial | Complete"
+  }
+}

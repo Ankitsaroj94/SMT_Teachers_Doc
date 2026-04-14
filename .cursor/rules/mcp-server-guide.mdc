@@ -1,0 +1,18 @@
+---
+description: Use local mcp-server-guide skills for Figma workflows
+alwaysApply: true
+---
+
+# MCP Server Guide Rules
+
+- For Figma-related requests, use local skill docs from `.cursor/rules/mcp-server-guide/skills/` first.
+- Prefer these skills in order based on task:
+  - `figma-use` for Figma write actions and API operations.
+  - `figma-implement-design` for design-to-code implementation.
+  - `figma-generate-design` for creating/updating screen layouts in Figma.
+  - `figma-code-connect` for component mapping with code.
+  - `figma-create-design-system-rules` or `figma-generate-library` for design-system setup.
+- Follow `README.md` and `figma-power/POWER.md` inside `.cursor/rules/mcp-server-guide/` for setup/usage conventions.
+- Do **not** create or ask for manual MCP server JSON blocks like:
+  - `{ "servers": { "figma": { "type": "http", "url": "https://mcp.figma.com/mcp" } } }`
+- Assume plugin/skills-based setup is preferred for this workspace unless the user explicitly asks for manual MCP config.

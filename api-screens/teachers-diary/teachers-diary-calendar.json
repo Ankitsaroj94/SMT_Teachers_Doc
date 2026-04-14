@@ -1,0 +1,98 @@
+{
+  "screen": "Teachers Diary Calendar",
+  "description": "Teachers diary overview with full month calendar, selected date cards, filters, and entry list.",
+  "figmaNodeId": "14655:104406",
+  "request": {
+    "month": "string",
+    "year": "number",
+    "selectedDate": "string",
+    "dateRange": "string",
+    "class": "string",
+    "subject": "string",
+    "status": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "title": "string",
+    "monthLabel": "string",
+    "calendar": {
+      "weekDays": [
+        "string"
+      ],
+      "dates": [
+        {
+          "date": "string",
+          "day": "number",
+          "isCurrentMonth": "boolean",
+          "isSelected": "boolean"
+        }
+      ]
+    },
+    "selectedDateLabel": "string",
+    "entries": [
+      {
+        "class": "string",
+        "subject": "string",
+        "period": "string",
+        "subTopic": "string",
+        "coverageStatus": "string",
+        "teacherName": "string",
+        "attendanceSummary": "string"
+      }
+    ],
+    "addEntryCta": "string",
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "title": "Teachers Dairy",
+    "monthLabel": "May 2024",
+    "calendar": {
+      "weekDays": [
+        "M",
+        "T",
+        "W",
+        "T",
+        "F",
+        "S",
+        "S"
+      ],
+      "dates": [
+        {
+          "date": "2024-05-19",
+          "day": 19,
+          "isCurrentMonth": true,
+          "isSelected": true
+        },
+        {
+          "date": "2024-05-20",
+          "day": 20,
+          "isCurrentMonth": true,
+          "isSelected": false
+        }
+      ]
+    },
+    "selectedDateLabel": "Monday - 19 May",
+    "entries": [
+      {
+        "class": "XII-A",
+        "subject": "MATHEMATICS",
+        "period": "Period 4",
+        "subTopic": "Quadratic Equations",
+        "coverageStatus": "Partial",
+        "teacherName": "Rajat Abrol",
+        "attendanceSummary": "49/52 students"
+      }
+    ],
+    "addEntryCta": "Add Entry",
+    "total": 12,
+    "page": 1,
+    "limit": 10
+  },
+  "notes": {
+    "status": "Initiated | Partial | Complete",
+    "entries": "List content reflects selected calendar date and applied filter chips"
+  }
+}
