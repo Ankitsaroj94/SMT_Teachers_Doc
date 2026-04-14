@@ -1,0 +1,34 @@
+{
+  "screen": "Leave Action (Approve / Reject)",
+  "description": "Single endpoint to approve or reject one or multiple leave requests — triggered from Approve / Reject buttons on the list or detail screen, and from the bulk-select action sheet",
+  "request": {
+    "leaveIds": ["string"],
+    "action": "approve | reject",
+    "comment": "string",
+    "reasonTags": ["string"]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "processed": "number",
+    "batchFlag": "string"
+  },
+  "reasonTagsOptions": {
+    "data": [
+      { "id": "string", "label": "string" }
+    ],
+    "example": [
+      { "id": "staffing_needs", "label": "Staffing needs" },
+      { "id": "urgent_tasks", "label": "Urgent tasks" },
+      { "id": "project_deadlines", "label": "Project deadlines" }
+    ]
+  },
+  "notes": {
+    "leaveIds": "array to support bulk actions from Select Multiple mode; single-item array for individual approve/reject",
+    "action": "required — determines outcome; 'approve' or 'reject'",
+    "comment": "optional for both action types",
+    "reasonTags": "optional; array of selected tag IDs — only applicable when action is 'reject'",
+    "batchFlag": "mirrors action value — 'approved' or 'rejected'",
+    "processed": "count of successfully actioned leave IDs"
+  }
+}

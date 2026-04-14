@@ -30,66 +30,38 @@
         "isSelected": "boolean"
       }
     ],
-    "selectMultipleCtaLabel": "string",
+    "selectMultipleCtaLabel": "string | null",
     "cards": [
       {
         "employeeName": "string",
         "employeeMeta": "string",
-        "appliedLabel": "string",
+        "appliedLabel": "string | null",
+        "decisionLabel": "string | null",
         "leaveType": "string",
         "leaveDatesLabel": "string",
         "reasonLabel": "string",
         "attachmentsLabel": "string",
-        "actions": [
-          "string"
-        ]
+        "actions": ["string"]
       }
     ]
   },
   "example_response": {
     "screenTitle": "Leave Application",
     "leaveTypeTabs": [
-      {
-        "label": "All",
-        "count": 3
-      },
-      {
-        "label": "Leave",
-        "count": 3
-      },
-      {
-        "label": "Study Leave",
-        "count": 3
-      },
-      {
-        "label": "Representing School",
-        "count": 3
-      },
-      {
-        "label": "Medical Leave",
-        "count": 3
-      }
+      { "label": "All", "count": 3 },
+      { "label": "Leave", "count": 3 },
+      { "label": "Study Leave", "count": 3 },
+      { "label": "Representing School", "count": 3 },
+      { "label": "Medical Leave", "count": 3 }
     ],
     "filterChips": {
       "classLabel": "Class",
       "sortByLabel": "Sort By"
     },
     "statusTabs": [
-      {
-        "label": "Pending",
-        "count": 32,
-        "isSelected": true
-      },
-      {
-        "label": "Approved",
-        "count": 0,
-        "isSelected": false
-      },
-      {
-        "label": "Rejected",
-        "count": 0,
-        "isSelected": false
-      }
+      { "label": "Pending", "count": 32, "isSelected": true },
+      { "label": "Approved", "count": 0, "isSelected": false },
+      { "label": "Rejected", "count": 0, "isSelected": false }
     ],
     "selectMultipleCtaLabel": "Select Multiple",
     "cards": [
@@ -97,16 +69,14 @@
         "employeeName": "Rajat Abrol",
         "employeeMeta": "878687 | XII- A",
         "appliedLabel": "Applied 3w ago",
+        "decisionLabel": null,
         "leaveType": "Leave",
         "leaveDatesLabel": "4 May 2025, Morning",
         "reasonLabel": "Reason : Family member died",
         "attachmentsLabel": "2 Attachments",
-        "actions": [
-          "Reject",
-          "Approve"
-        ]
+        "actions": ["Reject", "Approve"]
       }
     ]
   },
-  "notes": "Pending state includes inline Reject/Approve actions on each card and a top-level Select Multiple CTA."
+  "notes": "Single unified response shape for all three tabs. `selectMultipleCtaLabel` is non-null only when approvalStatusTab=pending. Cards always carry both `appliedLabel` and `decisionLabel`; whichever is irrelevant for the active tab is null. `actions` is populated only for pending cards; empty array otherwise."
 }

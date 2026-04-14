@@ -3,57 +3,35 @@
   "figmaNodeId": "10852:205391",
   "description": "Student picker screen with search, Select All control, sortable name list, row checkboxes, and Save action.",
   "request": {
-    "query": "string",
-    "selectAll": "boolean",
-    "selectedStudentIds": [
-      "string"
-    ],
-    "sortBy": "string"
+    "classId": "string",
+    "search": "string",
+    "sortBy": "string",
+    "page": "number",
+    "limit": "number"
   },
   "response": {
-    "title": "string",
-    "saveLabel": "string",
-    "toLabel": "string",
-    "searchPlaceholder": "string",
-    "selectAllLabel": "string",
-    "sortHeaderLabel": "string",
-    "students": [
+    "data": [
       {
         "name": "string",
-        "meta": "string",
-        "isSelected": "boolean"
+        "id": "string",
+        "image": "url",
+        "class": "string",
+        "section": "string"
       }
     ]
   },
   "example_response": {
-    "title": "Select Student",
-    "saveLabel": "Save",
-    "toLabel": "To:",
-    "searchPlaceholder": "Search for a person to add",
-    "selectAllLabel": "Select All",
-    "sortHeaderLabel": "Name",
-    "students": [
+    "data": [
       {
         "name": "Tarun Aggarwal",
-        "meta": "878687 | XII- A",
-        "isSelected": false
-      },
-      {
-        "name": "Priya Mehta",
-        "meta": "878687 | XII- A",
-        "isSelected": false
-      },
-      {
-        "name": "Anjali Sharma",
-        "meta": "878687 | XII- A",
-        "isSelected": false
-      },
-      {
-        "name": "Neha Gupta",
-        "meta": "878687 | XII- A",
-        "isSelected": false
+        "id": "string",
+        "image": "url",
+        "class": "string",
+        "section": "string"
       }
-    ]
-  },
-  "notes": "Checkboxes are shown in not-selected state in this node. Save commits selected students back to Add New Leave form."
+    ],
+    "total": 100,
+    "page": 1,
+    "limit": 20
+  }
 }

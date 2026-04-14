@@ -38,7 +38,9 @@
     "statusBadgeLabel": "Request Approved by You",
     "staff": {
       "name": "Tarun Aggarwal",
-      "meta": "X-C (23) | 23022"
+      "image": "url",
+      "ID": "string",
+      "class": "string"
     },
     "leaveDetails": {
       "fromDateLabel": "1 Sept, 2025, Thursday",
@@ -50,11 +52,8 @@
       "remarks": "New Year Celebration - Vande Matram Dance Troupe"
     },
     "attachments": [
-      {
-        "fileName": "1275778 .jpg",
-        "fileMeta": "2.8 mb - JPEG",
-        "actionLabel": "View"
-      }
+      "url",
+      "url"
     ],
     "activity": [
       {
@@ -66,6 +65,5 @@
         "timestamp": "8 Jun 2025, 6:40 am"
       }
     ]
-  },
-  "notes": "Approved detail state shows status badge at top and no footer decision buttons."
+  }
 }
