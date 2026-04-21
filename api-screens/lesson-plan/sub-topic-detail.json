@@ -1,0 +1,77 @@
+{
+  "screen": "Sub Topic Detail",
+  "description": "Sub-topic detail with completion marking form, resources list, and completion metadata.",
+  "figmaNodeId": "7133:151183",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "topic": "string",
+    "subTopic": "string",
+    "completionStatus": "string",
+    "completionDate": "string",
+    "remarks": "string",
+    "sendToWeb": "boolean"
+  },
+  "response": {
+    "class": "string",
+    "subject": "string",
+    "topic": "string",
+    "subTopic": "string",
+    "resources": [
+      {
+        "name": "string",
+        "count": "number"
+      }
+    ],
+    "yearPlanCompletion": {
+      "dropped": "boolean",
+      "covered": "boolean",
+      "completionDate": "string",
+      "remarks": "string",
+      "sendToWeb": "boolean"
+    },
+    "createdOn": "string",
+    "createdBy": "string"
+  },
+  "example_response": {
+    "class": "VI - B",
+    "subject": "Maths",
+    "topic": "Algebra - Polynomials",
+    "subTopic": "Zeros of polynmial, Remainder Theorem, Factor theorem",
+    "resources": [
+      {
+        "name": "Content",
+        "count": 8
+      },
+      {
+        "name": "Aids",
+        "count": 8
+      },
+      {
+        "name": "Formative Assessments",
+        "count": 8
+      },
+      {
+        "name": "Weekly P1",
+        "count": 8
+      },
+      {
+        "name": "Notes",
+        "count": 8
+      }
+    ],
+    "yearPlanCompletion": {
+      "dropped": false,
+      "covered": false,
+      "completionDate": "1 Sept, 2025",
+      "remarks": "",
+      "sendToWeb": false
+    },
+    "createdOn": "12 May 2024, 5:00pm",
+    "createdBy": "Admin"
+  },
+  "notes": {
+    "completionStatus": "Derived from Dropped/Covered checkboxes when marking completion."
+  }
+}

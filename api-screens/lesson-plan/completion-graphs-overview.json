@@ -1,0 +1,81 @@
+{
+  "screen": "Completion Graphs Overview",
+  "description": "Band-level completion graph list for a selected class/subject.",
+  "figmaNodeId": "7133:151645",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "title": "string",
+    "selectedClass": "string",
+    "bands": [
+      {
+        "name": "string",
+        "completed": "number",
+        "planned": "number",
+        "completionPercent": "number"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "title": "Completion Graphs",
+    "selectedClass": "VI - B : Maths",
+    "bands": [
+      {
+        "name": "Algebra",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      },
+      {
+        "name": "Mensuration",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      },
+      {
+        "name": "Number System",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      },
+      {
+        "name": "Geometry",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      },
+      {
+        "name": "Math lab manual",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      },
+      {
+        "name": "Trial",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      },
+      {
+        "name": "April",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      }
+    ],
+    "total": 7,
+    "page": 1,
+    "limit": 10
+  },
+  "notes": {
+    "completionPercent": "Computed as completed/planned and shown as circular progress."
+  }
+}

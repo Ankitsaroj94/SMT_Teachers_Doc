@@ -1,0 +1,56 @@
+{
+  "screen": "Band Completion Detail",
+  "description": "Topic-wise completion cards for a selected band with overall totals.",
+  "figmaNodeId": "7133:151241",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "search": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "band": "string",
+    "summary": {
+      "completed": "number",
+      "planned": "number",
+      "total": "number"
+    },
+    "topics": [
+      {
+        "title": "string",
+        "subtitle": "string",
+        "completed": "number",
+        "planned": "number",
+        "completionPercent": "number"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "band": "Algebra",
+    "summary": {
+      "completed": 27,
+      "planned": 65,
+      "total": 92
+    },
+    "topics": [
+      {
+        "title": "Topic \u2022 Subtopic",
+        "subtitle": "",
+        "completed": 27,
+        "planned": 65,
+        "completionPercent": 12
+      }
+    ],
+    "total": 7,
+    "page": 1,
+    "limit": 10
+  },
+  "notes": {
+    "topics": "UI repeats Topic \u2022 Subtopic cards; API can return concrete topic/subtopic names per record."
+  }
+}

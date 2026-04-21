@@ -1,0 +1,41 @@
+{
+  "screen": "Edit Framework",
+  "description": "Edit existing framework details, attachments, and publishing toggle for lesson plan resources.",
+  "figmaNodeId": "14424:110448",
+  "request": {
+    "frameworkId": "string",
+    "board": "string",
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "topic": "string",
+    "subTopic": "string",
+    "element": "string",
+    "aspect": "string",
+    "description": "string",
+    "attachmentMode": "string",
+    "attachmentLink": "string",
+    "uploadedFiles": [
+      "string"
+    ],
+    "streamReferences": [
+      "string"
+    ],
+    "sendToWeb": "boolean"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "frameworkId": "string",
+    "updatedAt": "string"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Framework updated successfully",
+    "frameworkId": "FWK_001",
+    "updatedAt": "2025-09-01T10:30:00Z"
+  },
+  "notes": {
+    "attachmentMode": "none | link | uploadFile | stream, mapped from segmented control."
+  }
+}

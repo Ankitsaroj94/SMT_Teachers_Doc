@@ -1,0 +1,58 @@
+{
+  "screen": "Red Book Dashboard",
+  "figmaNodeId": "14542:97281",
+  "description": "Red Book home dashboard showing complaint summary cards for two sections and quick actions to view lists or create a new ticket.",
+  "request": {},
+  "response": {
+    "title": "string",
+    "isStarred": "boolean",
+    "sections": [
+      {
+        "title": "string",
+        "viewActionLabel": "string",
+        "statusSummary": {
+          "total": "number",
+          "pending": "number",
+          "registered": "number",
+          "forwarded": "number",
+          "closed": "number"
+        }
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "title": "Red Book",
+    "isStarred": false,
+    "sections": [
+      {
+        "title": "My Registered Complaint",
+        "viewActionLabel": "View list",
+        "statusSummary": {
+          "total": 10,
+          "pending": 2,
+          "registered": 3,
+          "forwarded": 0,
+          "closed": 5
+        }
+      },
+      {
+        "title": "Complaints for my Action",
+        "viewActionLabel": "View list",
+        "statusSummary": {
+          "total": 10,
+          "pending": 2,
+          "registered": 0,
+          "forwarded": 3,
+          "closed": 5
+        }
+      }
+    ],
+    "primaryActionLabel": "New Ticket"
+  },
+  "notes": {
+    "request": "No filter, search, sort, or pagination controls are visible on this screen; request remains empty.",
+    "statusSummary": "Each section displays Total, Pending, and Closed. Section 1 includes Registered while section 2 includes Forwarded; missing statuses are represented as 0 for a stable shape.",
+    "isStarred": "Maps to the header favorite icon state for the Red Book screen."
+  }
+}

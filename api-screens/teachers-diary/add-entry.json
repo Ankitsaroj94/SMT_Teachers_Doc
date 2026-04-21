@@ -16,7 +16,28 @@
     "sourceUsed": "string",
     "teacherFeedback": "string",
     "syncFromLessonPlan": "boolean",
-    "homeworkAssigned": "boolean"
+    "homeworkAssigned": "boolean",
+    "homeworkItems": [
+      {
+        "subject": "string",
+        "title": "string",
+        "homeworkId": "string",
+        "homeworkType": "string",
+        "attachments": [
+          "Url",
+          "Url"
+        ],
+        "dueOn": "string",
+        "uploadedOn": "string"
+      },
+      {
+        "subject": "string",
+        "title": "string",
+        "homeworkId": "string",
+        "homeworkType": "string",
+        "attachmentsCount": "number"
+      }
+    ]
   },
   "response": {
     "success": "boolean",

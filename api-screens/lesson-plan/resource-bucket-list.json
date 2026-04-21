@@ -1,0 +1,86 @@
+{
+  "screen": "Resource Bucket List",
+  "description": "Resource bucket listing under lesson plan resources with counts and preview metadata.",
+  "figmaNodeId": "7138:153328",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "element": "string",
+    "aspect": "string",
+    "search": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "title": "string",
+    "resourceBuckets": [
+      {
+        "element": "string",
+        "count": "number",
+        "aspects": [
+          {
+            "name": "string",
+            "description": "string",
+            "attachments": [
+              {
+                "fileName": "string",
+                "meta": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "title": "Resources",
+    "resourceBuckets": [
+      {
+        "element": "Content",
+        "count": 8,
+        "aspects": [
+          {
+            "name": "Lesson Plan",
+            "description": "LP- Ch 2 POLYNOMIALS",
+            "attachments": [
+              {
+                "fileName": "New Regime",
+                "meta": "2.4 MB \u2022 PDF"
+              },
+              {
+                "fileName": "New Regime.mp3",
+                "meta": "2.4 MB \u2022 1:20 min \u2022 Video"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "element": "Element",
+        "count": 8,
+        "aspects": [
+          {
+            "name": "Aspect",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "attachments": [
+              {
+                "fileName": "New Regime",
+                "meta": "Google Sheets"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 10
+  },
+  "notes": {
+    "resourceBuckets": "Element and Aspect grouping follows the nested accordion structure shown in UI."
+  }
+}

@@ -38,24 +38,14 @@
     ],
     "addEntryCta": "string"
   },
+
+
+
   "example_response": {
-    "selectedWeek": [
-      {
-        "weekDay": "M",
-        "day": 19,
-        "date": "2024-05-19",
-        "isSelected": true
-      },
-      {
-        "weekDay": "T",
-        "day": 20,
-        "date": "2024-05-20",
-        "isSelected": false
-      }
-    ],
+    
     "sections": [
       {
-        "label": "Today",
+     
         "dateLabel": "MONDAY - 19 MAY",
         "entries": [
           {
@@ -65,15 +55,13 @@
             "subTopic": "Quadratic Equations",
             "coverageStatus": "Partial",
             "teacherName": "Rajat Abrol",
-            "attendanceSummary": "49/52 students"
+            "attendanceSummary": {
+              "totalStudents": 52,
+              "studentsAttended": 49
+            }
           }
         ]
       }
-    ],
-    "addEntryCta": "Add Entry"
-  },
-  "notes": {
-    "status": "Initiated | Partial | Complete",
-    "sections": "Grouped by date headings like Today and weekday labels"
+    ]
   }
 }

@@ -1,0 +1,73 @@
+{
+  "screen": "Year Plan Dashboard",
+  "description": "Lesson plan year-plan overview showing classes and bands for the selected year plan.",
+  "figmaNodeId": "8526:62812",
+  "request": {
+    "search": "string",
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "title": "string",
+    "yearPlanLabel": "string",
+    "classes": [
+      "string"
+    ],
+    "bands": [
+      {
+        "name": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "title": "Year Plan",
+    "yearPlanLabel": "VI - B : Maths",
+    "classes": [
+      "V - C : Maths",
+      "VI - B : Maths",
+      "VI - Fruits : Maths",
+      "III - NASA Space Explorer 2016 : Maths"
+    ],
+    "bands": [
+      {
+        "name": "Algebra"
+      },
+      {
+        "name": "Mensuration"
+      },
+      {
+        "name": "Number System"
+      },
+      {
+        "name": "Geometry"
+      },
+      {
+        "name": "Statistics"
+      },
+      {
+        "name": "Math lab manual"
+      },
+      {
+        "name": "Trial"
+      },
+      {
+        "name": "April"
+      },
+      {
+        "name": "May"
+      }
+    ],
+    "total": 9,
+    "page": 1,
+    "limit": 10
+  },
+  "notes": {
+    "bands": "Selecting a class/subject combination returns year-plan bands shown on the screen."
+  }
+}

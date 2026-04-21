@@ -1,0 +1,40 @@
+{
+  "screen": "Create Framework",
+  "description": "Create new lesson-plan framework item with element, aspect, description, attachment, and web sync option.",
+  "figmaNodeId": "7133:150394",
+  "request": {
+    "board": "string",
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "topic": "string",
+    "subTopic": "string",
+    "element": "string",
+    "aspect": "string",
+    "description": "string",
+    "attachmentMode": "string",
+    "attachmentLink": "string",
+    "uploadedFiles": [
+      "string"
+    ],
+    "streamReferences": [
+      "string"
+    ],
+    "sendToWeb": "boolean"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "frameworkId": "string",
+    "status": "string"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Framework created",
+    "frameworkId": "FWK_2451",
+    "status": "active"
+  },
+  "notes": {
+    "attachmentMode": "none | link | uploadFile | stream, mapped from segmented control."
+  }
+}

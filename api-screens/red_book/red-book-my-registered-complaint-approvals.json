@@ -1,0 +1,83 @@
+{
+  "screen": "My Registered Complaint Approvals",
+  "figmaNodeId": "14542:97606",
+  "description": "Approvals list screen for My Registered Complaint with tabs, filter chips, search, and complaint cards.",
+  "request": {
+    "tab": "string",
+    "search": "string",
+    "dateRange": "string",
+    "type": "string",
+    "location": "string"
+  },
+  "response": {
+    "headerTitle": "string",
+    "tabs": [
+      {
+        "label": "string",
+        "count": "number"
+      }
+    ],
+    "complaints": [
+      {
+        "ticketId": "string",
+        "submittedAt": "string",
+        "title": "string",
+        "status": "string",
+        "type": "string",
+        "location": "string"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "headerTitle": "My Registered Complaint",
+    "tabs": [
+      {
+        "label": "All",
+        "count": 7
+      },
+      {
+        "label": "Pending",
+        "count": 2
+      },
+      {
+        "label": "Closed",
+        "count": 5
+      }
+    ],
+    "complaints": [
+      {
+        "ticketId": "#3QAZ6789012",
+        "submittedAt": "16 Feb 2026, 2:30 PM",
+        "title": "Network connectivity issues",
+        "status": "Registered",
+        "type": "Issue",
+        "location": "NYPD"
+      },
+      {
+        "ticketId": "#3QAZ6789012",
+        "submittedAt": "16 Feb 2026, 2:30 PM",
+        "title": "Password reset required",
+        "status": "Pending",
+        "type": "Request",
+        "location": "NYPD"
+      },
+      {
+        "ticketId": "#3QAZ6789012",
+        "submittedAt": "16 Feb 2026, 2:30 PM",
+        "title": "Software installation request",
+        "status": "Closed",
+        "type": "Issue",
+        "location": "NYPD"
+      }
+    ],
+    "primaryActionLabel": "New Ticket"
+  },
+  "notes": {
+    "tab": "Visible options are All, Pending, Closed.",
+    "filters": "Visible filter chips are Date range, Type, and Location.",
+    "status": "Status comes from the status chip in each complaint card (Registered | Pending | Closed).",
+    "type": "Type comes from the second metadata chip per card (Issue | Request | Query).",
+    "location": "Location comes from the third metadata chip per card."
+  }
+}

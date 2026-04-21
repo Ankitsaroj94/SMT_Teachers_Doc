@@ -1,0 +1,68 @@
+{
+  "screen": "Mark Completion Quick",
+  "description": "Compact completion marking screen for a sub-topic with optional new framework shortcut.",
+  "figmaNodeId": "7138:152474",
+  "request": {
+    "class": "string",
+    "subject": "string",
+    "topic": "string",
+    "subTopic": "string",
+    "completionDate": "string",
+    "remarks": "string",
+    "sendToWeb": "boolean",
+    "status": "string"
+  },
+  "response": {
+    "topic": "string",
+    "subTopic": "string",
+    "resources": [
+      {
+        "name": "string",
+        "count": "number"
+      }
+    ],
+    "completion": {
+      "status": "string",
+      "completionDate": "string",
+      "remarks": "string",
+      "sendToWeb": "boolean"
+    },
+    "ctaLabel": "string"
+  },
+  "example_response": {
+    "topic": "Algebra - Polynomials",
+    "subTopic": "Zeros of polynmial, Remainder Theorem, Factor theorem",
+    "resources": [
+      {
+        "name": "Content",
+        "count": 8
+      },
+      {
+        "name": "Aids",
+        "count": 8
+      },
+      {
+        "name": "Formative Assessments",
+        "count": 8
+      },
+      {
+        "name": "Weekly P1",
+        "count": 8
+      },
+      {
+        "name": "Notes",
+        "count": 8
+      }
+    ],
+    "completion": {
+      "status": "pending",
+      "completionDate": "",
+      "remarks": "",
+      "sendToWeb": false
+    },
+    "ctaLabel": "Mark As Completed"
+  },
+  "notes": {
+    "status": "pending | completed based on completion action."
+  }
+}

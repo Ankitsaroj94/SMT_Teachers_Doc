@@ -1,0 +1,106 @@
+{
+  "screen": "Red Book Ticket Detail",
+  "figmaNodeIds": [
+    "14542:98749",
+    "14551:127827",
+    "14594:143389"
+  ],
+  "description": "Single ticket-detail API contract shared by Registered, Pending, and Closed detail screens.",
+  "request": {
+    "ticketId": "string"
+  },
+  "response": {
+    "headerMessage": "string",
+    "ticket": {
+      "ticketId": "string",
+      "submittedAt": "string",
+      "subject": "string",
+      "status": "string",
+      "type": "string",
+      "location": "string",
+      "raisedBy": {
+        "name": "string",
+        "reference": "string",
+        "relation": "string"
+      },
+      "categoryPath": "string",
+      "source": "string",
+      "assignedTo": {
+        "role": "string",
+        "name": "string"
+      },
+      "descriptionTitle": "string",
+      "description": "string",
+      "attachments": [
+        {
+          "fileName": "string",
+          "fileMeta": "string",
+          "actionLabel": "string"
+        }
+      ],
+      "activity": [
+        {
+          "message": "string",
+          "timestamp": "string"
+        }
+      ],
+      "actionRemarks": "string|null",
+      "actionRemarkAttachments": [
+        {
+          "fileName": "string",
+          "fileMeta": "string",
+          "actionLabel": "string"
+        }
+      ]
+    }
+  },
+  "example_response": {
+    "headerMessage": "Request Pending from Rajat Abrol.",
+    "ticket": {
+      "ticketId": "#3QAZ6789012",
+      "submittedAt": "16 Feb 2026, 2:30 PM",
+      "subject": "Network connectivity issues in Computer Lab",
+      "status": "Pending",
+      "type": "Issue",
+      "location": "NYPD",
+      "raisedBy": {
+        "name": "Rajat Abrol",
+        "reference": "878687 | XII- A",
+        "relation": "SELF"
+      },
+      "categoryPath": "IT > Network Issue > Charger",
+      "source": "Direct",
+      "assignedTo": {
+        "role": "HOD – IT Department",
+        "name": "Rajat Abrol"
+      },
+      "descriptionTitle": "WiFi in Computer Lab 3",
+      "description": "The WiFi in Computer Lab 3 (Ground Floor) has been intermittently dropping since Monday morning. Students are unable to access online resources during class hours. The router light appears to be blinking orange rather than steady green. This is affecting 3 periods daily.",
+      "attachments": [
+        {
+          "fileName": "1275778 .jpg",
+          "fileMeta": "2.8 mb - JPEG",
+          "actionLabel": "View"
+        }
+      ],
+      "activity": [
+        {
+          "message": "Waiting for action from Rajat Abrol",
+          "timestamp": "-"
+        },
+        {
+          "message": "Deepti S. has reassigned ticket to Rajat Abrol",
+          "timestamp": "10 Jun 2025, 8:00 pm"
+        }
+      ],
+      "actionRemarks": null,
+      "actionRemarkAttachments": []
+    }
+  },
+  "notes": {
+    "status": "Supported states from Figma: Registered | Pending | Closed.",
+    "headerMessage": "Message text changes by state (for example: pending/resolved/registered copy).",
+    "actionRemarks": "Nullable. Present for closed-state details; null for pending/registered.",
+    "sharedApi": "All three detail screens consume this single request/response contract."
+  }
+}

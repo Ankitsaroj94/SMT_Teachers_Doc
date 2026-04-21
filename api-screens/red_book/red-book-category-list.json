@@ -1,0 +1,85 @@
+{
+  "screen": "Red Book Category Selection",
+  "figmaNodeId": "14542:97490",
+  "description": "Category selection bottom sheet used while creating a New Ticket, with search and nested category options.",
+  "request": {
+    "search": "string",
+    "parentCategoryId": "string"
+  },
+  "response": {
+    "title": "string",
+    "categories": [
+      {
+        "id": "string",
+        "name": "string",
+        "isSelected": "boolean",
+        "children": [
+          {
+            "id": "string",
+            "name": "string",
+            "isSelected": "boolean",
+            "children": [
+              {
+                "id": "string",
+                "name": "string",
+                "isSelected": "boolean"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "example_response": {
+    "title": "Category Selection",
+    "categories": [
+      {
+        "id": "cat-it",
+        "name": "IT",
+        "isSelected": true,
+        "children": [
+          {
+            "id": "cat-it-hardware-issue",
+            "name": "Hardware Issue",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "id": "cat-it-network-issue",
+            "name": "Network Issue",
+            "isSelected": true,
+            "children": [
+              {
+                "id": "cat-it-network-issue-laptop",
+                "name": "Laptop",
+                "isSelected": false
+              },
+              {
+                "id": "cat-it-network-issue-charger",
+                "name": "Charger",
+                "isSelected": false
+              },
+              {
+                "id": "cat-it-network-issue-keyboard-mouse",
+                "name": "Keyboard & Mouse",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": "cat-it-software-issue",
+            "name": "Software Issue",
+            "isSelected": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "notes": {
+    "search": "Search input is visible at the top of the category bottom sheet.",
+    "parentCategoryId": "Optional linkage for fetching children progressively when a parent category is expanded.",
+    "hierarchy": "UI shows expandable nested category structure (parent -> child -> sub-child).",
+    "selection": "Selected state is visually represented for both parent and child list items."
+  }
+}

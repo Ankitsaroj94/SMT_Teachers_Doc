@@ -1,0 +1,54 @@
+{
+  "screen": "Create Framework With Attachments",
+  "description": "Create framework flow with floating labels and inline attachment item list management.",
+  "figmaNodeId": "11376:114092",
+  "request": {
+    "board": "string",
+    "class": "string",
+    "subject": "string",
+    "band": "string",
+    "topic": "string",
+    "subTopic": "string",
+    "element": "string",
+    "content": "string",
+    "aspect": "string",
+    "lessonPlan": "string",
+    "description": "string",
+    "attachments": [
+      {
+        "name": "string",
+        "type": "string"
+      }
+    ],
+    "sendToWeb": "boolean"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "frameworkId": "string",
+    "attachments": [
+      {
+        "name": "string",
+        "type": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "success": true,
+    "message": "Framework created",
+    "frameworkId": "FWK_2452",
+    "attachments": [
+      {
+        "name": "1275778.jpg",
+        "type": "image"
+      },
+      {
+        "name": "chapter ex 5.pdf",
+        "type": "pdf"
+      }
+    ]
+  },
+  "notes": {
+    "attachments": "UI shows add/remove attachment rows; API accepts current attachment list on submit."
+  }
+}
