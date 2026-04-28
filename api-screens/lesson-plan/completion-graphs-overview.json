@@ -5,7 +5,6 @@
   "request": {
     "class": "string",
     "subject": "string",
-    "band": "string",
     "page": "number",
     "limit": "number"
   },
@@ -25,47 +24,24 @@
     "limit": "number"
   },
   "example_response": {
-    "title": "Completion Graphs",
-    "selectedClass": "VI - B : Maths",
     "bands": [
       {
         "name": "Algebra",
+        "bandId": "BAND_001",
         "completed": 27,
         "planned": 65,
         "completionPercent": 12
       },
       {
         "name": "Mensuration",
+        "bandId": "BAND_002",
         "completed": 27,
         "planned": 65,
         "completionPercent": 12
       },
       {
         "name": "Number System",
-        "completed": 27,
-        "planned": 65,
-        "completionPercent": 12
-      },
-      {
-        "name": "Geometry",
-        "completed": 27,
-        "planned": 65,
-        "completionPercent": 12
-      },
-      {
-        "name": "Math lab manual",
-        "completed": 27,
-        "planned": 65,
-        "completionPercent": 12
-      },
-      {
-        "name": "Trial",
-        "completed": 27,
-        "planned": 65,
-        "completionPercent": 12
-      },
-      {
-        "name": "April",
+        "bandId": "BAND_003",
         "completed": 27,
         "planned": 65,
         "completionPercent": 12

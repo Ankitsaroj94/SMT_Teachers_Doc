@@ -1,24 +1,43 @@
 {
   "screen": "Year Plan Dashboard",
-  "description": "Lesson plan year-plan overview showing classes and bands for the selected year plan.",
+  "description": "Year plan listing with class tabs, expandable bands, and subtopic rows with attachment counts.",
   "figmaNodeId": "8526:62812",
   "request": {
     "search": "string",
-    "class": "string",
-    "subject": "string",
-    "band": "string",
+    "classId": "string",
+    "isStarred": "boolean",
     "page": "number",
     "limit": "number"
   },
   "response": {
     "title": "string",
-    "yearPlanLabel": "string",
+    "isStarred": "boolean",
     "classes": [
-      "string"
+      {
+        "classId": "string",
+        "name": "string",
+        "isSelected": "boolean"
+      }
     ],
     "bands": [
       {
-        "name": "string"
+        "bandId": "string",
+        "name": "string",
+        "isExpanded": "boolean",
+        "topics": [
+          {
+            "topicId": "string",
+            "name": "string",
+            "isExpanded": "boolean",
+            "subTopics": [
+              {
+                "subTopicId": "string",
+                "name": "string",
+                "attachmentsCount": "number"
+              }
+            ]
+          }
+        ]
       }
     ],
     "total": "number",
@@ -27,47 +46,72 @@
   },
   "example_response": {
     "title": "Year Plan",
-    "yearPlanLabel": "VI - B : Maths",
+    "isStarred": false,
     "classes": [
-      "V - C : Maths",
-      "VI - B : Maths",
-      "VI - Fruits : Maths",
-      "III - NASA Space Explorer 2016 : Maths"
+      {
+        "classId": "CLS_001",
+        "name": "V - C : Maths",
+        "isSelected": false
+      },
+      {
+        "classId": "CLS_002",
+        "name": "VI - B : Maths",
+        "isSelected": true
+      },
+      {
+        "classId": "CLS_003",
+        "name": "VI - Fruits : Maths",
+        "isSelected": false
+      },
+      {
+        "classId": "CLS_004",
+        "name": "III - NASA Space Explorer 2016 : Maths",
+        "isSelected": false
+      }
     ],
     "bands": [
       {
-        "name": "Algebra"
-      },
-      {
-        "name": "Mensuration"
-      },
-      {
-        "name": "Number System"
-      },
-      {
-        "name": "Geometry"
-      },
-      {
-        "name": "Statistics"
-      },
-      {
-        "name": "Math lab manual"
-      },
-      {
-        "name": "Trial"
-      },
-      {
-        "name": "April"
-      },
-      {
-        "name": "May"
+        "name": "Algebra",
+        "bandId": "BAND_001",
+        "isExpanded": true,
+        "topics": [
+          {
+            "topicId": "TOP_001",
+            "name": "Polynomials",
+            "isExpanded": true,
+            "subTopics": [
+              {
+                "subTopicId": "SUB_001",
+                "name": "Zeros of polynomial, Remainder Theorem, Factor theorem",
+                "attachmentsCount": 2
+              },
+              {
+                "subTopicId": "SUB_002",
+                "name": "Descartes's Rule of Signs, Synthetic Division, Polynomial Long Division",
+                "attachmentsCount": 3
+              },
+              {
+                "subTopicId": "SUB_003",
+                "name": "Roots of Unity, Fundamental Theorem of Algebra, Polynomial Interpolation",
+                "attachmentsCount": 4
+              },
+              {
+                "subTopicId": "SUB_004",
+                "name": "Complex Roots, Rational Root Theorem, Polynomial Graphs",
+                "attachmentsCount": 5
+              },
+              {
+                "subTopicId": "SUB_005",
+                "name": "Vieta's Formulas, Degree of Polynomial, Polynomial Functions",
+                "attachmentsCount": 2
+              }
+            ]
+          }
+        ]
       }
     ],
-    "total": 9,
+    "total": 1,
     "page": 1,
     "limit": 10
-  },
-  "notes": {
-    "bands": "Selecting a class/subject combination returns year-plan bands shown on the screen."
   }
 }

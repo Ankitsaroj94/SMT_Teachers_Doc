@@ -39,8 +39,8 @@
     },
     "topics": [
       {
-        "title": "Topic \u2022 Subtopic",
-        "subtitle": "",
+        "title": "Polynomials",
+        "subtitle": "Roots of Unity, Fundamental Theorem of Algebra, Polynomial Interpolation",
         "completed": 27,
         "planned": 65,
         "completionPercent": 12
@@ -49,8 +49,5 @@
     "total": 7,
     "page": 1,
     "limit": 10
-  },
-  "notes": {
-    "topics": "UI repeats Topic \u2022 Subtopic cards; API can return concrete topic/subtopic names per record."
   }
 }

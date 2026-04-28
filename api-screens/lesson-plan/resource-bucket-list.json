@@ -6,11 +6,7 @@
     "class": "string",
     "subject": "string",
     "band": "string",
-    "element": "string",
-    "aspect": "string",
-    "search": "string",
-    "page": "number",
-    "limit": "number"
+    "element": "string"
   },
   "response": {
     "title": "string",
@@ -37,7 +33,6 @@
     "limit": "number"
   },
   "example_response": {
-    "title": "Resources",
     "resourceBuckets": [
       {
         "element": "Content",
@@ -49,10 +44,12 @@
             "attachments": [
               {
                 "fileName": "New Regime",
+                "url": "https://www.google.com",
                 "meta": "2.4 MB \u2022 PDF"
               },
               {
                 "fileName": "New Regime.mp3",
+                "url": "https://www.google.com",
                 "meta": "2.4 MB \u2022 1:20 min \u2022 Video"
               }
             ]
@@ -69,18 +66,13 @@
             "attachments": [
               {
                 "fileName": "New Regime",
-                "meta": "Google Sheets"
+                "url": "https://www.google.com",
+                "meta": "2.4 MB \u2022 PDF"
               }
             ]
           }
         ]
       }
-    ],
-    "total": 2,
-    "page": 1,
-    "limit": 10
-  },
-  "notes": {
-    "resourceBuckets": "Element and Aspect grouping follows the nested accordion structure shown in UI."
+    ]
   }
 }

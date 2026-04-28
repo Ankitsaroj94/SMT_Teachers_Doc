@@ -7,11 +7,8 @@
     "subject": "string",
     "band": "string",
     "topic": "string",
-    "subTopic": "string",
-    "completionStatus": "string",
-    "completionDate": "string",
-    "remarks": "string",
-    "sendToWeb": "boolean"
+    "subTopic": "string"
+ 
   },
   "response": {
     "class": "string",
@@ -34,44 +31,53 @@
     "createdOn": "string",
     "createdBy": "string"
   },
+
+  
   "example_response": {
     "class": "VI - B",
     "subject": "Maths",
     "topic": "Algebra - Polynomials",
     "subTopic": "Zeros of polynmial, Remainder Theorem, Factor theorem",
+    "otherDetails": [
+     {
+      "name": "Board",
+      "value": "CBSE"
+     },
+     {
+      "name": "Terms",
+      "value": "1"
+     },
+     {
+      "name": "No of Classes",
+      "value": "1"
+     },
+     {
+      "name": "Planned Month",
+      "value": "January"
+     }
+    ],
     "resources": [
       {
         "name": "Content",
         "count": 8
+
       },
       {
         "name": "Aids",
         "count": 8
-      },
-      {
-        "name": "Formative Assessments",
-        "count": 8
-      },
-      {
-        "name": "Weekly P1",
-        "count": 8
-      },
-      {
-        "name": "Notes",
-        "count": 8
       }
     ],
-    "yearPlanCompletion": {
-      "dropped": false,
-      "covered": false,
-      "completionDate": "1 Sept, 2025",
-      "remarks": "",
-      "sendToWeb": false
-    },
+  
     "createdOn": "12 May 2024, 5:00pm",
     "createdBy": "Admin"
-  },
-  "notes": {
-    "completionStatus": "Derived from Dropped/Covered checkboxes when marking completion."
   }
 }
+
+
+"yearPlanCompletion": {
+  "dropped": false,
+  "covered": false,
+  "completionDate": "1 Sept, 2025",
+  "remarks": "",
+  "sendToWeb": false
+},

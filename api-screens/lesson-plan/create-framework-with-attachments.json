@@ -1,7 +1,7 @@
 {
   "screen": "Create Framework With Attachments",
   "description": "Create framework flow with floating labels and inline attachment item list management.",
-  "figmaNodeId": "11376:114092",
+  "figmaNodeId": "14424:110736",
   "request": {
     "board": "string",
     "class": "string",
@@ -10,18 +10,21 @@
     "topic": "string",
     "subTopic": "string",
     "element": "string",
-    "content": "string",
     "aspect": "string",
     "lessonPlan": "string",
     "description": "string",
+    "attachmentMode": "string",
     "attachments": [
       {
-        "name": "string",
-        "type": "string"
+        "type": "link | stream | uploadFile",
+        "url": "string",
+        "streamId": "string",
+        "fileId": "string"
       }
     ],
     "sendToWeb": "boolean"
   },
+
   "response": {
     "success": "boolean",
     "message": "string",
@@ -49,6 +52,11 @@
     ]
   },
   "notes": {
-    "attachments": "UI shows add/remove attachment rows; API accepts current attachment list on submit."
+    "attachments": "UI shows add/remove attachment rows; API accepts the full current list on submit.",
+    "attachmentMode": "none | link | uploadFile | stream, mapped from selected attachment type in flow.",
+    "attachmentType": "Each attachment row has type: link | stream | uploadFile.",
+    "streamFlow": "For type=stream, send streamId (required) and url when stream deep-link is available.",
+    "linkFlow": "For type=link, send url (required).",
+    "uploadFileFlow": "For type=uploadFile, send fileId (required)."
   }
 }
