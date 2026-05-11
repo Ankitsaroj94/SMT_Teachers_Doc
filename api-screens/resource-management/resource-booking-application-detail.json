@@ -1,0 +1,40 @@
+{
+  "screen": "Resource Booking Application Detail",
+  "description": "Single booking application detail with resource name, slot range, recurrence summary, applicant, purpose, and applied timestamp.",
+  "figmaNodeId": "8705:98008",
+  "request": {
+    "applicationId": "string"
+  },
+  "response": {
+    "resourceName": "string",
+    "startDate": "string",
+    "startTime": "string",
+    "endDate": "string",
+    "endTime": "string",
+    "recurrenceSummary": "string",
+    "recurrenceDetailsCtaLabel": "string",
+    "applicantName": "string",
+    "applicantMeta": "string",
+    "applicantAvatarUrl": "string",
+    "purpose": "string",
+    "appliedAtLabel": "string"
+  },
+  "example_response": {
+    "resourceName": "Auditorium 1A",
+    "startDate": "1 Sept, 2025",
+    "startTime": "10:00 AM",
+    "endDate": "1 Sept, 2025",
+    "endTime": "11:00 AM",
+    "recurrenceSummary": "Every day (until 26 Aug)",
+    "recurrenceDetailsCtaLabel": "Details",
+    "applicantName": "Rajat Abrol",
+    "applicantMeta": "Designation | 123456",
+    "applicantAvatarUrl": "",
+    "purpose": "Need to prepare for annual function with kids for vande matram performance",
+    "appliedAtLabel": "Applied : 8 Jun 2025, 6:40 am"
+  },
+  "notes": {
+    "applicationId": "Passed from booking history list row navigation.",
+    "recurrenceDetailsCtaLabel": "Tapping Details navigates to recurrence details screen when recurrence applies."
+  }
+}

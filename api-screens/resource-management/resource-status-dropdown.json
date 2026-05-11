@@ -1,0 +1,26 @@
+{
+  "screen": "Resource Status Dropdown",
+  "description": "Dropdown options for resource status used in resource management filters and forms.",
+  "figmaNodeId": "15302:233435",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "data": [
+      { "id": "active", "label": "Active", "value": "active" },
+      { "id": "inactive", "label": "Inactive", "value": "inactive" },
+      { "id": "archived", "label": "Archived", "value": "archived" }
+    ]
+  },
+  "notes": {
+    "statusValues": "Replace example values with exactly the statuses shown in the Figma UI.",
+    "usage": "The selected value maps to `status` in `resource-management-list` and `resource-management-upsert`."
+  }
+}

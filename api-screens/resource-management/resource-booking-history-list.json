@@ -1,0 +1,78 @@
+{
+  "screen": "My Booking History",
+  "description": "Resource booking applications list with sort, status, date, and category filter chips and booking cards.",
+  "figmaNodeId": "8705:97858",
+  "request": {
+    "sortBy": "string",
+    "status": "string",
+    "date": "string",
+    "category": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "title": "string",
+    "bookings": [
+      {
+        "id": "string",
+        "resourceName": "string",
+        "bookedOnLabel": "string",
+        "approvalStatus": "string",
+        "startDate": "string",
+        "startTime": "string",
+        "endDate": "string",
+        "endTime": "string",
+        "recurrenceSummary": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "bookings": [
+      {
+        "id": "123234",
+        "resourceName": "Presentation Room",
+        "bookedOnLabel": "01 Aug 2026, 10:00 AM",
+        "approvalStatus": "Approved",
+        "startDate": "01 Sep 2026, 10:00 AM",
+        "endDate": "01 Sep 2026, 11:00 AM",
+        "recurrenceSummary": "Every 2 weeks on Mon, Fri (until 26 Aug)",
+        "profileImageUrl": "https://via.placeholder.com/150",
+        "applicantName": "Rajat Abrol",
+        "designation": "Designation",
+        "employeeId": "123456"
+      },
+      {
+        "id": "123235",
+        "resourceName": "Presentation Room 2",
+        "bookedOnLabel": "01 Aug 2026, 10:00 AM",
+        "approvalStatus": "Rejected",
+        "startDate": "01 Sep 2026, 10:00 AM",
+        "endDate": "01 Sep 2026, 11:00 AM",
+        "recurrenceSummary": "Every 2 weeks on Mon, Fri (until 26 Aug)",
+        "profileImageUrl": "https://via.placeholder.com/150",
+        "applicantName": "Rajat Abrol",
+        "designation": "Designation",
+        "employeeId": "123456"
+      },
+      {
+        "id": "123236",
+        "resourceName": "Presentation Room 3",
+        "bookedOnLabel": "01 Aug 2026, 10:00 AM",
+        "approvalStatus": "Pending",
+        "startDate": "01 Sep 2026, 10:00 AM",
+        "endDate": "01 Sep 2026, 11:00 AM",
+        "recurrenceSummary": "Every 2 weeks on Mon, Fri (until 26 Aug)",
+        "profileImageUrl": "https://via.placeholder.com/150",
+        "applicantName": "Rajat Abrol",
+        "designation": "Designation",
+        "employeeId": "123456"
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 10
+  }
+}

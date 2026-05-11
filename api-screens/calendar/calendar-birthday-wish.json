@@ -1,0 +1,38 @@
+{
+  "screen": "Calendar Birthday Wish",
+  "description": "Send birthday wishes from calendar birthday event cards/details using a dedicated action API.",
+  "figmaNodeIds": [
+    "8386:134037",
+    "8386:134092",
+    "8386:134585"
+  ],
+  "method": "POST",
+  "endpoint": "/calendar/events/birthday/wish",
+  "request": {
+    "eventId": "string",
+    "wishType": "string",
+    "message": "string",
+    "recipientIds": [
+      "string"
+    ]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "eventId": "string",
+    "sentCount": "number",
+    "failedCount": "number"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Birthday wishes sent successfully",
+    "eventId": "CAL_EVT_0012",
+    "sentCount": 17,
+    "failedCount": 0
+  },
+  "notes": {
+    "wishType": "single | all. Use all for 'Wish all' CTA.",
+    "message": "Optional custom message; backend uses default template when empty.",
+    "recipientIds": "Required for wishType=single; optional for wishType=all when recipients are resolved by eventId."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "screen": "Calendar Entry Create",
+  "description": "Create calendar entry POST flow for calendar module.",
+  "figmaNodeIds": [
+    "13113:41938",
+    "8386:134488"
+  ],
+  "method": "POST",
+  "endpoint": "/calendar/events",
+  "request": {
+    "date": "string",
+    "category": "string",
+    "form": "string",
+    "class": "string",
+    "title": "string",
+    "description": "string",
+    "isAllDay": "boolean",
+    "startTime": "string",
+    "endTime": "string",
+    "notifyAudience": "string",
+    "attachments": [
+      {
+        "type": "string",
+        "url": "string"
+      }
+    ]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "eventId": "string",
+    "status": "string"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Calendar entry created",
+    "eventId": "CAL_EVT_0012",
+    "status": "active"
+  },
+  "notes": {
+    "method": "Use POST to create a new calendar event.",
+    "isAllDay": "When true, startTime/endTime can be empty.",
+    "attachments": "Attachment row support is optional and can include links/files depending on module policy."
+  }
+}

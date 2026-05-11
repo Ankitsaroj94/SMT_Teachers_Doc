@@ -1,0 +1,121 @@
+{
+  "screen": "Calendar Entry Detail",
+  "description": "Detailed calendar event view with event metadata, audience details, timing, attachments, and action permissions.",
+  "figmaNodeId": "13113:41652",
+  "request": {
+    "eventId": "string",
+    "selectedDate": "string"
+  },
+  "response": {
+    "headerTitle": "string",
+    "isStarred": "boolean",
+    "event": {
+      "eventId": "string",
+      "title": "string",
+      "description": "string",
+      "eventType": "string",
+      "category": "string",
+      "form": "string",
+      "class": "string",
+      "date": "string",
+      "dateLabel": "string",
+      "weekDay": "string",
+      "isAllDay": "boolean",
+      "startTime": "string",
+      "endTime": "string",
+      "timeLabel": "string",
+      "location": "string",
+      "notifyAudience": "string",
+      "audienceCount": "number",
+      "status": "string",
+      "ctaLabel": "string"
+    },
+    "participantsPreview": [
+      "string"
+    ],
+    "attachments": [
+      {
+        "name": "string",
+        "type": "string",
+        "size": "string",
+        "url": "string",
+        "actionLabel": "string"
+      }
+    ],
+    "audit": {
+      "createdBy": "string",
+      "createdAt": "string",
+      "updatedBy": "string",
+      "updatedAt": "string"
+    },
+    "permissions": {
+      "canEdit": "boolean",
+      "canDelete": "boolean",
+      "canShare": "boolean"
+    },
+    "activity": [
+      {
+        "message": "string",
+        "timestamp": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "event": {
+      "eventId": "CAL_EVT_0012",
+      "title": "Weekly Meeting",
+      "eventTime": "10:00 - 11:00",
+      "description": "Discuss the progress of the project",
+      "eventType": "staff_meeting",
+      "vanue": "Conference Room 1"
+    },
+    "description": "Discuss the progress of the project",
+    "attachments": [
+      "url",
+      "url"
+    ],
+    "activity": [
+      {
+        "message": "Event created by Rajat Abrol",
+        "timestamp": "2026-05-05, 6:40 AM"
+      },
+      {
+        "message": "Event updated by Sita Verma",
+        "timestamp": "2026-05-05, 8:40 PM"
+      }
+    ],
+    "notes": {
+      "title": "Event title is required",
+      "description": "Event description is required"
+    }
+  },
+  "post_notes_update": {
+    "method": "POST",
+    "description": "Create or update notes for the calendar event from detail screen.",
+    "request": {
+      "eventId": "string",
+      "title": "string",
+      "description": "string"
+    },
+    "response": {
+      "success": "boolean",
+      "message": "string",
+      "eventId": "string",
+      "notes": {
+        "title": "string",
+        "description": "string"
+      },
+      "updatedAt": "string"
+    },
+    "example_response": {
+      "success": true,
+      "message": "Notes updated successfully",
+      "eventId": "CAL_EVT_0012",
+      "notes": {
+        "title": "Weekly Meeting",
+        "description": "Discuss progress and assign next action items."
+      },
+      "updatedAt": "2026-05-05T15:45:00Z"
+    }
+  }
+}

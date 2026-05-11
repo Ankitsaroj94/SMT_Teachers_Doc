@@ -1,12 +1,15 @@
 {
-  "screen": "Select Resource",
-  "description": "Grouped resource list with expandable cards and inline time-slot selection.",
+  "screen": "Get Resource Group",
+  "figmaNodeId": "14487:166801",
+  "description": "Fetch grouped resources for dropdown/list selection in booking flow.",
+  "method": "GET",
+  "endpoint": "/resource-bookings/resource-groups",
   "request": {
     "search": "string",
     "date": "string"
   },
   "response": {
-    "data": [
+    "resourceGroups": [
       {
         "categoryId": "string",
         "categoryName": "string",
@@ -25,5 +28,35 @@
         ]
       }
     ]
+  },
+  "example_response": {
+    "resourceGroups": [
+      {
+        "categoryId": "cat-classrooms",
+        "categoryName": "Classrooms",
+        "color": "#4E46B4",
+        "resources": [
+          {
+            "id": "c1",
+            "name": "Classroom 1",
+            "timeSlots": [
+              {
+                "time": "7:00 AM",
+                "available": true
+              },
+              {
+                "time": "7:30 AM",
+                "available": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Used for resource-group dropdown/list selection before final booking submit.",
+    "search": "Optional query to filter resource groups/resources by name.",
+    "date": "Used to return date-aware availability inside nested timeSlots."
   }
 }

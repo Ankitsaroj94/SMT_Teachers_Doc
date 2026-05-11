@@ -1,0 +1,28 @@
+{
+  "screen": "Resource Group Dropdown",
+  "description": "Dropdown options for selecting a resource group in resource management screens.",
+  "figmaNodeId": "8695:53012",
+  "request": {
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "data": [
+      { "id": "rg-audio-visual", "label": "Audio-Visual", "value": "rg-audio-visual" },
+      { "id": "rg-classroom-tech", "label": "Classroom Tech", "value": "rg-classroom-tech" },
+      { "id": "rg-computer-lab", "label": "Computer Lab", "value": "rg-computer-lab" }
+    ]
+  },
+  "notes": {
+    "search": "Used to filter resource groups by name.",
+    "selection": "The selected value maps to `resourceGroupId` in `resource-management-list` and `resource-management-upsert`."
+  }
+}

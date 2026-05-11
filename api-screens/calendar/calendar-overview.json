@@ -1,0 +1,99 @@
+{
+  "screen": "Calendar Overview",
+  "description": "Calendar module overview with month/week date navigation, filter chips, and agenda-style grouped events.",
+  "figmaNodeIds": [
+    "8386:134037",
+    "8386:134092",
+    "8386:134585"
+  ],
+  "request": {
+    "month": "string",
+    "year": "number",
+    "selectedDate": "string",
+    "dateRange": "string",
+    "category": "string",
+    "form": "string",
+    "class": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "title": "string",
+    "monthLabel": "string",
+    "dateStrip": [
+      {
+        "weekDay": "string",
+        "day": "number",
+        "date": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "sections": [
+      {
+        "dateLabel": "string",
+        "events": [
+          {
+            "id": "string",
+            "title": "string",
+            "description": "string",
+            "type": "string",
+            "startTime": "string",
+            "endTime": "string",
+            "isAllDay": "boolean",
+            "ctaLabel": "string"
+          }
+        ]
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+
+
+
+
+
+
+  "example_response": {
+    "is_starred": "boolean",
+    "this_month_calendar": [
+      "dateString",
+      "dateString",
+      "dateString",
+      "dateString",
+      "dateString",
+      "dateString"
+    ],
+    "sections": [
+      {
+        "dateLabel": "MONDAY - 19 MAY",
+        "events": [
+          {
+            "id": "evt-1",
+            "title": "Buddha Purnima/Vesak",  
+            "description": "",
+            "type": "holiday",
+            "startTime": "",
+            "endTime": "",
+            "isAllDay": true,
+            "ctaLabel": ""
+          },
+          {
+            "id": "evt-2",
+            "title": "Staff Birthdays (17)",
+            "description": "Liam Johnson, Priya Sharma, Noah Kim",
+            "type": "birthday",
+            "startTime": "",
+            "endTime": "",
+            "isAllDay": true,
+            "ctaLabel": "Wish all"
+          }
+        ]
+      }
+    ],
+    "total": 24,
+    "page": 1,
+    "limit": 10
+  }
+}

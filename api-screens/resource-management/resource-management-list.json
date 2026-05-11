@@ -1,0 +1,61 @@
+{
+  "screen": "Resource Management",
+  "description": "List resources for resource management with filter inputs (resource group and status).",
+  "figmaNodeIds": [
+    "8695:53012",
+    "8695:53045"
+  ],
+  "request": {
+    "search": "string",
+    "resourceGroupId": "string",
+    "status": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "total": "number",
+    "page": "number",
+    "limit": "number",
+    "resources": [
+      {
+        "id": "string",
+        "name": "string",
+        "resourceGroupName": "string",
+        "status": "string",
+        "capacity": "number",
+        "location": "string",
+        "description": "string",
+        "imageFileId": "string",
+        "imageUrl": "string",
+        "updatedAt": "string"
+      }
+    ]
+  },
+
+
+  "example_response": {
+    "total": 24,
+    "page": 1,
+    "limit": 10,
+    "myOngoingBookings": [
+      {
+        "id": "123234",
+        "name": "Presentation Room 1",
+        "bookedOn": "01 Aug 2026, 10:00 AM",
+        "status": "confirmed",
+        "startDateTime": "01 Sep 2026, 10:00 AM",
+        "endDateTime": "01 Sep 2026, 11:00 AM",
+        "repeat": "daily"
+      },
+      {
+        "id": "123235",
+        "name": "Presentation Room 2",
+        "bookedOn": "01 Aug 2026, 10:00 AM",
+        "status": "confirmed",
+        "startDateTime": "01 Sep 2026, 10:00 AM",
+        "endDateTime": "01 Sep 2026, 11:00 AM",
+        "repeat": "daily"
+      }
+    ]
+  }
+}

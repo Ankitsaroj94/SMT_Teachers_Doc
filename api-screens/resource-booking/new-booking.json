@@ -1,23 +1,109 @@
 {
   "screen": "New Booking",
-  "description": "Default booking form — start/end datetime, resource, repeat, requirements",
+  "description": "Single POST API for complete resource-booking flow including default, all-day, date picker, time picker, and recurrence inputs.",
+  "figmaNodeIds": [
+    "3117:48312",
+    "14487:166717"
+  ],
+  "method": "POST",
+  "endpoint": "/resource-bookings",
+
+
   "request": {
+    "resGroupId": "string",
+    "resourceId": "string",
     "allDay": "boolean",
     "startDate": "string",
     "startTime": "string",
     "endDate": "string",
     "endTime": "string",
     "includeSaturdays": "boolean",
-    "resourceId": "string",
-    "eventName": "string",
     "repeat": "string",
+    "recurrenceId": "string",
+    "customRecurrence": {
+      "repeatEvery": "number",
+      "repeatUnit": "string",
+      "durationType": "string",
+      "occurrences": "number",
+      "untilDate": "string"
+    },
+    "eventName": "string",
     "requirements": "string",
     "customEventNameEnabled": "boolean",
     "calendarEventId": "string"
   },
+
+
+
   "response": {
     "bookingId": "string",
     "status": "string",
-    "message": "string"
+    "message": "string",
+    "data": {
+      "resourceId": "string",
+      "resourceName": "string",
+      "allDay": "boolean",
+      "startDateTime": "string",
+      "endDateTime": "string",
+      "includeSaturdays": "boolean",
+      "repeat": "string",
+      "recurrenceId": "string",
+      "customRecurrence": {
+        "repeatEvery": "number",
+        "repeatUnit": "string",
+        "durationType": "string",
+        "occurrences": "number",
+        "untilDate": "string",
+        "summary": "string"
+      },
+      "requirements": "string",
+      "customEventNameEnabled": "boolean",
+      "calendarEventId": "string",
+      "calendarMonth": "number",
+      "calendarYear": "number",
+      "createdAt": "string"
+    }
+  },
+  "example_response": {
+    "bookingId": "rb_20250901_0001",
+    "status": "confirmed",
+    "message": "Resource booking created successfully.",
+    "data": {
+      "resourceId": "c1",
+      "resourceName": "Classroom 1",
+      "allDay": false,
+      "startDateTime": "2025-08-19T15:00:00+05:30",
+      "endDateTime": "2025-08-19T16:00:00+05:30",
+      "includeSaturdays": false,
+      "repeat": "custom",
+      "recurrenceId": "rec_2wk_until_dec",
+      "customRecurrence": {
+        "repeatEvery": 2,
+        "repeatUnit": "week",
+        "durationType": "until",
+        "occurrences": 0,
+        "untilDate": "2025-12-31",
+        "summary": "Every 2 weeks until 31 Dec 2025"
+      },
+      "requirements": "Projector and whiteboard required.",
+      "customEventNameEnabled": false,
+      "calendarEventId": "evt_90021",
+      "calendarMonth": 8,
+      "calendarYear": 2025,
+      "createdAt": "2025-08-30T10:15:00+05:30"
+    }
+  },
+  "notes": {
+    "consolidation": "This single POST request body replaces separate payload dependencies from all-day, date-picker, and time-picker variants.",
+    "repeat": "never | daily | weekly | monthly | custom",
+    "selectedResource": "Pass selected resource object from select-resource response when UI has full resource context; resourceId remains mandatory.",
+    "recurrenceId": "Pass recurrenceId from custom-recurrence API when repeat = custom.",
+    "customRecurrence": "Can be passed inline when creating recurrence in the same submit.",
+    "repeatUnit": "day | week | month | year",
+    "durationType": "forever | specific_times | until",
+    "calendarEventId": "Used when selecting an existing event from calendar.",
+    "customEventNameEnabled": "When false, event title is sourced from selected calendar event.",
+    "allDay": "When true, startTime/endTime can be omitted and server infers full-day range.",
+    "startDateTime/endDateTime": "Server can return merged ISO datetimes even when request sends separate date/time fields."
   }
 }

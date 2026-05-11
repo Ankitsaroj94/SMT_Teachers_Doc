@@ -1,0 +1,89 @@
+{
+  "screen": "Resource Availability Slots",
+  "description": "Available resources schedule with date strip, morning/evening session toggle, and slot-wise booking availability.",
+  "figmaNodeId": "15302:233457",
+  "request": {
+    "resourceId": "string",
+    "month": "string",
+    "selectedDate": "string",
+    "session": "string"
+  },
+  "response": {
+    "title": "string",
+    "monthLabel": "string",
+    "dates": [
+      {
+        "date": "string",
+        "dayNumber": "number",
+        "dayLabel": "string",
+        "isSelected": "boolean"
+      }
+    ],
+    "sessions": [
+      {
+        "id": "string",
+        "label": "string",
+        "isSelected": "boolean",
+        "slots": [
+          {
+            "timeRange": "string",
+            "status": "string"
+          }
+        ]
+      }
+    ]
+  },
+  "example_response": {
+    "monthLabel": "SEP",
+    "dates": [
+      {
+        "date": "2026-09-01",
+        "dayNumber": 1,
+        "dayLabel": "Mon"
+      },
+      {
+        "date": "2026-09-02",
+        "dayNumber": 2,
+        "dayLabel": "Tue"
+      },
+      {
+        "date": "2026-09-03",
+        "dayNumber": 3,
+        "dayLabel": "Wed"
+      }
+    ],
+    "sessions": [
+      {
+        "label": "Morning",
+        "slots": [
+          {
+            "timeRange": "7:30 - 8:00 AM",
+            "status": "available"
+          },
+          {
+            "timeRange": "9:00 - 9:30 AM",
+            "status": "not_available"
+          },
+          {
+            "timeRange": "10:00 - 10:30 AM",
+            "status": "available"
+          }
+        ]
+      },
+      {
+       
+        "label": "Evening",
+        "slots": [
+          {
+            "timeRange": "5:00 - 5:30 AM",
+            "status": "available"
+          },
+          {
+            "timeRange": "7:00 - 7:30 AM",
+            "status": "not_available"
+          }
+        ]
+      }
+    ]
+  }
+}

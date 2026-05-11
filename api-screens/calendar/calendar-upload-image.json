@@ -1,0 +1,63 @@
+{
+  "screen": "Calendar Upload Image",
+  "description": "Upload a new image from calendar flow and return a reusable file reference for event create/update APIs.",
+  "figmaNodeId": "15197:76668",
+  "method": "POST",
+  "endpoint": "/calendar/uploads/image",
+  "request": {
+    "files": [
+      {
+        "file": "string",
+        "caption": "string",
+        "path": "string"
+      }
+    ],
+    "sendToWeb": "boolean"
+  },
+
+  
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "assets": [
+      {
+        "fileId": "string",
+        "url": "string",
+        "thumbnailUrl": "string",
+        "caption": "string",
+        "path": "string"
+      }
+    ],
+    "sendToWeb": "boolean",
+    "uploadedCount": "number"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Images uploaded successfully",
+    "assets": [
+      {
+        "fileId": "IMG_20260505_001",
+        "url": "https://cdn.example.com/calendar/IMG_20260505_001.jpg",
+        "thumbnailUrl": "https://cdn.example.com/calendar/thumbs/IMG_20260505_001.jpg",
+        "caption": "Staff birthday celebration",
+        "path": "calendar/events/birthday"
+      },
+      {
+        "fileId": "IMG_20260505_002",
+        "url": "https://cdn.example.com/calendar/IMG_20260505_002.jpg",
+        "thumbnailUrl": "https://cdn.example.com/calendar/thumbs/IMG_20260505_002.jpg",
+        "caption": "Team gathering",
+        "path": "calendar/events/meeting"
+      }
+    ],
+    "sendToWeb": true,
+    "uploadedCount": 2
+  },
+  "notes": {
+    "flow": "Use this API first when user uploads new images; pass returned fileId/url to create or detail update APIs.",
+    "multiPath": "When true, each file can use its own path value for storage routing.",
+    "files": "Supports multiple image uploads in a single request.",
+    "caption": "Optional per-image caption shown in event details/cards.",
+    "sendToWeb": "When true, uploaded media is eligible for web sync/public channel visibility per policy."
+  }
+}

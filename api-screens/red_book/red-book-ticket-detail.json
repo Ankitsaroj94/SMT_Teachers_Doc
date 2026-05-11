@@ -2,6 +2,7 @@
   "screen": "Red Book Ticket Detail",
   "figmaNodeIds": [
     "14542:98749",
+    "14565:141449",
     "14551:127827",
     "14594:143389"
   ],
@@ -101,6 +102,6 @@
     "status": "Supported states from Figma: Registered | Pending | Closed.",
     "headerMessage": "Message text changes by state (for example: pending/resolved/registered copy).",
     "actionRemarks": "Nullable. Present for closed-state details; null for pending/registered.",
-    "sharedApi": "All three detail screens consume this single request/response contract."
+    "sharedApi": "All available ticket-detail state screens consume this single request/response contract."
   }
 }

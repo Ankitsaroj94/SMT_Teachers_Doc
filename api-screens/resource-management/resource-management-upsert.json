@@ -1,0 +1,34 @@
+{
+  "screen": "Resource Management Upsert",
+  "description": "Create or update a resource in resource management flow (uses dropdown selections).",
+  "figmaNodeId": "15302:233435",
+  "request": {
+    "resourceId": "string",
+    "name": "string",
+    "resourceGroupId": "string",
+    "capacity": "number",
+    "status": "string",
+    "location": "string",
+    "description": "string",
+    "imageFileId": "string",
+    "sendToWeb": "boolean"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "resourceId": "string",
+    "updatedAt": "string",
+    "status": "string"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Resource saved successfully",
+    "resourceId": "res-101",
+    "updatedAt": "2026-05-08T11:00:00Z",
+    "status": "active"
+  },
+  "notes": {
+    "resourceId": "If this is a create flow, backend can ignore empty/undefined resourceId; if edit flow, it must be provided.",
+    "dropdowns": "resourceGroupId from resource-group dropdown; status from status dropdown."
+  }
+}

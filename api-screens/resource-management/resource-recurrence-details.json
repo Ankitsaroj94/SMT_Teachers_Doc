@@ -1,0 +1,33 @@
+{
+  "screen": "Recurrence Details",
+  "description": "Recurrence summary, daily time window, month calendar, and list of concrete occurrence dates for a booking.",
+  "figmaNodeId": "8705:98228",
+  "request": {
+    "applicationId": "string",
+    "search": "string"
+  },
+  "response": {
+    "recurrenceSummary": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "occurrenceDates": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "recurrenceSummary": "This booking will happen every 2 weeks on Monday and Friday, starting on July 1st, and will stop on August 26th, 2025.",
+    "startDate": "01 Sep 2026, 10:00 AM",
+    "endDate": "09 Sep 2026, 11:00 AM",
+    "occurrenceDates": [
+      "01 Sep 2026, Tuesday",
+      "02 Sep 2026, Wednesday",
+      "03 Sep 2026, Thursday",
+      "04 Sep 2026, Friday",
+      "05 Sep 2026, Saturday",
+      "06 Sep 2026, Sunday",
+      "07 Sep 2026, Monday",
+      "08 Sep 2026, Tuesday",
+      "09 Sep 2026, Wednesday"
+    ]
+  }
+}
