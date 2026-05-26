@@ -1,0 +1,180 @@
+{
+  "screen": "Resource Requests",
+  "description": "Staff resource request approval flow: tabbed list with filters, selectable cards, and per-request detail (booking, requester, requirements, activity). List UI and detail UI are documented in one contract; list uses root request/response; detail uses the nested `detail` object.",
+  "figmaNodeIds": [
+    "5105:40322",
+    "14305:44625"
+  ],
+  "request": {
+    "tab": "string",
+    "sort": "string",
+    "date": "string",
+    "status": "string",
+    "page": "number",
+    "limit": "number",
+    "selectedRequestIds": ["string"]
+  },
+  "response": {
+    "title": "string",
+    "tabs": [
+      {
+        "id": "string",
+        "label": "string",
+        "badgeCount": "number"
+      }
+    ],
+    "requests": [
+      {
+        "id": "string",
+        "resourceName": "string",
+        "bookedByLine": "string",
+        "bookedOnLabel": "string",
+        "startDate": "string",
+        "startTime": "string",
+        "endDate": "string",
+        "endTime": "string",
+        "recurrenceSummary": "string",
+        "eventTitle": "string",
+        "participantsLabel": "string",
+        "rejectLabel": "string",
+        "approveLabel": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "title": "Resource Requests",
+    "tabs": [
+      {
+        "id": "requests",
+        "label": "Requests",
+        "badgeCount": 32
+      },
+      {
+        "id": "approved",
+        "label": "Approved",
+        "badgeCount": 0
+      },
+      {
+        "id": "rejected",
+        "label": "Rejected",
+        "badgeCount": 0
+      }
+    ],
+    "requests": [
+      {
+        "id": "REQ_001",
+        "resourceName": "Auditorium 1A",
+        "bookedByLine": "Booked by Rajat Abrol (Designation | 7981909)",
+        "bookedOnLabel": "Booked on 19 August 2025, 10:30pm",
+        "startDate": "1 Sept, 2025",
+        "startTime": "10:00 AM",
+        "endDate": "1 Sept, 2025",
+        "endTime": "11:00 AM",
+        "recurrenceSummary": "Every 2 weeks on Mon, Fri (until 26 Aug)",
+        "eventTitle": "",
+        "participantsLabel": "",
+        "rejectLabel": "Reject",
+        "approveLabel": "Approve"
+      },
+      {
+        "id": "REQ_002",
+        "resourceName": "Auditorium 3C",
+        "bookedByLine": "Booked by Anita Sharma (Designation | 7981909)",
+        "bookedOnLabel": "Booked on 19 August 2025, 10:30pm",
+        "startDate": "1 Sept, 2025",
+        "startTime": "10:00 AM",
+        "endDate": "1 Sept, 2025",
+        "endTime": "11:00 AM",
+        "recurrenceSummary": "",
+        "eventTitle": "Science Fair",
+        "participantsLabel": "",
+        "rejectLabel": "Reject",
+        "approveLabel": "Approve"
+      },
+      {
+        "id": "REQ_003",
+        "resourceName": "Biology Lab",
+        "bookedByLine": "Booked by Rajat Abrol (Designation | 7981909)",
+        "bookedOnLabel": "Booked on 19 August 2025, 10:30pm",
+        "startDate": "1 Sept, 2025",
+        "startTime": "10:00 AM",
+        "endDate": "1 Sept, 2025",
+        "endTime": "11:00 AM",
+        "recurrenceSummary": "Every day (until 26 Aug)",
+        "eventTitle": "Teachers Day",
+        "participantsLabel": "12 Participants",
+        "rejectLabel": "Reject",
+        "approveLabel": "Approve"
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 10
+  },
+  "detail": {
+    "figmaNodeId": "14305:44625",
+    "request": {
+      "requestId": "string"
+    },
+    "response": {
+      "resourceName": "string",
+      "bookingDetailsSectionTitle": "string",
+      "startDateLabel": "string",
+      "startTime": "string",
+      "endDateLabel": "string",
+      "endTime": "string",
+      "recurrenceSummary": "string",
+      "recurrenceDetailsCtaLabel": "string",
+      "bookedBySectionTitle": "string",
+      "requesterName": "string",
+      "requesterMeta": "string",
+      "requirementsSectionTitle": "string",
+      "requirements": "string",
+      "activitySectionTitle": "string",
+      "activity": [
+        {
+          "message": "string",
+          "timestampLabel": "string"
+        }
+      ],
+      "appliedAtLabel": "string"
+    },
+    "example_response": {
+      "resourceName": "Auditorium 1A",
+      "bookingDetailsSectionTitle": "Booking Details",
+      "startDateLabel": "1 Sept 2025, Thursday",
+      "startTime": "10:00 AM",
+      "endDateLabel": "3 Sept 2025, Saturday",
+      "endTime": "11:00 AM",
+      "recurrenceSummary": "Every day (until 26 Aug)",
+      "recurrenceDetailsCtaLabel": "Details",
+      "bookedBySectionTitle": "Booked by",
+      "requesterName": "Rajat Abrol",
+      "requesterMeta": "Designation | 123456",
+      "requirementsSectionTitle": "Requirements",
+      "requirements": "Need to prepare for annual function with kids for vande matram performance",
+      "activitySectionTitle": "Activity",
+      "activity": [
+        {
+          "message": "Waiting for approval from You",
+          "timestampLabel": "-"
+        },
+        {
+          "message": "Request raised by Tarun Aggarwal",
+          "timestampLabel": "8 Jun 2025, 6:40 am"
+        }
+      ],
+      "appliedAtLabel": "Applied : 8 Jun 2025, 6:40 am"
+    }
+  },
+  "notes": {
+    "tab": "requests | approved | rejected (top tabs).",
+    "listFilters": "Sort, Date, and Status map to chip affordances; send applied values only when user sets them.",
+    "selectedRequestIds": "Optional; used when list supports Select All / Select Multiple and bulk actions.",
+    "detail": "Call with `requestId` from `requests[].id` when user opens a row or taps through from the list.",
+    "bookedByLine": "List cards may use rich emphasis in design; API may return plain string or structured segments per client needs."
+  }
+}

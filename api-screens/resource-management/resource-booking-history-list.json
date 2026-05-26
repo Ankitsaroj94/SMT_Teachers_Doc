@@ -1,12 +1,12 @@
 {
   "screen": "My Booking History",
-  "description": "Resource booking applications list with sort, status, date, and category filter chips and booking cards.",
+  "description": "Resource booking applications list with sort, status, date, and resource category filters, booking cards, optional decision reason (acceptance vs rejection), requirements, and activity timeline.",
   "figmaNodeId": "8705:97858",
   "request": {
     "sortBy": "string",
-    "status": "string",
     "date": "string",
-    "category": "string",
+    "status": "string",
+    "resourceCategory": "string",
     "page": "number",
     "limit": "number"
   },
@@ -16,13 +16,32 @@
       {
         "id": "string",
         "resourceName": "string",
-        "bookedOnLabel": "string",
+        "bookedBy": "string",
+        "bookedByDesignation": "string",
+        "bookedByEmployeeId": "string",
+        "bookedOn": "string",
         "approvalStatus": "string",
         "startDate": "string",
-        "startTime": "string",
         "endDate": "string",
-        "endTime": "string",
-        "recurrenceSummary": "string"
+        "recurrenceSummary": "string",
+        "profileImageUrl": "string",
+        "applicantName": "string",
+        "designation": "string",
+        "employeeId": "string",
+        "eventTitle": "string",
+        "participants": "string",
+        "requirements": "string",
+        "decisionReason": {
+          "type": "string",
+          "label": "string",
+          "text": "string"
+        },
+        "activity": [
+          {
+            "message": "string",
+            "timestamp": "string"
+          }
+        ]
       }
     ],
     "total": "number",
@@ -30,11 +49,15 @@
     "limit": "number"
   },
   "example_response": {
+    "title": "My Booking History",
     "bookings": [
       {
         "id": "123234",
         "resourceName": "Presentation Room",
-        "bookedOnLabel": "01 Aug 2026, 10:00 AM",
+        "bookedBy": "Rajat Abrol",
+        "bookedByDesignation": "Designation",
+        "bookedByEmployeeId": "123456",
+        "bookedOn": "01 Aug 2026, 10:00 AM",
         "approvalStatus": "Approved",
         "startDate": "01 Sep 2026, 10:00 AM",
         "endDate": "01 Sep 2026, 11:00 AM",
@@ -42,12 +65,33 @@
         "profileImageUrl": "https://via.placeholder.com/150",
         "applicantName": "Rajat Abrol",
         "designation": "Designation",
-        "employeeId": "123456"
+        "employeeId": "123456",
+        "eventTitle": "Event Title",
+        "participants": "12 Participants",
+        "requirements": "Projector and whiteboard required.",
+        "decisionReason": {
+          "type": "acceptance",
+          "label": "Reason for Acceptance",
+          "text": "Project deadlines"
+        },
+        "activity": [
+          {
+            "message": "Waiting for approval from You",
+            "timestamp": "-"
+          },
+          {
+            "message": "Request raised by Tarun Aggarwal",
+            "timestamp": "8 Jun 2025, 6:40 am"
+          }
+        ]
       },
       {
         "id": "123235",
         "resourceName": "Presentation Room 2",
-        "bookedOnLabel": "01 Aug 2026, 10:00 AM",
+        "bookedBy": "Rajat Abrol",
+        "bookedByDesignation": "Designation",
+        "bookedByEmployeeId": "123456",
+        "bookedOn": "01 Aug 2026, 10:00 AM",
         "approvalStatus": "Rejected",
         "startDate": "01 Sep 2026, 10:00 AM",
         "endDate": "01 Sep 2026, 11:00 AM",
@@ -55,24 +99,34 @@
         "profileImageUrl": "https://via.placeholder.com/150",
         "applicantName": "Rajat Abrol",
         "designation": "Designation",
-        "employeeId": "123456"
-      },
-      {
-        "id": "123236",
-        "resourceName": "Presentation Room 3",
-        "bookedOnLabel": "01 Aug 2026, 10:00 AM",
-        "approvalStatus": "Pending",
-        "startDate": "01 Sep 2026, 10:00 AM",
-        "endDate": "01 Sep 2026, 11:00 AM",
-        "recurrenceSummary": "Every 2 weeks on Mon, Fri (until 26 Aug)",
-        "profileImageUrl": "https://via.placeholder.com/150",
-        "applicantName": "Rajat Abrol",
-        "designation": "Designation",
-        "employeeId": "123456"
+        "employeeId": "123456",
+        "eventTitle": "",
+        "participants": "",
+        "requirements": "Projector and whiteboard required.",
+        "decisionReason": {
+          "type": "rejection",
+          "label": "Reason for Rejection",
+          "text": "Project deadlines"
+        },
+        "activity": [
+          {
+            "message": "Waiting for approval from You",
+            "timestamp": "-"
+          },
+          {
+            "message": "Request raised by Tarun Aggarwal",
+            "timestamp": "8 Jun 2025, 6:40 am"
+          }
+        ]
       }
     ],
-    "total": 3,
+    "total": 2,
     "page": 1,
     "limit": 10
+  },
+  "notes": {
+    "decisionReason": "Shown only after a decision; `type` drives card styling (green acceptance vs red rejection). Labels match Figma: [Reason for Acceptance](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=14305-43221&t=RUgqEWyO7rRfKolj-4) and [Reason for Rejection](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=14305-43216&t=RUgqEWyO7rRfKolj-4). Example body text uses visible placeholder \"Project deadlines\" from both nodes.",
+    "decisionReasonWhenPending": "Omit `decisionReason` or set `decisionReason` to null when `approvalStatus` is pending and the reason block is not shown.",
+    "approvalStatus": "Include `approvalStatus` on each booking when the list shows status badges; align with Status filter chip values from the screen."
   }
 }
