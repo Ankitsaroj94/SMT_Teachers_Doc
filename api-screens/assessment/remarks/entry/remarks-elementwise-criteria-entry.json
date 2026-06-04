@@ -1,0 +1,91 @@
+{
+  "screen": "Remarks \u2014 Elementwise criteria remarks",
+  "description": "Elementwise remark entry with criteria checklist and remark field.",
+  "figmaNodeId": "9540:57356",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "elementId": "string",
+    "remarks": [
+      {
+        "skillId": "string",
+        "remark": "string"
+      }
+    ],
+    "recommendation": "string",
+    "classTeacherRemark": "string",
+    "selectedSuggestionIds": [
+      "string"
+    ]
+  },
+  "response": {
+    "filterChips": {
+      "termLabel": "string",
+      "subjectLabel": "string",
+      "academicYearLabel": "string"
+    },
+    "student": {
+      "name": "string",
+      "classSection": "string",
+      "studentId": "string"
+    },
+    "criteria": [
+      {
+        "id": "string",
+        "label": "string",
+        "remark": "string"
+      }
+    ],
+    "addRemarksLabel": "string",
+    "placeholder": "string",
+    "suggestionsLabel": "string",
+    "saveAndNextLabel": "string",
+    "saveLabel": "string"
+  },
+  "example_response": {
+    "filterChips": {
+      "termLabel": "Term 1",
+      "subjectLabel": "English",
+      "academicYearLabel": "2025"
+    },
+    "student": {
+      "name": "Mark Thompson",
+      "classSection": "XII - C | 677868",
+      "studentId": "677868"
+    },
+    "criteria": [
+      {
+        "id": "attentive_listener",
+        "label": "Attentive Listener",
+        "remark": ""
+      },
+      {
+        "id": "comprehension",
+        "label": "Comprehension",
+        "remark": ""
+      },
+      {
+        "id": "sound_letter",
+        "label": "Can releate a sound to a letter?",
+        "remark": ""
+      },
+      {
+        "id": "identify_sounds",
+        "label": "Can identify sounds at the beginning, middle and end of the word?",
+        "remark": ""
+      }
+    ],
+    "addRemarksLabel": "Add Remarks",
+    "placeholder": "Write a short remark for this student.",
+    "suggestionsLabel": "Suggestions",
+    "saveAndNextLabel": "Save and Next",
+    "saveLabel": "Save"
+  },
+  "notes": {
+    "figmaNodeIds": "Also matches 9568:193988 (same layout)."
+  }
+}

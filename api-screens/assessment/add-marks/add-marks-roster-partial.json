@@ -1,0 +1,71 @@
+{
+  "screen": "Add Marks — Student Roster (Partial Entry)",
+  "description": "Same roster as Add Marks with some students already marked; shows mixed entered and empty marks fields.",
+  "figmaNodeId": "9379:194158",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "date": "string",
+    "search": "string",
+    "sortBy": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "header": {
+      "classLabel": "string",
+      "subjectLabel": "string",
+      "assessmentLabel": "string",
+      "maxMarks": "number",
+      "enteredCount": "number",
+      "totalCount": "number"
+    },
+    "students": [
+      {
+        "serial": "number",
+        "profilePic": "string",
+        "name": "string",
+        "studentId": "string",
+        "marks": "number | null",
+        "isAbsent": "boolean",
+        "remark": "string"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Add Marks",
+    "header": {
+      "classLabel": "XII - C",
+      "subjectLabel": "Mathematics",
+      "assessmentLabel": "Unit Test 1",
+      "maxMarks": 100,
+      "enteredCount": 8,
+      "totalCount": 24
+    },
+    "students": [
+      {
+        "serial": 1,
+        "profilePic": "string",
+        "name": "Mark Thompson",
+        "studentId": "1561154",
+        "marks": 78,
+        "isAbsent": false,
+        "remark": ""
+      },
+      {
+        "serial": 2,
+        "profilePic": "string",
+        "name": "Linda Gomez",
+        "studentId": "1561155",
+        "marks": null,
+        "isAbsent": false,
+        "remark": ""
+      }
+    ],
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "enteredCount": "Optional summary when UI shows partial progress; omit if not visible in design."
+  }
+}

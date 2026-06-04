@@ -1,0 +1,66 @@
+{
+  "screen": "Remarks \u2014 Class Teacher Remark",
+  "description": "Student-level class teacher remark and recommendations.",
+  "figmaNodeId": "9379:193791",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "elementId": "string",
+    "remarks": [
+      {
+        "skillId": "string",
+        "remark": "string"
+      }
+    ],
+    "recommendation": "string",
+    "classTeacherRemark": "string",
+    "selectedSuggestionIds": [
+      "string"
+    ]
+  },
+  "response": {
+    "filterChips": {
+      "termLabel": "string",
+      "academicYearLabel": "string"
+    },
+    "student": {
+      "name": "string",
+      "classSection": "string",
+      "studentId": "string",
+      "breadcrumb": "string"
+    },
+    "recommendationsLabel": "string",
+    "recommendationPages": [
+      "string"
+    ],
+    "classTeacherRemark": "string",
+    "saveAndNextLabel": "string",
+    "saveLabel": "string"
+  },
+  "example_response": {
+    "filterChips": {
+      "termLabel": "Term 1",
+      "academicYearLabel": "2025"
+    },
+    "student": {
+      "name": "Mark Thompson",
+      "classSection": "XII - C | 677868",
+      "studentId": "677868",
+      "breadcrumb": "Student Profile / Class Teacher Remark"
+    },
+    "recommendationsLabel": "Recommendations",
+    "recommendationPages": [
+      "A glimpse of myself(my page)"
+    ],
+    "classTeacherRemark": "",
+    "saveAndNextLabel": "Save and Next",
+    "saveLabel": "Save"
+  },
+  "notes": {
+    "recommendationPages": "Visible recommendation sections from UI."
+  }
+}

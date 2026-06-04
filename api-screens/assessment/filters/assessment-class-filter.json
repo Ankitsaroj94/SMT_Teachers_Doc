@@ -1,0 +1,36 @@
+{
+  "screen": "Assessment — Class Filter",
+  "description": "Dropdown / bottom-sheet options for the Assessment Class filter chip.",
+  "figmaNodeId": "7133:150449",
+  "request": {
+    "search": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "section": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_response": {
+    "data": [
+      { "id": "xii_a", "label": "XII - A", "section": "A" },
+      { "id": "xii_b", "label": "XII - B", "section": "B" },
+      { "id": "xi_c", "label": "XI - C", "section": "C" }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to `classId` on Assessment list and Add Marks setup requests.",
+    "search": "Optional; filters class list when search field is visible in the filter sheet."
+  }
+}

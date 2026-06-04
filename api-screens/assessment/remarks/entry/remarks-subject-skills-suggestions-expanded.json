@@ -1,0 +1,122 @@
+{
+  "screen": "Remarks \u2014 Suggestions list expanded",
+  "description": "Per-skill remark entry for subject profile.",
+  "figmaNodeId": "9379:193879",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "elementId": "string",
+    "remarks": [
+      {
+        "skillId": "string",
+        "remark": "string"
+      }
+    ],
+    "recommendation": "string",
+    "classTeacherRemark": "string",
+    "selectedSuggestionIds": [
+      "string"
+    ]
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": {
+      "termLabel": "string",
+      "subjectLabel": "string",
+      "assessmentLabel": "string",
+      "academicYearLabel": "string"
+    },
+    "student": {
+      "name": "string",
+      "classSection": "string",
+      "studentId": "string",
+      "breadcrumb": "string"
+    },
+    "skills": [
+      {
+        "id": "string",
+        "label": "string",
+        "remark": "string",
+        "placeholder": "string"
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "addRemarksLabel": "string",
+    "suggestionsLabel": "string",
+    "saveAndNextLabel": "string",
+    "saveLabel": "string"
+  },
+  "example_response": {
+    "filterChips": {
+      "termLabel": "Term 1",
+      "subjectLabel": "English",
+      "assessmentLabel": "Unit Test 1",
+      "academicYearLabel": "2025"
+    },
+    "student": {
+      "name": "Mark Thompson",
+      "classSection": "XII - C | 677868",
+      "studentId": "677868",
+      "breadcrumb": "Subject remark entry"
+    },
+    "skills": [
+      {
+        "id": "listening",
+        "label": "Listening",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      },
+      {
+        "id": "speaking",
+        "label": "Speaking",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      },
+      {
+        "id": "reading_comprehension",
+        "label": "Reading/Comprehension",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      },
+      {
+        "id": "vocabulary",
+        "label": "Vocabulary",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      },
+      {
+        "id": "grammar",
+        "label": "Grammar",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "s1",
+        "label": "Listens attentively and grasps the gist of the content with ease."
+      },
+      {
+        "id": "s2",
+        "label": "Listens for specific information and responds appropriately."
+      }
+    ],
+    "addRemarksLabel": "Add Remarks",
+    "suggestionsLabel": "Suggestions",
+    "saveAndNextLabel": "Save and Next",
+    "saveLabel": "Save"
+  },
+  "notes": {
+    "skills": "Listening, Speaking, Reading/Comprehension, Vocabulary, Grammar tabs/sections.",
+    "suggestions": "Optional chips from suggestions API when Suggestions is expanded."
+  }
+}
