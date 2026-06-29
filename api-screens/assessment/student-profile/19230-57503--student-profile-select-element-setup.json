@@ -1,0 +1,72 @@
+{
+  "screen": "Remarks — Student Profile — Select Element",
+  "description": "Setup screen before remarks list: class, term tabs, elementwise path.",
+  "figmaNodeId": "19230:57503",
+  "request": {
+    "classId": "string",
+    "termId": "string",
+    "viewMode": "elementwise | term",
+    "elementId": "string",
+    "subjectId": "string",
+    "aspectId": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "profileMode": "studentProfile | subjectProfile",
+    "sectionTitle": "string",
+    "classLabel": "string",
+    "terms": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "elementwiseLabel": "string",
+    "subjectLabel": "string",
+    "subjectPlaceholder": "string",
+    "elementPlaceholder": "string",
+    "whichSubjectLabel": "string",
+    "aspectPlaceholder": "string",
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Student Profile",
+    "profileMode": "studentProfile",
+    "sectionTitle": "Class and Term",
+    "classLabel": "XII - C",
+    "terms": [
+      {
+        "id": "term_1",
+        "label": "Term 1"
+      },
+      {
+        "id": "term_2",
+        "label": "Term 2"
+      },
+      {
+        "id": "term_3",
+        "label": "Term 3"
+      }
+    ],
+    "elementwiseLabel": "Elementwise",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "",
+    "elementPlaceholder": "Select Element",
+    "whichSubjectLabel": "Which Subject?",
+    "aspectPlaceholder": "Select Aspect",
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "viewMode": "Term tabs (Term 1–3) or Elementwise segmented control.",
+    "flow": "Submit navigates to matching remarks list screen.",
+    "figmaSectionId": "19230:57503"
+  },
+  "example_request": {
+    "classId": "",
+    "termId": "",
+    "viewMode": "elementwise",
+    "elementId": "",
+    "subjectId": "",
+    "aspectId": ""
+  }
+}

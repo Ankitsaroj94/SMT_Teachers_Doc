@@ -1,0 +1,67 @@
+{
+  "screen": "Manual Attendance — Subject Wise Setup",
+  "description": "Type = Subject Wise: Class Wise fields plus Subject, Upload Attendance, Submit → shared roster.",
+  "figmaNodeId": "19230:59708",
+  "request": {
+    "type": "classWise | subjectWise",
+    "formId": "string",
+    "classId": "string",
+    "templateId": "string",
+    "examId": "string",
+    "subjectId": "string",
+    "totalDays": "number"
+  },
+  "response": {
+    "pageTitle": "string",
+    "typeLabel": "string",
+    "typeOptions": [
+      "string"
+    ],
+    "selectedType": "classWise | subjectWise",
+    "formLabel": "string",
+    "classLabel": "string",
+    "templateLabel": "string",
+    "examLabel": "string",
+    "subjectLabel": "string",
+    "totalDaysLabel": "string",
+    "totalDays": "number",
+    "uploadSectionLabel": "string",
+    "uploadHint": "string",
+    "downloadTemplateLabel": "string",
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "type": "subjectWise",
+    "formId": "xii",
+    "classId": "xii_c",
+    "templateId": "template_1",
+    "examId": "exam_1",
+    "subjectId": "maths",
+    "totalDays": 324
+  },
+  "example_response": {
+    "pageTitle": "Manual Attendance",
+    "typeLabel": "Type",
+    "typeOptions": [
+      "Class Wise",
+      "Subject Wise"
+    ],
+    "selectedType": "subjectWise",
+    "formLabel": "Form",
+    "classLabel": "Class",
+    "templateLabel": "Template",
+    "examLabel": "Exam",
+    "subjectLabel": "Subject",
+    "totalDaysLabel": "Total Days",
+    "totalDays": 324,
+    "uploadSectionLabel": "Upload Attendance",
+    "uploadHint": "upload the excel file with student marks",
+    "downloadTemplateLabel": "Download Template",
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "figmaSectionId": "19230:59615",
+    "uiVariants": "19230:59708 empty, 19230:59755 filled — same API.",
+    "submit": "Navigates to shared roster with type=subjectWise; filterChips include subject."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "screen": "Assessment — Grades Filter",
+  "description": "Grade options for roster grade column (e.g. Select, DN).",
+  "figmaNodeId": "9568:194594",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "termId": "string",
+    "academicYear": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "select",
+        "label": "Select",
+        "value": ""
+      },
+      {
+        "id": "dn",
+        "label": "DN",
+        "value": "DN"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected value maps to `grade` on each student row in remarks-list-grade-column.",
+    "select": "Placeholder label shown before a grade is chosen."
+  },
+  "example_request": {
+    "classId": "",
+    "subjectId": "",
+    "termId": "",
+    "academicYear": ""
+  }
+}

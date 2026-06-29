@@ -1,0 +1,53 @@
+{
+  "screen": "Student Profile — Save Remarks",
+  "description": "Save remarks for current student (Save or Save and Next).",
+  "figmaNodeId": "19230:57503",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "elementId": "string",
+    "remarks": [
+      {
+        "skillId": "string",
+        "remark": "string"
+      }
+    ],
+    "recommendation": "string",
+    "classTeacherRemark": "string",
+    "selectedSuggestionIds": [
+      "string"
+    ]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "nextStudentId": "string"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Remarks saved",
+    "nextStudentId": "1561155"
+  },
+  "notes": {
+    "nextStudentId": "Returned when Save and Next is used; omit on Save only.",
+    "figmaSectionId": "19230:57503",
+    "linkedScreens": "POST mutation for subject-skills-entry and elementwise entry."
+  },
+  "example_request": {
+    "studentId": "",
+    "classId": "",
+    "termId": "",
+    "subjectId": "",
+    "assessmentId": "",
+    "academicYear": "",
+    "elementId": "",
+    "remarks": [],
+    "recommendation": "",
+    "classTeacherRemark": "",
+    "selectedSuggestionIds": []
+  }
+}

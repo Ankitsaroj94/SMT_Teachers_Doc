@@ -1,0 +1,53 @@
+{
+  "screen": "Co-Scholastic — Sub-Group Filter",
+  "description": "Sub-group picker for co-scholastic setup and roster.",
+  "figmaNodeId": "9456:57843",
+  "request": {
+    "areaId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "areaId": "co_curricular",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "music_dance",
+        "label": "Music and Dance"
+      },
+      {
+        "id": "art",
+        "label": "Art"
+      },
+      {
+        "id": "sports",
+        "label": "Sports"
+      },
+      {
+        "id": "karate",
+        "label": "Karate"
+      },
+      {
+        "id": "debate",
+        "label": "Debate"
+      }
+    ]
+  },
+  "notes": {
+    "figmaSectionId": "19230:59231",
+    "usage": "Selected id maps to subGroupId on setup and roster requests."
+  }
+}

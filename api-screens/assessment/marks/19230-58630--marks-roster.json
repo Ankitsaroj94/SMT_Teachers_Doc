@@ -1,0 +1,82 @@
+{
+  "screen": "Marks — Student Roster",
+  "description": "Student marks roster; partial and all-entered are UI states (marks null vs filled).",
+  "figmaNodeId": "19230:58630",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "date": "string",
+    "search": "string",
+    "sortBy": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "header": {
+      "classLabel": "string",
+      "subjectLabel": "string",
+      "assessmentLabel": "string",
+      "maxMarks": "number",
+      "enteredCount": "number",
+      "totalCount": "number"
+    },
+    "students": [
+      {
+        "serial": "number",
+        "profilePic": "string",
+        "name": "string",
+        "studentId": "string",
+        "marks": "number | null",
+        "isAbsent": "boolean",
+        "remark": "string"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Add Marks",
+    "header": {
+      "classLabel": "XII - C",
+      "subjectLabel": "Mathematics",
+      "assessmentLabel": "Unit Test 1",
+      "maxMarks": 100,
+      "enteredCount": 0,
+      "totalCount": 2
+    },
+    "students": [
+      {
+        "serial": 1,
+        "profilePic": "string",
+        "name": "Mark Thompson",
+        "studentId": "1561154",
+        "marks": null,
+        "isAbsent": false,
+        "remark": ""
+      },
+      {
+        "serial": 2,
+        "profilePic": "string",
+        "name": "Linda Gomez",
+        "studentId": "1561155",
+        "marks": null,
+        "isAbsent": false,
+        "remark": ""
+      }
+    ],
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "marks": "null when not yet entered; validate against maxMarks on submit.",
+    "isAbsent": "When true, marks input may be disabled in UI.",
+    "figmaSectionId": "19230:58630",
+    "uiVariants": "Merged add-marks-roster, add-marks-roster-partial, add-marks-roster-filled."
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math",
+    "assessmentId": "unit_test_1",
+    "date": "2025-05-19",
+    "search": "",
+    "sortBy": "name"
+  }
+}

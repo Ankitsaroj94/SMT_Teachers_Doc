@@ -1,0 +1,47 @@
+{
+  "screen": "Assessment — Form Filter",
+  "description": "Dropdown / bottom-sheet options for the Assessment Form filter chip.",
+  "figmaNodeId": "19230:56644",
+  "request": {
+    "siteId": "number",
+    "sessionId": "number",
+    "staffId": "number",
+    "userSysId": "number",
+    "accessLevel": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "formLevel": "number"
+      }
+    ]
+  },
+  "example_request": {
+    "siteId": 47,
+    "sessionId": 640,
+    "staffId": 0,
+    "userSysId": 121173,
+    "accessLevel": 10
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "xii",
+        "label": "XII",
+        "formLevel": 12
+      },
+      {
+        "id": "xi",
+        "label": "XI",
+        "formLevel": 11
+      }
+    ]
+  },
+  "notes": {
+    "figmaSectionId": "19230:56644",
+    "usage": "Selected id maps to formId on class filter and downstream setup screens.",
+    "backendMapping": "FormId → id, FormName → label, FormLevel → formLevel"
+  }
+}

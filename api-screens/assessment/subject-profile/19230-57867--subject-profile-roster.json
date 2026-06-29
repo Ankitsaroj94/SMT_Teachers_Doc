@@ -1,0 +1,152 @@
+{
+  "screen": "Subject Profile — Roster",
+  "description": "Merged roster for subjectProfile: filter chips, columnMode (remarks/marks/grade), student rows.",
+  "figmaNodeId": "19230:57867",
+  "request": {
+    "profileMode": "studentProfile | subjectProfile",
+    "classId": "string",
+    "termId": "string",
+    "academicYear": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "columnMode": "remarks | marks | grade",
+    "viewMode": "staff-wise | student-wise",
+    "sortBy": "name | admissionNo | rollNo",
+    "search": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "profileMode": "studentProfile | subjectProfile",
+    "filterChips": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ],
+    "columnMode": "remarks | marks | grade",
+    "sortOptions": [
+      "string"
+    ],
+    "viewModes": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "profilePic": "string",
+        "name": "string",
+        "rollNo": "string",
+        "studentId": "string",
+        "remarksAction": "add | edit | none",
+        "marks": "string",
+        "grade": "string"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "profileMode": "subjectProfile",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "academicYear": "2025",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "columnMode": "remarks",
+    "viewMode": "staff-wise",
+    "sortBy": "name",
+    "search": ""
+  },
+  "example_response": {
+    "pageTitle": "Subject Profile",
+    "profileMode": "subjectProfile",
+    "filterChips": [
+      {
+        "id": "class",
+        "label": "XII - C",
+        "value": "XII - C"
+      },
+      {
+        "id": "term",
+        "label": "Term 1",
+        "value": "Term 1"
+      },
+      {
+        "id": "subject",
+        "label": "English",
+        "value": "English"
+      },
+      {
+        "id": "assessment",
+        "label": "Unit Test 1",
+        "value": "Unit Test 1"
+      },
+      {
+        "id": "academicYear",
+        "label": "2025",
+        "value": "2025"
+      }
+    ],
+    "columnMode": "remarks",
+    "sortOptions": [
+      "Sort By",
+      "Name",
+      "Admission No.",
+      "Roll No."
+    ],
+    "viewModes": [
+      "Staff-wise",
+      "Student-wise",
+      "Option 6"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "profilePic": "string",
+        "name": "Mark Thompson",
+        "rollNo": "123",
+        "studentId": "1561154",
+        "remarksAction": "add",
+        "marks": "",
+        "grade": ""
+      },
+      {
+        "serial": 2,
+        "profilePic": "string",
+        "name": "Linda Gomez",
+        "rollNo": "string",
+        "studentId": "string",
+        "remarksAction": "add",
+        "marks": "",
+        "grade": ""
+      },
+      {
+        "serial": 3,
+        "profilePic": "string",
+        "name": "Sophia Kim",
+        "rollNo": "string",
+        "studentId": "string",
+        "remarksAction": "edit",
+        "marks": "",
+        "grade": ""
+      },
+      {
+        "serial": 4,
+        "profilePic": "string",
+        "name": "Ethan Brown",
+        "rollNo": "string",
+        "studentId": "string",
+        "remarksAction": "edit",
+        "marks": "",
+        "grade": "DN"
+      }
+    ],
+    "primaryActionLabel": "Save"
+  },
+  "notes": {
+    "figmaSectionId": "19230:57867",
+    "uiVariants": "Merged legacy list screens: remarks/list/remarks-subject-profile-list.json, remarks/list/remarks-subject-profile-list-assessment.json, remarks/list/remarks-list-subject-profile.json",
+    "columnMode": "remarks | marks | grade — one API; grade picker uses filters/9568-194594--assessment-grades-filter.json",
+    "filterChips": "Ordered chip strip; omit chips with empty value."
+  }
+}

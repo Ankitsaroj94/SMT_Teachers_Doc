@@ -1,0 +1,51 @@
+{
+  "screen": "Manual Attendance — Roster Submit",
+  "description": "POST attendance marks for all students on the manual attendance roster.",
+  "figmaNodeId": "19230:59803",
+  "request": {
+    "type": "classWise | subjectWise",
+    "formId": "string",
+    "classId": "string",
+    "templateId": "string",
+    "examId": "string",
+    "subjectId": "string",
+    "totalDays": "number",
+    "students": [
+      {
+        "studentId": "string",
+        "attendanceStatus": "present | absent",
+        "presentDays": "number | null"
+      }
+    ]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "submittedCount": "number"
+  },
+  "example_request": {
+    "type": "classWise",
+    "formId": "xii",
+    "classId": "xii_c",
+    "templateId": "template_1",
+    "examId": "exam_1",
+    "subjectId": "",
+    "totalDays": 324,
+    "students": [
+      {
+        "studentId": "1561154",
+        "attendanceStatus": "present",
+        "presentDays": 275
+      }
+    ]
+  },
+  "example_response": {
+    "success": true,
+    "message": "Attendance saved",
+    "submittedCount": 24
+  },
+  "notes": {
+    "figmaSectionId": "19230:59615",
+    "flow": "Submit action on roster screen 19230:59803."
+  }
+}

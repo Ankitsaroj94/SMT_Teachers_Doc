@@ -1,0 +1,196 @@
+{
+  "figmaFileKey": "iv4SFTxeHwgBYQ6TNhydaL",
+  "moduleRoot": "19230:56644",
+  "moduleRootUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-56644",
+  "screens": [
+    {
+      "contractFile": "_meta/19230-56644--assessment-hub.json",
+      "figmaNodeId": "19230:56644",
+      "screen": "Assessment — Hub",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-56644",
+      "figmaSectionId": "19230:56644"
+    },
+    {
+      "contractFile": "co-scholastic/19230-59231--co-scholastic-roster.json",
+      "figmaNodeId": "19230:59231",
+      "screen": "Co-Scholastic — Roster",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59231",
+      "figmaSectionId": "19230:59231"
+    },
+    {
+      "contractFile": "co-scholastic/19230-59231--co-scholastic-setup.json",
+      "figmaNodeId": "19230:59231",
+      "screen": "Co-Scholastic — Setup",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59231",
+      "figmaSectionId": "19230:59231"
+    },
+    {
+      "contractFile": "co-scholastic/19230-59231--co-scholastic-student-grades-entry.json",
+      "figmaNodeId": "19230:59231",
+      "screen": "Co-Scholastic — Student Grades Entry",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59231",
+      "figmaSectionId": "19230:59231"
+    },
+    {
+      "contractFile": "co-scholastic/9456-57843--co-scholastic-sub-group-filter.json",
+      "figmaNodeId": "9456:57843",
+      "screen": "Co-Scholastic — Sub-Group Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9456-57843",
+      "figmaSectionId": "19230:59231"
+    },
+    {
+      "contractFile": "filters/19230-56644--assessment-form-filter.json",
+      "figmaNodeId": "19230:56644",
+      "screen": "Assessment — Form Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-56644",
+      "figmaSectionId": "19230:56644"
+    },
+    {
+      "contractFile": "filters/7133-150449--assessment-class-filter.json",
+      "figmaNodeId": "7133:150449",
+      "screen": "Assessment — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150449",
+      "figmaSectionId": "19230:56644"
+    },
+    {
+      "contractFile": "filters/7133-150532--assessment-subject-filter.json",
+      "figmaNodeId": "7133:150532",
+      "screen": "Assessment — Subject Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150532",
+      "figmaSectionId": "19230:56644"
+    },
+    {
+      "contractFile": "filters/9568-194594--assessment-grades-filter.json",
+      "figmaNodeId": "9568:194594",
+      "screen": "Assessment — Grades Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9568-194594",
+      "figmaSectionId": null
+    },
+    {
+      "contractFile": "manual-attendance/19230-59616--manual-attendance-class-wise-setup.json",
+      "figmaNodeId": "19230:59616",
+      "screen": "Manual Attendance — Class Wise Setup",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59616",
+      "figmaSectionId": "19230:59615"
+    },
+    {
+      "contractFile": "manual-attendance/19230-59708--manual-attendance-subject-wise-setup.json",
+      "figmaNodeId": "19230:59708",
+      "screen": "Manual Attendance — Subject Wise Setup",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59708",
+      "figmaSectionId": "19230:59615"
+    },
+    {
+      "contractFile": "manual-attendance/19230-59803--manual-attendance-roster-submit.json",
+      "figmaNodeId": "19230:59803",
+      "screen": "Manual Attendance — Roster Submit",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59803",
+      "figmaSectionId": "19230:59615"
+    },
+    {
+      "contractFile": "manual-attendance/19230-59803--manual-attendance-roster.json",
+      "figmaNodeId": "19230:59803",
+      "screen": "Manual Attendance — Roster",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59803",
+      "figmaSectionId": "19230:59615"
+    },
+    {
+      "contractFile": "marks/19230-58630--marks-roster.json",
+      "figmaNodeId": "19230:58630",
+      "screen": "Marks — Student Roster",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58630",
+      "figmaSectionId": "19230:58630"
+    },
+    {
+      "contractFile": "marks/19230-58630--marks-setup.json",
+      "figmaNodeId": "19230:58630",
+      "screen": "Marks — Setup",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58630",
+      "figmaSectionId": "19230:58630"
+    },
+    {
+      "contractFile": "marks/9839-64995--marks-submit.json",
+      "figmaNodeId": "9839:64995",
+      "screen": "Marks — Submit",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9839-64995",
+      "figmaSectionId": "19230:58630"
+    },
+    {
+      "contractFile": "student-profile/19230-57503--remarks-save.json",
+      "figmaNodeId": "19230:57503",
+      "screen": "Student Profile — Save Remarks",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57503",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "student-profile/19230-57503--student-profile-class-term-setup.json",
+      "figmaNodeId": "19230:57503",
+      "screen": "Remarks — Student Profile — Class and Term",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57503",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "student-profile/19230-57503--student-profile-roster.json",
+      "figmaNodeId": "19230:57503",
+      "screen": "Student Profile — Roster",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57503",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "student-profile/19230-57503--student-profile-select-element-setup.json",
+      "figmaNodeId": "19230:57503",
+      "screen": "Remarks — Student Profile — Select Element",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57503",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "student-profile/19230-57503--subject-skills-entry.json",
+      "figmaNodeId": "19230:57503",
+      "screen": "Student Profile — Subject Skills Entry",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57503",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "student-profile/9540-57356--elementwise-criteria-entry.json",
+      "figmaNodeId": "9540:57356",
+      "screen": "Remarks — Elementwise criteria remarks",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9540-57356",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "subject-profile/19230-57867--remarks-save.json",
+      "figmaNodeId": "19230:57867",
+      "screen": "Subject Profile — Save Remarks",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-57867--subject-profile-class-term-setup.json",
+      "figmaNodeId": "19230:57867",
+      "screen": "Remarks — Subject Profile — Class, Term, Subject",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-57867--subject-profile-roster.json",
+      "figmaNodeId": "19230:57867",
+      "screen": "Subject Profile — Roster",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-57867--subject-profile-select-subject-aspect-setup.json",
+      "figmaNodeId": "19230:57867",
+      "screen": "Remarks — Subject Profile — Element, Subject, Aspect",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-57867--subject-skills-entry.json",
+      "figmaNodeId": "19230:57867",
+      "screen": "Subject Profile — Subject Skills Entry",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+      "figmaSectionId": "19230:57867"
+    }
+  ]
+}

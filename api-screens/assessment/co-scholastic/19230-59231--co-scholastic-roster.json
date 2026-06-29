@@ -1,0 +1,99 @@
+{
+  "screen": "Co-Scholastic — Roster",
+  "description": "Merged grade and remarks rosters: columnMode grade (Apply Grade to all) or remarks (Add/Edit).",
+  "figmaNodeId": "19230:59231",
+  "request": {
+    "classId": "string",
+    "termId": "string",
+    "areaId": "string",
+    "subGroupId": "string",
+    "academicYear": "string",
+    "columnMode": "grade | remarks",
+    "viewMode": "staff-wise | student-wise",
+    "sortBy": "name | admissionNo | rollNo",
+    "search": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ],
+    "columnMode": "grade | remarks",
+    "applyGradeToAllLabel": "string",
+    "defaultGrade": "string",
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "rollNo": "string",
+        "studentId": "string",
+        "grade": "string",
+        "remarksAction": "add | edit | none"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "termId": "term_1",
+    "areaId": "co_curricular",
+    "subGroupId": "music_dance",
+    "academicYear": "2025",
+    "columnMode": "grade",
+    "viewMode": "staff-wise",
+    "sortBy": "name",
+    "search": ""
+  },
+  "example_response": {
+    "pageTitle": "Co-Scholastic",
+    "filterChips": [
+      {
+        "id": "class",
+        "label": "XII - C",
+        "value": "XII - C"
+      },
+      {
+        "id": "term",
+        "label": "Term 1",
+        "value": "Term 1"
+      },
+      {
+        "id": "area",
+        "label": "Co-curricular Activity",
+        "value": "Co-curricular Activity"
+      },
+      {
+        "id": "subGroup",
+        "label": "Music and Dance",
+        "value": "Music and Dance"
+      },
+      {
+        "id": "year",
+        "label": "2025",
+        "value": "2025"
+      }
+    ],
+    "columnMode": "grade",
+    "applyGradeToAllLabel": "Apply Grade to all",
+    "defaultGrade": "Select",
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "rollNo": "123",
+        "studentId": "1561154",
+        "grade": "",
+        "remarksAction": "none"
+      }
+    ],
+    "primaryActionLabel": "Save"
+  },
+  "notes": {
+    "figmaSectionId": "19230:59231",
+    "uiVariants": "Merged 9379:194791 grade roster and 9379:195014 remarks roster via columnMode."
+  }
+}

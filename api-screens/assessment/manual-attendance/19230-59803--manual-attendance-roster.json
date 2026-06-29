@@ -1,0 +1,126 @@
+{
+  "screen": "Manual Attendance — Roster",
+  "description": "Shared roster after Class Wise or Subject Wise setup: dynamic filter chips, Total Days, default attendance, Present/Absent per student, Submit.",
+  "figmaNodeId": "19230:59803",
+  "request": {
+    "type": "classWise | subjectWise",
+    "formId": "string",
+    "classId": "string",
+    "templateId": "string",
+    "examId": "string",
+    "subjectId": "string",
+    "totalDays": "number",
+    "sortBy": "name | admissionNo | rollNo",
+    "viewMode": "staff-wise | student-wise",
+    "search": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ],
+    "totalDaysLabel": "string",
+    "totalDays": "number",
+    "setDefaultAttendanceLabel": "string",
+    "setDefaultAttendanceHint": "string",
+    "defaultAttendance": "present | absent",
+    "columnHeaders": {
+      "name": "string",
+      "attendance": "string",
+      "totalDays": "string",
+      "percentage": "string"
+    },
+    "students": [
+      {
+        "serial": "number",
+        "name": "string",
+        "rollNo": "string",
+        "studentId": "string",
+        "attendanceStatus": "present | absent",
+        "presentDays": "number | null",
+        "percentage": "string"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "type": "subjectWise",
+    "formId": "xii",
+    "classId": "xii_c",
+    "templateId": "template_1",
+    "examId": "exam_1",
+    "subjectId": "maths",
+    "totalDays": 324,
+    "sortBy": "name",
+    "viewMode": "staff-wise",
+    "search": ""
+  },
+  "example_response": {
+    "pageTitle": "Manual Attendance",
+    "filterChips": [
+      {
+        "id": "form",
+        "label": "XII",
+        "value": "XII"
+      },
+      {
+        "id": "class",
+        "label": "XII - C",
+        "value": "XII - C"
+      },
+      {
+        "id": "exam",
+        "label": "Term 1",
+        "value": "Term 1"
+      },
+      {
+        "id": "subject",
+        "label": "Maths",
+        "value": "Maths"
+      }
+    ],
+    "totalDaysLabel": "Total Days",
+    "totalDays": 324,
+    "setDefaultAttendanceLabel": "Set Default Attendance",
+    "setDefaultAttendanceHint": "Applied to all students. Edit individual entries as needed.",
+    "defaultAttendance": "present",
+    "columnHeaders": {
+      "name": "Name",
+      "attendance": "Present",
+      "totalDays": "Total Days",
+      "percentage": "%age"
+    },
+    "students": [
+      {
+        "serial": 1,
+        "name": "Mark Thompson",
+        "rollNo": "123",
+        "studentId": "1561154",
+        "attendanceStatus": "present",
+        "presentDays": 275,
+        "percentage": "84.88%"
+      },
+      {
+        "serial": 2,
+        "name": "Linda Gomez",
+        "rollNo": "",
+        "studentId": "1561155",
+        "attendanceStatus": "present",
+        "presentDays": null,
+        "percentage": "00.00%"
+      }
+    ],
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "figmaSectionId": "19230:59615",
+    "singleEndpoint": "One roster API for classWise and subjectWise; filterChips[] order/content varies by type.",
+    "classWiseChips": "form, class, template, exam",
+    "subjectWiseChips": "form, class, exam, subject",
+    "uiVariants": "19230:59803, 19230:59944, 19230:60085, 19230:60226 — empty/partial/filled states."
+  }
+}

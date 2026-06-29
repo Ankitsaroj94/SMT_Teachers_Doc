@@ -1,0 +1,45 @@
+{
+  "screen": "Marks — Submit",
+  "description": "Submit assessment marks for the selected class and assessment — confirmation summary and final POST.",
+  "figmaNodeId": "9839:64995",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "date": "string",
+    "maxMarks": "number",
+    "marks": [
+      {
+        "studentId": "string",
+        "marks": "number | null",
+        "isAbsent": "boolean",
+        "remark": "string"
+      }
+    ]
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "submittedCount": "number",
+    "assessmentId": "string"
+  },
+  "example_response": {
+    "success": true,
+    "message": "Marks submitted successfully",
+    "submittedCount": 24,
+    "assessmentId": "asm_unit_test_1"
+  },
+  "notes": {
+    "marks": "Send full roster from add-marks-roster screens on submit.",
+    "validation": "Each marks value must be between 0 and maxMarks unless isAbsent is true.",
+    "figmaSectionId": "19230:58630"
+  },
+  "example_request": {
+    "classId": "",
+    "subjectId": "",
+    "assessmentId": "",
+    "date": "",
+    "maxMarks": 0,
+    "marks": []
+  }
+}

@@ -35,3 +35,5 @@ alwaysApply: true
 - Do not add unnecessary/speculative keys that are not visible in UI flow.
 - Ensure `response` schema keys and `example_response` keys stay fully aligned.
 - If user provides an explicit target shape, treat it as final and adapt contract to it.
+- For Assessment module contracts, read `api-screens/assessment/README.md` and `assessment-module-map.json` (Figma section [`19230:56644`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-56644)). Filename pattern: `{node-id}--{screen-slug}.json` (e.g. `19230-57503--student-profile-class-term-setup.json`). Each screen JSON must include `request`, `response`, `example_request`, and `example_response`.
+- For Assessment dropdown/bottom-sheet **filter** contracts, follow `.cursor/rules/skills/api-screens-assessment-filters/SKILL.md` (form → class → subject chain, `id`/`label` normalization, SRF backend notes).

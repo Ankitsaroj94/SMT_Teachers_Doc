@@ -1,0 +1,41 @@
+{
+  "screen": "Marks — Setup",
+  "description": "Initial Add Marks screen: select class, subject, assessment, date, and max marks before opening the student marks roster.",
+  "figmaNodeId": "19230:58630",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "date": "string",
+    "maxMarks": "number"
+  },
+  "response": {
+    "pageTitle": "string",
+    "classLabel": "string",
+    "subjectLabel": "string",
+    "assessmentLabel": "string",
+    "dateLabel": "string",
+    "maxMarks": "number",
+    "primaryActionLabel": "string"
+  },
+  "example_response": {
+    "pageTitle": "Add Marks",
+    "classLabel": "XII - C",
+    "subjectLabel": "Mathematics",
+    "assessmentLabel": "Unit Test 1",
+    "dateLabel": "19 May 2025",
+    "maxMarks": 100,
+    "primaryActionLabel": "Continue"
+  },
+  "notes": {
+    "flow": "Use `assessment/filters/assessment-class-filter` and `assessment-subject-filter` for picker options. Continue opens add-marks roster screens.",
+    "figmaSectionId": "19230:58630"
+  },
+  "example_request": {
+    "classId": "",
+    "subjectId": "",
+    "assessmentId": "",
+    "date": "",
+    "maxMarks": 0
+  }
+}

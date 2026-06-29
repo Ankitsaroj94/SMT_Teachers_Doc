@@ -1,0 +1,119 @@
+{
+  "screen": "Co-Scholastic — Student Grades Entry",
+  "description": "Per-student sub-group grade entry with Save and Save and Next.",
+  "figmaNodeId": "19230:59231",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "areaId": "string",
+    "subGroupId": "string",
+    "academicYear": "string",
+    "grades": [
+      {
+        "subGroupId": "string",
+        "grade": "string"
+      }
+    ]
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ],
+    "student": {
+      "name": "string",
+      "classSection": "string",
+      "studentId": "string"
+    },
+    "subGroups": [
+      {
+        "id": "string",
+        "label": "string",
+        "grade": "string",
+        "placeholder": "string"
+      }
+    ],
+    "saveLabel": "string",
+    "saveAndNextLabel": "string"
+  },
+  "example_request": {
+    "studentId": "677868",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "areaId": "co_curricular",
+    "subGroupId": "all",
+    "academicYear": "2025",
+    "grades": [
+      {
+        "subGroupId": "music_dance",
+        "grade": ""
+      }
+    ]
+  },
+  "example_response": {
+    "pageTitle": "Co-Scholastic",
+    "filterChips": [
+      {
+        "id": "class",
+        "label": "XII - C",
+        "value": "XII - C"
+      },
+      {
+        "id": "term",
+        "label": "Term 1",
+        "value": "Term 1"
+      },
+      {
+        "id": "area",
+        "label": "Co-curricular Activity",
+        "value": "Co-curricular Activity"
+      },
+      {
+        "id": "subGroup",
+        "label": "All",
+        "value": "All"
+      },
+      {
+        "id": "year",
+        "label": "2025",
+        "value": "2025"
+      }
+    ],
+    "student": {
+      "name": "Mark Thompson",
+      "classSection": "XII - C | 677868",
+      "studentId": "677868"
+    },
+    "subGroups": [
+      {
+        "id": "music_dance",
+        "label": "Music and Dance",
+        "grade": "",
+        "placeholder": "Select"
+      },
+      {
+        "id": "art",
+        "label": "Art",
+        "grade": "",
+        "placeholder": "Select"
+      },
+      {
+        "id": "sports",
+        "label": "Sports",
+        "grade": "",
+        "placeholder": "Select"
+      }
+    ],
+    "saveLabel": "Save",
+    "saveAndNextLabel": "Save and Next"
+  },
+  "notes": {
+    "figmaSectionId": "19230:59231",
+    "legacyNode": "9379:194971"
+  }
+}

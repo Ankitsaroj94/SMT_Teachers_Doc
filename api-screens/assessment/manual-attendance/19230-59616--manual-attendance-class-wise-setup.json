@@ -1,0 +1,63 @@
+{
+  "screen": "Manual Attendance — Class Wise Setup",
+  "description": "Type = Class Wise: Form, Class, Template, Exam, Total Days, optional Upload Attendance, Submit → shared roster.",
+  "figmaNodeId": "19230:59616",
+  "request": {
+    "type": "classWise | subjectWise",
+    "formId": "string",
+    "classId": "string",
+    "templateId": "string",
+    "examId": "string",
+    "totalDays": "number"
+  },
+  "response": {
+    "pageTitle": "string",
+    "typeLabel": "string",
+    "typeOptions": [
+      "string"
+    ],
+    "selectedType": "classWise | subjectWise",
+    "formLabel": "string",
+    "classLabel": "string",
+    "templateLabel": "string",
+    "examLabel": "string",
+    "totalDaysLabel": "string",
+    "totalDays": "number",
+    "uploadSectionLabel": "string",
+    "uploadHint": "string",
+    "downloadTemplateLabel": "string",
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "type": "classWise",
+    "formId": "xii",
+    "classId": "xii_c",
+    "templateId": "template_1",
+    "examId": "exam_1",
+    "totalDays": 324
+  },
+  "example_response": {
+    "pageTitle": "Manual Attendance",
+    "typeLabel": "Type",
+    "typeOptions": [
+      "Class Wise",
+      "Subject Wise"
+    ],
+    "selectedType": "classWise",
+    "formLabel": "Form",
+    "classLabel": "Class",
+    "templateLabel": "Template",
+    "examLabel": "Exam",
+    "totalDaysLabel": "Total Days",
+    "totalDays": 324,
+    "uploadSectionLabel": "Upload Attendance",
+    "uploadHint": "upload the excel file with student marks",
+    "downloadTemplateLabel": "Download Template",
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "figmaSectionId": "19230:59615",
+    "uiVariants": "19230:59616 empty, 19230:59662 filled — same API.",
+    "submit": "Navigates to manual-attendance/19230-59803--manual-attendance-roster.json with type=classWise."
+  }
+}

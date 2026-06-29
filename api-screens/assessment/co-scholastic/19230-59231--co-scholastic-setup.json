@@ -1,0 +1,69 @@
+{
+  "screen": "Co-Scholastic — Setup",
+  "description": "Class, term tabs, elementwise path, co-scholastic area and sub-group, optional upload grades.",
+  "figmaNodeId": "19230:59231",
+  "request": {
+    "classId": "string",
+    "termId": "string",
+    "viewMode": "term | elementwise",
+    "areaId": "string",
+    "subGroupId": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "classLabel": "string",
+    "whichTermLabel": "string",
+    "terms": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "elementwiseLabel": "string",
+    "whichAreaLabel": "string",
+    "areaPlaceholder": "string",
+    "whichSubGroupLabel": "string",
+    "subGroupPlaceholder": "string",
+    "uploadGradesLabel": "string",
+    "uploadHint": "string",
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "termId": "term_1",
+    "viewMode": "term",
+    "areaId": "co_curricular",
+    "subGroupId": "music_dance"
+  },
+  "example_response": {
+    "pageTitle": "Co-Scholastic",
+    "classLabel": "XII - C",
+    "whichTermLabel": "Which Term?",
+    "terms": [
+      {
+        "id": "term_1",
+        "label": "Term 1"
+      },
+      {
+        "id": "term_2",
+        "label": "Term 2"
+      },
+      {
+        "id": "term_3",
+        "label": "Term 3"
+      }
+    ],
+    "elementwiseLabel": "Elementwise",
+    "whichAreaLabel": "Which Co-Scholastic Area?",
+    "areaPlaceholder": "Select Area",
+    "whichSubGroupLabel": "Which Co-Scholastic Sub-Group?",
+    "subGroupPlaceholder": "Select Sub-Group",
+    "uploadGradesLabel": "Upload Grades",
+    "uploadHint": "upload the excel file with student marks",
+    "primaryActionLabel": "Submit"
+  },
+  "notes": {
+    "figmaSectionId": "19230:59231",
+    "flow": "Submit opens co-scholastic roster (grade or remarks columnMode)."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "screen": "Assessment — Module Map",
+  "description": "Index of Assessment API contracts under Figma section 19230:56644.",
+  "figmaNodeId": "19230:56644",
+  "request": {},
+  "response": {
+    "modules": [
+      {
+        "id": "string",
+        "label": "string",
+        "contracts": [
+          "string"
+        ]
+      }
+    ]
+  },
+  "example_request": {},
+  "example_response": {
+    "modules": [
+      {
+        "id": "hub",
+        "label": "Assessment Hub",
+        "contracts": [
+          "_meta/19230-56644--assessment-hub.json"
+        ]
+      },
+      {
+        "id": "filters",
+        "label": "Filters",
+        "contracts": [
+          "filters/19230-56644--assessment-form-filter.json",
+          "filters/7133-150449--assessment-class-filter.json",
+          "filters/7133-150532--assessment-subject-filter.json",
+          "filters/9568-194594--assessment-grades-filter.json"
+        ]
+      },
+      {
+        "id": "studentProfile",
+        "label": "Student Profile",
+        "contracts": [
+          "student-profile/19230-57503--student-profile-class-term-setup.json",
+          "student-profile/19230-57503--student-profile-select-element-setup.json",
+          "student-profile/19230-57503--student-profile-roster.json",
+          "student-profile/19230-57503--subject-skills-entry.json",
+          "student-profile/9540-57356--elementwise-criteria-entry.json",
+          "student-profile/19230-57503--remarks-save.json"
+        ]
+      },
+      {
+        "id": "subjectProfile",
+        "label": "Subject Profile",
+        "contracts": [
+          "subject-profile/19230-57867--subject-profile-class-term-setup.json",
+          "subject-profile/19230-57867--subject-profile-select-subject-aspect-setup.json",
+          "subject-profile/19230-57867--subject-profile-roster.json",
+          "subject-profile/19230-57867--subject-skills-entry.json",
+          "subject-profile/19230-57867--remarks-save.json"
+        ]
+      },
+      {
+        "id": "marks",
+        "label": "Marks",
+        "contracts": [
+          "marks/19230-58630--marks-setup.json",
+          "marks/19230-58630--marks-roster.json",
+          "marks/9839-64995--marks-submit.json"
+        ]
+      },
+      {
+        "id": "manualAttendance",
+        "label": "Manual Attendance",
+        "contracts": [
+          "manual-attendance/19230-59616--manual-attendance-class-wise-setup.json",
+          "manual-attendance/19230-59708--manual-attendance-subject-wise-setup.json",
+          "manual-attendance/19230-59803--manual-attendance-roster.json",
+          "manual-attendance/19230-59803--manual-attendance-roster-submit.json"
+        ]
+      },
+      {
+        "id": "coScholastic",
+        "label": "Co-Scholastic",
+        "contracts": [
+          "co-scholastic/19230-59231--co-scholastic-setup.json",
+          "co-scholastic/9456-57843--co-scholastic-sub-group-filter.json",
+          "co-scholastic/19230-59231--co-scholastic-roster.json",
+          "co-scholastic/19230-59231--co-scholastic-student-grades-entry.json"
+        ]
+      }
+    ]
+  },
+  "notes": {
+    "seeAlso": "README.md, _figma-screen-index.json"
+  }
+}

@@ -1,0 +1,86 @@
+API Received Timelines - SMT Teachers (Staff) App
+==================================================
+
+Format: [Sr] | Module | API Path | Received Date
+
+
+--- 13 May '26 ---
+35 | Dashboard           | /Dashboard                       | 13 May '26
+36 | Health Room         | /StudentHealthRoomVisits         | 13 May '26
+37 | Calendar            | /SchoolCalendar                  | 13 May '26
+38 | Notifications       | /NotificationsList               | 13 May '26
+39 | Circulars & Notices | /SchoolCirculars                 | 13 May '26
+39 | Circulars & Notices | /CircularDetails                 | 13 May '26
+41 | School Directory    | /SchoolDirectory                 | 13 May '26
+42 | Staff Profile       | /StaffProfile                    | 13 May '26
+43 | Student Profile     | /StudentProfile                  | 13 May '26
+43 | Student Profile     | /StudentAcademicPerformance      | 13 May '26
+43 | Student Profile     | /StudentPersonalityTraits        | 13 May '26
+43 | Student Profile     | /StudentParticipatedEvents       | 13 May '26
+
+
+--- 15 May '26 ---
+44 | Staff Leave         | /StaffLeaveHomepage              | 15 May '26
+44 | Staff Leave         | /StaffLeaveStatusList            | 15 May '26
+44 | Staff Leave         | /StaffLeaveRequestApplication    | 15 May '26
+44 | Staff Leave         | /StaffLeaveRequestDetail         | 15 May '26
+44 | Staff Leave         | /LeaveApproval                   | 15 May '26
+
+
+--- 25 May '26 ---
+45 | Calendar            | /PostWishes                      | 25 May '26
+46 | Assignments         | /AssignmentsDashboard            | 25 May '26
+46 | Assignments         | /AssignmentsList                 | 25 May '26
+46 | Assignments         | /AssignmentDetails               | 25 May '26
+46 | Assignments         | /CreateAssignment                | 25 May '26
+
+
+--- 27 May '26 ---
+47 | Resource Booking    | /GetResourceBookingDropdownList  | 27 May '26
+47 | Resource Booking    | /PostResourceBooking             | 27 May '26
+48 | Student Leave       | /StudentLeaveListing             | 27 May '26
+48 | Student Leave       | /StudentLeaveDetails             | 27 May '26
+
+
+--- 08 Jun '26 ---
+46 | Assignments         | /AssignmentDirectory             | 08 Jun '26
+46 | Assignments         | /AssignmentEvents                | 08 Jun '26
+48 | Student Leave       | /ClassList                       | 08 Jun '26
+48 | Student Leave       | /LeaveTypeList                   | 08 Jun '26
+48 | Student Leave       | /LeaveReasonList                 | 08 Jun '26
+48 | Student Leave       | /StudentsList                    | 08 Jun '26
+48 | Student Leave       | /StudentLeaveAction              | 08 Jun '26
+49 | Attendance          | /StudentAttendanceSummary        | 08 Jun '26
+49 | Attendance          | /StudentLeaveCalendar            | 08 Jun '26
+49 | Attendance          | /StudentClassAttendanceList      | 08 Jun '26
+49 | Attendance          | /MarkStudentClassAttendance      | 08 Jun '26
+50 | Teacher Diary       | /TeacherDiaryList                | 08 Jun '26
+50 | Teacher Diary       | /TeacherDiarySubjectList         | 08 Jun '26
+50 | Teacher Diary       | /TeacherDiarySubTopicList        | 08 Jun '26
+50 | Teacher Diary       | /AcademicResourceCategoryList    | 08 Jun '26
+50 | Teacher Diary       | /TeacherDiarySave                | 08 Jun '26
+51 | Year Plan           | /YearPlanDashboard               | 08 Jun '26
+51 | Year Plan           | /YearPlanDetails                 | 08 Jun '26
+51 | Year Plan           | /GetYearPlanGraph                | 08 Jun '26
+
+
+==================================================
+Summary by Module
+==================================================
+Dashboard           : 1 API   (13 May '26)
+Health Room         : 1 API   (13 May '26)
+Calendar            : 2 APIs  (13 May '26, 25 May '26)
+Notifications       : 1 API   (13 May '26)
+Circulars & Notices : 2 APIs  (13 May '26)
+School Directory    : 1 API   (13 May '26)
+Staff Profile       : 1 API   (13 May '26)
+Student Profile     : 4 APIs  (13 May '26)
+Staff Leave         : 5 APIs  (15 May '26)
+Assignments         : 6 APIs  (25 May '26, 08 Jun '26)
+Resource Booking    : 2 APIs  (27 May '26)
+Student Leave       : 7 APIs  (27 May '26, 08 Jun '26)
+Attendance          : 4 APIs  (08 Jun '26)
+Teacher Diary       : 5 APIs  (08 Jun '26)
+Year Plan           : 3 APIs  (08 Jun '26)
+
+Total APIs: 45

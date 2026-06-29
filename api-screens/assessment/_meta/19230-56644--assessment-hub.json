@@ -1,0 +1,75 @@
+{
+  "screen": "Assessment — Hub",
+  "description": "Assessment module home: class chip, module shortcuts, Last Modified cards.",
+  "figmaNodeId": "19230:56644",
+  "request": {
+    "classId": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "classLabel": "string",
+    "modules": [
+      {
+        "id": "studentProfile | subjectProfile | marks | coScholastic | manualAttendance",
+        "label": "string",
+        "badgeCount": "number"
+      }
+    ],
+    "lastModifiedSectionLabel": "string",
+    "lastModified": [
+      {
+        "id": "string",
+        "title": "string",
+        "subtitle": "string",
+        "editActionLabel": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c"
+  },
+  "example_response": {
+    "pageTitle": "Assessment",
+    "classLabel": "XII - C",
+    "modules": [
+      {
+        "id": "studentProfile",
+        "label": "Student Profile",
+        "badgeCount": 0
+      },
+      {
+        "id": "subjectProfile",
+        "label": "Subject Profile",
+        "badgeCount": 0
+      },
+      {
+        "id": "marks",
+        "label": "Marks",
+        "badgeCount": 0
+      },
+      {
+        "id": "coScholastic",
+        "label": "Co-Scholastic",
+        "badgeCount": 0
+      },
+      {
+        "id": "manualAttendance",
+        "label": "Manual Attendance",
+        "badgeCount": 0
+      }
+    ],
+    "lastModifiedSectionLabel": "Last Modified",
+    "lastModified": [
+      {
+        "id": "asm_unit_test_1",
+        "title": "Unit Test 1",
+        "subtitle": "Mathematics • 19 May 2025",
+        "editActionLabel": "Edit"
+      }
+    ]
+  },
+  "notes": {
+    "figmaSectionId": "19230:56644",
+    "modules": "Shortcuts navigate to section roots 19230:57503, 57867, 58630, 59231, 59615."
+  }
+}
