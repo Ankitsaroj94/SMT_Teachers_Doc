@@ -1,0 +1,37 @@
+{
+  "screen": "Health Room — Sort By Filter",
+  "description": "Sort options for health room list.",
+  "figmaNodeId": "1837:16870",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {},
+  "example_response": {
+    "data": [
+      {
+        "id": "date",
+        "label": "Date"
+      },
+      {
+        "id": "name",
+        "label": "Name"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to sortBy.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

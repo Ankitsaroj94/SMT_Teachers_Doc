@@ -1,0 +1,47 @@
+{
+  "screen": "Attendance — Period Filter",
+  "description": "Period 1–8 grid for subject-wise mark attendance.",
+  "figmaNodeId": "8007:189679",
+  "request": {
+    "classId": "string",
+    "subjectId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "1",
+        "label": "Period 1"
+      },
+      {
+        "id": "2",
+        "label": "Period 2"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to period (1–8).",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

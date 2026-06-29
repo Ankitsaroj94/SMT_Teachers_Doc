@@ -1,0 +1,643 @@
+{
+  "figmaFileKey": "iv4SFTxeHwgBYQ6TNhydaL",
+  "figmaCatalogRoot": "1837:16870",
+  "figmaCatalogUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+  "filters": [
+    {
+      "contractFile": "assessment/1837-16870--aspect-filter.json",
+      "filterId": "1837-16870--aspect-filter",
+      "filterSlug": "aspect-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assessment — Aspect Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assessment",
+      "dependsOn": [
+        "classId",
+        "subjectId"
+      ],
+      "mapsToField": "Selected id maps to aspectId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assessment/1837-16870--assessment-filter.json",
+      "filterId": "1837-16870--assessment-filter",
+      "filterSlug": "assessment-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assessment — Assessment Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assessment",
+      "dependsOn": [
+        "classId",
+        "subjectId"
+      ],
+      "mapsToField": "Selected id maps to assessmentId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assessment/1837-16870--co-scholastic-area-filter.json",
+      "filterId": "1837-16870--co-scholastic-area-filter",
+      "filterSlug": "co-scholastic-area-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assessment — Co-Scholastic Area Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assessment",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to areaId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assessment/1837-16870--element-filter.json",
+      "filterId": "1837-16870--element-filter",
+      "filterSlug": "element-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assessment — Element Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assessment",
+      "dependsOn": [
+        "classId",
+        "termId"
+      ],
+      "mapsToField": "Selected id maps to elementId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assessment/1837-16870--exam-filter.json",
+      "filterId": "1837-16870--exam-filter",
+      "filterSlug": "exam-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assessment — Manual Attendance Exam Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assessment",
+      "dependsOn": [
+        "formId",
+        "classId",
+        "templateId"
+      ],
+      "mapsToField": "Selected id maps to examId.",
+      "usedByModules": [
+        "manual-attendance"
+      ]
+    },
+    {
+      "contractFile": "assessment/1837-16870--template-filter.json",
+      "filterId": "1837-16870--template-filter",
+      "filterSlug": "template-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assessment — Manual Attendance Template Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assessment",
+      "dependsOn": [
+        "formId",
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to templateId.",
+      "usedByModules": [
+        "manual-attendance"
+      ]
+    },
+    {
+      "contractFile": "assessment/9456-57843--co-scholastic-sub-group-filter.json",
+      "filterId": "9456-57843--co-scholastic-sub-group-filter",
+      "filterSlug": "co-scholastic-sub-group-filter",
+      "figmaNodeId": "9456:57843",
+      "screen": "Assessment — Co-Scholastic Sub-Group Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9456-57843",
+      "module": "assessment",
+      "dependsOn": [
+        "areaId"
+      ],
+      "mapsToField": "Selected id maps to subGroupId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assessment/9568-194594--grades-filter.json",
+      "filterId": "9568-194594--grades-filter",
+      "filterSlug": "grades-filter",
+      "figmaNodeId": "9568:194594",
+      "screen": "Assessment — Grades Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9568-194594",
+      "module": "assessment",
+      "dependsOn": [
+        "classId",
+        "subjectId",
+        "termId",
+        "academicYear"
+      ],
+      "mapsToField": "Selected value maps to grade on student row.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assignments/10852-207972--class-filter.json",
+      "filterId": "10852-207972--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "10852:207972",
+      "screen": "Assignments — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=10852-207972",
+      "module": "assignments",
+      "dependsOn": [],
+      "mapsToField": "Selected id(s) map to audience.classIds on create assignment.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assignments/1837-16870--date-filter.json",
+      "filterId": "1837-16870--date-filter",
+      "filterSlug": "date-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assignments — Date Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assignments",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to dateFilter.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "assignments/1837-16870--submissions-module-filter.json",
+      "filterId": "1837-16870--submissions-module-filter",
+      "filterSlug": "submissions-module-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Assignments — Submissions Module Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "assignments",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to module tab.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "attendance/1837-16870--class-schedule-session-filter.json",
+      "filterId": "1837-16870--class-schedule-session-filter",
+      "filterSlug": "class-schedule-session-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Attendance — Class Schedule Session Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "attendance",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to sessionId on class schedule screens.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "attendance/1837-16870--date-preset-filter.json",
+      "filterId": "1837-16870--date-preset-filter",
+      "filterSlug": "date-preset-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Attendance — Date Preset Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "attendance",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to dateFilter preset key.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "attendance/1837-16870--sort-by-filter.json",
+      "filterId": "1837-16870--sort-by-filter",
+      "filterSlug": "sort-by-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Attendance — Sort By Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "attendance",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to sortBy.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "attendance/8007-189100--mark-attendance-session-filter.json",
+      "filterId": "8007-189100--mark-attendance-session-filter",
+      "filterSlug": "mark-attendance-session-filter",
+      "figmaNodeId": "8007:189100",
+      "screen": "Attendance — Mark Attendance Session Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=8007-189100",
+      "module": "attendance",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to session on mark-attendance setup.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "attendance/8007-189679--period-filter.json",
+      "filterId": "8007-189679--period-filter",
+      "filterSlug": "period-filter",
+      "figmaNodeId": "8007:189679",
+      "screen": "Attendance — Period Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=8007-189679",
+      "module": "attendance",
+      "dependsOn": [
+        "classId",
+        "subjectId"
+      ],
+      "mapsToField": "Selected id maps to period (1–8).",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "attendance/8045-110417--staff-leave-class-filter.json",
+      "filterId": "8045-110417--staff-leave-class-filter",
+      "filterSlug": "staff-leave-class-filter",
+      "figmaNodeId": "8045:110417",
+      "screen": "Attendance — Staff Leave Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=8045-110417",
+      "module": "attendance",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to classFilter.",
+      "usedByModules": [
+        "staff-leave"
+      ]
+    },
+    {
+      "contractFile": "calendar/1837-16870--category-filter.json",
+      "filterId": "1837-16870--category-filter",
+      "filterSlug": "category-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Calendar — Category Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "calendar",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to category.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "calendar/1837-16870--class-filter.json",
+      "filterId": "1837-16870--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Calendar — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "calendar",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to class.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "calendar/1837-16870--form-filter.json",
+      "filterId": "1837-16870--form-filter",
+      "filterSlug": "form-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Calendar — Form Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "calendar",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to form.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "health-room/1837-16870--class-filter.json",
+      "filterId": "1837-16870--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Health Room — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "health-room",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to class.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "health-room/1837-16870--sort-by-filter.json",
+      "filterId": "1837-16870--sort-by-filter",
+      "filterSlug": "sort-by-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Health Room — Sort By Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "health-room",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to sortBy.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "lesson-plan/1837-16870--class-filter.json",
+      "filterId": "1837-16870--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Lesson Plan — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "lesson-plan",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to classId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "red-book/1837-16870--date-range-filter.json",
+      "filterId": "1837-16870--date-range-filter",
+      "filterSlug": "date-range-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Red Book — Daterange Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "red-book",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to dateRange.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "red-book/1837-16870--location-filter.json",
+      "filterId": "1837-16870--location-filter",
+      "filterSlug": "location-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Red Book — Location Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "red-book",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to location.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "red-book/1837-16870--type-filter.json",
+      "filterId": "1837-16870--type-filter",
+      "filterSlug": "type-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Red Book — Type Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "red-book",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to type.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "resource-booking/14487-166801--resource-group-filter.json",
+      "filterId": "14487-166801--resource-group-filter",
+      "filterSlug": "resource-group-filter",
+      "figmaNodeId": "14487:166801",
+      "screen": "Resource Booking — Resource Group Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=14487-166801",
+      "module": "resource-booking",
+      "dependsOn": [],
+      "mapsToField": "Selected resource group id for booking flow.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "resource-management/1837-16870--resource-status-filter.json",
+      "filterId": "1837-16870--resource-status-filter",
+      "filterSlug": "resource-status-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Resource Management — Resource Status Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "resource-management",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to status.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "resource-management/8695-53012--resource-group-filter.json",
+      "filterId": "8695-53012--resource-group-filter",
+      "filterSlug": "resource-group-filter",
+      "figmaNodeId": "8695:53012",
+      "screen": "Resource Management — Resource Group Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=8695-53012",
+      "module": "resource-management",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to resourceGroupId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "shared/1837-16870--academic-session-filter.json",
+      "filterId": "1837-16870--academic-session-filter",
+      "filterSlug": "academic-session-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Shared — Academic Session Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "shared",
+      "dependsOn": [
+        "siteId"
+      ],
+      "mapsToField": "Selected id maps to sessionId on form filter request.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "shared/1837-16870--academic-year-filter.json",
+      "filterId": "1837-16870--academic-year-filter",
+      "filterSlug": "academic-year-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Shared — Academic Year Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "shared",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to academicYear on roster requests.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "shared/1837-16870--site-filter.json",
+      "filterId": "1837-16870--site-filter",
+      "filterSlug": "site-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Shared — Site Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "shared",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to siteId on form filter and SRF academic APIs.",
+      "usedByModules": [
+        "shared",
+        "assessment",
+        "attendance"
+      ]
+    },
+    {
+      "contractFile": "shared/1837-16870--term-filter.json",
+      "filterId": "1837-16870--term-filter",
+      "filterSlug": "term-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Shared — Term Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "shared",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to termId on profile and co-scholastic flows.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "shared/19230-56644--form-filter.json",
+      "filterId": "19230-56644--form-filter",
+      "filterSlug": "form-filter",
+      "figmaNodeId": "19230:56644",
+      "screen": "Shared — Form Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-56644",
+      "module": "shared",
+      "dependsOn": [
+        "siteId",
+        "sessionId"
+      ],
+      "mapsToField": "Selected id maps to formId on class filter.",
+      "usedByModules": [
+        "assessment",
+        "attendance",
+        "calendar",
+        "manual-attendance"
+      ]
+    },
+    {
+      "contractFile": "shared/7133-150449--class-filter.json",
+      "filterId": "7133-150449--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "7133:150449",
+      "screen": "Shared — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150449",
+      "module": "shared",
+      "dependsOn": [
+        "formId"
+      ],
+      "mapsToField": "Selected id maps to classId downstream.",
+      "usedByModules": [
+        "assessment",
+        "attendance",
+        "assignments",
+        "teachers-diary",
+        "student-leave"
+      ]
+    },
+    {
+      "contractFile": "shared/7133-150532--subject-filter.json",
+      "filterId": "7133-150532--subject-filter",
+      "filterSlug": "subject-filter",
+      "figmaNodeId": "7133:150532",
+      "screen": "Shared — Subject Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150532",
+      "module": "shared",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to subjectId downstream.",
+      "usedByModules": [
+        "assessment",
+        "attendance",
+        "teachers-diary",
+        "marks"
+      ]
+    },
+    {
+      "contractFile": "staff-leave/1837-16870--leave-type-tab-filter.json",
+      "filterId": "1837-16870--leave-type-tab-filter",
+      "filterSlug": "leave-type-tab-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Staff Leave — Leave Type Tab Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "staff-leave",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to leaveTypeTab.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "staff-leave/8045-110417--class-filter.json",
+      "filterId": "8045-110417--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "8045:110417",
+      "screen": "Staff Leave — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=8045-110417",
+      "module": "staff-leave",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to classFilter.",
+      "usedByModules": [
+        "staff-leave"
+      ]
+    },
+    {
+      "contractFile": "student-leave/1837-16870--leave-reason-filter.json",
+      "filterId": "1837-16870--leave-reason-filter",
+      "filterSlug": "leave-reason-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Student Leave — Leave Reason Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "student-leave",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to leaveReasonId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "student-leave/1837-16870--leave-type-filter.json",
+      "filterId": "1837-16870--leave-type-filter",
+      "filterSlug": "leave-type-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Student Leave — Leave Type Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "student-leave",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to leaveType.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "student-leave/1837-16870--students-filter.json",
+      "filterId": "1837-16870--students-filter",
+      "filterSlug": "students-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Student Leave — Students Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "student-leave",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected ids map to studentIds[].",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "student-leave/7133-150449--class-filter.json",
+      "filterId": "7133-150449--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "7133:150449",
+      "screen": "Student Leave — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150449",
+      "module": "student-leave",
+      "dependsOn": [
+        "formId"
+      ],
+      "mapsToField": "Selected id maps to classId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "teachers-diary/1837-16870--status-filter.json",
+      "filterId": "1837-16870--status-filter",
+      "filterSlug": "status-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Teachers Diary — Status Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "teachers-diary",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to status.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "teachers-diary/1837-16870--subtopic-filter.json",
+      "filterId": "1837-16870--subtopic-filter",
+      "filterSlug": "subtopic-filter",
+      "figmaNodeId": "1837:16870",
+      "screen": "Teachers Diary — Sub-Topic Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "module": "teachers-diary",
+      "dependsOn": [
+        "classId",
+        "subjectId"
+      ],
+      "mapsToField": "Selected id maps to subTopicId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "teachers-diary/7133-150449--class-filter.json",
+      "filterId": "7133-150449--class-filter",
+      "filterSlug": "class-filter",
+      "figmaNodeId": "7133:150449",
+      "screen": "Teachers Diary — Class Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150449",
+      "module": "teachers-diary",
+      "dependsOn": [],
+      "mapsToField": "Selected id maps to classId.",
+      "usedByModules": []
+    },
+    {
+      "contractFile": "teachers-diary/7133-150532--subject-filter.json",
+      "filterId": "7133-150532--subject-filter",
+      "filterSlug": "subject-filter",
+      "figmaNodeId": "7133:150532",
+      "screen": "Teachers Diary — Subject Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=7133-150532",
+      "module": "teachers-diary",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to subjectId.",
+      "usedByModules": []
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "screen": "Assessment — Aspect Filter",
+  "description": "Aspect picker for subject profile setup.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "english",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "attitude",
+        "label": "Attitude"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to aspectId.",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

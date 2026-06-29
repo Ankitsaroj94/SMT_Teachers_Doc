@@ -1,0 +1,44 @@
+{
+  "screen": "Attendance — Class Schedule Session Filter",
+  "description": "Session chip on class schedule attendance hub.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "morning",
+        "label": "Morning"
+      },
+      {
+        "id": "afternoon",
+        "label": "Afternoon"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to sessionId on class schedule screens.",
+    "dependsOn": [
+      "classId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

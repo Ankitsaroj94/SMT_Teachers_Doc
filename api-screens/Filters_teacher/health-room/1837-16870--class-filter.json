@@ -1,0 +1,37 @@
+{
+  "screen": "Health Room — Class Filter",
+  "description": "Class filter on health room visit list.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "xii_c",
+        "label": "XII - C"
+      }
+    ],
+    "total": 1,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to class.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

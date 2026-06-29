@@ -1,0 +1,50 @@
+{
+  "screen": "Assessment — Grades Filter",
+  "description": "Grade options for roster grade column.",
+  "figmaNodeId": "9568:194594",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "termId": "string",
+    "academicYear": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "english",
+    "termId": "term_1",
+    "academicYear": "2025"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "select",
+        "label": "Select",
+        "value": ""
+      },
+      {
+        "id": "dn",
+        "label": "DN",
+        "value": "DN"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected value maps to grade on student row.",
+    "dependsOn": [
+      "classId",
+      "subjectId",
+      "termId",
+      "academicYear"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

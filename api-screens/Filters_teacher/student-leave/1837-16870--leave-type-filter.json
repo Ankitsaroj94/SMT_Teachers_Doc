@@ -1,0 +1,42 @@
+{
+  "screen": "Student Leave — Leave Type Filter",
+  "description": "Dropdown for Leave Type Filter.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "sick",
+        "label": "Sick Leave"
+      },
+      {
+        "id": "casual",
+        "label": "Casual Leave"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to leaveType.",
+    "backendPath": "/LeavetypeList",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

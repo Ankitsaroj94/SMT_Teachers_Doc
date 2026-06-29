@@ -1,0 +1,37 @@
+{
+  "screen": "Calendar — Category Filter",
+  "description": "Calendar category filter chip options.",
+  "figmaNodeId": "1837:16870",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {},
+  "example_response": {
+    "data": [
+      {
+        "id": "events",
+        "label": "Events"
+      },
+      {
+        "id": "holidays",
+        "label": "Holidays"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to category.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "screen": "Staff Leave — Leave Type Tab Filter",
+  "description": "Leave type tabs on staff leave approvals.",
+  "figmaNodeId": "1837:16870",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {},
+  "example_response": {
+    "data": [
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "casual",
+        "label": "Casual"
+      },
+      {
+        "id": "sick",
+        "label": "Sick"
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to leaveTypeTab.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

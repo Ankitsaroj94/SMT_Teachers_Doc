@@ -1,0 +1,51 @@
+{
+  "screen": "Shared — Academic Session Filter",
+  "description": "Academic year/session dropdown (SRF SessionId context).",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "siteId": "string",
+    "search": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "siteId": "site_47",
+    "search": "",
+    "page": 1,
+    "limit": 20
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "640",
+        "label": "2025-26"
+      },
+      {
+        "id": "639",
+        "label": "2024-25"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to sessionId on form filter request.",
+    "dependsOn": [
+      "siteId"
+    ],
+    "backendMapping": "SessionId → id, SessionName → label",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "screen": "Red Book — Type Filter",
+  "description": "Filter chip for type on complaint approvals.",
+  "figmaNodeId": "1837:16870",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {},
+  "example_response": {
+    "data": [
+      {
+        "id": "issue",
+        "label": "Issue"
+      },
+      {
+        "id": "request",
+        "label": "Request"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to type.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

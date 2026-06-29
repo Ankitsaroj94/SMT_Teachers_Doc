@@ -1,0 +1,70 @@
+{
+  "screen": "Shared — Form Filter",
+  "description": "Form / grade-band dropdown for academic modules.",
+  "figmaNodeId": "19230:56644",
+  "request": {
+    "siteId": "number",
+    "sessionId": "number",
+    "staffId": "number",
+    "userSysId": "number",
+    "accessLevel": "number",
+    "search": "string",
+    "page": "number",
+    "limit": "number"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "formLevel": "number"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "siteId": 47,
+    "sessionId": 640,
+    "staffId": 0,
+    "userSysId": 121173,
+    "accessLevel": 10,
+    "search": "",
+    "page": 1,
+    "limit": 20
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "xii",
+        "label": "XII",
+        "formLevel": 12
+      },
+      {
+        "id": "xi",
+        "label": "XI",
+        "formLevel": 11
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to formId on class filter.",
+    "dependsOn": [
+      "siteId",
+      "sessionId"
+    ],
+    "backendRequest": "SiteId, SessionId, StaffId, UserSysId, AccessLevel",
+    "backendMapping": "FormId → id, FormName → label, FormLevel → formLevel",
+    "usedByModules": [
+      "assessment",
+      "attendance",
+      "calendar",
+      "manual-attendance"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

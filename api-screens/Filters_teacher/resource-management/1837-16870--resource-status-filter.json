@@ -1,0 +1,34 @@
+{
+  "screen": "Resource Management — Resource Status Filter",
+  "description": "Resource status dropdown.",
+  "figmaNodeId": "1837:16870",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_request": {},
+  "example_response": {
+    "data": [
+      {
+        "id": "active",
+        "label": "Active",
+        "value": "active"
+      },
+      {
+        "id": "inactive",
+        "label": "Inactive",
+        "value": "inactive"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to status.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

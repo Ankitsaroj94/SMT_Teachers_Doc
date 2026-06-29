@@ -1,0 +1,37 @@
+{
+  "screen": "Assignments — Submissions Module Filter",
+  "description": "Module/tab filter on assignment submissions list.",
+  "figmaNodeId": "1837:16870",
+  "request": {},
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {},
+  "example_response": {
+    "data": [
+      {
+        "id": "overview",
+        "label": "Overview"
+      },
+      {
+        "id": "submissions",
+        "label": "Submissions"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to module tab.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

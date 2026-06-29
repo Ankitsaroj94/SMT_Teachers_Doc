@@ -1,0 +1,33 @@
+{
+  "screen": "Resource Management — Resource Group Filter",
+  "description": "Resource group dropdown.",
+  "figmaNodeId": "8695:53012",
+  "request": {
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "rg-audio-visual",
+        "label": "Audio-Visual",
+        "value": "rg-audio-visual"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to resourceGroupId.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

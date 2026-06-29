@@ -1,0 +1,46 @@
+{
+  "screen": "Teachers Diary — Sub-Topic Filter",
+  "description": "Sub-topic list for selected subject.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "st_1",
+        "label": "Algebra Basics"
+      }
+    ],
+    "total": 1,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to subTopicId.",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "backendPath": "/TeacherDiarySubTopicList",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

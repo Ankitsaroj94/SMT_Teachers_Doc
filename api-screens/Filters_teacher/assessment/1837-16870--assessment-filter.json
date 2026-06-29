@@ -1,0 +1,49 @@
+{
+  "screen": "Assessment — Assessment Filter",
+  "description": "Assessment / unit-test picker for marks and rosters.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "unit_test_1",
+        "label": "Unit Test 1"
+      },
+      {
+        "id": "unit_test_2",
+        "label": "Unit Test 2"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to assessmentId.",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

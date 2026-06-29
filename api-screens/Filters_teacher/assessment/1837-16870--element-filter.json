@@ -1,0 +1,49 @@
+{
+  "screen": "Assessment — Element Filter",
+  "description": "Element picker for student profile elementwise path.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string",
+    "termId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "termId": "term_1",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "listening",
+        "label": "Listening"
+      },
+      {
+        "id": "speaking",
+        "label": "Speaking"
+      }
+    ],
+    "total": 2,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to elementId.",
+    "dependsOn": [
+      "classId",
+      "termId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

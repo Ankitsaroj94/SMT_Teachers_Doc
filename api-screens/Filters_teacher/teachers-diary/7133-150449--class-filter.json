@@ -1,0 +1,40 @@
+{
+  "screen": "Teachers Diary — Class Filter",
+  "description": "Class filter for diary calendar.",
+  "figmaNodeId": "7133:150449",
+  "request": {
+    "formId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "formId": "xii",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "xii_c",
+        "label": "XII - C"
+      }
+    ],
+    "total": 1,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "canonicalShared": "shared/7133-150449--class-filter.json",
+    "usage": "Selected id maps to classId.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "screen": "Shared — Term Filter",
+  "description": "Term tabs / dropdown (Term 1, Term 2, Term 3).",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string",
+    "search": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "search": ""
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "term_1",
+        "label": "Term 1"
+      },
+      {
+        "id": "term_2",
+        "label": "Term 2"
+      },
+      {
+        "id": "term_3",
+        "label": "Term 3"
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to termId on profile and co-scholastic flows.",
+    "dependsOn": [
+      "classId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

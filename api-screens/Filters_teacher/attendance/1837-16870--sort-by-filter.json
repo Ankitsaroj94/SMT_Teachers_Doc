@@ -1,0 +1,45 @@
+{
+  "screen": "Attendance — Sort By Filter",
+  "description": "Generic sort options for attendance rosters and reports.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "context": "attendance | reports | staff-leave"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "context": "attendance"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "name",
+        "label": "Name"
+      },
+      {
+        "id": "admissionNo",
+        "label": "Admission No."
+      },
+      {
+        "id": "rollNo",
+        "label": "Roll No."
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to sortBy.",
+    "figmaCatalogRoot": "1837:16870"
+  }
+}

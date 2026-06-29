@@ -1,0 +1,50 @@
+{
+  "screen": "Teachers Diary — Status Filter",
+  "description": "Coverage/status filter on diary calendar.",
+  "figmaNodeId": "1837:16870",
+  "request": {
+    "classId": "string",
+    "subjectId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
+    "total": "number",
+    "page": "number",
+    "limit": "number"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "completed",
+        "label": "Completed"
+      },
+      {
+        "id": "pending",
+        "label": "Pending"
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "limit": 20
+  },
+  "notes": {
+    "usage": "Selected id maps to status.",
+    "dependsOn": [
+      "classId"
+    ],
+    "figmaCatalogRoot": "1837:16870"
+  }
+}
