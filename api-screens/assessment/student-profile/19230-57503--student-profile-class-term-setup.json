@@ -59,7 +59,13 @@
   "notes": {
     "viewMode": "Term tabs (Term 1–3) or Elementwise segmented control.",
     "flow": "Submit navigates to matching remarks list screen.",
-    "figmaSectionId": "19230:57503"
+    "figmaSectionId": "19230:57503",
+    "filterContracts": [
+      "filters/7133-150449--assessment-class-filter.json",
+      "Filters_teacher/shared/1837-16870--term-filter.json",
+      "filters/19230-57506--student-profile-element-filter.json",
+      "filters/7133-150532--assessment-subject-filter.json"
+    ]
   },
   "example_request": {
     "classId": "",

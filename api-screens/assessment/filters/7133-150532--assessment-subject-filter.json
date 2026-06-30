@@ -3,10 +3,7 @@
   "description": "Dropdown / bottom-sheet options for the Assessment Subject filter chip (depends on selected class).",
   "figmaNodeId": "7133:150532",
   "request": {
-    "classId": "string",
-    "search": "string",
-    "page": "number",
-    "limit": "number"
+    "classId": "string"
   },
   "response": {
     "data": [
@@ -14,10 +11,7 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_response": {
     "data": [
@@ -33,10 +27,7 @@
         "id": "chemistry",
         "label": "Chemistry"
       }
-    ],
-    "total": 3,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "classId": "Required when subject options are class-scoped.",
@@ -44,9 +35,6 @@
     "figmaSectionId": "19230:56644"
   },
   "example_request": {
-    "classId": "",
-    "search": "",
-    "page": 0,
-    "limit": 0
+    "classId": ""
   }
 }

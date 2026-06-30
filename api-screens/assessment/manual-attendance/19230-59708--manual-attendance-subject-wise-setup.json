@@ -62,6 +62,13 @@
   "notes": {
     "figmaSectionId": "19230:59615",
     "uiVariants": "19230:59708 empty, 19230:59755 filled — same API.",
-    "submit": "Navigates to shared roster with type=subjectWise; filterChips include subject."
+    "submit": "Navigates to shared roster with type=subjectWise; filterChips include subject.",
+    "filterContracts": [
+      "filters/19230-56644--assessment-form-filter.json",
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/19230-59628--manual-attendance-template-filter.json",
+      "filters/19230-59567--manual-attendance-exam-filter.json",
+      "filters/19230-59720--manual-attendance-subject-filter.json"
+    ]
   }
 }

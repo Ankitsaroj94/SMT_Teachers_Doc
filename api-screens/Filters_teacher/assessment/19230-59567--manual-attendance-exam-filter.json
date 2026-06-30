@@ -1,12 +1,11 @@
 {
-  "screen": "Assessment — Manual Attendance Exam Filter",
-  "description": "Exam dropdown on manual attendance setup.",
-  "figmaNodeId": "1837:16870",
+  "screen": "Manual Attendance — Exam Filter",
+  "description": "Exam dropdown on Manual Attendance setup.",
+  "figmaNodeId": "19230:59567",
   "request": {
     "formId": "string",
     "classId": "string",
-    "templateId": "string",
-    "search": "string"
+    "templateId": "string"
   },
   "response": {
     "data": [
@@ -14,16 +13,12 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
     "formId": "xii",
     "classId": "xii_c",
-    "templateId": "template_1",
-    "search": ""
+    "templateId": "template_1"
   },
   "example_response": {
     "data": [
@@ -31,10 +26,7 @@
         "id": "exam_1",
         "label": "Term 1 Exam"
       }
-    ],
-    "total": 1,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to examId.",
@@ -46,6 +38,7 @@
     "usedByModules": [
       "manual-attendance"
     ],
-    "figmaCatalogRoot": "1837:16870"
+    "figmaSectionId": "19230:59615",
+    "canonicalModuleContract": "assessment/filters/19230-59567--manual-attendance-exam-filter.json"
   }
 }

@@ -4,36 +4,6 @@
   "figmaCatalogUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
   "filters": [
     {
-      "contractFile": "assessment/1837-16870--aspect-filter.json",
-      "filterId": "1837-16870--aspect-filter",
-      "filterSlug": "aspect-filter",
-      "figmaNodeId": "1837:16870",
-      "screen": "Assessment — Aspect Filter",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
-      "module": "assessment",
-      "dependsOn": [
-        "classId",
-        "subjectId"
-      ],
-      "mapsToField": "Selected id maps to aspectId.",
-      "usedByModules": []
-    },
-    {
-      "contractFile": "assessment/1837-16870--assessment-filter.json",
-      "filterId": "1837-16870--assessment-filter",
-      "filterSlug": "assessment-filter",
-      "figmaNodeId": "1837:16870",
-      "screen": "Assessment — Assessment Filter",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
-      "module": "assessment",
-      "dependsOn": [
-        "classId",
-        "subjectId"
-      ],
-      "mapsToField": "Selected id maps to assessmentId.",
-      "usedByModules": []
-    },
-    {
       "contractFile": "assessment/1837-16870--co-scholastic-area-filter.json",
       "filterId": "1837-16870--co-scholastic-area-filter",
       "filterSlug": "co-scholastic-area-filter",
@@ -48,27 +18,64 @@
       "usedByModules": []
     },
     {
-      "contractFile": "assessment/1837-16870--element-filter.json",
-      "filterId": "1837-16870--element-filter",
-      "filterSlug": "element-filter",
-      "figmaNodeId": "1837:16870",
-      "screen": "Assessment — Element Filter",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "contractFile": "assessment/19230-57506--student-profile-element-filter.json",
+      "filterId": "19230-57506--student-profile-element-filter",
+      "filterSlug": "student-profile-element-filter",
+      "figmaNodeId": "19230:57506",
+      "screen": "Student Profile — Element Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57506",
       "module": "assessment",
       "dependsOn": [
         "classId",
         "termId"
       ],
       "mapsToField": "Selected id maps to elementId.",
-      "usedByModules": []
+      "usedByModules": [
+        "student-profile"
+      ]
     },
     {
-      "contractFile": "assessment/1837-16870--exam-filter.json",
-      "filterId": "1837-16870--exam-filter",
-      "filterSlug": "exam-filter",
-      "figmaNodeId": "1837:16870",
-      "screen": "Assessment — Manual Attendance Exam Filter",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "contractFile": "assessment/19230-57963--subject-profile-aspect-filter.json",
+      "filterId": "19230-57963--subject-profile-aspect-filter",
+      "filterSlug": "subject-profile-aspect-filter",
+      "figmaNodeId": "19230:57963",
+      "screen": "Subject Profile — Aspect Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57963",
+      "module": "assessment",
+      "dependsOn": [
+        "classId",
+        "subjectId",
+        "elementId"
+      ],
+      "mapsToField": "Selected id maps to aspectId.",
+      "usedByModules": [
+        "subject-profile"
+      ]
+    },
+    {
+      "contractFile": "assessment/19230-58649--marks-assessment-filter.json",
+      "filterId": "19230-58649--marks-assessment-filter",
+      "filterSlug": "marks-assessment-filter",
+      "figmaNodeId": "19230:58649",
+      "screen": "Marks — Assessment Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58649",
+      "module": "assessment",
+      "dependsOn": [
+        "classId",
+        "subjectId"
+      ],
+      "mapsToField": "Selected id maps to assessmentId.",
+      "usedByModules": [
+        "marks"
+      ]
+    },
+    {
+      "contractFile": "assessment/19230-59567--manual-attendance-exam-filter.json",
+      "filterId": "19230-59567--manual-attendance-exam-filter",
+      "filterSlug": "manual-attendance-exam-filter",
+      "figmaNodeId": "19230:59567",
+      "screen": "Manual Attendance — Exam Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59567",
       "module": "assessment",
       "dependsOn": [
         "formId",
@@ -81,18 +88,34 @@
       ]
     },
     {
-      "contractFile": "assessment/1837-16870--template-filter.json",
-      "filterId": "1837-16870--template-filter",
-      "filterSlug": "template-filter",
-      "figmaNodeId": "1837:16870",
-      "screen": "Assessment — Manual Attendance Template Filter",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=1837-16870",
+      "contractFile": "assessment/19230-59628--manual-attendance-template-filter.json",
+      "filterId": "19230-59628--manual-attendance-template-filter",
+      "filterSlug": "manual-attendance-template-filter",
+      "figmaNodeId": "19230:59628",
+      "screen": "Manual Attendance — Template Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59628",
       "module": "assessment",
       "dependsOn": [
         "formId",
         "classId"
       ],
       "mapsToField": "Selected id maps to templateId.",
+      "usedByModules": [
+        "manual-attendance"
+      ]
+    },
+    {
+      "contractFile": "assessment/19230-59720--manual-attendance-subject-filter.json",
+      "filterId": "19230-59720--manual-attendance-subject-filter",
+      "filterSlug": "manual-attendance-subject-filter",
+      "figmaNodeId": "19230:59720",
+      "screen": "Manual Attendance — Subject Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59720",
+      "module": "assessment",
+      "dependsOn": [
+        "classId"
+      ],
+      "mapsToField": "Selected id maps to subjectId.",
       "usedByModules": [
         "manual-attendance"
       ]

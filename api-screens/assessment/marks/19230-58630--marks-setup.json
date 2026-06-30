@@ -28,7 +28,7 @@
     "primaryActionLabel": "Continue"
   },
   "notes": {
-    "flow": "Use `assessment/filters/assessment-class-filter` and `assessment-subject-filter` for picker options. Continue opens add-marks roster screens.",
+    "flow": "Use `filters/7133-150449--assessment-class-filter`, `filters/7133-150532--assessment-subject-filter`, and `filters/19230-58649--marks-assessment-filter` for picker options. Continue opens marks roster.",
     "figmaSectionId": "19230:58630"
   },
   "example_request": {

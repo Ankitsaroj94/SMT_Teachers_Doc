@@ -14,16 +14,15 @@ Each contract includes: `screen`, `description`, `figmaNodeId`, `request`, `resp
 
 ## Response shape
 
-Most filters return paginated options:
+All filters return a plain options list:
 
 ```json
 {
-  "data": [{ "id": "string", "label": "string" }],
-  "total": "number",
-  "page": "number",
-  "limit": "number"
+  "data": [{ "id": "string", "label": "string" }]
 }
 ```
+
+Do not add `search`, `page`, `limit`, or `total` — filter dropdown APIs are not paginated.
 
 Optional item fields: `formLevel`, `section`, `value`, `curriculum`.
 
@@ -61,7 +60,7 @@ flowchart TD
 | Folder | Filters |
 |--------|---------|
 | [`shared/`](shared/) | Site, academic session, form, class, subject, term, academic year |
-| [`assessment/`](assessment/) | Grades, co-scholastic area/sub-group, assessment, element, aspect, template, exam |
+| [`assessment/`](assessment/) | Grades, co-scholastic area/sub-group, marks assessment, student profile element, subject profile aspect, manual attendance template/exam/subject |
 | [`attendance/`](attendance/) | Class schedule session, mark session, period, date preset, sort, staff-leave class |
 | [`student-leave/`](student-leave/) | Class, students, leave type, leave reason |
 | [`staff-leave/`](staff-leave/) | Class, leave type tab |
@@ -76,7 +75,7 @@ flowchart TD
 
 ## Index
 
-- [`_figma-filter-index.json`](_figma-filter-index.json) — flat list of all 46 filters
+- [`_figma-filter-index.json`](_figma-filter-index.json) — flat list of all 47 filters
 - [`_filter-dependency-map.json`](_filter-dependency-map.json) — dependency chains + filter metadata
 
 ## Shared vs module copies

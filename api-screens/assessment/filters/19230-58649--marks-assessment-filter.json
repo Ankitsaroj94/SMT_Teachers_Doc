@@ -1,0 +1,46 @@
+{
+  "screen": "Marks — Assessment Filter",
+  "description": "Dropdown / bottom-sheet options for the Assessment (unit test) picker on Add Marks setup.",
+  "figmaNodeId": "19230:58649",
+  "request": {
+    "classId": "string",
+    "subjectId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "unit_test_1",
+        "label": "Unit Test 1"
+      },
+      {
+        "id": "unit_test_2",
+        "label": "Unit Test 2"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to `assessmentId` on Marks setup and roster requests.",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "figmaSectionId": "19230:58630",
+    "filterContract": "Filters_teacher/assessment/19230-58649--marks-assessment-filter.json",
+    "relatedFilters": [
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/7133-150532--assessment-subject-filter.json"
+    ]
+  }
+}

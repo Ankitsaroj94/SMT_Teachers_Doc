@@ -1,0 +1,50 @@
+{
+  "screen": "Student Profile — Element Filter",
+  "description": "Dropdown / bottom-sheet options for Select Element on Student Profile setup (elementwise path).",
+  "figmaNodeId": "19230:57506",
+  "request": {
+    "classId": "string",
+    "termId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "termId": "term_1"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "listening",
+        "label": "Listening"
+      },
+      {
+        "id": "speaking",
+        "label": "Speaking"
+      },
+      {
+        "id": "reading",
+        "label": "Reading"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to `elementId` on Student Profile setup and roster requests.",
+    "dependsOn": [
+      "classId",
+      "termId"
+    ],
+    "figmaSectionId": "19230:57503",
+    "filterContract": "Filters_teacher/assessment/19230-57506--student-profile-element-filter.json",
+    "relatedFilters": [
+      "filters/7133-150449--assessment-class-filter.json",
+      "Filters_teacher/shared/1837-16870--term-filter.json"
+    ]
+  }
+}

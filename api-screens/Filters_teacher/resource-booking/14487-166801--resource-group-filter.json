@@ -3,7 +3,6 @@
   "description": "Grouped resources for booking selection.",
   "figmaNodeId": "14487:166801",
   "request": {
-    "search": "string",
     "date": "string"
   },
   "response": {
@@ -12,13 +11,9 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
-    "search": "",
     "date": "2025-08-19"
   },
   "example_response": {
@@ -27,10 +22,7 @@
         "id": "rg-lab",
         "label": "Computer Lab"
       }
-    ],
-    "total": 1,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected resource group id for booking flow.",

@@ -1,0 +1,42 @@
+{
+  "screen": "Manual Attendance — Subject Filter",
+  "description": "Dropdown / bottom-sheet options for Subject on Manual Attendance Subject Wise setup.",
+  "figmaNodeId": "19230:59720",
+  "request": {
+    "classId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "maths",
+        "label": "Mathematics"
+      },
+      {
+        "id": "physics",
+        "label": "Physics"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to `subjectId` on Manual Attendance Subject Wise setup and roster requests.",
+    "dependsOn": [
+      "classId"
+    ],
+    "figmaSectionId": "19230:59615",
+    "filterContract": "Filters_teacher/assessment/19230-59720--manual-attendance-subject-filter.json",
+    "relatedFilters": [
+      "filters/7133-150532--assessment-subject-filter.json"
+    ]
+  }
+}

@@ -1,11 +1,11 @@
 {
-  "screen": "Assessment — Aspect Filter",
-  "description": "Aspect picker for subject profile setup.",
-  "figmaNodeId": "1837:16870",
+  "screen": "Subject Profile — Aspect Filter",
+  "description": "Aspect picker for Subject Profile setup.",
+  "figmaNodeId": "19230:57963",
   "request": {
     "classId": "string",
     "subjectId": "string",
-    "search": "string"
+    "elementId": "string"
   },
   "response": {
     "data": [
@@ -13,15 +13,12 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
     "classId": "xii_c",
     "subjectId": "english",
-    "search": ""
+    "elementId": "listening"
   },
   "example_response": {
     "data": [
@@ -33,17 +30,19 @@
         "id": "attitude",
         "label": "Attitude"
       }
-    ],
-    "total": 2,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to aspectId.",
     "dependsOn": [
       "classId",
-      "subjectId"
+      "subjectId",
+      "elementId"
     ],
-    "figmaCatalogRoot": "1837:16870"
+    "usedByModules": [
+      "subject-profile"
+    ],
+    "figmaSectionId": "19230:57867",
+    "canonicalModuleContract": "assessment/filters/19230-57963--subject-profile-aspect-filter.json"
   }
 }

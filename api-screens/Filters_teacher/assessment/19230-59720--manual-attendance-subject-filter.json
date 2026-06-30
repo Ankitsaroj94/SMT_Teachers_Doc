@@ -1,0 +1,39 @@
+{
+  "screen": "Manual Attendance — Subject Filter",
+  "description": "Subject dropdown on Manual Attendance Subject Wise setup.",
+  "figmaNodeId": "19230:59720",
+  "request": {
+    "classId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "maths",
+        "label": "Mathematics"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to subjectId.",
+    "dependsOn": [
+      "classId"
+    ],
+    "usedByModules": [
+      "manual-attendance"
+    ],
+    "figmaSectionId": "19230:59615",
+    "canonicalModuleContract": "assessment/filters/19230-59720--manual-attendance-subject-filter.json",
+    "canonicalShared": "shared/7133-150532--subject-filter.json"
+  }
+}

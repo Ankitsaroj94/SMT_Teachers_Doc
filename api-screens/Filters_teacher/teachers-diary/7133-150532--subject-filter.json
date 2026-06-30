@@ -3,8 +3,7 @@
   "description": "Subject filter for diary entries.",
   "figmaNodeId": "7133:150532",
   "request": {
-    "classId": "string",
-    "search": "string"
+    "classId": "string"
   },
   "response": {
     "data": [
@@ -12,14 +11,10 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
-    "classId": "xii_c",
-    "search": ""
+    "classId": "xii_c"
   },
   "example_response": {
     "data": [
@@ -27,10 +22,7 @@
         "id": "math",
         "label": "Mathematics"
       }
-    ],
-    "total": 1,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to subjectId.",

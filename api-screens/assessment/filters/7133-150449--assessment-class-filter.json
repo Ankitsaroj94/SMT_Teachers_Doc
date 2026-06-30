@@ -3,9 +3,7 @@
   "description": "Dropdown / bottom-sheet options for the Assessment Class filter chip.",
   "figmaNodeId": "7133:150449",
   "request": {
-    "search": "string",
-    "page": "number",
-    "limit": "number"
+    "formId": "string"
   },
   "response": {
     "data": [
@@ -14,10 +12,7 @@
         "label": "string",
         "section": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_response": {
     "data": [
@@ -36,19 +31,16 @@
         "label": "XI - C",
         "section": "C"
       }
-    ],
-    "total": 3,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to `classId` on Assessment list and Add Marks setup requests.",
-    "search": "Optional; filters class list when search field is visible in the filter sheet.",
+    "dependsOn": [
+      "formId"
+    ],
     "figmaSectionId": "19230:56644"
   },
   "example_request": {
-    "search": "",
-    "page": 0,
-    "limit": 0
+    "formId": "xii"
   }
 }

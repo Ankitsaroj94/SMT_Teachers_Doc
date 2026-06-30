@@ -3,8 +3,7 @@
   "description": "Term tabs / dropdown (Term 1, Term 2, Term 3).",
   "figmaNodeId": "1837:16870",
   "request": {
-    "classId": "string",
-    "search": "string"
+    "classId": "string"
   },
   "response": {
     "data": [
@@ -12,14 +11,10 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
-    "classId": "xii_c",
-    "search": ""
+    "classId": "xii_c"
   },
   "example_response": {
     "data": [
@@ -35,10 +30,7 @@
         "id": "term_3",
         "label": "Term 3"
       }
-    ],
-    "total": 3,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to termId on profile and co-scholastic flows.",

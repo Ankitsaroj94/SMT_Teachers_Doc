@@ -58,6 +58,12 @@
   "notes": {
     "figmaSectionId": "19230:59615",
     "uiVariants": "19230:59616 empty, 19230:59662 filled — same API.",
-    "submit": "Navigates to manual-attendance/19230-59803--manual-attendance-roster.json with type=classWise."
+    "submit": "Navigates to manual-attendance/19230-59803--manual-attendance-roster.json with type=classWise.",
+    "filterContracts": [
+      "filters/19230-56644--assessment-form-filter.json",
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/19230-59628--manual-attendance-template-filter.json",
+      "filters/19230-59567--manual-attendance-exam-filter.json"
+    ]
   }
 }

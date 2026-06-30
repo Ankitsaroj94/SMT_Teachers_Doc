@@ -1,0 +1,48 @@
+{
+  "screen": "Manual Attendance — Exam Filter",
+  "description": "Dropdown / bottom-sheet options for Exam on Manual Attendance setup (Class Wise and Subject Wise).",
+  "figmaNodeId": "19230:59567",
+  "request": {
+    "formId": "string",
+    "classId": "string",
+    "templateId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "formId": "xii",
+    "classId": "xii_c",
+    "templateId": "template_1"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "exam_1",
+        "label": "Term 1 Exam"
+      },
+      {
+        "id": "exam_2",
+        "label": "Term 2 Exam"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to `examId` on Manual Attendance setup and roster requests.",
+    "dependsOn": [
+      "formId",
+      "classId",
+      "templateId"
+    ],
+    "figmaSectionId": "19230:59615",
+    "filterContract": "Filters_teacher/assessment/19230-59567--manual-attendance-exam-filter.json",
+    "relatedFilters": [
+      "filters/19230-59628--manual-attendance-template-filter.json"
+    ]
+  }
+}

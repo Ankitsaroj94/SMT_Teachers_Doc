@@ -67,6 +67,48 @@
       "figmaSectionId": null
     },
     {
+      "contractFile": "filters/19230-58649--marks-assessment-filter.json",
+      "figmaNodeId": "19230:58649",
+      "screen": "Marks — Assessment Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58649",
+      "figmaSectionId": "19230:58630"
+    },
+    {
+      "contractFile": "filters/19230-57506--student-profile-element-filter.json",
+      "figmaNodeId": "19230:57506",
+      "screen": "Student Profile — Element Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57506",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "filters/19230-57963--subject-profile-aspect-filter.json",
+      "figmaNodeId": "19230:57963",
+      "screen": "Subject Profile — Aspect Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57963",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "filters/19230-59628--manual-attendance-template-filter.json",
+      "figmaNodeId": "19230:59628",
+      "screen": "Manual Attendance — Template Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59628",
+      "figmaSectionId": "19230:59615"
+    },
+    {
+      "contractFile": "filters/19230-59567--manual-attendance-exam-filter.json",
+      "figmaNodeId": "19230:59567",
+      "screen": "Manual Attendance — Exam Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59567",
+      "figmaSectionId": "19230:59615"
+    },
+    {
+      "contractFile": "filters/19230-59720--manual-attendance-subject-filter.json",
+      "figmaNodeId": "19230:59720",
+      "screen": "Manual Attendance — Subject Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59720",
+      "figmaSectionId": "19230:59615"
+    },
+    {
       "contractFile": "manual-attendance/19230-59616--manual-attendance-class-wise-setup.json",
       "figmaNodeId": "19230:59616",
       "screen": "Manual Attendance — Class Wise Setup",

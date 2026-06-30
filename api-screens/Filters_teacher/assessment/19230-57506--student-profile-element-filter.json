@@ -1,11 +1,10 @@
 {
-  "screen": "Assessment — Element Filter",
-  "description": "Element picker for student profile elementwise path.",
-  "figmaNodeId": "1837:16870",
+  "screen": "Student Profile — Element Filter",
+  "description": "Element picker for Student Profile elementwise setup path.",
+  "figmaNodeId": "19230:57506",
   "request": {
     "classId": "string",
-    "termId": "string",
-    "search": "string"
+    "termId": "string"
   },
   "response": {
     "data": [
@@ -13,15 +12,11 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
     "classId": "xii_c",
-    "termId": "term_1",
-    "search": ""
+    "termId": "term_1"
   },
   "example_response": {
     "data": [
@@ -33,10 +28,7 @@
         "id": "speaking",
         "label": "Speaking"
       }
-    ],
-    "total": 2,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to elementId.",
@@ -44,6 +36,10 @@
       "classId",
       "termId"
     ],
-    "figmaCatalogRoot": "1837:16870"
+    "usedByModules": [
+      "student-profile"
+    ],
+    "figmaSectionId": "19230:57503",
+    "canonicalModuleContract": "assessment/filters/19230-57506--student-profile-element-filter.json"
   }
 }

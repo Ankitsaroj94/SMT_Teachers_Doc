@@ -90,6 +90,12 @@ Shared filter chain: **Form → Class → Subject**. See [`.cursor/rules/skills/
 | `filters/7133-150449--assessment-class-filter.json` | `7133:150449` |
 | `filters/7133-150532--assessment-subject-filter.json` | `7133:150532` |
 | `filters/9568-194594--assessment-grades-filter.json` | `9568:194594` |
+| `filters/19230-58649--marks-assessment-filter.json` | [`19230:58649`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58649) |
+| `filters/19230-57506--student-profile-element-filter.json` | [`19230:57506`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57506) |
+| `filters/19230-57963--subject-profile-aspect-filter.json` | [`19230:57963`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57963) |
+| `filters/19230-59628--manual-attendance-template-filter.json` | [`19230:59628`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59628) |
+| `filters/19230-59567--manual-attendance-exam-filter.json` | [`19230:59567`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59567) |
+| `filters/19230-59720--manual-attendance-subject-filter.json` | [`19230:59720`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59720) |
 
 ## Manual Attendance
 

@@ -2,37 +2,23 @@
   "screen": "Shared — Site Filter",
   "description": "School/site picker scoped to logged-in staff context.",
   "figmaNodeId": "1837:16870",
-  "request": {
-    "search": "string",
-    "page": "number",
-    "limit": "number"
-  },
+  "request": {},
   "response": {
     "data": [
       {
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
-  "example_request": {
-    "search": "",
-    "page": 1,
-    "limit": 20
-  },
+  "example_request": {},
   "example_response": {
     "data": [
       {
         "id": "site_47",
         "label": "Delhi Public School"
       }
-    ],
-    "total": 1,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to siteId on form filter and SRF academic APIs.",

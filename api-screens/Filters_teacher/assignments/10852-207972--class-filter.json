@@ -2,11 +2,7 @@
   "screen": "Assignments — Class Filter",
   "description": "Class picker for create assignment audience.",
   "figmaNodeId": "10852:207972",
-  "request": {
-    "search": "string",
-    "page": "number",
-    "limit": "number"
-  },
+  "request": {},
   "response": {
     "data": [
       {
@@ -15,16 +11,9 @@
         "section": "string",
         "curriculum": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
-  "example_request": {
-    "search": "",
-    "page": 1,
-    "limit": 20
-  },
+  "example_request": {},
   "example_response": {
     "data": [
       {
@@ -33,10 +22,7 @@
         "section": "C",
         "curriculum": ""
       }
-    ],
-    "total": 1,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id(s) map to audience.classIds on create assignment.",

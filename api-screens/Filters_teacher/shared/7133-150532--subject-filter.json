@@ -3,10 +3,7 @@
   "description": "Subject dropdown scoped to selected class.",
   "figmaNodeId": "7133:150532",
   "request": {
-    "classId": "string",
-    "search": "string",
-    "page": "number",
-    "limit": "number"
+    "classId": "string"
   },
   "response": {
     "data": [
@@ -14,16 +11,10 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
-    "classId": "xii_c",
-    "search": "",
-    "page": 1,
-    "limit": 20
+    "classId": "xii_c"
   },
   "example_response": {
     "data": [
@@ -39,10 +30,7 @@
         "id": "physics",
         "label": "Physics"
       }
-    ],
-    "total": 3,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to subjectId downstream.",

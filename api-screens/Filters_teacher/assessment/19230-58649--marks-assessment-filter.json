@@ -1,11 +1,10 @@
 {
-  "screen": "Assessment — Assessment Filter",
-  "description": "Assessment / unit-test picker for marks and rosters.",
-  "figmaNodeId": "1837:16870",
+  "screen": "Marks — Assessment Filter",
+  "description": "Assessment / unit-test picker on Add Marks setup.",
+  "figmaNodeId": "19230:58649",
   "request": {
     "classId": "string",
-    "subjectId": "string",
-    "search": "string"
+    "subjectId": "string"
   },
   "response": {
     "data": [
@@ -13,15 +12,11 @@
         "id": "string",
         "label": "string"
       }
-    ],
-    "total": "number",
-    "page": "number",
-    "limit": "number"
+    ]
   },
   "example_request": {
     "classId": "xii_c",
-    "subjectId": "math",
-    "search": ""
+    "subjectId": "math"
   },
   "example_response": {
     "data": [
@@ -33,10 +28,7 @@
         "id": "unit_test_2",
         "label": "Unit Test 2"
       }
-    ],
-    "total": 2,
-    "page": 1,
-    "limit": 20
+    ]
   },
   "notes": {
     "usage": "Selected id maps to assessmentId.",
@@ -44,6 +36,10 @@
       "classId",
       "subjectId"
     ],
-    "figmaCatalogRoot": "1837:16870"
+    "usedByModules": [
+      "marks"
+    ],
+    "figmaSectionId": "19230:58630",
+    "canonicalModuleContract": "assessment/filters/19230-58649--marks-assessment-filter.json"
   }
 }

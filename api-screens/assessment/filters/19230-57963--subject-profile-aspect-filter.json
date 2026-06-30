@@ -1,0 +1,53 @@
+{
+  "screen": "Subject Profile — Aspect Filter",
+  "description": "Dropdown / bottom-sheet options for Select Aspect on Subject Profile setup.",
+  "figmaNodeId": "19230:57963",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "elementId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "english",
+    "elementId": "listening"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "attitude",
+        "label": "Attitude"
+      },
+      {
+        "id": "participation",
+        "label": "Participation"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to `aspectId` on Subject Profile setup and roster requests.",
+    "dependsOn": [
+      "classId",
+      "subjectId",
+      "elementId"
+    ],
+    "figmaSectionId": "19230:57867",
+    "filterContract": "Filters_teacher/assessment/19230-57963--subject-profile-aspect-filter.json",
+    "relatedFilters": [
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/7133-150532--assessment-subject-filter.json"
+    ]
+  }
+}

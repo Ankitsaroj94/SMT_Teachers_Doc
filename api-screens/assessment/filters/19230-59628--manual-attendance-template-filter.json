@@ -1,0 +1,47 @@
+{
+  "screen": "Manual Attendance — Template Filter",
+  "description": "Dropdown / bottom-sheet options for Template on Manual Attendance Class Wise setup.",
+  "figmaNodeId": "19230:59628",
+  "request": {
+    "formId": "string",
+    "classId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "formId": "xii",
+    "classId": "xii_c"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "template_1",
+        "label": "Default Template"
+      },
+      {
+        "id": "template_2",
+        "label": "Annual Template"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to `templateId` on Manual Attendance setup and roster requests.",
+    "dependsOn": [
+      "formId",
+      "classId"
+    ],
+    "figmaSectionId": "19230:59615",
+    "filterContract": "Filters_teacher/assessment/19230-59628--manual-attendance-template-filter.json",
+    "relatedFilters": [
+      "filters/19230-56644--assessment-form-filter.json",
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/19230-59567--manual-attendance-exam-filter.json"
+    ]
+  }
+}

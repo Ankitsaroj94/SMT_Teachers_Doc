@@ -2,9 +2,7 @@
   "screen": "Resource Management — Resource Group Filter",
   "description": "Resource group dropdown.",
   "figmaNodeId": "8695:53012",
-  "request": {
-    "search": "string"
-  },
+  "request": {},
   "response": {
     "data": [
       {
@@ -14,9 +12,7 @@
       }
     ]
   },
-  "example_request": {
-    "search": ""
-  },
+  "example_request": {},
   "example_response": {
     "data": [
       {

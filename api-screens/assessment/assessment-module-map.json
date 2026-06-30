@@ -31,7 +31,13 @@
           "filters/19230-56644--assessment-form-filter.json",
           "filters/7133-150449--assessment-class-filter.json",
           "filters/7133-150532--assessment-subject-filter.json",
-          "filters/9568-194594--assessment-grades-filter.json"
+          "filters/9568-194594--assessment-grades-filter.json",
+          "filters/19230-58649--marks-assessment-filter.json",
+          "filters/19230-57506--student-profile-element-filter.json",
+          "filters/19230-57963--subject-profile-aspect-filter.json",
+          "filters/19230-59628--manual-attendance-template-filter.json",
+          "filters/19230-59567--manual-attendance-exam-filter.json",
+          "filters/19230-59720--manual-attendance-subject-filter.json"
         ]
       },
       {

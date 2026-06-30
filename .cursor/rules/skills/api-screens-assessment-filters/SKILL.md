@@ -68,10 +68,17 @@ Rules:
 - Add `example_request` when backend or SRF sample request values are documented (required for Form filter).
 - `response` keys and `example_response` keys must stay fully aligned.
 - Use camelCase in contracts; document SRF PascalCase only in `notes`.
+- **Do not** include `search`, `page`, `limit`, or `total` on filter contracts — dropdown/bottom-sheet options return a plain `data[]` list; search and pagination are not part of these APIs.
 
 ## Response normalization
 
-All filter options are returned under `response.data[]`:
+All filter options are returned under `response.data[]` only:
+
+```json
+"response": {
+  "data": [{ "id": "string", "label": "string" }]
+}
+```
 
 | UI field | Purpose |
 |----------|---------|
@@ -92,8 +99,10 @@ Do **not** expose raw SRF keys (`FormId`, `FormName`, `ClassId`, etc.) in `respo
 | Filter | `request` | Notes |
 |--------|-----------|-------|
 | Form | `siteId`, `sessionId`, `staffId`, `userSysId`, `accessLevel` (number) | From login/session; SRF URL params use PascalCase |
-| Class | `formId`, optional `search` | `formId` required when options are form-scoped |
+| Class | `formId` | Required when options are form-scoped |
 | Subject | `classId` | Required when options are class-scoped |
+
+Only include parent linkage params visible in the UI flow (e.g. `formId`, `classId`, `termId`). Do not add `search`, `page`, or `limit`.
 
 Add `example_request` on Form filter when SRF sample values are known. Document PascalCase URL names in `notes.backendRequest`.
 
@@ -129,6 +138,12 @@ Form list API (documented):
 | `assessment-form-filter.json` | `19230:56644` |
 | `7133-150449--assessment-class-filter.json` | `7133:150449` |
 | `7133-150532--assessment-subject-filter.json` | `7133:150532` |
+| `19230-58649--marks-assessment-filter.json` | `19230:58649` |
+| `19230-57506--student-profile-element-filter.json` | `19230:57506` |
+| `19230-57963--subject-profile-aspect-filter.json` | `19230:57963` |
+| `19230-59628--manual-attendance-template-filter.json` | `19230:59628` |
+| `19230-59567--manual-attendance-exam-filter.json` | `19230:59567` |
+| `19230-59720--manual-attendance-subject-filter.json` | `19230:59720` |
 
 Figma file key for Staff App: `iv4SFTxeHwgBYQ6TNhydaL` (Shriconnect Staff App).
 
