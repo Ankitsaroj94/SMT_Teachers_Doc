@@ -31,6 +31,7 @@ alwaysApply: true
   - Then date buckets (`dateGroups`) like `Today`, `Yesterday`, `Earlier`
   - Then assignment cards inside each date group
 - Extract `example_response` values directly from visible Figma content wherever possible.
+- When Figma MCP data extraction fails (`get_design_context`, `get_metadata`, rate limits, etc.), call `get_screenshot` for that node and use the screenshot as the source for visible labels, fields, and example values. Do not guess keys not shown in the design. See `.cursor/rules/mcp-server-guide/skills/figma-tool-reference.md` → *Figma MCP failure → screenshot extraction*.
 - Keep key names aligned to Figma labels (converted consistently to project naming style).
 - Do not add unnecessary/speculative keys that are not visible in UI flow.
 - Ensure `response` schema keys and `example_response` keys stay fully aligned.

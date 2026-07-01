@@ -34,7 +34,8 @@
     "usage": "Selected id maps to `assessmentId` on Marks setup and roster requests.",
     "dependsOn": [
       "classId",
-      "subjectId"
+      "subjectId",
+      "examId"
     ],
     "figmaSectionId": "19230:58630",
     "filterContract": "Filters_teacher/assessment/19230-58649--marks-assessment-filter.json",

@@ -30,11 +30,14 @@
     ]
   },
   "notes": {
-    "classId": "Required when subject options are class-scoped.",
-    "usage": "Selected id maps to `subjectId` on Assessment list and Add Marks setup requests.",
-    "figmaSectionId": "19230:56644"
+    "usage": "Selected id maps to `subjectId` on Assessment hub and downstream setup requests.",
+    "dependsOn": [
+      "classId"
+    ],
+    "figmaSectionId": "19230:56644",
+    "figmaHubFilterFrameId": "19230:57226"
   },
   "example_request": {
-    "classId": ""
+    "classId": "xii_c"
   }
 }

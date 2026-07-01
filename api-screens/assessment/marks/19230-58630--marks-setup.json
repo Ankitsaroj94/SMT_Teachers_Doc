@@ -1,41 +1,86 @@
 {
   "screen": "Marks — Setup",
-  "description": "Initial Add Marks screen: select class, subject, assessment, date, and max marks before opening the student marks roster.",
-  "figmaNodeId": "19230:58630",
+  "description": "Initial Add Marks screen before the student marks roster. Multiple-assessment mode includes full filter chain (form, class, subject, stud cat, exam, assessment, term, date, max marks). Direct-assessment mode uses a reduced filter set.",
+  "figmaNodeId": "19230:58649",
   "request": {
+    "assessmentMode": "multipleAssessment | directAssessment",
+    "formId": "string",
     "classId": "string",
     "subjectId": "string",
+    "studentCategoryId": "string",
+    "examId": "string",
     "assessmentId": "string",
+    "termId": "string",
     "date": "string",
     "maxMarks": "number"
   },
   "response": {
     "pageTitle": "string",
+    "assessmentMode": "multipleAssessment | directAssessment",
+    "formLabel": "string",
     "classLabel": "string",
     "subjectLabel": "string",
+    "studentCategoryLabel": "string",
+    "examLabel": "string",
     "assessmentLabel": "string",
+    "termLabel": "string",
     "dateLabel": "string",
     "maxMarks": "number",
     "primaryActionLabel": "string"
   },
+  "example_request": {
+    "assessmentMode": "multipleAssessment",
+    "formId": "xii",
+    "classId": "xii_c",
+    "subjectId": "math",
+    "studentCategoryId": "general",
+    "examId": "exam_1",
+    "assessmentId": "unit_test_1",
+    "termId": "term_1",
+    "date": "2025-05-19",
+    "maxMarks": 100
+  },
   "example_response": {
     "pageTitle": "Add Marks",
+    "assessmentMode": "multipleAssessment",
+    "formLabel": "XII",
     "classLabel": "XII - C",
     "subjectLabel": "Mathematics",
+    "studentCategoryLabel": "General",
+    "examLabel": "Term 1 Exam",
     "assessmentLabel": "Unit Test 1",
+    "termLabel": "Term 1",
     "dateLabel": "19 May 2025",
     "maxMarks": 100,
     "primaryActionLabel": "Continue"
   },
   "notes": {
-    "flow": "Use `filters/7133-150449--assessment-class-filter`, `filters/7133-150532--assessment-subject-filter`, and `filters/19230-58649--marks-assessment-filter` for picker options. Continue opens marks roster.",
-    "figmaSectionId": "19230:58630"
-  },
-  "example_request": {
-    "classId": "",
-    "subjectId": "",
-    "assessmentId": "",
-    "date": "",
-    "maxMarks": 0
+    "figmaSectionId": "19230:58630",
+    "assessmentMode": "multipleAssessment | directAssessment",
+    "uiVariants": {
+      "multipleAssessment": "19230:58682 — full filter row: Form, Class, Subject, Stud Cat, Exam, Assessment, Term, Date, Max Marks.",
+      "directAssessment": "19230:58978 — reduced filters: Form, Class, Subject, Exam, Date, Max Marks."
+    },
+    "figmaMultipleAssessmentUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682",
+    "figmaDirectAssessmentUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58978",
+    "figmaSetupFrameId": "19230:58649",
+    "filterChain": {
+      "multipleAssessment": "formId → classId → subjectId → studentCategoryId → examId → assessmentId → termId",
+      "directAssessment": "formId → classId → subjectId → examId"
+    },
+    "conditionalFields": {
+      "multipleAssessment": "studentCategoryId, examId, assessmentId, termId required.",
+      "directAssessment": "studentCategoryId, assessmentId, termId omitted; examId required."
+    },
+    "flow": "Continue opens marks/19230-58630--marks-roster.json with the same request context.",
+    "filterContracts": [
+      "filters/19230-56644--assessment-form-filter.json",
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/7133-150532--assessment-subject-filter.json",
+      "filters/19230-58682--marks-student-category-filter.json",
+      "filters/19230-58682--marks-exam-filter.json",
+      "filters/19230-58649--marks-assessment-filter.json",
+      "Filters_teacher/shared/1837-16870--term-filter.json"
+    ]
   }
 }

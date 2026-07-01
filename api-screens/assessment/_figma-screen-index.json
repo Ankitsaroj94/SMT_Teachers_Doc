@@ -74,6 +74,20 @@
       "figmaSectionId": "19230:58630"
     },
     {
+      "contractFile": "filters/19230-58682--marks-student-category-filter.json",
+      "figmaNodeId": "19230:58682",
+      "screen": "Marks — Student Category Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682",
+      "figmaSectionId": "19230:58630"
+    },
+    {
+      "contractFile": "filters/19230-58682--marks-exam-filter.json",
+      "figmaNodeId": "19230:58682",
+      "screen": "Marks — Exam Filter",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682",
+      "figmaSectionId": "19230:58630"
+    },
+    {
       "contractFile": "filters/19230-57506--student-profile-element-filter.json",
       "figmaNodeId": "19230:57506",
       "screen": "Student Profile — Element Filter",
@@ -138,23 +152,23 @@
     },
     {
       "contractFile": "marks/19230-58630--marks-roster.json",
-      "figmaNodeId": "19230:58630",
+      "figmaNodeId": "19230:58637",
       "screen": "Marks — Student Roster",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58630",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58637",
       "figmaSectionId": "19230:58630"
     },
     {
       "contractFile": "marks/19230-58630--marks-setup.json",
-      "figmaNodeId": "19230:58630",
+      "figmaNodeId": "19230:58649",
       "screen": "Marks — Setup",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58630",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58649",
       "figmaSectionId": "19230:58630"
     },
     {
       "contractFile": "marks/9839-64995--marks-submit.json",
-      "figmaNodeId": "9839:64995",
+      "figmaNodeId": "19230:58682",
       "screen": "Marks — Submit",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9839-64995",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682",
       "figmaSectionId": "19230:58630"
     },
     {

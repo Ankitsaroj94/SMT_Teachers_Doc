@@ -41,6 +41,7 @@
   },
   "notes": {
     "figmaSectionId": "19230:56644",
+    "figmaHubFilterFrameId": "19230:57226",
     "usage": "Selected id maps to formId on class filter and downstream setup screens.",
     "backendMapping": "FormId → id, FormName → label, FormLevel → formLevel"
   }

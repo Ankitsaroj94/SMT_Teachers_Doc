@@ -13,6 +13,7 @@ alwaysApply: true
   - `figma-code-connect` for component mapping with code.
   - `figma-create-design-system-rules` or `figma-generate-library` for design-system setup.
 - Follow `README.md` and `figma-power/POWER.md` inside `.cursor/rules/mcp-server-guide/` for setup/usage conventions.
+- If Figma MCP data extraction fails, fall back to `get_screenshot` for that node and extract visible UI from the image — see `mcp-server-guide/skills/figma-tool-reference.md`.
 - Do **not** create or ask for manual MCP server JSON blocks like:
   - `{ "servers": { "figma": { "type": "http", "url": "https://mcp.figma.com/mcp" } } }`
 - Assume plugin/skills-based setup is preferred for this workspace unless the user explicitly asks for manual MCP config.

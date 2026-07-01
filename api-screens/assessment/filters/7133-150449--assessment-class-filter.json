@@ -38,7 +38,8 @@
     "dependsOn": [
       "formId"
     ],
-    "figmaSectionId": "19230:56644"
+    "figmaSectionId": "19230:56644",
+    "figmaHubFilterFrameId": "19230:57226"
   },
   "example_request": {
     "formId": "xii"

@@ -1,82 +1,153 @@
 {
   "screen": "Marks — Student Roster",
-  "description": "Student marks roster; partial and all-entered are UI states (marks null vs filled).",
-  "figmaNodeId": "19230:58630",
+  "description": "Student marks roster. Multiple-assessment (19230:58682): Tool 1, Tool 2, Final columns. Direct-assessment (19230:58978): single Marks column only.",
+  "figmaNodeId": "19230:58637",
   "request": {
+    "assessmentMode": "multipleAssessment | directAssessment",
     "classId": "string",
+    "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
-    "date": "string",
-    "search": "string",
-    "sortBy": "string"
+    "year": "string",
+    "maxMarks": "number"
   },
   "response": {
-    "pageTitle": "string",
-    "header": {
-      "classLabel": "string",
-      "subjectLabel": "string",
-      "assessmentLabel": "string",
-      "maxMarks": "number",
-      "enteredCount": "number",
-      "totalCount": "number"
-    },
+  
+    "assessmentMode": "multipleAssessment | directAssessment",
+    "markColumns": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ],
     "students": [
       {
         "serial": "number",
         "profilePic": "string",
         "name": "string",
+        "age": "number",
         "studentId": "string",
-        "marks": "number | null",
-        "isAbsent": "boolean",
-        "remark": "string"
+        "tool1": "number | null",
+        "tool2": "number | null",
+        "final": "string | null",
+        "marks": "number | null"
       }
     ],
     "primaryActionLabel": "string"
   },
+  "example_request": {
+    "assessmentMode": "multipleAssessment",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "math",
+    "maxMarks": 324
+  },
   "example_response": {
-    "pageTitle": "Add Marks",
+    "pageTitle": "Multiple Assessment",
+    "assessmentMode": "multipleAssessment",
     "header": {
       "classLabel": "XII - C",
-      "subjectLabel": "Mathematics",
-      "assessmentLabel": "Unit Test 1",
-      "maxMarks": 100,
+      "termLabel": "Term 1",
+      "subjectLabel": "Maths",
+      "examLabel": "",
+      "dateLabel": "",
+      "maxMarks": 324,
       "enteredCount": 0,
       "totalCount": 2
     },
+    "markColumns": [
+      {
+        "id": "tool1",
+        "label": "Tool 1"
+      },
+      {
+        "id": "tool2",
+        "label": "Tool 2"
+      },
+      {
+        "id": "final",
+        "label": "Final"
+      }
+    ],
     "students": [
       {
         "serial": 1,
         "profilePic": "string",
         "name": "Mark Thompson",
+        "age": 18,
         "studentId": "1561154",
-        "marks": null,
-        "isAbsent": false,
-        "remark": ""
+        "tool1": null,
+        "tool2": null,
+        "final": "00.00%",
+        "marks": null
       },
       {
         "serial": 2,
         "profilePic": "string",
         "name": "Linda Gomez",
+        "age": 18,
         "studentId": "1561155",
-        "marks": null,
-        "isAbsent": false,
-        "remark": ""
+        "tool1": null,
+        "tool2": null,
+        "final": "00.00%",
+        "marks": null
       }
     ],
     "primaryActionLabel": "Submit"
   },
   "notes": {
-    "marks": "null when not yet entered; validate against maxMarks on submit.",
-    "isAbsent": "When true, marks input may be disabled in UI.",
     "figmaSectionId": "19230:58630",
-    "uiVariants": "Merged add-marks-roster, add-marks-roster-partial, add-marks-roster-filled."
-  },
-  "example_request": {
-    "classId": "xii_c",
-    "subjectId": "math",
-    "assessmentId": "unit_test_1",
-    "date": "2025-05-19",
-    "search": "",
-    "sortBy": "name"
+    "figmaMultipleAssessmentUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682",
+    "figmaDirectAssessmentUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58978",
+    "conditionalFields": {
+      "multipleAssessment": "19230:58682 — tool1, tool2, final; termId in request; omit marks.",
+      "directAssessment": "19230:58978 — marks only; examId, date in request; omit tool1, tool2, final, termId, isAbsent, remark."
+    },
+    "example_response_directAssessment": {
+      "pageTitle": "Direct Assessment",
+      "assessmentMode": "directAssessment",
+      "header": {
+        "classLabel": "XII - C",
+        "termLabel": "",
+        "subjectLabel": "Mathematics",
+        "examLabel": "Term 1 Exam",
+        "dateLabel": "19 May 2025",
+        "maxMarks": 100,
+        "enteredCount": 0,
+        "totalCount": 2
+      },
+      "markColumns": [
+        {
+          "id": "marks",
+          "label": "Marks"
+        }
+      ],
+      "students": [
+        {
+          "serial": 1,
+          "profilePic": "string",
+          "name": "Mark Thompson",
+          "age": 18,
+          "studentId": "1561154",
+          "tool1": null,
+          "tool2": null,
+          "final": null,
+          "marks": null
+        },
+        {
+          "serial": 2,
+          "profilePic": "string",
+          "name": "Linda Gomez",
+          "age": 18,
+          "studentId": "1561155",
+          "tool1": null,
+          "tool2": null,
+          "final": null,
+          "marks": null
+        }
+      ],
+      "primaryActionLabel": "Submit"
+    },
+    "flow": "Opened from marks/19230-58630--marks-setup.json. Submit via marks/9839-64995--marks-submit.json.",
+    "filterContracts": "Same as marks/19230-58630--marks-setup.json notes.filterContracts."
   }
 }

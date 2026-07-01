@@ -1,0 +1,49 @@
+{
+  "screen": "Marks — Student Category Filter",
+  "description": "Student category (Stud Cat) dropdown on Add Marks multiple-assessment setup.",
+  "figmaNodeId": "19230:58682",
+  "request": {
+    "classId": "string",
+    "subjectId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "general",
+        "label": "General"
+      },
+      {
+        "id": "science",
+        "label": "Science"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to studentCategoryId on Marks setup and roster requests.",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "figmaSectionId": "19230:58630",
+    "figmaMultipleAssessmentFrameId": "19230:58682",
+    "usedByModes": [
+      "multipleAssessment"
+    ]
+  }
+}

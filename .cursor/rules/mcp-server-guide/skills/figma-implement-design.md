@@ -8,7 +8,8 @@ Translate a Figma node to production code with visual parity.
 2. Fetch design data:
    - Preferred: `plugin-figma-figma/get_design_context`
    - Fallback: `user-figma-dev-mode-mcp-server/get_figma_data`
-3. Fetch screenshot:
+   - **If design data extraction fails** (rate limit, auth, timeout, oversized): call `plugin-figma-figma/get_screenshot` for the same node and extract visible labels, values, and layout from the screenshot. See `figma-tool-reference.md` → *Figma MCP failure → screenshot extraction*.
+3. Fetch screenshot (always for validation; required when step 2 failed):
    - Preferred: `plugin-figma-figma/get_screenshot`
    - If unavailable on user MCP, use the returned node structure and visible labels.
 4. Download referenced images/icons where needed.

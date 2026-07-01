@@ -1,0 +1,50 @@
+{
+  "screen": "Marks — Exam Filter",
+  "description": "Exam dropdown on Add Marks setup (multiple-assessment and direct-assessment).",
+  "figmaNodeId": "19230:58682",
+  "request": {
+    "classId": "string",
+    "subjectId": "string",
+    "studentCategoryId": "string"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "subjectId": "math",
+    "studentCategoryId": "general"
+  },
+  "example_response": {
+    "data": [
+      {
+        "id": "exam_1",
+        "label": "Term 1 Exam"
+      },
+      {
+        "id": "exam_2",
+        "label": "Term 2 Exam"
+      }
+    ]
+  },
+  "notes": {
+    "usage": "Selected id maps to examId on Marks setup and roster requests.",
+    "dependsOn": [
+      "classId",
+      "subjectId"
+    ],
+    "conditionalDependsOn": "studentCategoryId required when assessmentMode=multipleAssessment.",
+    "figmaSectionId": "19230:58630",
+    "figmaMultipleAssessmentFrameId": "19230:58682",
+    "figmaDirectAssessmentFrameId": "19230:58978",
+    "usedByModes": [
+      "multipleAssessment",
+      "directAssessment"
+    ]
+  }
+}

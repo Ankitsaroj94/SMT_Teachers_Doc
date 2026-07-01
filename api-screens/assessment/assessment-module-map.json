@@ -33,6 +33,8 @@
           "filters/7133-150532--assessment-subject-filter.json",
           "filters/9568-194594--assessment-grades-filter.json",
           "filters/19230-58649--marks-assessment-filter.json",
+          "filters/19230-58682--marks-student-category-filter.json",
+          "filters/19230-58682--marks-exam-filter.json",
           "filters/19230-57506--student-profile-element-filter.json",
           "filters/19230-57963--subject-profile-aspect-filter.json",
           "filters/19230-59628--manual-attendance-template-filter.json",

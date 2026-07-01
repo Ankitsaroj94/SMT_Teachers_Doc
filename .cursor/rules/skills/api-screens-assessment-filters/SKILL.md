@@ -147,6 +147,17 @@ Form list API (documented):
 
 Figma file key for Staff App: `iv4SFTxeHwgBYQ6TNhydaL` (Shriconnect Staff App).
 
+## Figma data extraction fallback
+
+When Figma MCP fails to return design context or metadata for a filter node:
+
+1. Call `plugin-figma-figma/get_screenshot` with the same `fileKey` and `figmaNodeId`.
+2. Read visible option labels, chip text, and section titles from the screenshot.
+3. Populate `example_response.data[]` (`id`, `label`) and `notes` from what is shown — do not invent options.
+4. If screenshot MCP also fails, try user MCP `get_figma_data`; otherwise ask the user for a screenshot before adding speculative filter values.
+
+Full fallback policy: `.cursor/rules/mcp-server-guide/skills/figma-tool-reference.md`.
+
 ## Downstream linkage
 
 - Class/subject filters feed Assessment list and Add Marks setup (`classId`, `subjectId`).

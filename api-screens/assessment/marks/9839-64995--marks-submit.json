@@ -1,45 +1,88 @@
 {
   "screen": "Marks — Submit",
-  "description": "Submit assessment marks for the selected class and assessment — confirmation summary and final POST.",
-  "figmaNodeId": "9839:64995",
+  "description": "Submit marks from Add Marks roster. Multiple-assessment (19230:58682): Tool 1, Tool 2, Final per student. Direct-assessment (19230:58978): single marks value per student.",
+  "figmaNodeId": "19230:58682",
   "request": {
+    "assessmentMode": "multipleAssessment | directAssessment",
     "classId": "string",
+    "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
+    "examId": "string",
     "date": "string",
     "maxMarks": "number",
     "marks": [
       {
         "studentId": "string",
-        "marks": "number | null",
-        "isAbsent": "boolean",
-        "remark": "string"
+        "tool1": "number | null",
+        "tool2": "number | null",
+        "final": "string | null",
+        "marks": "number | null"
       }
     ]
   },
   "response": {
     "success": "boolean",
     "message": "string",
-    "submittedCount": "number",
-    "assessmentId": "string"
+    "submittedCount": "number"
+  },
+  "example_request": {
+    "assessmentMode": "multipleAssessment",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "math",
+    "maxMarks": 324,
+    "marks": [
+      {
+        "studentId": "1561154",
+        "tool1": 85,
+        "tool2": 90,
+        "final": "27.01%"
+      },
+      {
+        "studentId": "1561155",
+        "tool1": 78,
+        "tool2": 82,
+        "final": "24.69%"
+      }
+    ]
   },
   "example_response": {
     "success": true,
     "message": "Marks submitted successfully",
-    "submittedCount": 24,
-    "assessmentId": "asm_unit_test_1"
+    "submittedCount": 2
   },
   "notes": {
-    "marks": "Send full roster from add-marks-roster screens on submit.",
-    "validation": "Each marks value must be between 0 and maxMarks unless isAbsent is true.",
-    "figmaSectionId": "19230:58630"
-  },
-  "example_request": {
-    "classId": "",
-    "subjectId": "",
-    "assessmentId": "",
-    "date": "",
-    "maxMarks": 0,
-    "marks": []
+    "figmaSectionId": "19230:58630",
+    "figmaMultipleAssessmentUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682",
+    "figmaDirectAssessmentUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58978",
+    "assessmentMode": "multipleAssessment | directAssessment",
+    "uiVariants": {
+      "multipleAssessment": "19230:58682 — marks[].tool1, tool2, final.",
+      "directAssessment": "19230:58978 — marks[].marks only."
+    },
+    "conditionalFields": {
+      "multipleAssessment": "classId, termId, subjectId, maxMarks required. marks[] uses tool1, tool2, final; marks field omitted.",
+      "directAssessment": "classId, subjectId, examId, date, maxMarks required. marks[] uses marks only; tool1, tool2, final omitted. termId omitted."
+    },
+    "example_request_directAssessment": {
+      "assessmentMode": "directAssessment",
+      "classId": "xii_c",
+      "subjectId": "math",
+      "examId": "exam_1",
+      "date": "2025-05-19",
+      "maxMarks": 100,
+      "marks": [
+        {
+          "studentId": "1561154",
+          "marks": 85
+        },
+        {
+          "studentId": "1561155",
+          "marks": 92
+        }
+      ]
+    },
+    "validation": "Multiple-assessment: each tool mark 0–maxMarks. Direct-assessment: marks 0–maxMarks.",
+    "flow": "Submit action on roster after setup from marks/19230-58630--marks-setup.json."
   }
 }

@@ -1,13 +1,17 @@
 {
   "screen": "Assessment — Hub",
-  "description": "Assessment module home: class chip, module shortcuts, Last Modified cards.",
+  "description": "Assessment module home: form/class/subject filter chips, module shortcuts, Last Modified cards.",
   "figmaNodeId": "19230:56644",
   "request": {
-    "classId": "string"
+    "formId": "string",
+    "classId": "string",
+    "subjectId": "string"
   },
   "response": {
     "pageTitle": "string",
+    "formLabel": "string",
     "classLabel": "string",
+    "subjectLabel": "string",
     "modules": [
       {
         "id": "studentProfile | subjectProfile | marks | coScholastic | manualAttendance",
@@ -26,11 +30,15 @@
     ]
   },
   "example_request": {
-    "classId": "xii_c"
+    "formId": "xii",
+    "classId": "xii_c",
+    "subjectId": "math"
   },
   "example_response": {
     "pageTitle": "Assessment",
+    "formLabel": "XII",
     "classLabel": "XII - C",
+    "subjectLabel": "Mathematics",
     "modules": [
       {
         "id": "studentProfile",
@@ -70,6 +78,14 @@
   },
   "notes": {
     "figmaSectionId": "19230:56644",
+    "figmaFilterFrameId": "19230:57226",
+    "figmaFilterFrameUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57226",
+    "filterChain": "Form (formId) → Class (classId) → Subject (subjectId)",
+    "filterContracts": [
+      "filters/19230-56644--assessment-form-filter.json",
+      "filters/7133-150449--assessment-class-filter.json",
+      "filters/7133-150532--assessment-subject-filter.json"
+    ],
     "modules": "Shortcuts navigate to section roots 19230:57503, 57867, 58630, 59231, 59615."
   }
 }

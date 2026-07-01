@@ -72,6 +72,7 @@ Duplicate Figma variants are collapsed into one API per screen logic:
 - **Entry UI states** (empty, filled, suggestions expanded, next student) → one entry GET
 - **Manual attendance roster** → single endpoint for Class Wise and Subject Wise; `filterChips[]` varies by `type`
 - **Co-Scholastic grade + remarks lists** → one roster with `columnMode: grade | remarks`
+- **Marks entry modes** → one setup/roster/submit API with `assessmentMode: multipleAssessment | directAssessment` ([`19230:58682`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682) multiple, [`19230:58978`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58978) direct)
 
 ## Index files
 
@@ -91,6 +92,8 @@ Shared filter chain: **Form → Class → Subject**. See [`.cursor/rules/skills/
 | `filters/7133-150532--assessment-subject-filter.json` | `7133:150532` |
 | `filters/9568-194594--assessment-grades-filter.json` | `9568:194594` |
 | `filters/19230-58649--marks-assessment-filter.json` | [`19230:58649`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58649) |
+| `filters/19230-58682--marks-student-category-filter.json` | [`19230:58682`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682) |
+| `filters/19230-58682--marks-exam-filter.json` | [`19230:58682`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682) |
 | `filters/19230-57506--student-profile-element-filter.json` | [`19230:57506`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57506) |
 | `filters/19230-57963--subject-profile-aspect-filter.json` | [`19230:57963`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57963) |
 | `filters/19230-59628--manual-attendance-template-filter.json` | [`19230:59628`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-59628) |
