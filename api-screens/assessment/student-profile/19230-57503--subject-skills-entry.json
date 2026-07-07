@@ -1,7 +1,7 @@
 {
   "screen": "Student Profile — Subject Skills Entry",
-  "description": "Per-skill remark entry with suggestions; empty, filled, with-text, and next-student are UI states.",
-  "figmaNodeId": "19230:57503",
+  "description": "Per-skill remark entry for a student from Student Profile roster. Filter chips, skill remark fields, recommendation, class-teacher remark, and suggestions.",
+  "figmaNodeId": "19230:57731",
   "request": {
     "studentId": "string",
     "classId": "string",
@@ -20,7 +20,11 @@
     "classTeacherRemark": "string",
     "selectedSuggestionIds": [
       "string"
-    ]
+    ],
+    "allAboutMe": "string (url)",
+    "glimpseMyself": "string (url)",
+    "glimpseMyFamily": "string (url)",
+    "uploadedFiles": "string (url)"
   },
   "response": {
     "pageTitle": "string",
@@ -44,19 +48,37 @@
         "placeholder": "string"
       }
     ],
-    "suggestions": [
-      {
-        "id": "string",
-        "label": "string"
-      }
-    ],
+    "recommendationLabel": "string",
+    "recommendation": "string",
+    "recommendationPlaceholder": "string",
+    "classTeacherRemarkLabel": "string",
+    "classTeacherRemark": "string",
+    "classTeacherRemarkPlaceholder": "string",
     "addRemarksLabel": "string",
     "suggestionsLabel": "string",
     "saveAndNextLabel": "string",
     "saveLabel": "string",
     "suggestionsExpanded": "boolean"
   },
+  "example_request": {
+    "studentId": "1561154",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "elementId": "",
+    "remarks": [],
+    "recommendation": "",
+    "classTeacherRemark": "",
+    "selectedSuggestionIds": [],
+    "allAboutMe": "",
+    "glimpseMyself": "",
+    "glimpseMyFamily": "",
+    "uploadedFiles": ""
+  },
   "example_response": {
+    "pageTitle": "Remarks",
     "filterChips": {
       "termLabel": "Term 1",
       "subjectLabel": "English",
@@ -101,31 +123,26 @@
         "placeholder": "Write a short remark for this student."
       }
     ],
-    "suggestions": [],
+    "recommendationLabel": "Recommendation",
+    "recommendation": "",
+    "recommendationPlaceholder": "Write a recommendation for this student.",
+    "classTeacherRemarkLabel": "Class Teacher Remark",
+    "classTeacherRemark": "",
+    "classTeacherRemarkPlaceholder": "Write a class teacher remark for this student.",
     "addRemarksLabel": "Add Remarks",
     "suggestionsLabel": "Suggestions",
     "saveAndNextLabel": "Save and Next",
     "saveLabel": "Save",
-    "suggestionsExpanded": false,
-    "pageTitle": "Remarks"
+    "suggestionsExpanded": false
   },
   "notes": {
-    "skills": "Listening, Speaking, Reading/Comprehension, Vocabulary, Grammar tabs/sections.",
-    "suggestions": "Optional chips from suggestions API when Suggestions is expanded.",
     "figmaSectionId": "19230:57503",
-    "uiVariants": "Empty, filled, suggestions expanded, add-remarks placeholder, next-student — single GET; use skills[].remark null/empty vs populated."
-  },
-  "example_request": {
-    "studentId": "1561154",
-    "classId": "xii_c",
-    "termId": "term_1",
-    "subjectId": "english",
-    "assessmentId": "unit_test_1",
-    "academicYear": "2025",
-    "elementId": "",
-    "remarks": [],
-    "recommendation": "",
-    "classTeacherRemark": "",
-    "selectedSuggestionIds": []
+    "figmaFrameId": "19230:57731",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57731",
+    "skills": "Listening, Speaking, Reading/Comprehension, Vocabulary, Grammar sections.",
+    "suggestions": "Loaded from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is expanded; pass matching suggestionType (and skillId when type=skill).",
+    "uploadFields": "allAboutMe, glimpseMyself, glimpseMyFamily, uploadedFiles — each is an uploaded file url (omit or empty when not uploaded).",
+    "save": "POST body on this screen or via student-profile/19230-57503--remarks-save.json — same request shape.",
+    "uiVariants": "Empty, filled, suggestions expanded, add-remarks placeholder, next-student — single GET; use skills[].remark empty vs populated."
   }
 }

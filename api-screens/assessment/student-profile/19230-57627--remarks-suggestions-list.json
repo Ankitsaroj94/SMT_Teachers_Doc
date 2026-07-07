@@ -1,0 +1,70 @@
+{
+  "screen": "Student Profile — Remarks Suggestions List",
+  "description": "Fetch suggestion chips for remark entry fields by suggestionType. Used when Suggestions is expanded on subject-skills entry, elementwise entry, and related remark screens.",
+  "figmaNodeId": "19230:57627",
+  "request": {
+    "suggestionType": "recommendation | classTeacherRemark | skill | criteria",
+    "skillId": "string",
+    "criteriaId": "string",
+    "classId": "string",
+    "subjectId": "string",
+    "termId": "string"
+  },
+  "response": {
+    "suggestionType": "string",
+    "data": [
+      {
+        "id": "string",
+        "label": "string"
+      }
+    ]
+  },
+  "example_request": {
+    "suggestionType": "recommendation",
+    "skillId": "",
+    "criteriaId": "",
+    "classId": "xii_c",
+    "subjectId": "english",
+    "termId": "term_1"
+  },
+  "example_response": {
+    "suggestionType": "recommendation",
+    "data": [
+      {
+        "id": "rec_1",
+        "label": "Shows consistent effort in class activities."
+      },
+      {
+        "id": "rec_2",
+        "label": "Participates actively during discussions."
+      },
+      {
+        "id": "rec_3",
+        "label": "Demonstrates good understanding of core concepts."
+      }
+    ]
+  },
+  "notes": {
+    "figmaSectionId": "19230:57503",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57627",
+    "uiVariants": {
+      "recommendation": "19340:47415 — Recommendation suggestions list.",
+      "classTeacherRemark": "Class Teacher Remark suggestions.",
+      "skill": "Per-skill remark suggestions; skillId required (e.g. listening, speaking).",
+      "criteria": "Per-criteria remark suggestions on elementwise entry; criteriaId required."
+    },
+    "suggestionType": "recommendation | classTeacherRemark | skill | criteria",
+    "conditionalFields": {
+      "skill": "skillId required when suggestionType=skill.",
+      "criteria": "criteriaId required when suggestionType=criteria.",
+      "recommendation": "skillId omitted.",
+      "classTeacherRemark": "skillId omitted."
+    },
+    "usage": "Selected suggestion id maps to selectedSuggestionIds[] on remarks save. Call once per expanded field type.",
+    "usedBy": [
+      "student-profile/19230-57503--subject-skills-entry.json",
+      "student-profile/9540-57356--elementwise-criteria-entry.json",
+      "subject-profile/19230-57867--subject-skills-entry.json"
+    ]
+  }
+}

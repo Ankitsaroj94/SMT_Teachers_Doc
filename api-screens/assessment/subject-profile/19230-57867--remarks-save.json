@@ -1,6 +1,6 @@
 {
   "screen": "Subject Profile — Save Remarks",
-  "description": "Save remarks for current student (Save or Save and Next).",
+  "description": "Save subject-profile aspect entry for current student (Save or Save and Next). Payload shape depends on aspectEntryType.",
   "figmaNodeId": "19230:57867",
   "request": {
     "studentId": "string",
@@ -9,23 +9,69 @@
     "subjectId": "string",
     "assessmentId": "string",
     "academicYear": "string",
-    "elementId": "string",
+    "aspectId": "string",
+    "aspectEntryType": "manualRemark | grade | emoji | listOfValue | marks | performanceEfforts",
     "remarks": [
       {
-        "skillId": "string",
+        "itemId": "string",
         "remark": "string"
       }
     ],
-    "recommendation": "string",
-    "classTeacherRemark": "string",
     "selectedSuggestionIds": [
       "string"
+    ],
+    "grades": [
+      {
+        "itemId": "string",
+        "gradeId": "string"
+      }
+    ],
+    "selections": [
+      {
+        "itemId": "string",
+        "valueId": "string",
+        "emojiId": "string"
+      }
+    ],
+    "marks": [
+      {
+        "itemId": "string",
+        "marks": "number"
+      }
+    ],
+    "criteria": [
+      {
+        "criteriaId": "string",
+        "performance": "string",
+        "efforts": "string"
+      }
     ]
   },
   "response": {
     "success": "boolean",
     "message": "string",
     "nextStudentId": "string"
+  },
+  "example_request": {
+    "studentId": "1561154",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "aspectId": "skills",
+    "aspectEntryType": "manualRemark",
+    "remarks": [
+      {
+        "itemId": "listening",
+        "remark": "Shows good progress."
+      }
+    ],
+    "selectedSuggestionIds": [],
+    "grades": [],
+    "selections": [],
+    "marks": [],
+    "criteria": []
   },
   "example_response": {
     "success": true,
@@ -34,19 +80,16 @@
   },
   "notes": {
     "nextStudentId": "Returned when Save and Next is used; omit on Save only.",
-    "figmaSectionId": "19230:57867"
-  },
-  "example_request": {
-    "studentId": "",
-    "classId": "",
-    "termId": "",
-    "subjectId": "",
-    "assessmentId": "",
-    "academicYear": "",
-    "elementId": "",
-    "remarks": [],
-    "recommendation": "",
-    "classTeacherRemark": "",
-    "selectedSuggestionIds": []
+    "figmaSectionId": "19230:57867",
+    "aspectEntryType": "manualRemark | grade | emoji | listOfValue | marks | performanceEfforts",
+    "flow": "Setup → typed list by aspectEntryType → tap student → typed entry → remarks-save.",
+    "conditionalFields": {
+      "manualRemark": "remarks[], selectedSuggestionIds[] — list: 19230-58386--manual-remark-list.json; entry: 19230-58386--manual-remark-entry.json",
+      "grade": "grades[] — list: 19230-58100--grade-list.json; entry: 19230-58100--grade-entry.json",
+      "emoji": "selections[] with emojiId — list: 19230-58190--emoji-list.json; entry: 19230-58190--emoji-entry.json",
+      "listOfValue": "selections[] with valueId — list: 19230-58283--list-of-value-list.json; entry: 19230-58283--list-of-value-entry.json",
+      "marks": "marks[] — list: 19230-58426--marks-list.json; entry: 19230-58426--marks-entry.json",
+      "performanceEfforts": "criteria[] with criteriaId, performance, efforts; remarks (string) — save via 19230-58576--performance-efforts-entry.json; list: 19230-57868--performance-efforts-list.json; criterion options: 19230-58601--performance-efforts-criterion-options.json"
+    }
   }
 }

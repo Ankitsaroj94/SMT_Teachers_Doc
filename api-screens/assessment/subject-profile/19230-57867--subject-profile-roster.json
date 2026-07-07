@@ -147,6 +147,15 @@
     "figmaSectionId": "19230:57867",
     "uiVariants": "Merged legacy list screens: remarks/list/remarks-subject-profile-list.json, remarks/list/remarks-subject-profile-list-assessment.json, remarks/list/remarks-list-subject-profile.json",
     "columnMode": "remarks | marks | grade — one API; grade picker uses filters/9568-194594--assessment-grades-filter.json",
+    "aspectEntryType": "After setup, open typed list API by backend aspectEntryType; tap student → matching entry API → remarks-save.",
+    "typedLists": {
+      "manualRemark": "19230-58386--manual-remark-list.json",
+      "grade": "19230-58100--grade-list.json",
+      "emoji": "19230-58190--emoji-list.json",
+      "listOfValue": "19230-58283--list-of-value-list.json",
+      "marks": "19230-58426--marks-list.json",
+      "performanceEfforts": "19230-57868--performance-efforts-list.json"
+    },
     "filterChips": "Ordered chip strip; omit chips with empty value."
   }
 }

@@ -1,0 +1,103 @@
+{
+  "screen": "Subject Profile — Manual Remark Entry",
+  "description": "Per-student manual text remark entry. Opened from manual remark list when a student row is tapped.",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "aspectId": "string",
+    "remarks": [
+      {
+        "itemId": "string",
+        "remark": "string"
+      }
+    ],
+    "selectedSuggestionIds": [
+      "string"
+    ]
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": {
+      "termLabel": "string",
+      "subjectLabel": "string",
+      "assessmentLabel": "string",
+      "academicYearLabel": "string"
+    },
+    "student": {
+      "name": "string",
+      "classSection": "string",
+      "studentId": "string",
+      "breadcrumb": "string"
+    },
+    "items": [
+      {
+        "id": "string",
+        "label": "string",
+        "remark": "string",
+        "placeholder": "string"
+      }
+    ],
+    "addRemarksLabel": "string",
+    "suggestionsLabel": "string",
+    "suggestionsExpanded": "boolean",
+    "saveLabel": "string",
+    "saveAndNextLabel": "string"
+  },
+  "example_request": {
+    "studentId": "1561154",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "aspectId": "skills",
+    "remarks": [],
+    "selectedSuggestionIds": []
+  },
+  "example_response": {
+    "pageTitle": "Remarks",
+    "filterChips": {
+      "termLabel": "Term 1",
+      "subjectLabel": "English",
+      "assessmentLabel": "Unit Test 1",
+      "academicYearLabel": "2025"
+    },
+    "student": {
+      "name": "Mark Thompson",
+      "classSection": "XII - C | 677868",
+      "studentId": "677868",
+      "breadcrumb": "Subject remark entry"
+    },
+    "items": [
+      {
+        "id": "listening",
+        "label": "Listening",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      },
+      {
+        "id": "speaking",
+        "label": "Speaking",
+        "remark": "",
+        "placeholder": "Write a short remark for this student."
+      }
+    ],
+    "addRemarksLabel": "Add Remarks",
+    "suggestionsLabel": "Suggestions",
+    "suggestionsExpanded": false,
+    "saveLabel": "Save",
+    "saveAndNextLabel": "Save and Next"
+  },
+  "notes": {
+    "figmaSectionId": "19230:57867",
+    "aspectEntryType": "manualRemark",
+    "list": "subject-profile/19230-58386--manual-remark-list.json (Figma 19230:58386)",
+    "suggestions": "Loaded from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is expanded.",
+    "save": "POST remarks[] and selectedSuggestionIds[] via subject-profile/19230-57867--remarks-save.json with aspectEntryType=manualRemark.",
+    "uiVariants": "Empty, filled, suggestions expanded, next-student — single GET; use items[].remark empty vs populated."
+  }
+}

@@ -44,12 +44,6 @@
         "placeholder": "string"
       }
     ],
-    "suggestions": [
-      {
-        "id": "string",
-        "label": "string"
-      }
-    ],
     "addRemarksLabel": "string",
     "suggestionsLabel": "string",
     "saveAndNextLabel": "string",
@@ -101,7 +95,6 @@
         "placeholder": "Write a short remark for this student."
       }
     ],
-    "suggestions": [],
     "addRemarksLabel": "Add Remarks",
     "suggestionsLabel": "Suggestions",
     "saveAndNextLabel": "Save and Next",
@@ -111,8 +104,9 @@
   },
   "notes": {
     "skills": "Listening, Speaking, Reading/Comprehension, Vocabulary, Grammar tabs/sections.",
-    "suggestions": "Optional chips from suggestions API when Suggestions is expanded.",
+    "suggestions": "Loaded from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is expanded.",
     "figmaSectionId": "19230:57867",
+    "supersededBy": "Use type-specific entry contracts under subject-profile/ (19230-58386 manual remark, 19230-58100 grade, etc.) keyed by aspectEntryType from backend.",
     "uiVariants": "Empty, filled, suggestions expanded, add-remarks placeholder, next-student — single GET; use skills[].remark null/empty vs populated."
   },
   "example_request": {

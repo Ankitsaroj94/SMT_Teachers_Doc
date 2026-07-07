@@ -1,0 +1,13 @@
+{
+    "Screen_type": "D/M" //D - Direct Exam , M - Multiple 
+    "students": [
+        "max_marks": "string",
+        {
+            "profilePic": "string",
+            "name": "string",
+            "studentId": "string",
+            "roll_no": "string",
+            "marks": "String"
+        }
+    ]
+}

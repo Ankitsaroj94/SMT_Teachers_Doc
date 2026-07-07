@@ -1,0 +1,120 @@
+{
+  "screen": "Subject Profile — Performance and Efforts List",
+  "description": "Student roster list for combined Performance and Efforts aspect. Tap Add or Edit on a row to open performance-efforts entry.",
+  "figmaNodeId": "19230:57868",
+  "request": {
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "aspectId": "string",
+    "viewMode": "staff-wise | student-wise",
+    "sortBy": "name | admissionNo | rollNo",
+    "search": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ],
+    "sortOptions": [
+      "string"
+    ],
+    "viewModes": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "profilePic": "string",
+        "name": "string",
+        "rollNo": "string",
+        "studentId": "string",
+        "remarksAction": "add | edit | none"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "aspectId": "performance_efforts",
+    "viewMode": "staff-wise",
+    "sortBy": "name",
+    "search": ""
+  },
+  "example_response": {
+    "pageTitle": "Subject Profile",
+    "filterChips": [
+      {
+        "id": "class",
+        "label": "XII - C",
+        "value": "XII - C"
+      },
+      {
+        "id": "term",
+        "label": "Term 1",
+        "value": "Term 1"
+      },
+      {
+        "id": "subject",
+        "label": "English",
+        "value": "English"
+      },
+      {
+        "id": "assessment",
+        "label": "Unit Test 1",
+        "value": "Unit Test 1"
+      },
+      {
+        "id": "academicYear",
+        "label": "2025",
+        "value": "2025"
+      }
+    ],
+    "sortOptions": [
+      "Sort By",
+      "Name",
+      "Admission No.",
+      "Roll No."
+    ],
+    "viewModes": [
+      "Staff-wise",
+      "Student-wise"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "profilePic": "string",
+        "name": "Mark Thompson",
+        "rollNo": "123",
+        "studentId": "1561154",
+        "remarksAction": "add"
+      },
+      {
+        "serial": 2,
+        "profilePic": "string",
+        "name": "Sophia Kim",
+        "rollNo": "124",
+        "studentId": "1561156",
+        "remarksAction": "edit"
+      }
+    ],
+    "primaryActionLabel": "Save"
+  },
+  "notes": {
+    "figmaSectionId": "19230:57867",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57868",
+    "aspectEntryType": "performanceEfforts",
+    "entry": "Tap Add or Edit on student row → subject-profile/19230-58576--performance-efforts-entry.json",
+    "uiVariants": "Empty, partial, filled list states via remarksAction."
+  }
+}

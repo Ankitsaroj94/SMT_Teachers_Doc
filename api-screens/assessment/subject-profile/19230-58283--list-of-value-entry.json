@@ -1,0 +1,111 @@
+{
+  "screen": "Subject Profile — List of Value Entry",
+  "description": "Per-student list-of-value entry. Opened from list-of-value list when a student row is tapped.",
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "aspectId": "string",
+    "selections": [
+      {
+        "itemId": "string",
+        "valueId": "string"
+      }
+    ]
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": {
+      "termLabel": "string",
+      "subjectLabel": "string",
+      "assessmentLabel": "string",
+      "academicYearLabel": "string"
+    },
+    "student": {
+      "name": "string",
+      "classSection": "string",
+      "studentId": "string",
+      "breadcrumb": "string"
+    },
+    "items": [
+      {
+        "id": "string",
+        "label": "string",
+        "selectedValueId": "string",
+        "selectedValueLabel": "string",
+        "placeholder": "string",
+        "valueOptions": [
+          {
+            "id": "string",
+            "label": "string"
+          }
+        ]
+      }
+    ],
+    "saveLabel": "string",
+    "saveAndNextLabel": "string"
+  },
+  "example_request": {
+    "studentId": "1561154",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "aspectId": "participation",
+    "selections": []
+  },
+  "example_response": {
+    "pageTitle": "Remarks",
+    "filterChips": {
+      "termLabel": "Term 1",
+      "subjectLabel": "English",
+      "assessmentLabel": "Unit Test 1",
+      "academicYearLabel": "2025"
+    },
+    "student": {
+      "name": "Mark Thompson",
+      "classSection": "XII - C | 677868",
+      "studentId": "677868",
+      "breadcrumb": "Subject remark entry"
+    },
+    "items": [
+      {
+        "id": "class_participation",
+        "label": "Class Participation",
+        "selectedValueId": "",
+        "selectedValueLabel": "",
+        "placeholder": "Select",
+        "valueOptions": [
+          {
+            "id": "always",
+            "label": "Always"
+          },
+          {
+            "id": "often",
+            "label": "Often"
+          },
+          {
+            "id": "sometimes",
+            "label": "Sometimes"
+          },
+          {
+            "id": "rarely",
+            "label": "Rarely"
+          }
+        ]
+      }
+    ],
+    "saveLabel": "Save",
+    "saveAndNextLabel": "Save and Next"
+  },
+  "notes": {
+    "figmaSectionId": "19230:57867",
+    "aspectEntryType": "listOfValue",
+    "list": "subject-profile/19230-58283--list-of-value-list.json (Figma 19230:58283)",
+    "save": "POST selections[] with itemId and valueId via subject-profile/19230-57867--remarks-save.json with aspectEntryType=listOfValue."
+  }
+}

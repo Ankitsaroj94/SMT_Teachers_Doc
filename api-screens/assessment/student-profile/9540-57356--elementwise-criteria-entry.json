@@ -87,7 +87,8 @@
   },
   "notes": {
     "figmaNodeIds": "Also matches 9568:193988 (same layout).",
-    "figmaSectionId": "19230:57503"
+    "figmaSectionId": "19230:57503",
+    "suggestions": "Loaded from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is expanded; pass suggestionType=criteria with criteriaId for per-criteria chips."
   },
   "example_request": {
     "studentId": "",

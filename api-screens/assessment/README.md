@@ -44,9 +44,24 @@ flowchart TD
   SP --> SPSave[Save remarks]
 
   SubP --> SubSetup[Setup class/term/subject/aspect]
-  SubP --> SubRoster[Roster merged]
-  SubP --> SubEntry[Skills entry]
-  SubP --> SubSave[Save remarks]
+  SubP --> SubListManual[Manual remark list]
+  SubP --> SubListGrade[Grade list]
+  SubP --> SubListEmoji[Emoji list]
+  SubP --> SubListLOV[List of value list]
+  SubP --> SubListMarks[Marks list]
+  SubP --> SubListPerfEff[Performance and Efforts list]
+  SubListManual --> SubEntryManual[Manual remark entry]
+  SubListGrade --> SubEntryGrade[Grade entry]
+  SubListEmoji --> SubEntryEmoji[Emoji entry]
+  SubListLOV --> SubEntryLOV[List of value entry]
+  SubListMarks --> SubEntryMarks[Marks entry]
+  SubListPerfEff --> SubEntryPerfEff[Performance and Efforts entry]
+  SubEntryManual --> SubSave[Save remarks]
+  SubEntryGrade --> SubSave
+  SubEntryEmoji --> SubSave
+  SubEntryLOV --> SubSave
+  SubEntryMarks --> SubSave
+  SubEntryPerfEff --> SubSave
 
   Marks --> MSetup[Setup]
   Marks --> MRoster[Roster merged]
@@ -69,7 +84,8 @@ Duplicate Figma variants are collapsed into one API per screen logic:
 
 - **Roster column modes** (`remarks | marks | grade`) → one roster API with `columnMode`
 - **Roster fill states** (empty / partial / filled) → nullable fields + `notes.uiVariants`
-- **Entry UI states** (empty, filled, suggestions expanded, next student) → one entry GET
+- **Subject Profile aspect types** → separate **list** + **entry** API per `aspectEntryType`. List Figma frames: [`19230:58386`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58386) manual remark, [`19230:58100`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58100) grade, [`19230:58190`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58190) emoji, [`19230:58283`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58283) list of value, [`19230:58426`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58426) marks, [`19230:57868`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57868) performance and efforts (merged). Entry screens are separate contracts; performance-efforts criterion pickers use [`19230:58601`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58601) options API per criterion.
+- **Entry UI states** (empty, filled, suggestions expanded, next student) → one entry GET per aspect entry type
 - **Manual attendance roster** → single endpoint for Class Wise and Subject Wise; `filterChips[]` varies by `type`
 - **Co-Scholastic grade + remarks lists** → one roster with `columnMode: grade | remarks`
 - **Marks entry modes** → one setup/roster/submit API with `assessmentMode: multipleAssessment | directAssessment` ([`19230:58682`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58682) multiple, [`19230:58978`](https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58978) direct)

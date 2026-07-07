@@ -50,6 +50,7 @@
           "student-profile/19230-57503--student-profile-select-element-setup.json",
           "student-profile/19230-57503--student-profile-roster.json",
           "student-profile/19230-57503--subject-skills-entry.json",
+          "student-profile/19230-57627--remarks-suggestions-list.json",
           "student-profile/9540-57356--elementwise-criteria-entry.json",
           "student-profile/19230-57503--remarks-save.json"
         ]
@@ -61,6 +62,19 @@
           "subject-profile/19230-57867--subject-profile-class-term-setup.json",
           "subject-profile/19230-57867--subject-profile-select-subject-aspect-setup.json",
           "subject-profile/19230-57867--subject-profile-roster.json",
+          "subject-profile/19230-58386--manual-remark-list.json",
+          "subject-profile/19230-58386--manual-remark-entry.json",
+          "subject-profile/19230-58100--grade-list.json",
+          "subject-profile/19230-58100--grade-entry.json",
+          "subject-profile/19230-58190--emoji-list.json",
+          "subject-profile/19230-58190--emoji-entry.json",
+          "subject-profile/19230-58283--list-of-value-list.json",
+          "subject-profile/19230-58283--list-of-value-entry.json",
+          "subject-profile/19230-58426--marks-list.json",
+          "subject-profile/19230-58426--marks-entry.json",
+          "subject-profile/19230-57868--performance-efforts-list.json",
+          "subject-profile/19230-58576--performance-efforts-entry.json",
+          "subject-profile/19230-58601--performance-efforts-criterion-options.json",
           "subject-profile/19230-57867--subject-skills-entry.json",
           "subject-profile/19230-57867--remarks-save.json"
         ]

@@ -1,0 +1,58 @@
+{
+  "screen": "Subject Profile — Performance and Efforts Entry",
+
+  "request": {
+    "studentId": "string",
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "aspectId": "string",
+    "criteria": [
+      {
+        "criteriaId": "string",
+        "performance": "string",
+        "efforts": "string"
+      }
+    ],
+    "remarks": "string"
+  },
+  "response": {
+    "success": "boolean",
+    "message": "string",
+    "nextStudentId": "string"
+  },
+  "example_request": {
+    "studentId": "1561154",
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "aspectId": "performance_efforts",
+    "criteria": [
+      {
+        "criteriaId": "attentative_listening",
+        "performance": "often",
+        "efforts": "good"
+      },
+      {
+        "criteriaId": "attentative_speaking",
+        "performance": "",
+        "efforts": ""
+      },
+      {
+        "criteriaId": "attentative_reading",
+        "performance": "",
+        "efforts": ""
+      }
+    ],
+    "remarks": ""
+  },
+  "example_response": {
+    "success": true,
+    "message": "Data updated successfully",
+    "nextStudentId": "1561155"
+  }
+}

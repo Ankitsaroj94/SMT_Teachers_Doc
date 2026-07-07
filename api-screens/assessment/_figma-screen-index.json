@@ -201,9 +201,16 @@
     },
     {
       "contractFile": "student-profile/19230-57503--subject-skills-entry.json",
-      "figmaNodeId": "19230:57503",
+      "figmaNodeId": "19230:57731",
       "screen": "Student Profile — Subject Skills Entry",
-      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57503",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57731",
+      "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "student-profile/19230-57627--remarks-suggestions-list.json",
+      "figmaNodeId": "19230:57627",
+      "screen": "Student Profile — Remarks Suggestions List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57627",
       "figmaSectionId": "19230:57503"
     },
     {
@@ -212,6 +219,87 @@
       "screen": "Remarks — Elementwise criteria remarks",
       "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=9540-57356",
       "figmaSectionId": "19230:57503"
+    },
+    {
+      "contractFile": "subject-profile/19230-58386--manual-remark-list.json",
+      "figmaNodeId": "19230:58386",
+      "screen": "Subject Profile — Manual Remark List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58386",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58386--manual-remark-entry.json",
+      "screen": "Subject Profile — Manual Remark Entry",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58100--grade-list.json",
+      "figmaNodeId": "19230:58100",
+      "screen": "Subject Profile — Grade List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58100",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58100--grade-entry.json",
+      "screen": "Subject Profile — Grade Entry",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58190--emoji-list.json",
+      "figmaNodeId": "19230:58190",
+      "screen": "Subject Profile — Emoji List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58190",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58190--emoji-entry.json",
+      "screen": "Subject Profile — Emoji Entry",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58283--list-of-value-list.json",
+      "figmaNodeId": "19230:58283",
+      "screen": "Subject Profile — List of Value List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58283",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58283--list-of-value-entry.json",
+      "screen": "Subject Profile — List of Value Entry",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58426--marks-list.json",
+      "figmaNodeId": "19230:58426",
+      "screen": "Subject Profile — Marks List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58426",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58426--marks-entry.json",
+      "screen": "Subject Profile — Marks Entry",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-57868--performance-efforts-list.json",
+      "figmaNodeId": "19230:57868",
+      "screen": "Subject Profile — Performance and Efforts List",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57868",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58576--performance-efforts-entry.json",
+      "figmaNodeId": "19230:58576",
+      "screen": "Subject Profile — Performance and Efforts Entry",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58576",
+      "figmaSectionId": "19230:57867"
+    },
+    {
+      "contractFile": "subject-profile/19230-58601--performance-efforts-criterion-options.json",
+      "figmaNodeId": "19230:58601",
+      "screen": "Subject Profile — Performance and Efforts Criterion Options",
+      "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58601",
+      "figmaSectionId": "19230:57867"
     },
     {
       "contractFile": "subject-profile/19230-57867--remarks-save.json",

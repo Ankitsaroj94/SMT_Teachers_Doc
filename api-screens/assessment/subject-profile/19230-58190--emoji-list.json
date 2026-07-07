@@ -1,0 +1,122 @@
+{
+  "screen": "Subject Profile — Emoji List",
+  "description": "Student roster list for emoji aspect. Shows selected emoji per student row.",
+  "figmaNodeId": "19230:58190",
+  "request": {
+    "classId": "string",
+    "termId": "string",
+    "subjectId": "string",
+    "assessmentId": "string",
+    "academicYear": "string",
+    "aspectId": "string",
+    "viewMode": "staff-wise | student-wise",
+    "sortBy": "name | admissionNo | rollNo",
+    "search": "string"
+  },
+  "response": {
+    "pageTitle": "string",
+    "filterChips": [
+      {
+        "id": "string",
+        "label": "string",
+        "value": "string"
+      }
+    ],
+    "sortOptions": [
+      "string"
+    ],
+    "viewModes": [
+      "string"
+    ],
+    "students": [
+      {
+        "serial": "number",
+        "profilePic": "string",
+        "name": "string",
+        "rollNo": "string",
+        "studentId": "string",
+        "emoji": "string",
+        "emojiId": "string"
+      }
+    ],
+    "primaryActionLabel": "string"
+  },
+  "example_request": {
+    "classId": "xii_c",
+    "termId": "term_1",
+    "subjectId": "english",
+    "assessmentId": "unit_test_1",
+    "academicYear": "2025",
+    "aspectId": "attitude",
+    "viewMode": "staff-wise",
+    "sortBy": "name",
+    "search": ""
+  },
+  "example_response": {
+    "pageTitle": "Subject Profile",
+    "filterChips": [
+      {
+        "id": "class",
+        "label": "XII - C",
+        "value": "XII - C"
+      },
+      {
+        "id": "term",
+        "label": "Term 1",
+        "value": "Term 1"
+      },
+      {
+        "id": "subject",
+        "label": "English",
+        "value": "English"
+      },
+      {
+        "id": "assessment",
+        "label": "Unit Test 1",
+        "value": "Unit Test 1"
+      },
+      {
+        "id": "academicYear",
+        "label": "2025",
+        "value": "2025"
+      }
+    ],
+    "sortOptions": [
+      "Sort By",
+      "Name",
+      "Admission No.",
+      "Roll No."
+    ],
+    "viewModes": [
+      "Staff-wise",
+      "Student-wise"
+    ],
+    "students": [
+      {
+        "serial": 1,
+        "profilePic": "string",
+        "name": "Mark Thompson",
+        "rollNo": "123",
+        "studentId": "1561154",
+        "emoji": "",
+        "emojiId": ""
+      },
+      {
+        "serial": 2,
+        "profilePic": "string",
+        "name": "Sophia Kim",
+        "rollNo": "124",
+        "studentId": "1561156",
+        "emoji": "😀",
+        "emojiId": "excellent"
+      }
+    ],
+    "primaryActionLabel": "Save"
+  },
+  "notes": {
+    "figmaSectionId": "19230:57867",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58190",
+    "aspectEntryType": "emoji",
+    "entry": "Tap student row → subject-profile/19230-58190--emoji-entry.json"
+  }
+}

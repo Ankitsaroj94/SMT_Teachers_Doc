@@ -20,7 +20,11 @@
     "classTeacherRemark": "string",
     "selectedSuggestionIds": [
       "string"
-    ]
+    ],
+    "allAboutMe": "string (url)",
+    "glimpseMyself": "string (url)",
+    "glimpseMyFamily": "string (url)",
+    "uploadedFiles": "string (url)"
   },
   "response": {
     "success": "boolean",
@@ -35,7 +39,8 @@
   "notes": {
     "nextStudentId": "Returned when Save and Next is used; omit on Save only.",
     "figmaSectionId": "19230:57503",
-    "linkedScreens": "POST mutation for subject-skills-entry and elementwise entry."
+    "linkedScreens": "POST mutation for subject-skills-entry and elementwise entry.",
+    "uploadFields": "allAboutMe, glimpseMyself, glimpseMyFamily, uploadedFiles — each is an uploaded file url."
   },
   "example_request": {
     "studentId": "",
@@ -48,6 +53,10 @@
     "remarks": [],
     "recommendation": "",
     "classTeacherRemark": "",
-    "selectedSuggestionIds": []
+    "selectedSuggestionIds": [],
+    "allAboutMe": "",
+    "glimpseMyself": "",
+    "glimpseMyFamily": "",
+    "uploadedFiles": ""
   }
 }
