@@ -1,107 +1,74 @@
 {
   "screen": "Subject Profile — Emoji Entry",
-  "description": "Per-student emoji selection entry. Opened from emoji list when a student row is tapped.",
+  "description": "Save emoji entry from emoji list (Remarks screen, Figma 19230:57867). All entry data in request; response is save result only.",
+  "figmaNodeId": "19230:57867",
   "request": {
     "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "selections": [
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string",
+    "aspects": [
       {
-        "itemId": "string",
+        "aspectId": "string",
         "emojiId": "string"
       }
+    ],
+    "overallRemarks": "string",
+    "selectedSuggestionIds": [
+      "string"
     ]
   },
   "response": {
-    "pageTitle": "string",
-    "filterChips": {
-      "termLabel": "string",
-      "subjectLabel": "string",
-      "assessmentLabel": "string",
-      "academicYearLabel": "string"
-    },
-    "student": {
-      "name": "string",
-      "classSection": "string",
-      "studentId": "string",
-      "breadcrumb": "string"
-    },
-    "items": [
-      {
-        "id": "string",
-        "label": "string",
-        "selectedEmojiId": "string",
-        "options": [
-          {
-            "id": "string",
-            "emoji": "string",
-            "label": "string"
-          }
-        ]
-      }
-    ],
-    "saveLabel": "string",
-    "saveAndNextLabel": "string"
+    "success": "boolean",
+    "message": "string"
   },
   "example_request": {
     "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
-    "aspectId": "attitude",
-    "selections": []
-  },
-  "example_response": {
-    "pageTitle": "Remarks",
-    "filterChips": {
-      "termLabel": "Term 1",
-      "subjectLabel": "English",
-      "assessmentLabel": "Unit Test 1",
-      "academicYearLabel": "2025"
-    },
-    "student": {
-      "name": "Mark Thompson",
-      "classSection": "XII - C | 677868",
-      "studentId": "677868",
-      "breadcrumb": "Subject remark entry"
-    },
-    "items": [
+    "aspectId": "skills",
+    "groupId": "listening",
+    "subGroupId": "",
+    "sortBy": "",
+    "aspects": [
       {
-        "id": "participation",
-        "label": "Participation",
-        "selectedEmojiId": "",
-        "options": [
-          {
-            "id": "excellent",
-            "emoji": "😀",
-            "label": "Excellent"
-          },
-          {
-            "id": "good",
-            "emoji": "🙂",
-            "label": "Good"
-          },
-          {
-            "id": "needs_improvement",
-            "emoji": "😐",
-            "label": "Needs Improvement"
-          }
-        ]
+        "aspectId": "attentive_listener",
+        "emojiId": ""
+      },
+      {
+        "aspectId": "relate_sound_letter",
+        "emojiId": "star"
+      },
+      {
+        "aspectId": "comprehension",
+        "emojiId": ""
+      },
+      {
+        "aspectId": "identify_sounds_bme",
+        "emojiId": ""
       }
     ],
-    "saveLabel": "Save",
-    "saveAndNextLabel": "Save and Next"
+    "overallRemarks": "Shows good listening skills in class.",
+    "selectedSuggestionIds": []
+  },
+  "example_response": {
+    "success": true,
+    "message": "Data updated successfully"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "emoji",
-    "list": "subject-profile/19230-58190--emoji-list.json (Figma 19230:58190)",
-    "save": "POST selections[] with itemId and emojiId via subject-profile/19230-57867--remarks-save.json with aspectEntryType=emoji."
+    "list": "GET subject-profile/19230-58190--emoji-list.json to load aspects[] rows and Overall Remarks form.",
+    "save": "POST full request body on Save — context fields + aspects[] + overallRemarks + selectedSuggestionIds.",
+    "emojiOptions": "emojiId values from backend when Emoji picker opens per aspect row.",
+    "suggestions": "selectedSuggestionIds from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is used."
   }
 }

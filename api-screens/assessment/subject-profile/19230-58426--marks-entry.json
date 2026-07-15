@@ -1,95 +1,82 @@
 {
   "screen": "Subject Profile — Marks Entry",
-  "description": "Per-student marks entry. Opened from marks list when a student row is tapped.",
+  "description": "Save marks entry from marks list (Remarks screen, Figma 19230:57867). All entry data in request; response is save result only.",
+  "figmaNodeId": "19230:57867",
   "request": {
     "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "marks": [
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string",
+    "maximumMarks": "number",
+    "aspects": [
       {
-        "itemId": "string",
-        "marks": "number"
+        "aspectId": "string",
+        "marks": "number | null",
+        "gradeId": "string"
       }
+    ],
+    "overallRemarks": "string",
+    "selectedSuggestionIds": [
+      "string"
     ]
   },
   "response": {
-    "pageTitle": "string",
-    "filterChips": {
-      "termLabel": "string",
-      "subjectLabel": "string",
-      "assessmentLabel": "string",
-      "academicYearLabel": "string"
-    },
-    "student": {
-      "name": "string",
-      "classSection": "string",
-      "studentId": "string",
-      "breadcrumb": "string"
-    },
-    "maximumMarksLabel": "string",
-    "maximumMarks": "number",
-    "items": [
-      {
-        "id": "string",
-        "label": "string",
-        "marks": "number | null",
-        "placeholder": "string"
-      }
-    ],
-    "saveLabel": "string",
-    "saveAndNextLabel": "string"
+    "success": "boolean",
+    "message": "string"
   },
   "example_request": {
     "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "skills",
-    "marks": []
-  },
-  "example_response": {
-    "pageTitle": "Remarks",
-    "filterChips": {
-      "termLabel": "Term 1",
-      "subjectLabel": "English",
-      "assessmentLabel": "Unit Test 1",
-      "academicYearLabel": "2025"
-    },
-    "student": {
-      "name": "Mark Thompson",
-      "classSection": "XII - C | 677868",
-      "studentId": "677868",
-      "breadcrumb": "Subject remark entry"
-    },
-    "maximumMarksLabel": "Maximum Marks",
-    "maximumMarks": 10,
-    "items": [
+    "groupId": "listening",
+    "subGroupId": "",
+    "sortBy": "",
+    "maximumMarks": 324,
+    "aspects": [
       {
-        "id": "listening",
-        "label": "Listening",
+        "aspectId": "attentive_listener",
         "marks": null,
-        "placeholder": "Enter marks"
+        "gradeId": ""
       },
       {
-        "id": "speaking",
-        "label": "Speaking",
+        "aspectId": "comprehension",
         "marks": null,
-        "placeholder": "Enter marks"
+        "gradeId": ""
+      },
+      {
+        "aspectId": "relate_sound_letter",
+        "marks": null,
+        "gradeId": ""
+      },
+      {
+        "aspectId": "identify_sounds_bme",
+        "marks": null,
+        "gradeId": ""
       }
     ],
-    "saveLabel": "Save",
-    "saveAndNextLabel": "Save and Next"
+    "overallRemarks": "Shows good listening skills in class.",
+    "selectedSuggestionIds": []
+  },
+  "example_response": {
+    "success": true,
+    "message": "Data updated successfully"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "marks",
-    "list": "subject-profile/19230-58426--marks-list.json (Figma 19230:58426)",
-    "save": "POST marks[] with itemId and marks via subject-profile/19230-57867--remarks-save.json with aspectEntryType=marks."
+    "list": "GET subject-profile/19230-58426--marks-list.json to load maximumMarks, accordion aspects[], and Overall Remarks form.",
+    "save": "POST full request body on Save — context fields + maximumMarks + aspects[] (marks or gradeId per row) + overallRemarks + selectedSuggestionIds.",
+    "gradeOptions": "gradeId values from filters/9568-194594--assessment-grades-filter.json.",
+    "marksOrGrade": "Send marks or gradeId per aspect row, not both.",
+    "suggestions": "selectedSuggestionIds from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is used."
   }
 }

@@ -1,20 +1,31 @@
 {
   "screen": "Subject Profile — Performance and Efforts List",
-  "description": "Student roster list for combined Performance and Efforts aspect. Tap Add or Edit on a row to open performance-efforts entry.",
-  "figmaNodeId": "19230:57868",
+  "description": "Performance and Efforts on Remarks screen (Figma 19230:57867). Student card with prev/next, Group dropdown, filter chips, accordion criteria with Performance and Effort radio option lists, Overall Remarks with Suggestions.",
+  "figmaNodeId": "19230:57867",
   "request": {
+    "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "viewMode": "staff-wise | student-wise",
-    "sortBy": "name | admissionNo | rollNo",
-    "search": "string"
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string"
   },
   "response": {
     "pageTitle": "string",
+    "studentCard": {
+      "profilePic": "string",
+      "name": "string",
+      "classLabel": "string",
+      "admissionNo": "string",
+      "previousStudentId": "string",
+      "nextStudentId": "string"
+    },
+    "groupLabel": "string",
+    "subGroupLabel": "string",
+    "subGroupDisabled": "boolean",
     "filterChips": [
       {
         "id": "string",
@@ -22,43 +33,61 @@
         "value": "string"
       }
     ],
-    "sortOptions": [
-      "string"
-    ],
-    "viewModes": [
-      "string"
-    ],
-    "students": [
+    "criteria": [
       {
-        "serial": "number",
-        "profilePic": "string",
-        "name": "string",
-        "rollNo": "string",
-        "studentId": "string",
-        "remarksAction": "add | edit | none"
+        "criteriaId": "string",
+        "label": "string",
+        "performanceSectionLabel": "string",
+        "performance": [
+          {
+            "id": "string",
+            "label": "string",
+            "isSelected": "boolean"
+          }
+        ],
+        "effortsSectionLabel": "string",
+        "efforts": [
+          {
+            "id": "string",
+            "label": "string",
+            "isSelected": "boolean"
+          }
+        ]
       }
     ],
-    "primaryActionLabel": "string"
+    "overallRemarksLabel": "string",
+    "overallRemarksRequired": "boolean",
+    "overallRemarks": "string",
+    "overallRemarksPlaceholder": "string",
+    "suggestionsLabel": "string",
+    "saveLabel": "string",
+    "saveAndNextLabel": "string"
   },
   "example_request": {
+    "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "performance_efforts",
-    "viewMode": "staff-wise",
-    "sortBy": "name",
-    "search": ""
+    "groupId": "listening",
+    "subGroupId": "",
+    "sortBy": ""
   },
   "example_response": {
-    "pageTitle": "Subject Profile",
+    "pageTitle": "Remarks",
+    "studentCard": {
+      "profilePic": "string",
+      "name": "Mark Thompson",
+      "classLabel": "XII - C",
+      "admissionNo": "677868",
+      "previousStudentId": "",
+      "nextStudentId": "1561156"
+    },
+    "groupLabel": "Listening",
+    "subGroupLabel": "Sub Group",
+    "subGroupDisabled": true,
     "filterChips": [
-      {
-        "id": "class",
-        "label": "XII - C",
-        "value": "XII - C"
-      },
       {
         "id": "term",
         "label": "Term 1",
@@ -70,51 +99,102 @@
         "value": "English"
       },
       {
-        "id": "assessment",
-        "label": "Unit Test 1",
-        "value": "Unit Test 1"
-      },
-      {
         "id": "academicYear",
         "label": "2025",
         "value": "2025"
       }
     ],
-    "sortOptions": [
-      "Sort By",
-      "Name",
-      "Admission No.",
-      "Roll No."
-    ],
-    "viewModes": [
-      "Staff-wise",
-      "Student-wise"
-    ],
-    "students": [
+    "criteria": [
       {
-        "serial": 1,
-        "profilePic": "string",
-        "name": "Mark Thompson",
-        "rollNo": "123",
-        "studentId": "1561154",
-        "remarksAction": "add"
+        "criteriaId": "attentive_listener",
+        "label": "Attentive Listener",
+        "performanceSectionLabel": "PERFORMANCE",
+        "performance": [
+          { "id": "ex", "label": "EX", "isSelected": true },
+          { "id": "mp", "label": "MP", "isSelected": false },
+          { "id": "nm", "label": "NM", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ],
+        "effortsSectionLabel": "EFFORT",
+        "efforts": [
+          { "id": "ol", "label": "OL", "isSelected": true },
+          { "id": "exl", "label": "EXL", "isSelected": false },
+          { "id": "rl", "label": "RL", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ]
       },
       {
-        "serial": 2,
-        "profilePic": "string",
-        "name": "Sophia Kim",
-        "rollNo": "124",
-        "studentId": "1561156",
-        "remarksAction": "edit"
+        "criteriaId": "comprehension",
+        "label": "Comprehension",
+        "performanceSectionLabel": "PERFORMANCE",
+        "performance": [
+          { "id": "ex", "label": "EX", "isSelected": false },
+          { "id": "mp", "label": "MP", "isSelected": false },
+          { "id": "nm", "label": "NM", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ],
+        "effortsSectionLabel": "EFFORT",
+        "efforts": [
+          { "id": "ol", "label": "OL", "isSelected": false },
+          { "id": "exl", "label": "EXL", "isSelected": false },
+          { "id": "rl", "label": "RL", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ]
+      },
+      {
+        "criteriaId": "relate_sound_letter",
+        "label": "Can relate a sound to a letter?",
+        "performanceSectionLabel": "PERFORMANCE",
+        "performance": [
+          { "id": "ex", "label": "EX", "isSelected": false },
+          { "id": "mp", "label": "MP", "isSelected": false },
+          { "id": "nm", "label": "NM", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ],
+        "effortsSectionLabel": "EFFORT",
+        "efforts": [
+          { "id": "ol", "label": "OL", "isSelected": false },
+          { "id": "exl", "label": "EXL", "isSelected": false },
+          { "id": "rl", "label": "RL", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ]
+      },
+      {
+        "criteriaId": "identify_sounds_bme",
+        "label": "Can identify sounds at the beginning, middle and end of the word?",
+        "performanceSectionLabel": "PERFORMANCE",
+        "performance": [
+          { "id": "ex", "label": "EX", "isSelected": false },
+          { "id": "mp", "label": "MP", "isSelected": false },
+          { "id": "nm", "label": "NM", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ],
+        "effortsSectionLabel": "EFFORT",
+        "efforts": [
+          { "id": "ol", "label": "OL", "isSelected": false },
+          { "id": "exl", "label": "EXL", "isSelected": false },
+          { "id": "rl", "label": "RL", "isSelected": false },
+          { "id": "na", "label": "NA", "isSelected": false }
+        ]
       }
     ],
-    "primaryActionLabel": "Save"
+    "overallRemarksLabel": "Overall Remarks",
+    "overallRemarksRequired": true,
+    "overallRemarks": "",
+    "overallRemarksPlaceholder": "Write a short remark for this student.",
+    "suggestionsLabel": "Suggestions",
+    "saveLabel": "Save",
+    "saveAndNextLabel": "Save and Next"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
-    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57868",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "performanceEfforts",
-    "entry": "Tap Add or Edit on student row → subject-profile/19230-58576--performance-efforts-entry.json",
-    "uiVariants": "Empty, partial, filled list states via remarksAction."
+    "performanceEffortsLists": "performance[] and efforts[] are radio option lists per criterion row; exactly one item should have isSelected=true when a value is chosen.",
+    "accordion": "Expanded/collapsed state is UI-only; response returns all criteria rows with full option lists.",
+    "criterionOptions": "Optional lazy-load via subject-profile/19230-58601--performance-efforts-criterion-options.json when option lists are not embedded in list response.",
+    "studentNav": "previousStudentId and nextStudentId on studentCard for prev/next arrows; Save and Next uses nextStudentId after POST entry.",
+    "save": "POST selected id per row via subject-profile/19230-58576--performance-efforts-entry.json (performance and efforts as selected id strings, not full lists).",
+    "groupChange": "Changing Group dropdown re-fetches criteria[] for selected groupId."
   }
 }

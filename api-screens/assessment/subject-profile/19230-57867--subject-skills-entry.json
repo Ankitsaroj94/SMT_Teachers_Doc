@@ -106,7 +106,7 @@
     "skills": "Listening, Speaking, Reading/Comprehension, Vocabulary, Grammar tabs/sections.",
     "suggestions": "Loaded from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is expanded.",
     "figmaSectionId": "19230:57867",
-    "supersededBy": "Use type-specific entry contracts under subject-profile/ (19230-58386 manual remark, 19230-58100 grade, etc.) keyed by aspectEntryType from backend.",
+    "supersededBy": "Use type-specific entry contracts under subject-profile/ aligned to Figma 19230:57867 Remarks UI.",
     "uiVariants": "Empty, filled, suggestions expanded, add-remarks placeholder, next-student — single GET; use skills[].remark null/empty vs populated."
   },
   "example_request": {

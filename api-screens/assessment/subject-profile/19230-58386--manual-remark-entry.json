@@ -1,103 +1,78 @@
 {
   "screen": "Subject Profile — Manual Remark Entry",
-  "description": "Per-student manual text remark entry. Opened from manual remark list when a student row is tapped.",
+  "description": "Save manual remark entry from list (Remarks screen, Figma 19230:57867). All entry data in request; response is save result only.",
+  "figmaNodeId": "19230:57867",
   "request": {
     "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "remarks": [
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string",
+    "skills": [
       {
-        "itemId": "string",
+        "skillId": "string",
         "remark": "string"
       }
     ],
+    "overallRemarks": "string",
     "selectedSuggestionIds": [
       "string"
     ]
   },
   "response": {
-    "pageTitle": "string",
-    "filterChips": {
-      "termLabel": "string",
-      "subjectLabel": "string",
-      "assessmentLabel": "string",
-      "academicYearLabel": "string"
-    },
-    "student": {
-      "name": "string",
-      "classSection": "string",
-      "studentId": "string",
-      "breadcrumb": "string"
-    },
-    "items": [
-      {
-        "id": "string",
-        "label": "string",
-        "remark": "string",
-        "placeholder": "string"
-      }
-    ],
-    "addRemarksLabel": "string",
-    "suggestionsLabel": "string",
-    "suggestionsExpanded": "boolean",
-    "saveLabel": "string",
-    "saveAndNextLabel": "string"
+    "success": "boolean",
+    "message": "string"
   },
   "example_request": {
     "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "skills",
-    "remarks": [],
+    "groupId": "",
+    "subGroupId": "",
+    "sortBy": "",
+    "skills": [
+      {
+        "skillId": "listening",
+        "remark": ""
+      },
+      {
+        "skillId": "speaking",
+        "remark": ""
+      },
+      {
+        "skillId": "reading_comprehension",
+        "remark": ""
+      },
+      {
+        "skillId": "vocabulary",
+        "remark": ""
+      },
+      {
+        "skillId": "grammar",
+        "remark": ""
+      }
+    ],
+    "overallRemarks": "",
     "selectedSuggestionIds": []
   },
   "example_response": {
-    "pageTitle": "Remarks",
-    "filterChips": {
-      "termLabel": "Term 1",
-      "subjectLabel": "English",
-      "assessmentLabel": "Unit Test 1",
-      "academicYearLabel": "2025"
-    },
-    "student": {
-      "name": "Mark Thompson",
-      "classSection": "XII - C | 677868",
-      "studentId": "677868",
-      "breadcrumb": "Subject remark entry"
-    },
-    "items": [
-      {
-        "id": "listening",
-        "label": "Listening",
-        "remark": "",
-        "placeholder": "Write a short remark for this student."
-      },
-      {
-        "id": "speaking",
-        "label": "Speaking",
-        "remark": "",
-        "placeholder": "Write a short remark for this student."
-      }
-    ],
-    "addRemarksLabel": "Add Remarks",
-    "suggestionsLabel": "Suggestions",
-    "suggestionsExpanded": false,
-    "saveLabel": "Save",
-    "saveAndNextLabel": "Save and Next"
+    "success": true,
+    "message": "Data updated successfully"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "manualRemark",
-    "list": "subject-profile/19230-58386--manual-remark-list.json (Figma 19230:58386)",
-    "suggestions": "Loaded from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is expanded.",
-    "save": "POST remarks[] and selectedSuggestionIds[] via subject-profile/19230-57867--remarks-save.json with aspectEntryType=manualRemark.",
-    "uiVariants": "Empty, filled, suggestions expanded, next-student — single GET; use items[].remark empty vs populated."
+    "list": "GET subject-profile/19230-58386--manual-remark-list.json to load studentCard, skills[] cards, and Overall Remarks form.",
+    "save": "POST full request body on Save or Save and Next — context fields + skills[] (skillId + remark per card) + overallRemarks + selectedSuggestionIds.",
+    "saveAndNext": "After successful POST, client navigates to studentCard.nextStudentId from list response.",
+    "suggestions": "selectedSuggestionIds from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is used on Overall Remarks."
   }
 }

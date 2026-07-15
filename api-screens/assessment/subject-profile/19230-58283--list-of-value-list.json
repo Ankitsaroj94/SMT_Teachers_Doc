@@ -1,20 +1,23 @@
 {
   "screen": "Subject Profile — List of Value List",
-  "description": "Student roster list for list-of-value aspect. Shows selected value label per student row.",
-  "figmaNodeId": "19230:58283",
+  "description": "List-of-value on Remarks screen (Figma 19230:57867). Group dropdown (e.g. Listening), Sub Group, filter chips, accordion aspects with value dropdown + remark per row, Overall Remarks with Suggestions.",
+  "figmaNodeId": "19230:57867",
   "request": {
+    "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "viewMode": "staff-wise | student-wise",
-    "sortBy": "name | admissionNo | rollNo",
-    "search": "string"
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string"
   },
   "response": {
     "pageTitle": "string",
+    "groupLabel": "string",
+    "subGroupLabel": "string",
+    "subGroupDisabled": "boolean",
     "filterChips": [
       {
         "id": "string",
@@ -22,39 +25,46 @@
         "value": "string"
       }
     ],
-    "sortOptions": [
-      "string"
-    ],
-    "viewModes": [
-      "string"
-    ],
-    "students": [
+    "aspects": [
       {
-        "serial": "number",
-        "profilePic": "string",
-        "name": "string",
-        "rollNo": "string",
-        "studentId": "string",
+        "aspectId": "string",
+        "label": "string",
         "valueId": "string",
-        "valueLabel": "string"
+        "valueLabel": "string",
+        "valuePlaceholder": "string",
+        "remark": "string",
+        "remarkPlaceholder": "string"
       }
     ],
-    "primaryActionLabel": "string"
+    "overallRemarksLabel": "string",
+    "overallRemarksRequired": "boolean",
+    "overallRemarks": "string",
+    "overallRemarksPlaceholder": "string",
+    "suggestionsLabel": "string",
+    "saveLabel": "string"
   },
   "example_request": {
+    "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
-    "aspectId": "participation",
-    "viewMode": "staff-wise",
-    "sortBy": "name",
-    "search": ""
+    "aspectId": "skills",
+    "groupId": "listening",
+    "subGroupId": "",
+    "sortBy": ""
   },
   "example_response": {
-    "pageTitle": "Subject Profile",
+    "pageTitle": "Remarks",
+    "groupLabel": "Listening",
+    "subGroupLabel": "Sub Group",
+    "subGroupDisabled": true,
     "filterChips": [
+      {
+        "id": "sortBy",
+        "label": "Sort By",
+        "value": "Sort By"
+      },
       {
         "id": "class",
         "label": "XII - C",
@@ -71,52 +81,63 @@
         "value": "English"
       },
       {
-        "id": "assessment",
-        "label": "Unit Test 1",
-        "value": "Unit Test 1"
-      },
-      {
         "id": "academicYear",
         "label": "2025",
         "value": "2025"
       }
     ],
-    "sortOptions": [
-      "Sort By",
-      "Name",
-      "Admission No.",
-      "Roll No."
-    ],
-    "viewModes": [
-      "Staff-wise",
-      "Student-wise"
-    ],
-    "students": [
+    "aspects": [
       {
-        "serial": 1,
-        "profilePic": "string",
-        "name": "Mark Thompson",
-        "rollNo": "123",
-        "studentId": "1561154",
-        "valueId": "",
-        "valueLabel": "Select"
+        "aspectId": "attentive_listener",
+        "label": "Attentive Listener",
+        "valueId": "excellent_listening",
+        "valueLabel": "Excellent listening skills, that are reflected in...",
+        "valuePlaceholder": "Select",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
       },
       {
-        "serial": 2,
-        "profilePic": "string",
-        "name": "Sophia Kim",
-        "rollNo": "124",
-        "studentId": "1561156",
-        "valueId": "often",
-        "valueLabel": "Often"
+        "aspectId": "comprehension",
+        "label": "Comprehension",
+        "valueId": "",
+        "valueLabel": "",
+        "valuePlaceholder": "Select",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
+      },
+      {
+        "aspectId": "relate_sound_letter",
+        "label": "Can relate a sound to a letter?",
+        "valueId": "",
+        "valueLabel": "",
+        "valuePlaceholder": "Select",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
+      },
+      {
+        "aspectId": "identify_sounds_bme",
+        "label": "Can identify sounds at the beginning, middle and end of the word?",
+        "valueId": "",
+        "valueLabel": "",
+        "valuePlaceholder": "Select",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
       }
     ],
-    "primaryActionLabel": "Save"
+    "overallRemarksLabel": "Overall Remarks",
+    "overallRemarksRequired": false,
+    "overallRemarks": "",
+    "overallRemarksPlaceholder": "Write a short remark for this student.",
+    "suggestionsLabel": "Suggestions",
+    "saveLabel": "Save"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
-    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58283",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "listOfValue",
-    "entry": "Tap student row → subject-profile/19230-58283--list-of-value-entry.json"
+    "accordion": "Expanded/collapsed state is UI-only; response returns all aspect rows with valueId, valueLabel, and remark.",
+    "valueOptions": "Per-aspect value list loaded from backend when value dropdown opens.",
+    "save": "POST aspects[] + overallRemarks via subject-profile/19230-58283--list-of-value-entry.json.",
+    "groupChange": "Changing Group dropdown re-fetches aspects[] for selected groupId."
   }
 }

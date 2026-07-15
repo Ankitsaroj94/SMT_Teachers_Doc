@@ -1,20 +1,23 @@
 {
   "screen": "Subject Profile — Marks List",
-  "description": "Student roster list for marks aspect. Shows marks per student row with maximum marks header.",
-  "figmaNodeId": "19230:58426",
+  "description": "Marks on Remarks screen (Figma 19230:57867). Group dropdown (e.g. Listening), Sub Group, filter chips, Maximum Marks header, accordion aspects with Enter Marks + Select Grade per row, Overall Remarks with Suggestions.",
+  "figmaNodeId": "19230:57867",
   "request": {
+    "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "viewMode": "staff-wise | student-wise",
-    "sortBy": "name | admissionNo | rollNo",
-    "search": "string"
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string"
   },
   "response": {
     "pageTitle": "string",
+    "groupLabel": "string",
+    "subGroupLabel": "string",
+    "subGroupDisabled": "boolean",
     "filterChips": [
       {
         "id": "string",
@@ -24,38 +27,46 @@
     ],
     "maximumMarksLabel": "string",
     "maximumMarks": "number",
-    "sortOptions": [
-      "string"
-    ],
-    "viewModes": [
-      "string"
-    ],
-    "students": [
+    "aspects": [
       {
-        "serial": "number",
-        "profilePic": "string",
-        "name": "string",
-        "rollNo": "string",
-        "studentId": "string",
-        "marks": "number | null"
+        "aspectId": "string",
+        "label": "string",
+        "marks": "number | null",
+        "marksPlaceholder": "string",
+        "gradeId": "string",
+        "gradeLabel": "string",
+        "gradePlaceholder": "string"
       }
     ],
-    "primaryActionLabel": "string"
+    "overallRemarksLabel": "string",
+    "overallRemarksRequired": "boolean",
+    "overallRemarks": "string",
+    "overallRemarksPlaceholder": "string",
+    "suggestionsLabel": "string",
+    "saveLabel": "string"
   },
   "example_request": {
+    "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "skills",
-    "viewMode": "staff-wise",
-    "sortBy": "name",
-    "search": ""
+    "groupId": "listening",
+    "subGroupId": "",
+    "sortBy": ""
   },
   "example_response": {
-    "pageTitle": "Subject Profile",
+    "pageTitle": "Remarks",
+    "groupLabel": "Listening",
+    "subGroupLabel": "Sub Group",
+    "subGroupDisabled": true,
     "filterChips": [
+      {
+        "id": "sortBy",
+        "label": "Sort By",
+        "value": "Sort By"
+      },
       {
         "id": "class",
         "label": "XII - C",
@@ -72,52 +83,67 @@
         "value": "English"
       },
       {
-        "id": "assessment",
-        "label": "Unit Test 1",
-        "value": "Unit Test 1"
-      },
-      {
         "id": "academicYear",
         "label": "2025",
         "value": "2025"
       }
     ],
     "maximumMarksLabel": "Maximum Marks",
-    "maximumMarks": 10,
-    "sortOptions": [
-      "Sort By",
-      "Name",
-      "Admission No.",
-      "Roll No."
-    ],
-    "viewModes": [
-      "Staff-wise",
-      "Student-wise"
-    ],
-    "students": [
+    "maximumMarks": 324,
+    "aspects": [
       {
-        "serial": 1,
-        "profilePic": "string",
-        "name": "Mark Thompson",
-        "rollNo": "123",
-        "studentId": "1561154",
-        "marks": null
+        "aspectId": "attentive_listener",
+        "label": "Attentive Listener",
+        "marks": null,
+        "marksPlaceholder": "Enter Marks",
+        "gradeId": "",
+        "gradeLabel": "",
+        "gradePlaceholder": "Select Grade"
       },
       {
-        "serial": 2,
-        "profilePic": "string",
-        "name": "Sophia Kim",
-        "rollNo": "124",
-        "studentId": "1561156",
-        "marks": 8
+        "aspectId": "comprehension",
+        "label": "Comprehension",
+        "marks": null,
+        "marksPlaceholder": "Enter Marks",
+        "gradeId": "",
+        "gradeLabel": "",
+        "gradePlaceholder": "Select Grade"
+      },
+      {
+        "aspectId": "relate_sound_letter",
+        "label": "Can relate a sound to a letter?",
+        "marks": null,
+        "marksPlaceholder": "Enter Marks",
+        "gradeId": "",
+        "gradeLabel": "",
+        "gradePlaceholder": "Select Grade"
+      },
+      {
+        "aspectId": "identify_sounds_bme",
+        "label": "Can identify sounds at the beginning, middle and end of the word?",
+        "marks": null,
+        "marksPlaceholder": "Enter Marks",
+        "gradeId": "",
+        "gradeLabel": "",
+        "gradePlaceholder": "Select Grade"
       }
     ],
-    "primaryActionLabel": "Save"
+    "overallRemarksLabel": "Overall Remarks",
+    "overallRemarksRequired": true,
+    "overallRemarks": "",
+    "overallRemarksPlaceholder": "Write a short remark for this student.",
+    "suggestionsLabel": "Suggestions",
+    "saveLabel": "Save"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
-    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58426",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "marks",
-    "entry": "Tap student row → subject-profile/19230-58426--marks-entry.json"
+    "accordion": "Expanded/collapsed state is UI-only; response returns all aspect rows with marks and gradeId.",
+    "maximumMarks": "Read-only total shown in header; validate entered marks against this on save.",
+    "gradeOptions": "Select Grade picker from filters/9568-194594--assessment-grades-filter.json.",
+    "marksOrGrade": "Enter Marks and Select Grade are mutually exclusive per row; UI disables grade when marks are entered.",
+    "save": "POST aspects[] + overallRemarks via subject-profile/19230-58426--marks-entry.json.",
+    "groupChange": "Changing Group dropdown re-fetches aspects[] and maximumMarks for selected groupId."
   }
 }

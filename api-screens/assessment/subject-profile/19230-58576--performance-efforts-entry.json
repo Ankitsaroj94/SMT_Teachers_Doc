@@ -1,14 +1,17 @@
 {
   "screen": "Subject Profile — Performance and Efforts Entry",
-
+  "description": "Save performance and efforts entry from list (Remarks screen, Figma 19230:57867). All entry data in request; response is save result only.",
+  "figmaNodeId": "19230:57867",
   "request": {
     "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string",
     "criteria": [
       {
         "criteriaId": "string",
@@ -16,43 +19,62 @@
         "efforts": "string"
       }
     ],
-    "remarks": "string"
+    "overallRemarks": "string",
+    "selectedSuggestionIds": [
+      "string"
+    ]
   },
   "response": {
     "success": "boolean",
-    "message": "string",
-    "nextStudentId": "string"
+    "message": "string"
   },
   "example_request": {
     "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "performance_efforts",
+    "groupId": "listening",
+    "subGroupId": "",
+    "sortBy": "",
     "criteria": [
       {
-        "criteriaId": "attentative_listening",
-        "performance": "often",
-        "efforts": "good"
+        "criteriaId": "attentive_listener",
+        "performance": "ex",
+        "efforts": "ol"
       },
       {
-        "criteriaId": "attentative_speaking",
+        "criteriaId": "comprehension",
         "performance": "",
         "efforts": ""
       },
       {
-        "criteriaId": "attentative_reading",
+        "criteriaId": "relate_sound_letter",
+        "performance": "",
+        "efforts": ""
+      },
+      {
+        "criteriaId": "identify_sounds_bme",
         "performance": "",
         "efforts": ""
       }
     ],
-    "remarks": ""
+    "overallRemarks": "Shows good listening skills in class.",
+    "selectedSuggestionIds": []
   },
   "example_response": {
     "success": true,
-    "message": "Data updated successfully",
-    "nextStudentId": "1561155"
+    "message": "Data updated successfully"
+  },
+  "notes": {
+    "figmaSectionId": "19230:57867",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+    "aspectEntryType": "performanceEfforts",
+    "list": "GET subject-profile/19230-57868--performance-efforts-list.json to load studentCard, criteria[] rows, and Overall Remarks form.",
+    "save": "POST full request body on Save or Save and Next — context fields + criteria[] (performance + efforts per row) + overallRemarks + selectedSuggestionIds.",
+    "criterionOptions": "performance and efforts id values from subject-profile/19230-58601--performance-efforts-criterion-options.json.",
+    "saveAndNext": "After successful POST, client navigates to studentCard.nextStudentId from list response.",
+    "suggestions": "selectedSuggestionIds from student-profile/19230-57627--remarks-suggestions-list.json when Suggestions is used."
   }
 }

@@ -1,41 +1,30 @@
 {
   "screen": "Subject Profile — Save Remarks",
-  "description": "Save subject-profile aspect entry for current student (Save or Save and Next). Payload shape depends on aspectEntryType.",
+  "description": "Save subject-profile aspect entry for current student. Payload shape depends on aspectEntryType. All entry types use request-only data with clean success response.",
   "figmaNodeId": "19230:57867",
   "request": {
     "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
     "aspectEntryType": "manualRemark | grade | emoji | listOfValue | marks | performanceEfforts",
-    "remarks": [
+    "groupId": "string",
+    "subGroupId": "string",
+    "skills": [
       {
-        "itemId": "string",
+        "skillId": "string",
         "remark": "string"
       }
     ],
-    "selectedSuggestionIds": [
-      "string"
-    ],
-    "grades": [
+    "aspects": [
       {
-        "itemId": "string",
-        "gradeId": "string"
-      }
-    ],
-    "selections": [
-      {
-        "itemId": "string",
+        "aspectId": "string",
+        "gradeId": "string",
+        "emojiId": "string",
         "valueId": "string",
-        "emojiId": "string"
-      }
-    ],
-    "marks": [
-      {
-        "itemId": "string",
+        "remark": "string",
         "marks": "number"
       }
     ],
@@ -45,6 +34,11 @@
         "performance": "string",
         "efforts": "string"
       }
+    ],
+    "maximumMarks": "number",
+    "overallRemarks": "string",
+    "selectedSuggestionIds": [
+      "string"
     ]
   },
   "response": {
@@ -57,39 +51,44 @@
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "skills",
-    "aspectEntryType": "manualRemark",
-    "remarks": [
+    "aspectEntryType": "grade",
+    "groupId": "listening",
+    "subGroupId": "",
+    "skills": [],
+    "aspects": [
       {
-        "itemId": "listening",
-        "remark": "Shows good progress."
+        "aspectId": "attentive_listener",
+        "gradeId": "a",
+        "emojiId": "",
+        "valueId": "",
+        "remark": "",
+        "marks": 0
       }
     ],
-    "selectedSuggestionIds": [],
-    "grades": [],
-    "selections": [],
-    "marks": [],
-    "criteria": []
+    "criteria": [],
+    "maximumMarks": 0,
+    "overallRemarks": "Shows good progress in listening.",
+    "selectedSuggestionIds": []
   },
   "example_response": {
     "success": true,
-    "message": "Remarks saved",
-    "nextStudentId": "1561155"
+    "message": "Data updated successfully",
+    "nextStudentId": ""
   },
   "notes": {
-    "nextStudentId": "Returned when Save and Next is used; omit on Save only.",
     "figmaSectionId": "19230:57867",
-    "aspectEntryType": "manualRemark | grade | emoji | listOfValue | marks | performanceEfforts",
-    "flow": "Setup → typed list by aspectEntryType → tap student → typed entry → remarks-save.",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
+    "nextStudentId": "Returned when Save and Next is used; omit on Save only.",
+    "sharedFields": "groupId, subGroupId, overallRemarks, selectedSuggestionIds on all entry types where visible in Remarks UI.",
     "conditionalFields": {
-      "manualRemark": "remarks[], selectedSuggestionIds[] — list: 19230-58386--manual-remark-list.json; entry: 19230-58386--manual-remark-entry.json",
-      "grade": "grades[] — list: 19230-58100--grade-list.json; entry: 19230-58100--grade-entry.json",
-      "emoji": "selections[] with emojiId — list: 19230-58190--emoji-list.json; entry: 19230-58190--emoji-entry.json",
-      "listOfValue": "selections[] with valueId — list: 19230-58283--list-of-value-list.json; entry: 19230-58283--list-of-value-entry.json",
-      "marks": "marks[] — list: 19230-58426--marks-list.json; entry: 19230-58426--marks-entry.json",
-      "performanceEfforts": "criteria[] with criteriaId, performance, efforts; remarks (string) — save via 19230-58576--performance-efforts-entry.json; list: 19230-57868--performance-efforts-list.json; criterion options: 19230-58601--performance-efforts-criterion-options.json"
+      "manualRemark": "skills[] with skillId + remark, overallRemarks, selectedSuggestionIds — list GET: 19230-58386--manual-remark-list.json; save POST: 19230-58386--manual-remark-entry.json",
+      "grade": "aspects[] with aspectId + gradeId, overallRemarks, selectedSuggestionIds — list GET: 19230-58100--grade-list.json; save POST: 19230-58100--grade-entry.json",
+      "emoji": "aspects[] with aspectId + emojiId, overallRemarks, selectedSuggestionIds — list GET: 19230-58190--emoji-list.json; save POST: 19230-58190--emoji-entry.json",
+      "listOfValue": "aspects[] with aspectId + valueId + remark, overallRemarks, selectedSuggestionIds — list GET: 19230-58283--list-of-value-list.json; save POST: 19230-58283--list-of-value-entry.json",
+      "marks": "maximumMarks, aspects[] with aspectId + marks + gradeId, overallRemarks, selectedSuggestionIds — list GET: 19230-58426--marks-list.json; save POST: 19230-58426--marks-entry.json",
+      "performanceEfforts": "criteria[] with criteriaId + performance + efforts, overallRemarks, selectedSuggestionIds — list GET: 19230-57868--performance-efforts-list.json; save POST: 19230-58576--performance-efforts-entry.json",
     }
   }
 }

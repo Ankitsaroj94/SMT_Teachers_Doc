@@ -1,20 +1,31 @@
 {
   "screen": "Subject Profile — Manual Remark List",
-  "description": "Student roster list for manual-remark aspect. Tap a row to open manual remark entry.",
-  "figmaNodeId": "19230:58386",
+  "description": "Manual remark on Remarks screen (Figma 19230:57867). Student card with prev/next, Group dropdown, filter chips, skill remark cards, Overall Remarks with Suggestions.",
+  "figmaNodeId": "19230:57867",
   "request": {
+    "studentId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string",
-    "viewMode": "staff-wise | student-wise",
-    "sortBy": "name | admissionNo | rollNo",
-    "search": "string"
+    "groupId": "string",
+    "subGroupId": "string",
+    "sortBy": "string"
   },
   "response": {
     "pageTitle": "string",
+    "studentCard": {
+      "profilePic": "string",
+      "name": "string",
+      "classLabel": "string",
+      "admissionNo": "string",
+      "previousStudentId": "string",
+      "nextStudentId": "string"
+    },
+    "groupLabel": "string",
+    "subGroupLabel": "string",
+    "subGroupDisabled": "boolean",
     "filterChips": [
       {
         "id": "string",
@@ -22,43 +33,47 @@
         "value": "string"
       }
     ],
-    "sortOptions": [
-      "string"
-    ],
-    "viewModes": [
-      "string"
-    ],
-    "students": [
+    "skills": [
       {
-        "serial": "number",
-        "profilePic": "string",
-        "name": "string",
-        "rollNo": "string",
-        "studentId": "string",
-        "remarksAction": "add | edit | none"
+        "skillId": "string",
+        "label": "string",
+        "remark": "string",
+        "remarkPlaceholder": "string"
       }
     ],
-    "primaryActionLabel": "string"
+    "overallRemarksLabel": "string",
+    "overallRemarksRequired": "boolean",
+    "overallRemarks": "string",
+    "overallRemarksPlaceholder": "string",
+    "suggestionsLabel": "string",
+    "saveLabel": "string",
+    "saveAndNextLabel": "string"
   },
   "example_request": {
+    "studentId": "1561154",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "skills",
-    "viewMode": "staff-wise",
-    "sortBy": "name",
-    "search": ""
+    "groupId": "",
+    "subGroupId": "",
+    "sortBy": ""
   },
   "example_response": {
-    "pageTitle": "Subject Profile",
+    "pageTitle": "Remarks",
+    "studentCard": {
+      "profilePic": "string",
+      "name": "Mark Thompson",
+      "classLabel": "XII - C",
+      "admissionNo": "677868",
+      "previousStudentId": "",
+      "nextStudentId": "1561156"
+    },
+    "groupLabel": "Group",
+    "subGroupLabel": "Sub Group",
+    "subGroupDisabled": true,
     "filterChips": [
-      {
-        "id": "class",
-        "label": "XII - C",
-        "value": "XII - C"
-      },
       {
         "id": "term",
         "label": "Term 1",
@@ -70,51 +85,57 @@
         "value": "English"
       },
       {
-        "id": "assessment",
-        "label": "Unit Test 1",
-        "value": "Unit Test 1"
-      },
-      {
         "id": "academicYear",
         "label": "2025",
         "value": "2025"
       }
     ],
-    "sortOptions": [
-      "Sort By",
-      "Name",
-      "Admission No.",
-      "Roll No."
-    ],
-    "viewModes": [
-      "Staff-wise",
-      "Student-wise"
-    ],
-    "students": [
+    "skills": [
       {
-        "serial": 1,
-        "profilePic": "string",
-        "name": "Mark Thompson",
-        "rollNo": "123",
-        "studentId": "1561154",
-        "remarksAction": "add"
+        "skillId": "listening",
+        "label": "Listening",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
       },
       {
-        "serial": 2,
-        "profilePic": "string",
-        "name": "Sophia Kim",
-        "rollNo": "124",
-        "studentId": "1561156",
-        "remarksAction": "edit"
+        "skillId": "speaking",
+        "label": "Speaking",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
+      },
+      {
+        "skillId": "reading_comprehension",
+        "label": "Reading/Comprehension",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
+      },
+      {
+        "skillId": "vocabulary",
+        "label": "Vocabulary",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
+      },
+      {
+        "skillId": "grammar",
+        "label": "Grammar",
+        "remark": "",
+        "remarkPlaceholder": "Write a short remark for this student."
       }
     ],
-    "primaryActionLabel": "Save"
+    "overallRemarksLabel": "Overall Remarks",
+    "overallRemarksRequired": false,
+    "overallRemarks": "",
+    "overallRemarksPlaceholder": "Write a short remark for this student.",
+    "suggestionsLabel": "Suggestions",
+    "saveLabel": "Save",
+    "saveAndNextLabel": "Save and Next"
   },
   "notes": {
     "figmaSectionId": "19230:57867",
-    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58386",
+    "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-57867",
     "aspectEntryType": "manualRemark",
-    "entry": "Tap student row → subject-profile/19230-58386--manual-remark-entry.json",
-    "uiVariants": "Empty, partial, filled list states via remarksAction and row fill."
+    "studentNav": "previousStudentId and nextStudentId on studentCard for prev/next arrows; Save and Next uses nextStudentId after POST entry.",
+    "save": "POST skills[] + overallRemarks via subject-profile/19230-58386--manual-remark-entry.json.",
+    "groupChange": "Changing Group dropdown re-fetches skills[] for selected groupId when applicable."
   }
 }

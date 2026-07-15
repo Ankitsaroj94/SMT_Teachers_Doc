@@ -1,20 +1,21 @@
 {
   "screen": "Subject Profile — Performance and Efforts Criterion Options",
-  "description": "Dropdown / bottom-sheet options for Performance or Efforts on a criterion row (e.g. Listening). Each criteriaId has its own option list per sectionType.",
+  "description": "Radio options for Performance or Effort section on a criterion row (e.g. Attentive Listener) within Group Listening.",
   "figmaNodeId": "19230:58601",
   "request": {
     "sectionType": "performance | efforts",
-    "criterionId": "string",
+    "criteriaId": "string",
+    "groupId": "string",
     "classId": "string",
     "termId": "string",
     "subjectId": "string",
-    "assessmentId": "string",
     "academicYear": "string",
     "aspectId": "string"
   },
   "response": {
     "sectionType": "string",
-    "criterionId": "string",
+    "criteriaId": "string",
+    "sectionLabel": "string",
     "data": [
       {
         "id": "string",
@@ -24,49 +25,63 @@
   },
   "example_request": {
     "sectionType": "performance",
-    "criterionId": "attentative_listening",
+    "criteriaId": "attentive_listener",
+    "groupId": "listening",
     "classId": "xii_c",
     "termId": "term_1",
     "subjectId": "english",
-    "assessmentId": "unit_test_1",
     "academicYear": "2025",
     "aspectId": "performance_efforts"
   },
   "example_response": {
     "sectionType": "performance",
-    "criterionId": "attentative_listening",
+    "criteriaId": "attentive_listener",
+    "sectionLabel": "PERFORMANCE",
     "data": [
       {
-        "id": "always",
-        "label": "Always"
+        "id": "ex",
+        "label": "EX"
       },
       {
-        "id": "often",
-        "label": "Often"
+        "id": "mp",
+        "label": "MP"
       },
       {
-        "id": "sometimes",
-        "label": "Sometimes"
+        "id": "nm",
+        "label": "NM"
       },
       {
-        "id": "rarely",
-        "label": "Rarely"
+        "id": "na",
+        "label": "NA"
       }
     ]
   },
   "notes": {
-    "figmaSectionId": "19230:57867",
+    "figmaSectionId": "19230:58601",
     "figmaUrl": "https://www.figma.com/design/iv4SFTxeHwgBYQ6TNhydaL/Shriconnect-Staff-App?node-id=19230-58601",
-    "uiVariants": "19230:58601 — criterion picker example; each criteriaId (e.g. listening) returns its own data[] list for the chosen sectionType.",
-    "usage": "Call when user opens picker on a performance or efforts criterion row in 19230-58576--performance-efforts-entry.json.",
+    "usage": "Call when Performance or Effort radio group is rendered or expanded on a criterion row in 19230-57868--performance-efforts-list.json.",
+    "sectionType": "performance returns EX | MP | NM | NA; efforts returns OL | EXL | RL | NA.",
+    "effortsExample": {
+      "sectionType": "efforts",
+      "criteriaId": "attentive_listener",
+      "sectionLabel": "EFFORT",
+      "data": [
+        { "id": "ol", "label": "OL" },
+        { "id": "exl", "label": "EXL" },
+        { "id": "rl", "label": "RL" },
+        { "id": "na", "label": "NA" }
+      ]
+    },
     "dependsOn": [
       "sectionType",
-      "criterionId",
+      "criteriaId",
+      "groupId",
       "classId",
       "subjectId",
       "termId"
     ],
     "usedBy": [
+      "subject-profile/19230-57868--performance-efforts-list.json",
       "subject-profile/19230-58576--performance-efforts-entry.json"
     ]
   }
